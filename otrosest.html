@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Altres Estudis | Orientació</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#003366;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px 20px;
+}
+
+/* ACORDEÓN */
+
+.accordion{
+background:#f1f5ff;
+border:2px solid #2f6df6;
+border-radius:12px;
+padding:18px;
+margin-bottom:15px;
+cursor:pointer;
+font-weight:bold;
+color:#2f6df6;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:18px;
+}
+
+.accordion:hover{
+background:#e8edff;
+}
+
+.panel{
+display:none;
+background:white;
+border-radius:10px;
+padding:20px;
+margin-top:-10px;
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.plus{
+font-size:22px;
+font-weight:bold;
+}
+
+a{
+color:#003366;
+font-weight:bold;
+text-decoration:none;
+}
+
+ul{
+margin-top:10px;
+}
+
+footer{
+margin-top:40px;
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>📚 Altres Estudis</h1>
+<p>IES Didín Puig · Departament d’Orientació</p>
+</header>
+
+<div class="container">
+
+
+<div class="accordion">👮 Forces i Cossos de Seguretat <span class="plus">+</span></div>
+<div class="panel">
+
+<ul>
+<li>Cos de bombers</li>
+<li>Policia Nacional</li>
+<li>Guàrdia Civil</li>
+<li>Policia Local</li>
+</ul>
+
+<p>
+En la pàgina de l'Ajuntament de València pots trobar informació sobre les convocatòries de places de Policia Local.
+</p>
+
+<p>
+També pots consultar la informació en els diferents ajuntaments.
+</p>
+
+</div>
+
+
+<div class="accordion">🪖 Exèrcit / Forces Armades <span class="plus">+</span></div>
+<div class="panel">
+
+<p>
+Les Forces Armades ofereixen diferents vies d'accés i itineraris professionals.
+</p>
+
+<p>
+Es pot accedir amb diferents nivells d'estudis i existeixen diferents especialitats i formacions dins de l'exèrcit.
+</p>
+
+</div>
+
+
+<div class="accordion">🌍 Idiomes <span class="plus">+</span></div>
+<div class="panel">
+
+<ul>
+
+<li>
+<a href="https://ceice.gva.es" target="_blank">
+Pàgina de la Conselleria d'Educació
+</a>
+</li>
+
+<li>
+<a href="https://portal.edu.gva.es/eoivirtual/" target="_blank">
+Cercador d'Escoles Oficials d'Idiomes (EOI)
+</a>
+</li>
+
+</ul>
+
+<p>
+Les Escoles Oficials d’Idiomes permeten estudiar llengües amb titulació oficial.
+</p>
+
+</div>
+
+
+<div class="accordion">🎨 Estudis esportius, musicals i artístics <span class="plus">+</span></div>
+<div class="panel">
+
+<p>
+Pots consultar aquests estudis en l'apartat d’<strong>Ensenyaments d’FP en Règim Especial</strong>.
+</p>
+
+<p>
+Inclou:
+</p>
+
+<ul>
+<li>Ensenyaments esportius</li>
+<li>Ensenyaments musicals</li>
+<li>Ensenyaments artístics</li>
+</ul>
+
+<p>
+Consulta aquesta informació en la pàgina <strong>Coneix l’FP</strong>.
+</p>
+
+</div>
+
+
+</div>
+
+<footer>
+IES Didín Puig · Orientació Acadèmica
+</footer>
+
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+
+acc[i].addEventListener("click", function() {
+
+var panel = this.nextElementSibling;
+
+if (panel.style.display === "block") {
+panel.style.display = "none";
+} else {
+panel.style.display = "block";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
