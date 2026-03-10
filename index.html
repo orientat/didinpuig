@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 
 <head>
 <meta charset="UTF-8">
@@ -14,11 +14,34 @@ margin:0;
 background:#f3f3f3;
 }
 
-/* CONTENEDOR GENERAL (MISMO ANCHO QUE IMÁGENES Y BOTONES) */
+/* CONTENEDOR GENERAL */
 
 .wrapper{
 width:75%;
 margin:auto;
+}
+
+/* SELECTOR IDIOMA */
+
+.lang{
+width:75%;
+margin:auto;
+text-align:right;
+padding-top:10px;
+}
+
+.lang a{
+background:#6d2548;
+color:white;
+padding:6px 12px;
+border-radius:15px;
+margin-left:5px;
+font-size:14px;
+text-decoration:none;
+}
+
+.lang a:hover{
+background:#a65277;
 }
 
 /* LOGO */
@@ -27,7 +50,7 @@ margin:auto;
 width:100%;
 height:auto;
 display:block;
-margin-top:20px;
+margin-top:10px;
 }
 
 /* IMAGEN PRINCIPAL */
@@ -48,7 +71,7 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* CONTENEDOR BOTONES */
+/* BOTONES */
 
 .grid{
 display:flex;
@@ -56,8 +79,6 @@ flex-wrap:wrap;
 justify-content:center;
 gap:25px;
 }
-
-/* TARJETAS */
 
 .card{
 background:#a65277;
@@ -110,7 +131,8 @@ text-decoration:none;
 
 @media (max-width:900px){
 
-.wrapper{
+.wrapper,
+.lang{
 width:90%;
 }
 
@@ -134,6 +156,13 @@ width:140px;
 
 <body>
 
+<!-- SELECTOR IDIOMA -->
+
+<div class="lang">
+<a href="index.html">VAL</a>
+<a href="es/index.html">ES</a>
+</div>
+
 <div class="wrapper">
 
 <!-- LOGO -->
@@ -142,7 +171,7 @@ width:140px;
 <img src="logo.jpg" alt="Logo centre">
 </div>
 
-<!-- IMAGEN PRINCIPAL -->
+<!-- IMAGEN -->
 
 <div class="header-img">
 <img src="foto_orienta.png" alt="Orientació Acadèmica i Professional">
@@ -150,88 +179,86 @@ width:140px;
 
 <h2>ORIENTACIÓ ACADÈMICA</h2>
 
-<!-- BOTONES -->
-
 <div class="grid">
 
-<a href="https://orientamcr.wordpress.com/transicion-a-la-eso/">
+<a href="#">
 <div class="card">
 <div class="card-title">Transició Primària</div>
 <div class="card-button">Informació</div>
 </div>
 </a>
 
-<a href="1eso.html">
+<a href="#">
 <div class="card">
 <div class="card-title">1r ESO</div>
 <div class="card-button">Guia per a l'alumnat</div>
 </div>
 </a>
 
-<a href="2eso.html">
+<a href="#">
 <div class="card">
 <div class="card-title">2n ESO</div>
 <div class="card-button">Informació del curs</div>
 </div>
 </a>
 
-<a href="3eso.html">
+<a href="#">
 <div class="card">
 <div class="card-title">3r ESO</div>
 <div class="card-button">Orientació acadèmica</div>
 </div>
 </a>
 
-<a href="4eso.html">
+<a href="#">
 <div class="card">
 <div class="card-title">4t ESO</div>
 <div class="card-button">Decideix el teu futur</div>
 </div>
 </a>
 
-<a href="pdc.html">
+<a href="#">
 <div class="card">
 <div class="card-title">PDC</div>
 <div class="card-button">Programa diversificació</div>
 </div>
 </a>
 
-<a href="fp.html">
+<a href="#">
 <div class="card">
 <div class="card-title">FP</div>
 <div class="card-button">Coneix la FP</div>
 </div>
 </a>
 
-<a href="bach.html">
+<a href="#">
 <div class="card">
 <div class="card-title">Batxillerat</div>
 <div class="card-button">Informació</div>
 </div>
 </a>
 
-<a href="uni.html">
+<a href="#">
 <div class="card">
 <div class="card-title">Universitat</div>
 <div class="card-button">Accés i PAU</div>
 </div>
 </a>
 
-<a href="otrosest.html">
+<a href="#">
 <div class="card">
 <div class="card-title">Altres estudis</div>
 <div class="card-button">Opcions</div>
 </div>
 </a>
 
-<a href="orientafut.html">
+<a href="#">
 <div class="card">
 <div class="card-title">Orienta el teu futur</div>
 <div class="card-button">Tests i recursos</div>
 </div>
 </a>
 
-<a href="sistedu.html">
+<a href="#">
 <div class="card">
 <div class="card-title">Sistema educatiu</div>
 <div class="card-button">Esquema</div>
