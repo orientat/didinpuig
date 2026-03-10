@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Orientació Acadèmica</title>
 
 <style>
@@ -34,7 +33,7 @@ padding-top:15px;
 .lang a{
 background:#6d2548;
 color:white;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:25px;
 margin-left:10px;
 font-size:16px;
@@ -56,7 +55,7 @@ display:block;
 margin-top:10px;
 }
 
-/* IMATGE PRINCIPAL */
+/* IMAGEN PRINCIPAL */
 
 .header-img img{
 width:100%;
@@ -65,7 +64,7 @@ display:block;
 margin-top:10px;
 }
 
-/* TÍTOL */
+/* TITOL */
 
 h2{
 text-align:center;
@@ -74,12 +73,11 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* CONTENEDOR BOTONS */
+/* BOTONS */
 
 .grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(6,1fr);
 gap:25px;
 }
 
@@ -89,7 +87,7 @@ gap:25px;
 background:#a65277;
 color:white;
 border-radius:28px;
-padding:25px;
+padding:20px;
 text-align:center;
 border:4px solid #6d2548;
 
@@ -97,8 +95,7 @@ display:flex;
 flex-direction:column;
 justify-content:space-between;
 
-width:200px;
-min-height:170px;
+min-height:160px;
 
 transition:transform .2s;
 }
@@ -108,11 +105,11 @@ transform:scale(1.05);
 }
 
 .card-title{
-font-size:20px;
+font-size:18px;
 font-weight:bold;
 margin-bottom:15px;
 
-min-height:50px;
+min-height:45px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -122,10 +119,11 @@ text-align:center;
 .card-button{
 background:white;
 color:#6d2548;
-padding:10px 18px;
+padding:8px 16px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
+font-size:14px;
 }
 
 a{
@@ -134,23 +132,36 @@ text-decoration:none;
 
 /* RESPONSIVE */
 
-@media (max-width:900px){
+@media (max-width:1200px){
+
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
 
 .wrapper,
 .lang{
-width:90%;
+width:85%;
 }
 
-.card{
-width:180px;
+}
+
+@media (max-width:800px){
+
+.grid{
+grid-template-columns:repeat(3,1fr);
 }
 
 }
 
 @media (max-width:600px){
 
-.card{
-width:160px;
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.wrapper,
+.lang{
+width:90%;
 }
 
 }
@@ -196,42 +207,42 @@ width:160px;
 <a href="1eso.html">
 <div class="card">
 <div class="card-title">1r ESO</div>
-<div class="card-button">Guia per a l'alumnat</div>
+<div class="card-button">Guia alumnat</div>
 </div>
 </a>
 
 <a href="2eso.html">
 <div class="card">
 <div class="card-title">2n ESO</div>
-<div class="card-button">Informació del curs</div>
+<div class="card-button">Informació</div>
 </div>
 </a>
 
 <a href="3eso.html">
 <div class="card">
 <div class="card-title">3r ESO</div>
-<div class="card-button">Orientació acadèmica</div>
+<div class="card-button">Orientació</div>
 </div>
 </a>
 
 <a href="4eso.html">
 <div class="card">
 <div class="card-title">4t ESO</div>
-<div class="card-button">Decideix el teu futur</div>
+<div class="card-button">Futur</div>
 </div>
 </a>
 
 <a href="pdc.html">
 <div class="card">
 <div class="card-title">PDC</div>
-<div class="card-button">Programa diversificació</div>
+<div class="card-button">Programa</div>
 </div>
 </a>
 
 <a href="fp.html">
 <div class="card">
 <div class="card-title">FP</div>
-<div class="card-button">Coneix la FP</div>
+<div class="card-button">Coneix FP</div>
 </div>
 </a>
 
@@ -245,11 +256,11 @@ width:160px;
 <a href="uni.html">
 <div class="card">
 <div class="card-title">Universitat</div>
-<div class="card-button">Accés i PAU</div>
+<div class="card-button">Accés</div>
 </div>
 </a>
 
-<a href="otrosest.html">
+<a href="altres.html">
 <div class="card">
 <div class="card-title">Altres estudis</div>
 <div class="card-button">Opcions</div>
@@ -258,8 +269,8 @@ width:160px;
 
 <a href="orientafut.html">
 <div class="card">
-<div class="card-title">Orienta el teu futur</div>
-<div class="card-button">Tests i recursos</div>
+<div class="card-title">Orienta futur</div>
+<div class="card-button">Tests</div>
 </div>
 </a>
 
