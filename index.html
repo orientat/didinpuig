@@ -26,23 +26,24 @@ margin:auto;
 .lang{
 width:75%;
 margin:auto;
-text-align:right;
+display:flex;
+justify-content:flex-end;
+gap:15px;
 padding-top:15px;
+flex-wrap:wrap;
 }
 
-/* BOTONES IDIOMA (MÁS ANCHOS Y MITAD DE ALTURA) */
+/* BOTONES IDIOMA */
 
 .lang a{
 background:#6d2548;
 color:white;
-padding:5px 40px;       /* menos altura */
+padding:6px 30px;
 border-radius:25px;
-margin-left:10px;
 font-size:15px;
 font-weight:bold;
 text-decoration:none;
 display:inline-block;
-min-width:90px;
 text-align:center;
 }
 
@@ -168,6 +169,10 @@ grid-template-columns:repeat(2,1fr);
 width:90%;
 }
 
+.lang{
+justify-content:center;
+}
+
 }
 
 </style>
@@ -179,8 +184,8 @@ width:90%;
 <!-- SELECTOR IDIOMA -->
 
 <div class="lang">
-<a href="index.html">VAL</a>
-<a href="es/index.html">ES</a>
+<a href="index.html">Valencià</a>
+<a href="es/index.html">Español</a>
 </div>
 
 <div class="wrapper">
