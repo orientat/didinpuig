@@ -14,9 +14,9 @@ margin:0;
 background:#f3f3f3;
 }
 
-/* CONTENEDOR IMÁGENES */
+/* CONTENEDOR GENERAL (MISMO ANCHO QUE IMÁGENES Y BOTONES) */
 
-.header-wrapper{
+.wrapper{
 width:75%;
 margin:auto;
 }
@@ -39,27 +39,21 @@ display:block;
 margin-top:10px;
 }
 
-/* CONTENIDO */
-
-.content{
-padding:40px 20px;
-}
+/* TITULO */
 
 h2{
 text-align:center;
-margin-bottom:40px;
+margin:40px 0;
 color:#5b2140;
 font-size:32px;
 }
 
-/* GRID BOTONES */
+/* CONTENEDOR BOTONES */
 
 .grid{
-max-width:1200px;
-margin:auto;
-
-display:grid;
-grid-template-columns:repeat(5,1fr);
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:25px;
 }
 
@@ -77,13 +71,14 @@ display:flex;
 flex-direction:column;
 justify-content:space-between;
 
+width:180px;
 min-height:170px;
 
 transition:transform .2s;
 }
 
 .card:hover{
-transform:scale(1.04);
+transform:scale(1.05);
 }
 
 .card-title{
@@ -95,6 +90,7 @@ min-height:50px;
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
 }
 
 .card-button{
@@ -112,38 +108,22 @@ text-decoration:none;
 
 /* RESPONSIVE */
 
-@media (max-width:1100px){
+@media (max-width:900px){
 
-.grid{
-grid-template-columns:repeat(4,1fr);
+.wrapper{
+width:90%;
 }
 
-}
-
-@media (max-width:800px){
-
-.grid{
-grid-template-columns:repeat(3,1fr);
+.card{
+width:160px;
 }
 
 }
 
 @media (max-width:600px){
 
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media (max-width:400px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.header-wrapper{
-width:95%;
+.card{
+width:140px;
 }
 
 }
@@ -154,23 +134,23 @@ width:95%;
 
 <body>
 
-<!-- IMÁGENES CENTRADAS -->
+<div class="wrapper">
 
-<div class="header-wrapper">
+<!-- LOGO -->
 
 <div class="logo">
 <img src="logo.jpg" alt="Logo centre">
 </div>
 
+<!-- IMAGEN PRINCIPAL -->
+
 <div class="header-img">
 <img src="foto_orienta.png" alt="Orientació Acadèmica i Professional">
 </div>
 
-</div>
-
-<div class="content">
-
 <h2>ORIENTACIÓ ACADÈMICA</h2>
+
+<!-- BOTONES -->
 
 <div class="grid">
 
