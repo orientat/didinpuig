@@ -11,7 +11,7 @@
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f3f3f3;
+background:#ffffff;
 }
 
 /* CONTENEDOR GENERAL */
@@ -26,36 +26,36 @@ margin:auto;
 .lang{
 width:75%;
 margin:auto;
-text-align:right;
-padding-top:10px;
+display:flex;
+justify-content:flex-end;
+gap:15px;
+padding-top:15px;
+flex-wrap:wrap;
 }
+
+/* BOTONES IDIOMA */
 
 .lang a{
 background:#6d2548;
 color:white;
-padding:6px 12px;
-border-radius:15px;
-margin-left:5px;
-font-size:14px;
+padding:6px 30px;
+border-radius:25px;
+font-size:15px;
+font-weight:bold;
 text-decoration:none;
+display:inline-block;
+text-align:center;
 }
 
 .lang a:hover{
 background:#a65277;
 }
 
-/* LOGO */
+/* IMÁGENES */
 
-.logo img{
-width:100%;
-height:auto;
-display:block;
-margin-top:10px;
-}
-
-/* IMAGEN PRINCIPAL */
-
-.header-img img{
+.logo img,
+.header-img img,
+.footer img{
 width:100%;
 height:auto;
 display:block;
@@ -74,9 +74,8 @@ font-size:32px;
 /* BOTONES */
 
 .grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(6,1fr);
 gap:25px;
 }
 
@@ -86,7 +85,7 @@ gap:25px;
 background:#a65277;
 color:white;
 border-radius:28px;
-padding:25px;
+padding:20px;
 text-align:center;
 border:4px solid #6d2548;
 
@@ -94,8 +93,7 @@ display:flex;
 flex-direction:column;
 justify-content:space-between;
 
-width:180px;
-min-height:170px;
+min-height:160px;
 
 transition:transform .2s;
 }
@@ -105,11 +103,11 @@ transform:scale(1.05);
 }
 
 .card-title{
-font-size:20px;
+font-size:18px;
 font-weight:bold;
 margin-bottom:15px;
 
-min-height:50px;
+min-height:45px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -119,10 +117,11 @@ text-align:center;
 .card-button{
 background:white;
 color:#6d2548;
-padding:10px 18px;
+padding:8px 16px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
+font-size:14px;
 }
 
 a{
@@ -131,23 +130,40 @@ text-decoration:none;
 
 /* RESPONSIVE */
 
-@media (max-width:900px){
+@media (max-width:1200px){
+
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
 
 .wrapper,
 .lang{
-width:90%;
+width:85%;
 }
 
-.card{
-width:160px;
+}
+
+@media (max-width:800px){
+
+.grid{
+grid-template-columns:repeat(3,1fr);
 }
 
 }
 
 @media (max-width:600px){
 
-.card{
-width:140px;
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.wrapper,
+.lang{
+width:90%;
+}
+
+.lang{
+justify-content:center;
 }
 
 }
@@ -161,8 +177,8 @@ width:140px;
 <!-- SELECTOR IDIOMA -->
 
 <div class="lang">
-<a href="../index.html">VAL</a>
-<a href="index.html">ES</a>
+<a href="../index.html">Valencià</a>
+<a href="index.html">Castellano</a>
 </div>
 
 <div class="wrapper">
@@ -170,10 +186,10 @@ width:140px;
 <!-- LOGO -->
 
 <div class="logo">
-<img src="../logo.jpg" alt="Logo del centro">
+<img src="../logo.jpg" alt="Logo centro">
 </div>
 
-<!-- IMAGEN -->
+<!-- IMAGEN PRINCIPAL -->
 
 <div class="header-img">
 <img src="../foto_orienta.png" alt="Orientación Académica y Profesional">
@@ -183,90 +199,96 @@ width:140px;
 
 <div class="grid">
 
-<a href="#">
+<a href="/es/transicion.html">
 <div class="card">
-<div class="card-title">Transición Primaria</div>
+<div class="card-title">Transición de Primaria</div>
 <div class="card-button">Información</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/1eso.html">
 <div class="card">
-<div class="card-title">1º ESO</div>
-<div class="card-button">Guía para el alumnado</div>
+<div class="card-title">Estás en 1º de ESO</div>
+<div class="card-button">Guía alumnado</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/2eso.html">
 <div class="card">
-<div class="card-title">2º ESO</div>
-<div class="card-button">Información del curso</div>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<div class="card-title">3º ESO</div>
-<div class="card-button">Orientación académica</div>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<div class="card-title">4º ESO</div>
-<div class="card-button">Decide tu futuro</div>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<div class="card-title">PDC</div>
-<div class="card-button">Programa de diversificación</div>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<div class="card-title">FP</div>
-<div class="card-button">Conoce la FP</div>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<div class="card-title">Bachillerato</div>
+<div class="card-title">Estás en 2º de ESO</div>
 <div class="card-button">Información</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/3eso.html">
 <div class="card">
-<div class="card-title">Universidad</div>
-<div class="card-button">Acceso y PAU</div>
+<div class="card-title">Estás en 3º de ESO</div>
+<div class="card-button">Orientación</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/4eso.html">
+<div class="card">
+<div class="card-title">Estás en 4º de ESO</div>
+<div class="card-button">Futuro</div>
+</div>
+</a>
+
+<a href="/es/pdc.html">
+<div class="card">
+<div class="card-title">Estás en PDC</div>
+<div class="card-button">Programa</div>
+</div>
+</a>
+
+<a href="/es/fp.html">
+<div class="card">
+<div class="card-title">Conoce la FP</div>
+<div class="card-button">Información</div>
+</div>
+</a>
+
+<a href="/es/bach.html">
+<div class="card">
+<div class="card-title">Conoce el Bachillerato</div>
+<div class="card-button">Información</div>
+</div>
+</a>
+
+<a href="/es/universidad.html">
+<div class="card">
+<div class="card-title">Conoce la Universidad</div>
+<div class="card-button">Acceso</div>
+</div>
+</a>
+
+<a href="/es/otros.html">
 <div class="card">
 <div class="card-title">Otros estudios</div>
 <div class="card-button">Opciones</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/orientafuturo.html">
 <div class="card">
 <div class="card-title">Orienta tu futuro</div>
-<div class="card-button">Tests y recursos</div>
+<div class="card-button">Tests</div>
 </div>
 </a>
 
-<a href="#">
+<a href="/es/sistemaeducativo.html">
 <div class="card">
 <div class="card-title">Sistema educativo</div>
 <div class="card-button">Esquema</div>
 </div>
 </a>
 
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+<img src="../footer.jpg" alt="Pie de página">
 </div>
 
 </div>
