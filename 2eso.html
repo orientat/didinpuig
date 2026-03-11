@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2º ESO | Orientación</title>
+<title>2n ESO | Orientació</title>
 
 <style>
 
 body{
 font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
 
+/* CONTENEDOR GENERAL */
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+/* BOTON VOLVER */
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+/* CABECERA */
+
 header{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:25px;
+margin-top:15px;
+border-radius:10px;
 }
 
 header h1{
@@ -27,62 +58,46 @@ margin:0;
 font-size:30px;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px 20px;
-}
+/* SECCIONES */
 
 .section{
-margin-bottom:40px;
+margin-top:40px;
 }
 
 .section h2{
-color:#003366;
-border-left:6px solid #003366;
+color:#6d2548;
+border-left:6px solid #a65277;
 padding-left:10px;
 margin-bottom:15px;
-}
-
-/* TARJETAS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.card{
-background:white;
-padding:18px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
 }
 
 /* MATERIAS */
 
 .subjects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
 .subject{
-background:white;
-padding:15px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
+background:#f3f3f3;
+padding:15px 18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-/* INFO */
+/* CAJA INFORMACIÓN */
 
 .info{
-background:#eef3ff;
+background:#fff2f7;
 padding:20px;
 border-radius:10px;
 line-height:1.6;
+border-left:5px solid #a65277;
 }
 
 .warning{
@@ -93,12 +108,45 @@ line-height:1.6;
 margin-top:15px;
 }
 
+/* TEXTO FINAL */
+
+.benvinguda{
+width:75%;
+margin:30px auto;
+text-align:center;
+font-size:18px;
+}
+
+/* FOOTER */
+
 footer{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
 margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.benvinguda{
+width:90%;
+}
+
+footer{
+width:90%;
+}
+
 }
 
 </style>
@@ -107,38 +155,41 @@ margin-top:40px;
 
 <body>
 
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Tornar a Orientació</a>
+</div>
+
 <header>
-<h1>📚 Estás en 2º de ESO</h1>
-<p>IES Didín Puig · Departamento de Orientación</p>
+<h1>📚 Estàs en 2n d'ESO!</h1>
+<p>IES Didín Puig · Orientació</p>
 </header>
-
-
-<div class="container">
 
 
 <section class="section">
 
-<h2>⏰ Materias en 2º de ESO (30 horas semanales)</h2>
+<h2>⏰ Matèries en 2n d'ESO (30 hores setmanals)</h2>
 
 <div class="subjects">
 
-<div class="subject">📘 Valenciano: Lengua y Literatura — 3 h</div>
-<div class="subject">📗 Lengua Castellana y Literatura — 3 h</div>
-<div class="subject">🌍 Lengua Extranjera — 4 h</div>
-<div class="subject">🏛️ Geografía e Historia — 3 h</div>
-<div class="subject">🏃 Educación Física — 2 h</div>
-<div class="subject">➗ Matemáticas — 4 h</div>
-<div class="subject">⚗️ Física y Química — 3 h</div>
+<div class="subject">📘 Valencià: Llengua i Literatura — 3 h</div>
+<div class="subject">📗 Castellà: Llengua i Literatura — 3 h</div>
+<div class="subject">🌍 Llengua Estrangera — 4 h</div>
+<div class="subject">🏛️ Geografia i Història — 3 h</div>
+<div class="subject">🏃 Educació Física — 2 h</div>
+<div class="subject">➗ Matemàtiques — 4 h</div>
+<div class="subject">⚗️ Física i Química — 3 h</div>
 <div class="subject">🎵 Música — 2 h</div>
-<div class="subject">🎨 Educación Plástica, Visual y Audiovisual — 2 h</div>
+<div class="subject">🎨 Educació Plàstica, Visual i Audiovisual — 2 h</div>
 <div class="subject">⭐ Optativa — 2 h</div>
-<div class="subject">⛪ Religión / Atención Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoría — 1 h</div>
+<div class="subject">⛪ Religió / Atenció Educativa — 1 h</div>
+<div class="subject">🧑‍🏫 Tutoria — 1 h</div>
 
 </div>
 
 <p style="margin-top:15px;">
-En el <strong>tercer trimestre</strong> se informará de las optativas que oferta el centro para el próximo curso.
+En el <strong>tercer trimestre</strong> s'informarà de les optatives que oferirà el centre per al pròxim curs, els quals en aquest curs són Programació, Intel·ligència Artificial i Robòtica i Taller d'Aprofundiment.
 </p>
 
 </section>
@@ -147,35 +198,35 @@ En el <strong>tercer trimestre</strong> se informará de las optativas que ofert
 
 <section class="section">
 
-<h2>➡️ Al terminar 2º de ESO</h2>
+<h2>➡️ En acabar 2n d'ESO</h2>
 
 <div class="info">
 
-✅ Si estás en condiciones de promocionar, pasarás a <strong>3º de la ESO</strong>.
+✅ Si estàs en condicions de promocionar, passaràs a <strong>3r d'ESO</strong>.
 
 </div>
 
 <div class="warning">
 
-Si no estás en condiciones de promocionar a 3º de la ESO o tienes <strong>15 años o los cumplirás pronto</strong>, tienes varias opciones:
+Si no estàs en condicions de promocionar a 3r d'ESO o tens <strong>15 anys o els compliràs prompte</strong>, tens diverses opcions:
 
 <ul>
 
 <li>
-🔁 <strong>Repetir 2º ESO</strong> si no estás repitiendo este curso.
+🔁 <strong>Repetir 2n d'ESO</strong> si no estàs repetint aquest curs.
 </li>
 
 <li>
-📚 Si ya has repetido, puedes promocionar a <strong>3º ESO</strong>, pero tendrás que recuperar las materias pendientes de cursos anteriores.
+📚 Si ja has repetit, pots promocionar a <strong>3r d'ESO</strong>, però hauràs de recuperar les matèries pendents de cursos anteriors.
 </li>
 
 <li>
-🧭 <strong>Programa de Diversificación Curricular (PDC)</strong> del centro, si cumples los requisitos de acceso.  
-Consulta con tu tutor o tutora para más información.
+🧭 Incorporar-te al <strong>Programa de Diversificació Curricular (PDC)</strong> del centre, si compleixes els requisits d'accés.  
+Consulta amb el teu tutor o tutora per a més informació i/o polsa ací.
 </li>
 
 <li>
-🛠️ <strong>Ciclo de Formación Profesional Básica</strong> (para alumnado con 15 años).
+🛠️ <strong>Cicle de Formació Professional Bàsica</strong> (per a alumnat amb 15 anys).
 </li>
 
 </ul>
@@ -188,26 +239,29 @@ Consulta con tu tutor o tutora para más información.
 
 <section class="section">
 
-<h2>ℹ️ Información importante</h2>
+<h2>ℹ️ Informació important</h2>
 
 <div class="info">
 
-📌 Solo se puede <strong>repetir una vez el mismo curso</strong>.
+📌 Només es pot <strong>repetir una vegada el mateix curs</strong>.
 
-📌 Como norma general, se pueden <strong>repetir un máximo de dos cursos durante toda la ESO</strong>.
+<br><br>
 
-📌 En cualquier caso, consulta siempre con tu <strong>tutor o tutora</strong> o con el <strong>Departamento de Orientación</strong>.
+📌 Com a norma general, es poden <strong>repetir un màxim de dos cursos durant tota l'ESO</strong>.
+
+<br><br>
+
+📌 En qualsevol cas, consulta sempre amb el teu <strong>tutor o tutora</strong> o amb el <strong>Departament d'Orientació</strong>.
 
 </div>
 
 </section>
 
-
 </div>
 
 
 <footer>
-IES Didín Puig · Orientación Académica
+IES Didín Puig · Orientació Acadèmica
 </footer>
 
 </body>
