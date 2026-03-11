@@ -1,25 +1,56 @@
-<!DOCTYPE html> 
-<html lang="es">
+<!DOCTYPE html>
+<html lang="ca">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>1º ESO | Orientación</title>
+<title>1r ESO | Orientació</title>
 
 <style>
 
 body{
 font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
 
+/* CONTENEDOR GENERAL */
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+/* BOTON VOLVER */
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+/* CABECERA */
+
 header{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:25px;
+margin-top:15px;
+border-radius:10px;
 }
 
 header h1{
@@ -27,65 +58,65 @@ margin:0;
 font-size:30px;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px 20px;
-}
+/* SECCIONES */
 
 .section{
-margin-bottom:40px;
+margin-top:40px;
 }
 
 .section h2{
-color:#003366;
-border-left:6px solid #003366;
+color:#6d2548;
+border-left:6px solid #a65277;
 padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETAS */
+/* TARJETAS INFORMACIÓN */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:15px;
 }
 
 .card{
-background:white;
+background:#f3f3f3;
 padding:18px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
 /* MATERIAS */
 
 .subjects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
 .subject{
-background:white;
-padding:15px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
+background:#f3f3f3;
+padding:15px 18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-/* INFO FINAL */
+/* CAJA INFORMACIÓN FINAL */
 
 .info{
-background:#eef3ff;
+background:#fff2f7;
 padding:20px;
 border-radius:10px;
 line-height:1.6;
+border-left:5px solid #a65277;
 }
 
-/* IMAGEN SISTEMA EDUCATIVO */
+/* IMAGEN ESQUEMA */
 
 .esquema{
 text-align:center;
@@ -99,18 +130,43 @@ height:auto;
 
 /* TEXTO FINAL */
 
-.bienvenida{
+.benvinguda{
+width:75%;
+margin:30px auto;
 text-align:center;
-margin-top:40px;
 font-size:18px;
 }
 
+/* FOOTER */
+
 footer{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
 margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.benvinguda{
+width:90%;
+}
+
+footer{
+width:90%;
+}
+
 }
 
 </style>
@@ -119,35 +175,38 @@ margin-top:40px;
 
 <body>
 
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Tornar a Orientació</a>
+</div>
+
 <header>
-<h1>🎒 ¡Ya estás en la ESO!</h1>
-<p>IES Didín Puig · Departamento de Orientación</p>
+<h1>🎒 Ja estàs en 1r d'ESO!</h1>
+<p>IES Didín Puig · Orientació</p>
 </header>
-
-
-<div class="container">
 
 
 <section class="section">
 
-<h2>📚 ¿Qué es la ESO?</h2>
+<h2>📚 Què és l'ESO?</h2>
 
 <div class="cards">
 
 <div class="card">
-🏫 <strong>ENSEÑANZA SECUNDARIA OBLIGATORIA</strong>
+🏫 <strong>Educació Secundària Obligatòria</strong>
 </div>
 
 <div class="card">
-📖 Es <strong>SECUNDARIA</strong> porque viene después de la Educación Primaria.
+📖 És <strong>secundària</strong> perquè ve després de l'Educació Primària.
 </div>
 
 <div class="card">
-👩‍🎓 Es <strong>OBLIGATORIA</strong> porque deben cursarla todos los jóvenes de <strong>12 a 16 años</strong>.
+👩‍🎓 És <strong>obligatòria</strong> perquè l'han de cursar els joves entre <strong>12 i 16 anys</strong>.
 </div>
 
 <div class="card">
-📅 Tiene una duración de <strong>4 cursos</strong>.
+📅 Té una duració de <strong>4 cursos</strong>.
 </div>
 
 </div>
@@ -158,22 +217,22 @@ margin-top:40px;
 
 <section class="section">
 
-<h2>📖 ¿Cómo es 1º de ESO?</h2>
+<h2>📖 Com és 1r d'ESO?</h2>
 
 <p>
-Algunas materias de la ESO ya son conocidas para ti, pero otras serán nuevas.
+Algunes matèries de l'ESO ja les coneixes, però altres seran noves.
 </p>
 
 <p>
-Para cada materia tendrás un <strong>profesor o profesora diferente</strong>.
+Per a cada matèria tindràs un <strong>professor o professora diferent</strong>.
 </p>
 
 <p>
-También tendrás un <strong>tutor o tutora</strong>, con quien tendrás una hora de tutoría además de las clases de su asignatura.
+També tindràs un <strong>tutor o tutora</strong>, amb qui tindràs una hora de tutoria a més de les classes de la seua assignatura.
 </p>
 
 <p>
-Tendrás <strong>12 materias</strong>, por eso es muy importante que te organices bien para estudiar.
+Tindràs aproximadament <strong>12 matèries</strong>, per això és molt important que t'organitzes bé per a estudiar.
 </p>
 
 </section>
@@ -182,27 +241,27 @@ Tendrás <strong>12 materias</strong>, por eso es muy importante que te organice
 
 <section class="section">
 
-<h2>⏰ Materias en 1º de ESO (30 horas semanales)</h2>
+<h2>⏰ Matèries en 1r d'ESO (30 hores setmanals)</h2>
 
 <div class="subjects">
 
-<div class="subject">📘 Valenciano: Lengua y Literatura — 3 h</div>
-<div class="subject">📗 Lengua Castellana y Literatura — 3 h</div>
-<div class="subject">🌍 Lengua Extranjera — 4 h</div>
-<div class="subject">🏛️ Geografía e Historia — 3 h</div>
-<div class="subject">🏃 Educación Física — 2 h</div>
-<div class="subject">➗ Matemáticas — 4 h</div>
-<div class="subject">🔬 Biología y Geología — 3 h</div>
+<div class="subject">📘 Valencià: Llengua i Literatura — 3 h</div>
+<div class="subject">📗 Castellà: Llengua i Literatura — 3 h</div>
+<div class="subject">🌍 Llengua Estrangera — 4 h</div>
+<div class="subject">🏛️ Geografia i Història — 3 h</div>
+<div class="subject">🏃 Educació Física — 2 h</div>
+<div class="subject">➗ Matemàtiques — 4 h</div>
+<div class="subject">🔬 Biologia i Geologia — 3 h</div>
 <div class="subject">🎵 Música — 2 h</div>
-<div class="subject">💻 Tecnología y Digitalización — 2 h</div>
+<div class="subject">💻 Tecnologia i Digitalització — 2 h</div>
 <div class="subject">⭐ Optativa — 2 h</div>
-<div class="subject">⛪ Religión / Atención Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoría — 1 h</div>
+<div class="subject">⛪ Religió / Atenció Educativa — 1 h</div>
+<div class="subject">🧑‍🏫 Tutoria — 1 h</div>
 
 </div>
 
 <p style="margin-top:15px;">
-Cada curso se informará de la <strong>oferta de optativas del centro</strong>.
+Cada curs s'informarà de <strong>l'oferta d'optatives del centre</strong>.
 </p>
 
 </section>
@@ -211,41 +270,42 @@ Cada curso se informará de la <strong>oferta de optativas del centro</strong>.
 
 <section class="section">
 
-<h2>➡️ Al terminar 1º de ESO</h2>
+<h2>➡️ En acabar 1r d'ESO</h2>
 
 <div class="info">
 
 <p>🏫 Aquest és un esquema simplificat del sistema educatiu:</p>
 
 <div class="esquema">
-<img src="/Transición-EP-ESO.png" alt="Esquema transición Primaria ESO">
+<img src="/Transición-EP-ESO.png" alt="Esquema transició Primària ESO">
 </div>
 
 <br>
 
-✅ Si estás en condiciones de promocionar, pasarás a <strong>2º ESO</strong>.
+✅ Si estàs en condicions de promocionar, passaràs a <strong>2n d'ESO</strong>.
 
 <br><br>
 
-📘 Consulta la información sobre <strong>2º ESO</strong> para conocer cómo será el siguiente curso.
+📘 Consulta la informació sobre <strong>2n d'ESO</strong> per conéixer com serà el següent curs.
 
 <br><br>
 
-🔁 Si no estás en condiciones de promocionar, repetirás <strong>1º ESO</strong>, siempre que no lo estés repitiendo ya.
+🔁 Si no estàs en condicions de promocionar, repetiràs <strong>1r d'ESO</strong>.
 
 </div>
 
 </section>
 
-<div class="bienvenida">
-Benvingut/da a l'IES Didín Puig
 </div>
 
+
+<div class="benvinguda">
+Benvingut/da a l'IES Didín Puig
 </div>
 
 
 <footer>
-IES Didín Puig · Orientación Académica
+IES Didín Puig · Orientació Acadèmica
 </footer>
 
 </body>
