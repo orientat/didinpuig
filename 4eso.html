@@ -11,15 +11,46 @@
 body{
 font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
 
+/* CONTENEDOR GENERAL */
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+/* BOTON VOLVER */
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+/* CABECERA */
+
 header{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:25px;
+margin-top:15px;
+border-radius:10px;
 }
 
 header h1{
@@ -27,69 +58,52 @@ margin:0;
 font-size:30px;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px 20px;
-}
+/* SECCIONES */
 
 .section{
-margin-bottom:40px;
+margin-top:40px;
 }
 
 .section h2{
-color:#003366;
-border-left:6px solid #003366;
+color:#6d2548;
+border-left:6px solid #a65277;
 padding-left:10px;
 margin-bottom:15px;
-}
-
-/* TARJETAS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.card{
-background:white;
-padding:18px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
 }
 
 /* MATERIAS */
 
 .subjects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
 .subject{
-background:white;
-padding:15px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
+background:#f3f3f3;
+padding:15px 18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 /* BLOQUES OPCIÓN */
 
 .blocks{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
 .block{
-background:white;
+background:#f3f3f3;
 padding:18px;
-border-radius:8px;
-border-left:5px solid #003366;
-box-shadow:0 1px 5px rgba(0,0,0,0.1);
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
 /* OPCIONES FUTURO */
@@ -102,19 +116,22 @@ margin-top:15px;
 }
 
 .option{
-background:white;
+background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 text-align:center;
 font-weight:bold;
-border:2px solid #003366;
+border-left:5px solid #a65277;
 }
 
+/* CAJAS INFO */
+
 .info{
-background:#eef3ff;
+background:#fff2f7;
 padding:20px;
 border-radius:10px;
 line-height:1.6;
+border-left:5px solid #a65277;
 }
 
 .warning{
@@ -125,12 +142,32 @@ line-height:1.6;
 margin-top:15px;
 }
 
+/* FOOTER */
+
 footer{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
 margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+footer{
+width:90%;
+}
+
 }
 
 </style>
@@ -139,13 +176,16 @@ margin-top:40px;
 
 <body>
 
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Tornar a Orientació</a>
+</div>
+
 <header>
 <h1>🎓 Estàs en 4t d'ESO</h1>
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
-
-
-<div class="container">
 
 
 <section class="section">
@@ -167,7 +207,7 @@ Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <
 <div class="subjects">
 
 <div class="subject">📘 Valencià: Llengua i Literatura — 3 h</div>
-<div class="subject">📗 Llengua Castellana i Literatura — 3 h</div>
+<div class="subject">📗 Castellà: Llengua i Literatura — 3 h</div>
 <div class="subject">🌍 Llengua Estrangera — 3 h</div>
 <div class="subject">🏛️ Geografia i Història — 3 h</div>
 <div class="subject">🏃 Educació Física — 2 h</div>
@@ -192,11 +232,13 @@ Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <
 
 <div class="info">
 
-📘 <strong>Matemàtiques A</strong>  
-Recomanades per a alumnat que no continuarà estudiant matemàtiques, per exemple si vol cursar un cicle formatiu.
+📘 <strong>Matemàtiques A</strong><br>
+Recomanades per a alumnat que no continuarà estudiant matemàtiques, per exemple si vol cursar un <a href="fp.html"><strong>cicle formatiu</strong></a>.
 
-📗 <strong>Matemàtiques B</strong>  
-Recomanades per a qui vulga cursar <strong>Batxillerat</strong>.
+<br><br>
+
+📗 <strong>Matemàtiques B</strong><br>
+Recomanades per a qui vulga cursar <a href="bach.html"><strong>Batxillerat</strong></a>.
 
 </div>
 
@@ -237,10 +279,6 @@ Recomanades per a qui vulga cursar <strong>Batxillerat</strong>.
 
 </div>
 
-<p style="margin-top:15px;">
-Si tens dubtes consulta amb el teu <strong>tutor o tutora</strong> o amb el <strong>Departament d’Orientació</strong>.
-</p>
-
 </section>
 
 
@@ -253,13 +291,21 @@ Si tens dubtes consulta amb el teu <strong>tutor o tutora</strong> o amb el <str
 
 <div class="options">
 
-<div class="option">🎓 BATXILLERAT</div>
+<div class="option">
+<a href="bach.html">🎓 BATXILLERAT</a>
+</div>
 
-<div class="option">🛠️ FP (CICLES FORMATIUS)</div>
+<div class="option">
+<a href="fp.html">🛠️ FP (CICLES FORMATIUS)</a>
+</div>
 
-<div class="option">📚 ALTRES ESTUDIS</div>
+<div class="option">
+<a href="altres.html">📚 ALTRES ESTUDIS</a>
+</div>
 
-<div class="option">🤔 ENCARA NO SÉ QUÈ FER</div>
+<div class="option">
+🤔 ENCARA NO SÉ QUÈ FER
+</div>
 
 </div>
 
@@ -275,7 +321,7 @@ Si tens dubtes consulta amb el teu <strong>tutor o tutora</strong> o amb el <str
 
 <ul>
 
-<li>🔁 Repetir 4t ESO ordinari o cursar <strong>4t de PDC</strong> si compleixes els requisits.</li>
+<li>🔁 Repetir 4t d'ESO ordinari o cursar <strong><a href="pdc.html">4t de PDC</a></strong> si compleixes els requisits.</li>
 
 <li>🛠️ Preparar la <strong>prova d'accés a cicles d'FP</strong> si tens 17 anys o els complixes l'any que acabes 4t.</li>
 
@@ -297,7 +343,11 @@ Si tens dubtes consulta amb el teu <strong>tutor o tutora</strong> o amb el <str
 
 📘 Cursar un <strong>Cicle Formatiu de Grau Bàsic</strong>. Obtindràs el títol d'ESO i el títol de Tècnic Bàsic.
 
+<br><br>
+
 👨‍🎓 Preparar la <strong>prova lliure de l’ESO</strong> en Centres de Formació de Persones Adultes (majors de 18 anys).
+
+<br><br>
 
 💻 Obtenir el graduat d'ESO <strong>a distància</strong>.
 
