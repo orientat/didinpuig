@@ -54,7 +54,7 @@ text-align:center;
 background:#a65277;
 }
 
-/* IMÁGENES PRINCIPALES */
+/* IMÁGENES */
 
 .logo img,
 .footer img{
@@ -72,10 +72,10 @@ margin-top:20px;
 
 .header-img img{
 width:100%;
-height:260px;
-object-fit:cover;
-object-position:center;
+height:auto;
+max-height:420px;
 display:block;
+
 border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 border:1px solid #eee;
@@ -161,7 +161,7 @@ width:85%;
 }
 
 .header-img img{
-height:220px;
+max-height:360px;
 }
 
 }
@@ -173,7 +173,7 @@ grid-template-columns:repeat(3,1fr);
 }
 
 .header-img img{
-height:200px;
+max-height:300px;
 }
 
 }
@@ -194,7 +194,7 @@ justify-content:center;
 }
 
 .header-img img{
-height:160px;
+max-height:240px;
 }
 
 }
@@ -205,8 +205,6 @@ height:160px;
 
 <body>
 
-<!-- SELECTOR IDIOMA -->
-
 <div class="lang">
 <a href="index.html">Valencià</a>
 <a href="es/index.html">Castellano</a>
@@ -214,13 +212,9 @@ height:160px;
 
 <div class="wrapper">
 
-<!-- LOGO -->
-
 <div class="logo">
 <img src="logo.jpg" alt="Logo centre">
 </div>
-
-<!-- BANNER PRINCIPAL -->
 
 <div class="header-img">
 <img src="foto_orienta_val.png" alt="Orientació Acadèmica i Professional">
@@ -315,8 +309,6 @@ height:160px;
 </a>
 
 </div>
-
-<!-- FOOTER -->
 
 <div class="footer">
 <img src="footer.jpg" alt="Peu de pàgina">
