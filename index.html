@@ -60,7 +60,7 @@ margin-top:10px;
 .header-img{
 margin-top:20px;
 position:relative;
-margin-bottom:60px;
+margin-bottom:80px;
 }
 
 .header-img img{
@@ -81,8 +81,6 @@ transform:translateX(-50%);
 overflow:hidden;
 }
 
-/* imagen botón */
-
 .boton-orientaline img{
 width:320px;
 height:auto;
@@ -96,51 +94,35 @@ z-index:2;
 transform:scale(1.05);
 }
 
-/* animación flotante */
-
 @keyframes flotar{
 0%{transform:translateY(0);}
 50%{transform:translateY(-6px);}
 100%{transform:translateY(0);}
 }
 
-/* brillo */
+/* BRILLO BOTÓN */
 
 .boton-orientaline::after{
-
 content:"";
-
 position:absolute;
-
 top:0;
-
 left:-120%;
-
 width:120%;
-
 height:100%;
-
 background:linear-gradient(
 120deg,
 transparent 30%,
 rgba(255,255,255,0.6) 50%,
 transparent 70%
 );
-
 transform:skewX(-25deg);
-
 animation:brillo 4s infinite;
-
 }
 
 @keyframes brillo{
-
 0%{left:-120%;}
-
 60%{left:120%;}
-
 100%{left:120%;}
-
 }
 
 /* BOTONES LATERALES */
@@ -187,12 +169,16 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* GRID */
+/* GRID TARJETAS */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:25px;
+
+/* MÁS ESPACIO */
+
+margin-bottom:70px;
 }
 
 /* TARJETAS */
@@ -229,6 +215,17 @@ padding:8px 16px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
+}
+
+/* TEXTO ENTRE TARJETAS Y FOOTER */
+
+.creditos{
+text-align:center;
+font-size:14px;
+color:#6d2548;
+margin-bottom:40px;
+font-weight:600;
+letter-spacing:0.4px;
 }
 
 /* RESPONSIVE */
@@ -329,9 +326,7 @@ target="_blank">
 <a class="boton-orientaline"
 href="https://elorienta.com/movil//?yafxb=06651"
 target="_blank">
-
 <img src="orientaline_boto.png">
-
 </a>
 
 </div>
@@ -339,6 +334,8 @@ target="_blank">
 <h2>ORIENTACIÓ ACADÈMICA</h2>
 
 <div class="grid">
+
+<!-- TARJETAS -->
 
 <a href="transicio.html">
 <div class="card">
@@ -438,6 +435,10 @@ target="_blank">
 
 </div>
 
+<div class="creditos">
+IES Didín Puig · Orientació Acadèmica
+</div>
+
 <div class="footer">
 <img src="footer.jpg">
 </div>
@@ -451,40 +452,9 @@ window.addEventListener("scroll", function(){
 let botones = document.querySelectorAll(".orientaline-lateral");
 
 if(window.scrollY > 300){
-
 botones.forEach(b => b.classList.add("orientaline-visible"));
-
 }else{
-
 botones.forEach(b => b.classList.remove("orientaline-visible"));
-
-}
-
-});
-
-</script>
-
-</body>
-</html>
-<img src="footer.jpg">
-</div>
-
-</div>
-
-<script>
-
-window.addEventListener("scroll", function(){
-
-let botones = document.querySelectorAll(".orientaline-lateral");
-
-if(window.scrollY > 300){
-
-botones.forEach(b => b.classList.add("orientaline-visible"));
-
-}else{
-
-botones.forEach(b => b.classList.remove("orientaline-visible"));
-
 }
 
 });
