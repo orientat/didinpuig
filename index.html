@@ -350,7 +350,7 @@ target="_blank">
 
 <a href="1eso.html">
 <div class="card">
-<div class="card-icon">1️⃣</div>
+<div class="card-icon">📘</div>
 <div class="card-title">Estàs en 1r d'ESO</div>
 <div class="card-button">Guia alumnat</div>
 </div>
@@ -358,7 +358,7 @@ target="_blank">
 
 <a href="2eso.html">
 <div class="card">
-<div class="card-icon">2️⃣</div>
+<div class="card-icon">📗</div>
 <div class="card-title">Estàs en 2n d'ESO</div>
 <div class="card-button">Informació</div>
 </div>
@@ -366,7 +366,7 @@ target="_blank">
 
 <a href="3eso.html">
 <div class="card">
-<div class="card-icon">3️⃣</div>
+<div class="card-icon">📙</div>
 <div class="card-title">Estàs en 3r d'ESO</div>
 <div class="card-button">Orientació</div>
 </div>
@@ -374,7 +374,7 @@ target="_blank">
 
 <a href="4eso.html">
 <div class="card">
-<div class="card-icon">4️⃣</div>
+<div class="card-icon">🎓</div>
 <div class="card-title">Estàs en 4t d'ESO</div>
 <div class="card-button">Futur</div>
 </div>
@@ -382,7 +382,7 @@ target="_blank">
 
 <a href="pdc.html">
 <div class="card">
-<div class="card-icon">📘</div>
+<div class="card-icon">🗺️</div>
 <div class="card-title">Estàs en PDC</div>
 <div class="card-button">Programa</div>
 </div>
@@ -390,7 +390,7 @@ target="_blank">
 
 <a href="fp.html">
 <div class="card">
-<div class="card-icon">🔧</div>
+<div class="card-icon">🛠️</div>
 <div class="card-title">Coneix l'FP</div>
 <div class="card-button">Informació</div>
 </div>
@@ -422,7 +422,7 @@ target="_blank">
 
 <a href="orientafut.html">
 <div class="card">
-<div class="card-icon">🧠</div>
+<div class="card-icon">🧭</div>
 <div class="card-title">Orienta el teu futur</div>
 <div class="card-button">Tests</div>
 </div>
@@ -466,3 +466,31 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 </body>
 </html>
+<img src="footer.jpg">
+</div>
+
+</div>
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+let botones = document.querySelectorAll(".orientaline-lateral");
+
+if(window.scrollY > 300){
+
+botones.forEach(b => b.classList.add("orientaline-visible"));
+
+}else{
+
+botones.forEach(b => b.classList.remove("orientaline-visible"));
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
+
