@@ -82,34 +82,22 @@ display:inline-block;
 }
 
 .boton-orientaline::before{
-
 content:"";
-
 position:absolute;
-
 top:0;
-
 left:-150%;
-
 width:120%;
-
 height:100%;
-
 background:linear-gradient(
 120deg,
 transparent 30%,
 rgba(255,255,255,0.7) 50%,
 transparent 70%
 );
-
 transform:skewX(-25deg);
-
 animation:shine 4s infinite;
-
 z-index:3;
-
 pointer-events:none;
-
 }
 
 @keyframes shine{
@@ -217,24 +205,23 @@ font-weight:bold;
 display:inline-block;
 }
 
-/* ZONA INFERIOR */
-
-.zona-inferior{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:40px;
-}
-
-/* TEXTO ORIENTACIÓN */
+/* TEXTO DEPARTAMENTO */
 
 .creditos{
-font-size:18px;
+text-align:center;
+font-size:19px;
 color:#6d2548;
 font-weight:700;
+margin-bottom:20px;
 }
 
-/* CONTADOR NEGRO */
+/* CONTADOR */
+
+.contador-area{
+display:flex;
+justify-content:flex-end;
+margin-bottom:40px;
+}
 
 .contador-box{
 background:#000;
@@ -279,9 +266,8 @@ margin-top:10px;
 .header-img img{height:220px;}
 .boton-orientaline img{width:200px;}
 
-.zona-inferior{
-flex-direction:column;
-gap:15px;
+.contador-area{
+justify-content:center;
 }
 
 }
@@ -334,7 +320,7 @@ target="_blank">
 <h2>ORIENTACIÓ ACADÈMICA</h2>
 
 <div class="grid">
-
+<!-- TARJETAS -->
 <a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Informació</div></div></a>
 <a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia alumnat</div></div></a>
 <a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Informació</div></div></a>
@@ -347,19 +333,16 @@ target="_blank">
 <a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Opcions</div></div></a>
 <a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Tests</div></div></a>
 <a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Esquema</div></div></a>
-
 </div>
-
-<div class="zona-inferior">
 
 <div class="creditos">
 IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 </div>
 
+<div class="contador-area">
 <div class="contador-box">
 VISITES: <span id="contador">...</span>
 </div>
-
 </div>
 
 <div class="footer">
@@ -392,4 +375,3 @@ document.getElementById('contador').innerHTML = res.value;
 
 </body>
 </html>
-
