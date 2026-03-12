@@ -36,8 +36,6 @@ padding-top:15px;
 flex-wrap:wrap;
 }
 
-/* BOTONES IDIOMA */
-
 .lang a{
 background:#6d2548;
 color:white;
@@ -90,11 +88,34 @@ position:absolute;
 bottom:5px;
 left:50%;
 transform:translateX(-50%);
+display:inline-block;
+overflow:hidden;
 }
+
+/* EFECTO BRILLO */
+
+.boton-orientaline::after{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+rgba(255,255,255,0) 0%,
+rgba(255,255,255,0.7) 50%,
+rgba(255,255,255,0) 100%
+);
+animation:brillo 4s infinite;
+}
+
+/* IMAGEN BOTÓN */
 
 .boton-orientaline img{
 width:320px;
 height:auto;
+display:block;
 
 /* efecto flotante */
 animation:flotar 3s ease-in-out infinite;
@@ -124,6 +145,20 @@ transform:translateY(-6px);
 
 100%{
 transform:translateY(0px);
+}
+
+}
+
+/* ANIMACIÓN BRILLO */
+
+@keyframes brillo{
+
+0%{
+left:-75%;
+}
+
+100%{
+left:125%;
 }
 
 }
