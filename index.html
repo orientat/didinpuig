@@ -47,10 +47,9 @@ text-decoration:none;
 background:#a65277;
 }
 
-/* IMÁGENES */
+/* LOGO */
 
-.logo img,
-.footer img{
+.logo img{
 width:100%;
 margin-top:10px;
 }
@@ -79,6 +78,32 @@ bottom:5px;
 left:50%;
 transform:translateX(-50%);
 overflow:hidden;
+display:inline-block;
+}
+
+.boton-orientaline::before{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:120%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 30%,
+rgba(255,255,255,0.7) 50%,
+transparent 70%
+);
+transform:skewX(-25deg);
+animation:shine 4s infinite;
+z-index:3;
+pointer-events:none;
+}
+
+@keyframes shine{
+0%{left:-150%;}
+60%{left:150%;}
+100%{left:150%;}
 }
 
 .boton-orientaline img{
@@ -90,39 +115,10 @@ position:relative;
 z-index:2;
 }
 
-.boton-orientaline img:hover{
-transform:scale(1.05);
-}
-
 @keyframes flotar{
 0%{transform:translateY(0);}
 50%{transform:translateY(-6px);}
 100%{transform:translateY(0);}
-}
-
-/* BRILLO BOTÓN */
-
-.boton-orientaline::after{
-content:"";
-position:absolute;
-top:0;
-left:-120%;
-width:120%;
-height:100%;
-background:linear-gradient(
-120deg,
-transparent 30%,
-rgba(255,255,255,0.6) 50%,
-transparent 70%
-);
-transform:skewX(-25deg);
-animation:brillo 4s infinite;
-}
-
-@keyframes brillo{
-0%{left:-120%;}
-60%{left:120%;}
-100%{left:120%;}
 }
 
 /* BOTONES LATERALES */
@@ -132,32 +128,33 @@ position:fixed;
 top:50%;
 transform:translateY(-50%);
 z-index:999;
-opacity:0;
 pointer-events:none;
+opacity:0;
 transition:opacity .4s ease;
 }
 
-.orientaline-lateral img{
-height:420px;
-filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
-transition:transform .2s ease;
-}
-
-.orientaline-lateral img:hover{
-transform:scale(1.05);
-}
-
-.orientaline-left{
-left:10px;
-}
-
-.orientaline-right{
-right:10px;
-}
+.orientaline-left{ left:-200px; }
+.orientaline-right{ right:-200px; }
 
 .orientaline-visible{
 opacity:1;
 pointer-events:auto;
+}
+
+.orientaline-visible.orientaline-left{
+animation:slideLeft .6s forwards;
+}
+
+.orientaline-visible.orientaline-right{
+animation:slideRight .6s forwards;
+}
+
+@keyframes slideLeft{ to{ left:10px; } }
+@keyframes slideRight{ to{ right:10px; } }
+
+.orientaline-lateral img{
+height:420px;
+filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
 
 /* TITULO */
@@ -175,9 +172,6 @@ font-size:32px;
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:25px;
-
-/* MÁS ESPACIO */
-
 margin-bottom:70px;
 }
 
@@ -190,12 +184,6 @@ border-radius:28px;
 padding:20px;
 border:4px solid #6d2548;
 text-align:center;
-transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 14px 28px rgba(0,0,0,0.25);
 }
 
 .card-icon{
@@ -223,69 +211,49 @@ display:inline-block;
 text-align:center;
 font-size:14px;
 color:#6d2548;
-margin-bottom:40px;
+margin-bottom:10px;
 font-weight:600;
-letter-spacing:0.4px;
+}
+
+/* CONTADOR */
+
+.visitas{
+text-align:center;
+font-size:13px;
+color:#888;
+margin-bottom:40px;
+}
+
+/* FOOTER */
+
+.footer img{
+width:100%;
+margin-top:10px;
 }
 
 /* RESPONSIVE */
 
 @media (max-width:1200px){
-
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-
-.wrapper{
-width:85%;
-}
-
-.header-img img{
-height:320px;
-}
-
-.boton-orientaline img{
-width:260px;
-}
-
+.grid{grid-template-columns:repeat(4,1fr);}
+.wrapper{width:85%;}
+.header-img img{height:320px;}
+.boton-orientaline img{width:260px;}
 }
 
 @media (max-width:800px){
-
-.grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.header-img img{
-height:260px;
-}
-
+.grid{grid-template-columns:repeat(3,1fr);}
+.header-img img{height:260px;}
 }
 
 @media (max-width:600px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.wrapper{
-width:90%;
-}
-
-.header-img img{
-height:220px;
-}
-
-.boton-orientaline img{
-width:200px;
-}
-
+.grid{grid-template-columns:repeat(2,1fr);}
+.wrapper{width:90%;}
+.header-img img{height:220px;}
+.boton-orientaline img{width:200px;}
 }
 
 @media (max-width:900px){
-.orientaline-lateral{
-display:none;
-}
+.orientaline-lateral{display:none;}
 }
 
 </style>
@@ -293,8 +261,6 @@ display:none;
 </head>
 
 <body>
-
-<!-- BOTONES LATERALES -->
 
 <a class="orientaline-lateral orientaline-left"
 href="https://elorienta.com/movil//?yafxb=06651"
@@ -335,108 +301,27 @@ target="_blank">
 
 <div class="grid">
 
-<!-- TARJETAS -->
-
-<a href="transicio.html">
-<div class="card">
-<div class="card-icon">🏫</div>
-<div class="card-title">Transició de Primària</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="1eso.html">
-<div class="card">
-<div class="card-icon">📘</div>
-<div class="card-title">Estàs en 1r d'ESO</div>
-<div class="card-button">Guia alumnat</div>
-</div>
-</a>
-
-<a href="2eso.html">
-<div class="card">
-<div class="card-icon">📗</div>
-<div class="card-title">Estàs en 2n d'ESO</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="3eso.html">
-<div class="card">
-<div class="card-icon">📙</div>
-<div class="card-title">Estàs en 3r d'ESO</div>
-<div class="card-button">Orientació</div>
-</div>
-</a>
-
-<a href="4eso.html">
-<div class="card">
-<div class="card-icon">🎓</div>
-<div class="card-title">Estàs en 4t d'ESO</div>
-<div class="card-button">Futur</div>
-</div>
-</a>
-
-<a href="pdc.html">
-<div class="card">
-<div class="card-icon">🗺️</div>
-<div class="card-title">Estàs en PDC</div>
-<div class="card-button">Programa</div>
-</div>
-</a>
-
-<a href="fp.html">
-<div class="card">
-<div class="card-icon">🛠️</div>
-<div class="card-title">Coneix l'FP</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="bach.html">
-<div class="card">
-<div class="card-icon">🎓</div>
-<div class="card-title">Coneix el Batxillerat</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="uni.html">
-<div class="card">
-<div class="card-icon">🏛️</div>
-<div class="card-title">Coneix la Universitat</div>
-<div class="card-button">Accés</div>
-</div>
-</a>
-
-<a href="altres.html">
-<div class="card">
-<div class="card-icon">📚</div>
-<div class="card-title">Altres estudis</div>
-<div class="card-button">Opcions</div>
-</div>
-</a>
-
-<a href="orientafut.html">
-<div class="card">
-<div class="card-icon">🧭</div>
-<div class="card-title">Orienta el teu futur</div>
-<div class="card-button">Tests</div>
-</div>
-</a>
-
-<a href="sistedu.html">
-<div class="card">
-<div class="card-icon">🗂️</div>
-<div class="card-title">Sistema educatiu</div>
-<div class="card-button">Esquema</div>
-</div>
-</a>
+<a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Informació</div></div></a>
+<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia alumnat</div></div></a>
+<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Informació</div></div></a>
+<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Orientació</div></div></a>
+<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Futur</div></div></a>
+<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Programa</div></div></a>
+<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Coneix l'FP</div><div class="card-button">Informació</div></div></a>
+<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Coneix el Batxillerat</div><div class="card-button">Informació</div></div></a>
+<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Coneix la Universitat</div><div class="card-button">Accés</div></div></a>
+<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Opcions</div></div></a>
+<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Tests</div></div></a>
+<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Esquema</div></div></a>
 
 </div>
 
 <div class="creditos">
-IES Didín Puig · Departament d'Orientació Educativa i Professional
+IES Didín Puig · Orientació Acadèmica
+</div>
+
+<div class="visitas">
+Visites a esta web: <span id="contador">...</span>
 </div>
 
 <div class="footer">
@@ -459,9 +344,16 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
+/* CONTADOR VISITAS */
+
+fetch('https://api.countapi.xyz/hit/didinpuig/orientacio')
+.then(res => res.json())
+.then(res => {
+document.getElementById('contador').innerHTML = res.value;
+});
+
 </script>
 
 </body>
 </html>
-
 
