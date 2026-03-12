@@ -36,6 +36,8 @@ padding-top:15px;
 flex-wrap:wrap;
 }
 
+/* BOTONES IDIOMA */
+
 .lang a{
 background:#6d2548;
 color:white;
@@ -52,7 +54,7 @@ text-align:center;
 background:#a65277;
 }
 
-/* IMÁGENES */
+/* IMÁGENES PRINCIPALES */
 
 .logo img,
 .footer img{
@@ -67,7 +69,7 @@ margin-top:10px;
 .header-img{
 margin-top:20px;
 position:relative;
-margin-bottom:80px;
+margin-bottom:70px; /* espacio para el botón */
 }
 
 .header-img img{
@@ -85,12 +87,13 @@ border:1px solid #eee;
 
 .boton-orientaline{
 position:absolute;
-bottom:-20px;       /* un poco más arriba */
-left:45%;           /* desplazado a la izquierda */
+bottom:-40px; /* lo baja para no tapar el texto */
+left:50%;
+transform:translateX(-50%);
 }
 
 .boton-orientaline img{
-width:340px;
+width:320px; /* tamaño grande */
 height:auto;
 transition:transform .2s ease, filter .2s ease;
 }
@@ -100,7 +103,7 @@ transform:scale(1.08);
 filter:brightness(1.05);
 }
 
-/* TITULO */
+/* TITOL */
 
 h2{
 text-align:center;
@@ -109,7 +112,7 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* GRID */
+/* BOTONS */
 
 .grid{
 display:grid;
@@ -117,7 +120,7 @@ grid-template-columns:repeat(6,1fr);
 gap:25px;
 }
 
-/* TARJETAS */
+/* TARGETES */
 
 .card{
 background:#a65277;
@@ -166,21 +169,17 @@ text-decoration:none;
 
 @media (max-width:1200px){
 
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
+
 .wrapper,
 .lang{
 width:85%;
 }
 
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-
 .header-img img{
 height:320px;
-}
-
-.boton-orientaline{
-left:44%;
 }
 
 .boton-orientaline img{
@@ -199,10 +198,6 @@ grid-template-columns:repeat(3,1fr);
 height:260px;
 }
 
-.boton-orientaline{
-left:42%;
-}
-
 .boton-orientaline img{
 width:220px;
 }
@@ -210,6 +205,10 @@ width:220px;
 }
 
 @media (max-width:600px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
 
 .wrapper,
 .lang{
@@ -220,16 +219,8 @@ width:90%;
 justify-content:center;
 }
 
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
 .header-img img{
 height:220px;
-}
-
-.boton-orientaline{
-left:40%;
 }
 
 .boton-orientaline img{
@@ -269,7 +260,89 @@ width:180px;
 
 <div class="grid">
 
-<!-- tus tarjetas siguen igual -->
+<a href="transicio.html">
+<div class="card">
+<div class="card-title">Transició de Primària</div>
+<div class="card-button">Informació</div>
+</div>
+</a>
+
+<a href="1eso.html">
+<div class="card">
+<div class="card-title">Estàs en 1r d'ESO</div>
+<div class="card-button">Guia alumnat</div>
+</div>
+</a>
+
+<a href="2eso.html">
+<div class="card">
+<div class="card-title">Estàs en 2n d'ESO</div>
+<div class="card-button">Informació</div>
+</div>
+</a>
+
+<a href="3eso.html">
+<div class="card">
+<div class="card-title">Estàs en 3r d'ESO</div>
+<div class="card-button">Orientació</div>
+</div>
+</a>
+
+<a href="4eso.html">
+<div class="card">
+<div class="card-title">Estàs en 4t d'ESO</div>
+<div class="card-button">Futur</div>
+</div>
+</a>
+
+<a href="pdc.html">
+<div class="card">
+<div class="card-title">Estàs en PDC</div>
+<div class="card-button">Programa</div>
+</div>
+</a>
+
+<a href="fp.html">
+<div class="card">
+<div class="card-title">Coneix l'FP</div>
+<div class="card-button">Informació</div>
+</div>
+</a>
+
+<a href="bach.html">
+<div class="card">
+<div class="card-title">Coneix el Batxillerat</div>
+<div class="card-button">Informació</div>
+</div>
+</a>
+
+<a href="uni.html">
+<div class="card">
+<div class="card-title">Coneix la Universitat</div>
+<div class="card-button">Accés</div>
+</div>
+</a>
+
+<a href="altres.html">
+<div class="card">
+<div class="card-title">Altres estudis</div>
+<div class="card-button">Opcions</div>
+</div>
+</a>
+
+<a href="orientafut.html">
+<div class="card">
+<div class="card-title">Orienta el teu futur</div>
+<div class="card-button">Tests</div>
+</div>
+</a>
+
+<a href="sistedu.html">
+<div class="card">
+<div class="card-title">Sistema educatiu</div>
+<div class="card-button">Esquema</div>
+</div>
+</a>
 
 </div>
 
