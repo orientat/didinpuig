@@ -67,7 +67,7 @@ margin-top:10px;
 .header-img{
 margin-top:20px;
 position:relative;
-margin-bottom:80px;
+margin-bottom:70px;
 }
 
 .header-img img{
@@ -85,12 +85,14 @@ border:1px solid #eee;
 
 .boton-orientaline{
 position:absolute;
-bottom:-20px;       /* un poco más arriba */
-left:45%;           /* desplazado a la izquierda */
+bottom:-10px;             /* subir botón */
+left:50%;
+transform:translateX(-65%); /* mover hacia la izquierda */
 }
 
 .boton-orientaline img{
-width:340px;
+max-width:320px;
+width:40vw;               /* responsive */
 height:auto;
 transition:transform .2s ease, filter .2s ease;
 }
@@ -180,11 +182,7 @@ height:320px;
 }
 
 .boton-orientaline{
-left:44%;
-}
-
-.boton-orientaline img{
-width:260px;
+transform:translateX(-60%);
 }
 
 }
@@ -200,11 +198,12 @@ height:260px;
 }
 
 .boton-orientaline{
-left:42%;
+bottom:-5px;
+transform:translateX(-55%);
 }
 
 .boton-orientaline img{
-width:220px;
+width:50vw;
 }
 
 }
@@ -229,11 +228,12 @@ height:220px;
 }
 
 .boton-orientaline{
-left:40%;
+bottom:-5px;
+transform:translateX(-50%);
 }
 
 .boton-orientaline img{
-width:180px;
+width:70vw;
 }
 
 }
@@ -269,7 +269,7 @@ width:180px;
 
 <div class="grid">
 
-<!-- tus tarjetas siguen igual -->
+<!-- tus tarjetas siguen iguales -->
 
 </div>
 
@@ -281,5 +281,3 @@ width:180px;
 
 </body>
 </html>
-
-
