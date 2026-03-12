@@ -82,22 +82,34 @@ display:inline-block;
 }
 
 .boton-orientaline::before{
+
 content:"";
+
 position:absolute;
+
 top:0;
+
 left:-150%;
+
 width:120%;
+
 height:100%;
+
 background:linear-gradient(
 120deg,
 transparent 30%,
 rgba(255,255,255,0.7) 50%,
 transparent 70%
 );
+
 transform:skewX(-25deg);
+
 animation:shine 4s infinite;
+
 z-index:3;
+
 pointer-events:none;
+
 }
 
 @keyframes shine{
@@ -205,23 +217,34 @@ font-weight:bold;
 display:inline-block;
 }
 
-/* TEXTO ENTRE TARJETAS Y FOOTER */
+/* ZONA INFERIOR */
 
-.creditos{
-text-align:center;
-font-size:14px;
-color:#6d2548;
-margin-bottom:10px;
-font-weight:600;
+.zona-inferior{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
 }
 
-/* CONTADOR */
+/* TEXTO ORIENTACIÓN */
 
-.visitas{
-text-align:center;
-font-size:13px;
-color:#888;
-margin-bottom:40px;
+.creditos{
+font-size:18px;
+color:#6d2548;
+font-weight:700;
+}
+
+/* CONTADOR NEGRO */
+
+.contador-box{
+background:#000;
+color:#00ff90;
+font-family:monospace;
+font-size:18px;
+padding:8px 14px;
+border-radius:6px;
+letter-spacing:2px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -234,22 +257,33 @@ margin-top:10px;
 /* RESPONSIVE */
 
 @media (max-width:1200px){
+
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
 .header-img img{height:320px;}
 .boton-orientaline img{width:260px;}
+
 }
 
 @media (max-width:800px){
+
 .grid{grid-template-columns:repeat(3,1fr);}
 .header-img img{height:260px;}
+
 }
 
 @media (max-width:600px){
+
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
 .header-img img{height:220px;}
 .boton-orientaline img{width:200px;}
+
+.zona-inferior{
+flex-direction:column;
+gap:15px;
+}
+
 }
 
 @media (max-width:900px){
@@ -316,12 +350,16 @@ target="_blank">
 
 </div>
 
+<div class="zona-inferior">
+
 <div class="creditos">
-IES Didín Puig · Orientació Acadèmica
+IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 </div>
 
-<div class="visitas">
-Visites a esta web: <span id="contador">...</span>
+<div class="contador-box">
+VISITES: <span id="contador">...</span>
+</div>
+
 </div>
 
 <div class="footer">
@@ -343,8 +381,6 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 }
 
 });
-
-/* CONTADOR VISITAS */
 
 fetch('https://api.countapi.xyz/hit/didinpuig/orientacio')
 .then(res => res.json())
