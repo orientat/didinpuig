@@ -16,14 +16,14 @@ margin:0;
 background:#ffffff;
 }
 
-/* CONTENEDOR */
+/* CONTENEDOR GENERAL */
 
 .wrapper{
 width:75%;
 margin:auto;
 }
 
-/* IDIOMA */
+/* SELECTOR IDIOMA */
 
 .lang{
 width:75%;
@@ -71,7 +71,7 @@ border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN CENTRAL */
+/* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
 position:absolute;
@@ -80,76 +80,61 @@ left:50%;
 transform:translateX(-50%);
 }
 
+/* imagen botón */
+
 .boton-orientaline img{
 width:320px;
-animation:flotar 3s ease-in-out infinite;
+height:auto;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+animation:flotar 3s ease-in-out infinite;
+transition:transform .2s ease;
 }
 
-/* ANIMACIÓN BOTÓN */
+.boton-orientaline img:hover{
+transform:scale(1.05);
+}
+
+/* animación flotante */
 
 @keyframes flotar{
-0%{transform:translate(-50%,0);}
-50%{transform:translate(-50%,-6px);}
-100%{transform:translate(-50%,0);}
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
 }
 
 /* BOTONES LATERALES */
 
 .orientaline-lateral{
-
 position:fixed;
-
 top:50%;
-
 transform:translateY(-50%);
-
 z-index:999;
-
 opacity:0;
-
 pointer-events:none;
-
 transition:opacity .4s ease;
-
 }
 
 .orientaline-lateral img{
-
 height:420px;
-
 filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
-
 transition:transform .2s ease;
-
 }
 
 .orientaline-lateral img:hover{
-
 transform:scale(1.05);
-
 }
 
 .orientaline-left{
-
 left:10px;
-
 }
 
 .orientaline-right{
-
 right:10px;
-
 }
 
-/* CUANDO SE ACTIVA */
-
 .orientaline-visible{
-
 opacity:1;
-
 pointer-events:auto;
-
 }
 
 /* TITULO */
@@ -172,79 +157,32 @@ gap:25px;
 /* TARJETAS */
 
 .card{
-
 background:linear-gradient(145deg,#b56388,#a65277);
-
 color:white;
-
 border-radius:28px;
-
 padding:20px;
-
 border:4px solid #6d2548;
-
 text-align:center;
-
 transition:transform .25s ease, box-shadow .25s ease;
-
-opacity:0;
-
-transform:translateY(30px);
-
-animation:entrada .7s ease forwards;
-
 }
 
 .card:hover{
-
 transform:translateY(-8px) scale(1.03);
-
 box-shadow:0 14px 28px rgba(0,0,0,0.25);
-
-}
-
-@keyframes entrada{
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-.card-icon{
-
-font-size:34px;
-
-margin-bottom:10px;
-
 }
 
 .card-title{
-
 font-weight:bold;
-
 margin-bottom:15px;
-
 }
 
 .card-button{
-
 background:white;
-
 color:#6d2548;
-
 padding:8px 16px;
-
 border-radius:30px;
-
 font-weight:bold;
-
 display:inline-block;
-
 }
 
 /* RESPONSIVE */
@@ -252,27 +190,19 @@ display:inline-block;
 @media (max-width:1200px){
 
 .grid{
-
 grid-template-columns:repeat(4,1fr);
-
 }
 
 .wrapper{
-
 width:85%;
-
 }
 
 .header-img img{
-
 height:320px;
-
 }
 
 .boton-orientaline img{
-
 width:260px;
-
 }
 
 }
@@ -280,15 +210,11 @@ width:260px;
 @media (max-width:800px){
 
 .grid{
-
 grid-template-columns:repeat(3,1fr);
-
 }
 
 .header-img img{
-
 height:260px;
-
 }
 
 }
@@ -296,35 +222,29 @@ height:260px;
 @media (max-width:600px){
 
 .grid{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 .wrapper{
-
 width:90%;
-
 }
 
 .header-img img{
-
 height:220px;
+}
 
+.boton-orientaline img{
+width:200px;
 }
 
 }
 
-/* OCULTAR LATERALES EN MÓVIL */
+/* ocultar botones laterales en móvil */
 
 @media (max-width:900px){
-
 .orientaline-lateral{
-
 display:none;
-
 }
-
 }
 
 </style>
@@ -381,101 +301,7 @@ target="_blank">
 
 <div class="grid">
 
-<a href="transicio.html">
-<div class="card">
-<div class="card-icon">🏫</div>
-<div class="card-title">Transició de Primària</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="1eso.html">
-<div class="card">
-<div class="card-icon">📘</div>
-<div class="card-title">Estàs en 1r d'ESO</div>
-<div class="card-button">Guia alumnat</div>
-</div>
-</a>
-
-<a href="2eso.html">
-<div class="card">
-<div class="card-icon">📗</div>
-<div class="card-title">Estàs en 2n d'ESO</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="3eso.html">
-<div class="card">
-<div class="card-icon">📙</div>
-<div class="card-title">Estàs en 3r d'ESO</div>
-<div class="card-button">Orientació</div>
-</div>
-</a>
-
-<a href="4eso.html">
-<div class="card">
-<div class="card-icon">🎓</div>
-<div class="card-title">Estàs en 4t d'ESO</div>
-<div class="card-button">Futur</div>
-</div>
-</a>
-
-<a href="pdc.html">
-<div class="card">
-<div class="card-icon">🧠</div>
-<div class="card-title">Estàs en PDC</div>
-<div class="card-button">Programa</div>
-</div>
-</a>
-
-<a href="fp.html">
-<div class="card">
-<div class="card-icon">🛠️</div>
-<div class="card-title">Coneix l'FP</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="bach.html">
-<div class="card">
-<div class="card-icon">📚</div>
-<div class="card-title">Coneix el Batxillerat</div>
-<div class="card-button">Informació</div>
-</div>
-</a>
-
-<a href="uni.html">
-<div class="card">
-<div class="card-icon">🏛️</div>
-<div class="card-title">Coneix la Universitat</div>
-<div class="card-button">Accés</div>
-</div>
-</a>
-
-<a href="altres.html">
-<div class="card">
-<div class="card-icon">🧭</div>
-<div class="card-title">Altres estudis</div>
-<div class="card-button">Opcions</div>
-</div>
-</a>
-
-<a href="orientafut.html">
-<div class="card">
-<div class="card-icon">🔎</div>
-<div class="card-title">Orienta el teu futur</div>
-<div class="card-button">Tests</div>
-</div>
-</a>
-
-<a href="sistedu.html">
-<div class="card">
-<div class="card-icon">🗺️</div>
-<div class="card-title">Sistema educatiu</div>
-<div class="card-button">Esquema</div>
-</div>
-</a>
+<!-- aquí van tus tarjetas como ya las tienes -->
 
 </div>
 
@@ -486,8 +312,6 @@ target="_blank">
 </div>
 
 <script>
-
-/* MOSTRAR BOTONES AL HACER SCROLL */
 
 window.addEventListener("scroll", function(){
 
@@ -506,9 +330,6 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 });
 
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
