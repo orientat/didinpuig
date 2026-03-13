@@ -18,6 +18,56 @@ margin:0;
 background:#ffffff;
 }
 
+/* MENÚ SUPERIOR MODERNO */
+
+.topbar{
+
+width:100%;
+background:#6d2548;
+color:white;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:sticky;
+top:0;
+z-index:2000;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.menu{
+width:75%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 0;
+}
+
+.menu-title{
+font-weight:bold;
+font-size:18px;
+letter-spacing:1px;
+}
+
+.menu-links{
+display:flex;
+gap:25px;
+}
+
+.menu-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+transition:opacity .2s;
+}
+
+.menu-links a:hover{
+opacity:0.7;
+}
+
 /* CONTENEDOR */
 
 .wrapper{
@@ -28,8 +78,6 @@ margin:auto;
 /* IDIOMA */
 
 .lang{
-width:75%;
-margin:auto;
 display:flex;
 justify-content:flex-end;
 gap:15px;
@@ -56,28 +104,38 @@ width:100%;
 margin-top:10px;
 }
 
-/* BANNER */
+/* BANNER CON PROFUNDIDAD */
 
 .header-img{
+
 margin-top:20px;
 margin-bottom:90px;
 
 display:flex;
 flex-direction:column;
 align-items:center;
+
 position:relative;
+overflow:hidden;
 }
 
 .header-img img{
+
 width:100%;
 height:auto;
 max-height:470px;
-object-fit:cover;
+
 border-radius:12px;
-box-shadow:0 6px 18px rgba(0,0,0,0.15);
+
+box-shadow:
+0 15px 30px rgba(0,0,0,0.35),
+0 5px 10px rgba(0,0,0,0.2);
+
+transform:scale(1.02);
+
 }
 
-/* BOTÓN ORIENTALINE PROFESIONAL */
+/* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
 
@@ -90,16 +148,14 @@ display:block;
 position:relative;
 
 border-radius:14px;
-
 overflow:hidden;
 
-transition:transform .3s ease, box-shadow .3s ease;
-
+transition:transform .3s, box-shadow .3s;
 }
 
 .boton-orientaline:hover{
 transform:translateY(-4px);
-box-shadow:0 14px 25px rgba(0,0,0,0.35);
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
 
 .boton-orientaline::before{
@@ -109,12 +165,14 @@ top:0;
 left:-150%;
 width:100%;
 height:100%;
+
 background:linear-gradient(
 120deg,
 transparent 30%,
 rgba(255,255,255,0.9) 50%,
 transparent 70%
 );
+
 transform:skewX(-25deg);
 animation:shine 5s infinite;
 z-index:3;
@@ -135,8 +193,6 @@ display:block;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 
 animation:flotar 3s ease-in-out infinite;
-position:relative;
-z-index:2;
 }
 
 @keyframes flotar{
@@ -154,7 +210,7 @@ transform:translateY(-50%);
 z-index:999;
 pointer-events:none;
 opacity:0;
-transition:opacity .4s ease;
+transition:opacity .4s;
 }
 
 .orientaline-left{ left:-200px; }
@@ -199,7 +255,7 @@ gap:30px;
 margin-bottom:80px;
 }
 
-/* TARJETAS MÁS GRANDES */
+/* TARJETAS */
 
 .card{
 
@@ -221,15 +277,13 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
-transition:transform .3s ease, box-shadow .3s ease;
+transition:transform .3s, box-shadow .3s;
 }
 
 .card:hover{
 transform:translateY(-10px) scale(1.04);
 box-shadow:0 16px 30px rgba(0,0,0,0.30);
 }
-
-/* ICONO */
 
 .card-icon{
 font-size:36px;
@@ -249,7 +303,6 @@ padding:8px 18px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
-font-size:14px;
 }
 
 /* TEXTO DEPARTAMENTO */
@@ -278,7 +331,6 @@ font-size:18px;
 padding:8px 14px;
 border-radius:6px;
 letter-spacing:2px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -306,9 +358,8 @@ margin-top:-60px;
 
 .grid{grid-template-columns:repeat(3,1fr);}
 
-.boton-orientaline{
-width:240px;
-margin-top:-50px;
+.menu{
+width:90%;
 }
 
 }
@@ -323,6 +374,10 @@ width:210px;
 margin-top:-45px;
 }
 
+.menu-links{
+display:none;
+}
+
 }
 
 @media (max-width:900px){
@@ -334,6 +389,23 @@ margin-top:-45px;
 </head>
 
 <body>
+
+<div class="topbar">
+<div class="menu">
+
+<div class="menu-title">
+ORIENTACIÓ · IES DIDÍN PUIG
+</div>
+
+<div class="menu-links">
+<a href="#">ESO</a>
+<a href="#">FP</a>
+<a href="#">Batxillerat</a>
+<a href="#">Universitat</a>
+</div>
+
+</div>
+</div>
 
 <a class="orientaline-lateral orientaline-left"
 href="https://elorienta.com/movil//?yafxb=06651"
@@ -347,12 +419,12 @@ target="_blank">
 <img src="orientaline_boto_v.png">
 </a>
 
+<div class="wrapper">
+
 <div class="lang">
 <a href="index.html">Valencià</a>
 <a href="es/index.html">Castellano</a>
 </div>
-
-<div class="wrapper">
 
 <div class="logo">
 <img src="logo.jpg">
@@ -372,19 +444,32 @@ target="_blank">
 
 <h2>ORIENTACIÓ ACADÈMICA</h2>
 
+<!-- TARJETAS -->
+
 <div class="grid">
 
 <a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Informació</div></div></a>
+
 <a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia alumnat</div></div></a>
+
 <a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Informació</div></div></a>
+
 <a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Orientació</div></div></a>
+
 <a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Futur</div></div></a>
+
 <a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Programa</div></div></a>
+
 <a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Coneix l'FP</div><div class="card-button">Informació</div></div></a>
+
 <a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Coneix el Batxillerat</div><div class="card-button">Informació</div></div></a>
+
 <a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Coneix la Universitat</div><div class="card-button">Accés</div></div></a>
+
 <a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Opcions</div></div></a>
+
 <a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Tests</div></div></a>
+
 <a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Esquema</div></div></a>
 
 </div>
