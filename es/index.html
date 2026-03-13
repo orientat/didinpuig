@@ -4,7 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orientación Académica</title>
+<title>Oriéntate</title>
+
+<link rel="icon" type="image/png" href="../favicon.png">
 
 <style>
 
@@ -14,14 +16,14 @@ margin:0;
 background:#ffffff;
 }
 
-/* CONTENEDOR GENERAL */
+/* CONTENEDOR */
 
 .wrapper{
 width:75%;
 margin:auto;
 }
 
-/* SELECTOR IDIOMA */
+/* IDIOMA */
 
 .lang{
 width:75%;
@@ -30,36 +32,129 @@ display:flex;
 justify-content:flex-end;
 gap:15px;
 padding-top:15px;
-flex-wrap:wrap;
 }
-
-/* BOTONES IDIOMA */
 
 .lang a{
 background:#6d2548;
 color:white;
 padding:6px 30px;
 border-radius:25px;
-font-size:15px;
 font-weight:bold;
 text-decoration:none;
-display:inline-block;
-text-align:center;
 }
 
 .lang a:hover{
 background:#a65277;
 }
 
-/* IMÁGENES */
+/* LOGO */
 
-.logo img,
-.header-img img,
-.footer img{
+.logo img{
 width:100%;
-height:auto;
-display:block;
 margin-top:10px;
+}
+
+/* BANNER */
+
+.header-img{
+margin-top:20px;
+position:relative;
+margin-bottom:80px;
+}
+
+.header-img img{
+width:100%;
+height:470px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* BOTÓN ORIENTALINE */
+
+.boton-orientaline{
+position:absolute;
+bottom:5px;
+left:50%;
+transform:translateX(-50%);
+overflow:hidden;
+display:inline-block;
+}
+
+.boton-orientaline::before{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:120%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 30%,
+rgba(255,255,255,0.7) 50%,
+transparent 70%
+);
+transform:skewX(-25deg);
+animation:shine 4s infinite;
+z-index:3;
+pointer-events:none;
+}
+
+@keyframes shine{
+0%{left:-150%;}
+60%{left:150%;}
+100%{left:150%;}
+}
+
+.boton-orientaline img{
+width:320px;
+height:auto;
+filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+animation:flotar 3s ease-in-out infinite;
+position:relative;
+z-index:2;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+}
+
+/* BOTONES LATERALES */
+
+.orientaline-lateral{
+position:fixed;
+top:50%;
+transform:translateY(-50%);
+z-index:999;
+pointer-events:none;
+opacity:0;
+transition:opacity .4s ease;
+}
+
+.orientaline-left{ left:-200px; }
+.orientaline-right{ right:-200px; }
+
+.orientaline-visible{
+opacity:1;
+pointer-events:auto;
+}
+
+.orientaline-visible.orientaline-left{
+animation:slideLeft .6s forwards;
+}
+
+.orientaline-visible.orientaline-right{
+animation:slideRight .6s forwards;
+}
+
+@keyframes slideLeft{ to{ left:10px; } }
+@keyframes slideRight{ to{ right:10px; } }
+
+.orientaline-lateral img{
+height:420px;
+filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
 
 /* TITULO */
@@ -71,47 +166,55 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* BOTONES */
+/* GRID TARJETAS */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:25px;
+margin-bottom:70px;
 }
 
 /* TARJETAS */
 
 .card{
-background:#a65277;
+background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
 border-radius:28px;
 padding:20px;
-text-align:center;
 border:4px solid #6d2548;
-
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-
-min-height:160px;
-
-transition:transform .2s;
+text-align:center;
+transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 14px 28px rgba(0,0,0,0.25);
+filter:brightness(1.05);
+}
+
+/* ICONO TARJETA */
+
+.card-icon{
+font-size:34px;
+margin-bottom:10px;
+transition:transform .4s ease;
+}
+
+.card:hover .card-icon{
+animation:iconBounce .5s ease;
+}
+
+@keyframes iconBounce{
+0%{transform:scale(1);}
+40%{transform:scale(1.35);}
+70%{transform:scale(1.15);}
+100%{transform:scale(1.25);}
 }
 
 .card-title{
-font-size:18px;
 font-weight:bold;
 margin-bottom:15px;
-
-min-height:45px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
 }
 
 .card-button{
@@ -121,51 +224,67 @@ padding:8px 16px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
-font-size:14px;
 }
 
-a{
-text-decoration:none;
+/* TEXTO DEPARTAMENTO */
+
+.creditos{
+text-align:center;
+font-size:22px;
+color:#6d2548;
+font-weight:700;
+margin-bottom:20px;
+}
+
+/* CONTADOR */
+
+.contador-area{
+display:flex;
+justify-content:center;
+margin-bottom:40px;
+}
+
+.contador-box{
+background:#000;
+color:#00ff90;
+font-family:monospace;
+font-size:18px;
+padding:8px 14px;
+border-radius:6px;
+letter-spacing:2px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+
+.footer img{
+width:100%;
+margin-top:10px;
 }
 
 /* RESPONSIVE */
 
 @media (max-width:1200px){
-
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-
-.wrapper,
-.lang{
-width:85%;
-}
-
+.grid{grid-template-columns:repeat(4,1fr);}
+.wrapper{width:85%;}
+.header-img img{height:320px;}
+.boton-orientaline img{width:260px;}
 }
 
 @media (max-width:800px){
-
-.grid{
-grid-template-columns:repeat(3,1fr);
-}
-
+.grid{grid-template-columns:repeat(3,1fr);}
+.header-img img{height:260px;}
 }
 
 @media (max-width:600px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
+.grid{grid-template-columns:repeat(2,1fr);}
+.wrapper{width:90%;}
+.header-img img{height:220px;}
+.boton-orientaline img{width:200px;}
 }
 
-.wrapper,
-.lang{
-width:90%;
-}
-
-.lang{
-justify-content:center;
-}
-
+@media (max-width:900px){
+.orientaline-lateral{display:none;}
 }
 
 </style>
@@ -174,7 +293,17 @@ justify-content:center;
 
 <body>
 
-<!-- SELECTOR IDIOMA -->
+<a class="orientaline-lateral orientaline-left"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank">
+<img src="orientaline_boto_v.png">
+</a>
+
+<a class="orientaline-lateral orientaline-right"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank">
+<img src="orientaline_boto_v.png">
+</a>
 
 <div class="lang">
 <a href="../index.html">Valencià</a>
@@ -183,115 +312,89 @@ justify-content:center;
 
 <div class="wrapper">
 
-<!-- LOGO -->
-
 <div class="logo">
-<img src="../logo.jpg" alt="Logo centro">
+<img src="logo.jpg">
 </div>
 
-<!-- IMAGEN PRINCIPAL -->
-
 <div class="header-img">
-<img src="../foto_orienta.png" alt="Orientación Académica y Profesional">
+
+<img src="foto_orienta_val1.png">
+
+<a class="boton-orientaline"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank">
+<img src="orientaline_boto.png">
+</a>
+
 </div>
 
 <h2>ORIENTACIÓN ACADÉMICA</h2>
 
 <div class="grid">
 
-<a href="/es/transicion.html">
-<div class="card">
-<div class="card-title">Transición de Primaria</div>
-<div class="card-button">Información</div>
-</div>
-</a>
+<a href="transicion.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transición de Primaria</div><div class="card-button">Información</div></div></a>
 
-<a href="/es/1eso.html">
-<div class="card">
-<div class="card-title">Estás en 1º de ESO</div>
-<div class="card-button">Guía alumnado</div>
-</div>
-</a>
+<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º ESO</div><div class="card-button">Guía alumnado</div></div></a>
 
-<a href="/es/2eso.html">
-<div class="card">
-<div class="card-title">Estás en 2º de ESO</div>
-<div class="card-button">Información</div>
-</div>
-</a>
+<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º ESO</div><div class="card-button">Información</div></div></a>
 
-<a href="/es/3eso.html">
-<div class="card">
-<div class="card-title">Estás en 3º de ESO</div>
-<div class="card-button">Orientación</div>
-</div>
-</a>
+<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º ESO</div><div class="card-button">Orientación</div></div></a>
 
-<a href="/es/4eso.html">
-<div class="card">
-<div class="card-title">Estás en 4º de ESO</div>
-<div class="card-button">Futuro</div>
-</div>
-</a>
+<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º ESO</div><div class="card-button">Futuro</div></div></a>
 
-<a href="/es/pdc.html">
-<div class="card">
-<div class="card-title">Estás en PDC</div>
-<div class="card-button">Programa</div>
-</div>
-</a>
+<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estás en PDC</div><div class="card-button">Programa</div></div></a>
 
-<a href="/es/fp.html">
-<div class="card">
-<div class="card-title">Conoce la FP</div>
-<div class="card-button">Información</div>
-</div>
-</a>
+<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Conoce la FP</div><div class="card-button">Información</div></div></a>
 
-<a href="/es/bach.html">
-<div class="card">
-<div class="card-title">Conoce el Bachillerato</div>
-<div class="card-button">Información</div>
-</div>
-</a>
+<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Conoce el Bachillerato</div><div class="card-button">Información</div></div></a>
 
-<a href="/es/universidad.html">
-<div class="card">
-<div class="card-title">Conoce la Universidad</div>
-<div class="card-button">Acceso</div>
-</div>
-</a>
+<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceso</div></div></a>
 
-<a href="/es/otros.html">
-<div class="card">
-<div class="card-title">Otros estudios</div>
-<div class="card-button">Opciones</div>
-</div>
-</a>
+<a href="otros.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Opciones</div></div></a>
 
-<a href="/es/orientafuturo.html">
-<div class="card">
-<div class="card-title">Orienta tu futuro</div>
-<div class="card-button">Tests</div>
-</div>
-</a>
+<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta tu futuro</div><div class="card-button">Tests</div></div></a>
 
-<a href="/es/sistemaeducativo.html">
-<div class="card">
-<div class="card-title">Sistema educativo</div>
-<div class="card-button">Esquema</div>
-</div>
-</a>
+<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educativo</div><div class="card-button">Esquema</div></div></a>
 
 </div>
 
-<!-- FOOTER -->
+<div class="creditos">
+IES Didín Puig · Departamento de Orientación Académica y Profesional
+</div>
+
+<div class="contador-area">
+<div class="contador-box">
+VISITAS: <span id="contador">...</span>
+</div>
+</div>
 
 <div class="footer">
-<img src="../footer.jpg" alt="Pie de página">
+<img src="footer.jpg">
 </div>
 
 </div>
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+let botones = document.querySelectorAll(".orientaline-lateral");
+
+if(window.scrollY > 300){
+botones.forEach(b => b.classList.add("orientaline-visible"));
+}else{
+botones.forEach(b => b.classList.remove("orientaline-visible"));
+}
+
+});
+
+fetch('https://api.countapi.xyz/hit/didinpuig/orientacion')
+.then(res => res.json())
+.then(res => {
+document.getElementById('contador').innerHTML = res.value;
+});
+
+</script>
 
 </body>
 </html>
