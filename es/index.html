@@ -186,6 +186,13 @@ border-radius:28px;
 padding:20px;
 border:4px solid #6d2548;
 text-align:center;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+min-height:160px;
+
 transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
 }
 
@@ -217,6 +224,11 @@ animation:iconBounce .5s ease;
 .card-title{
 font-weight:bold;
 margin-bottom:15px;
+min-height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
 .card-button{
@@ -276,7 +288,6 @@ margin-top:10px;
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
 .header-img img{height:260px;}
-.boton-orientaline{max-width:220px;}
 }
 
 @media (max-width:600px){
