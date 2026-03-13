@@ -193,9 +193,26 @@ transform:translateY(-10px) scale(1.04);
 box-shadow:0 16px 30px rgba(0,0,0,0.30);
 }
 
+/* ICONO */
+
 .card-icon{
 font-size:36px;
 margin-bottom:12px;
+display:inline-block;
+transition:transform .3s ease;
+}
+
+/* ANIMACIÓN ICONO */
+
+.card:hover .card-icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 .card-title{
@@ -222,7 +239,7 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-/* CONTADOR LED */
+/* CONTADOR */
 
 .contador-area{
 display:flex;
@@ -350,8 +367,6 @@ VISITES: <span id="busuanzi_value_page_pv">000000</span>
 
 <script>
 
-/* botones laterales */
-
 window.addEventListener("scroll", function(){
 
 let botones = document.querySelectorAll(".orientaline-lateral");
@@ -364,7 +379,7 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
-/* contador animado robusto */
+/* contador animado */
 
 function iniciarContador(){
 
@@ -395,8 +410,6 @@ el.innerText=Math.floor(actual).toString().padStart(6,"0");
 
 }
 
-/* esperar a que busuanzi cargue */
-
 let check=setInterval(function(){
 
 let el=document.getElementById("busuanzi_value_page_pv");
@@ -415,6 +428,5 @@ iniciarContador();
 
 </body>
 </html>
-
 
 
