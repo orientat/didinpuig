@@ -8,7 +8,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- CONTADOR VISITAS COMPATIBLE GITHUB -->
+<!-- CONTADOR VISITES GITHUB -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <style>
@@ -73,7 +73,7 @@ border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN ORIENTALINE RESPONSIVE CORRECTO */
+/* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
 position:absolute;
@@ -81,7 +81,7 @@ bottom:5px;
 left:50%;
 transform:translateX(-50%);
 display:block;
-overflow:hidden;
+overflow:visible;
 }
 
 .boton-orientaline::before{
@@ -111,9 +111,10 @@ pointer-events:none;
 
 .boton-orientaline img{
 width:320px;
-max-width:90vw;
+max-width:100%;
 height:auto;
 display:block;
+
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
 position:relative;
@@ -294,7 +295,6 @@ margin-top:10px;
 
 .boton-orientaline img{
 width:240px;
-max-width:85vw;
 }
 }
 
