@@ -234,10 +234,10 @@ margin-bottom:40px;
 background:#020202;
 color:#00ff90;
 font-family:"Courier New", monospace;
-font-size:30px;
-padding:16px 32px;
+font-size:32px;
+padding:16px 36px;
 border-radius:10px;
-letter-spacing:8px;
+letter-spacing:10px;
 
 box-shadow:
 0 0 8px #00ff90,
@@ -350,6 +350,8 @@ VISITES: <span id="busuanzi_value_page_pv">000000</span>
 
 <script>
 
+/* botones laterales */
+
 window.addEventListener("scroll", function(){
 
 let botones = document.querySelectorAll(".orientaline-lateral");
@@ -362,40 +364,52 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
-/* animación contador */
+/* contador animado robusto */
 
-function animarContador(){
+function iniciarContador(){
 
 let el=document.getElementById("busuanzi_value_page_pv");
 
-let final=parseInt(el.innerText.replace(/\D/g,''))||0;
+let valor=parseInt(el.innerText);
+
+if(!valor) return;
 
 let actual=0;
 
-let duracion=1000;
+let pasos=50;
 
-let pasos=60;
-
-let incremento=final/pasos;
+let incremento=valor/pasos;
 
 let intervalo=setInterval(function(){
 
 actual+=incremento;
 
-if(actual>=final){
-
-actual=final;
+if(actual>=valor){
+actual=valor;
 clearInterval(intervalo);
-
 }
 
 el.innerText=Math.floor(actual).toString().padStart(6,"0");
 
-},duracion/pasos);
+},20);
 
 }
 
-setTimeout(animarContador,1200);
+/* esperar a que busuanzi cargue */
+
+let check=setInterval(function(){
+
+let el=document.getElementById("busuanzi_value_page_pv");
+
+if(el && el.innerText && parseInt(el.innerText)>0){
+
+clearInterval(check);
+
+iniciarContador();
+
+}
+
+},200);
 
 </script>
 
