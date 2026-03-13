@@ -8,7 +8,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- CONTADOR VISITES COMPATIBLE GITHUB -->
+<!-- CONTADOR VISITAS GITHUB -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <style>
@@ -83,6 +83,8 @@ transform:translateX(-50%);
 width:320px;
 max-width:90vw;
 display:block;
+
+position:relative; /* ESTA ES LA CLAVE */
 }
 
 .boton-orientaline img{
@@ -94,7 +96,7 @@ filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
 }
 
-/* efecto brillo */
+/* EFECTO BRILLO */
 
 .boton-orientaline::before{
 content:"";
@@ -205,23 +207,9 @@ box-shadow:0 14px 28px rgba(0,0,0,0.25);
 filter:brightness(1.05);
 }
 
-/* ICONO TARJETA */
-
 .card-icon{
 font-size:36px;
 margin-bottom:12px;
-transition:transform .4s ease;
-}
-
-.card:hover .card-icon{
-animation:iconBounce .5s ease;
-}
-
-@keyframes iconBounce{
-0%{transform:scale(1);}
-40%{transform:scale(1.35);}
-70%{transform:scale(1.15);}
-100%{transform:scale(1.25);}
 }
 
 .card-title{
@@ -264,7 +252,6 @@ font-size:18px;
 padding:8px 14px;
 border-radius:6px;
 letter-spacing:2px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -343,55 +330,3 @@ target="_blank">
 </div>
 
 <h2>ORIENTACIÓ ACADÈMICA</h2>
-
-<div class="grid">
-
-<a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Informació</div></div></a>
-<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia alumnat</div></div></a>
-<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Informació</div></div></a>
-<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Orientació</div></div></a>
-<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Futur</div></div></a>
-<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Programa</div></div></a>
-<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Coneix l'FP</div><div class="card-button">Informació</div></div></a>
-<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Coneix el Batxillerat</div><div class="card-button">Informació</div></div></a>
-<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Coneix la Universitat</div><div class="card-button">Accés</div></div></a>
-<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Opcions</div></div></a>
-<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Tests</div></div></a>
-<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Esquema</div></div></a>
-
-</div>
-
-<div class="creditos">
-IES Didín Puig · Departament d'Orientació Acadèmica i Professional
-</div>
-
-<div class="contador-area">
-<div class="contador-box">
-VISITES: <span id="busuanzi_value_page_pv">...</span>
-</div>
-</div>
-
-<div class="footer">
-<img src="footer.jpg">
-</div>
-
-</div>
-
-<script>
-
-window.addEventListener("scroll", function(){
-
-let botones = document.querySelectorAll(".orientaline-lateral");
-
-if(window.scrollY > 300){
-botones.forEach(b => b.classList.add("orientaline-visible"));
-}else{
-botones.forEach(b => b.classList.remove("orientaline-visible"));
-}
-
-});
-
-</script>
-
-</body>
-</html>
