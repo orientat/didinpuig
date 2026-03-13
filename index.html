@@ -8,8 +8,6 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 <style>
 
 body{
@@ -61,7 +59,6 @@ margin-top:10px;
 .header-img{
 margin-top:20px;
 margin-bottom:90px;
-
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -131,9 +128,7 @@ pointer-events:none;
 width:100%;
 height:auto;
 display:block;
-
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
-
 animation:flotar 3s ease-in-out infinite;
 position:relative;
 z-index:2;
@@ -202,25 +197,17 @@ margin-bottom:80px;
 /* TARJETAS */
 
 .card{
-
 background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
-
 border-radius:30px;
-
 padding:30px 20px;
-
 border:4px solid #6d2548;
-
 text-align:center;
-
 min-height:170px;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 transition:transform .3s ease, box-shadow .3s ease;
 }
 
@@ -271,12 +258,18 @@ margin-bottom:40px;
 .contador-box{
 background:#000;
 color:#00ff90;
-font-family:monospace;
-font-size:18px;
-padding:8px 14px;
-border-radius:6px;
-letter-spacing:2px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+font-family:"Courier New", monospace;
+font-size:14px;
+text-align:center;
+padding:10px 20px;
+border-radius:8px;
+box-shadow:0 6px 12px rgba(0,0,0,0.4);
+}
+
+#contador{
+font-size:26px;
+letter-spacing:4px;
+margin-top:5px;
 }
 
 /* FOOTER */
@@ -333,18 +326,6 @@ margin-top:-45px;
 
 <body>
 
-<a class="orientaline-lateral orientaline-left"
-href="https://elorienta.com/movil//?yafxb=06651"
-target="_blank">
-<img src="orientaline_boto_v.png">
-</a>
-
-<a class="orientaline-lateral orientaline-right"
-href="https://elorienta.com/movil//?yafxb=06651"
-target="_blank">
-<img src="orientaline_boto_v.png">
-</a>
-
 <div class="lang">
 <a href="index.html">Valencià</a>
 <a href="es/index.html">Castellano</a>
@@ -391,57 +372,18 @@ target="_blank">
 IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 </div>
 
-.contador-box{
-
-background:#000;
-color:#00ff90;
-
-font-family:"Courier New", monospace;
-
-font-size:14px;
-text-align:center;
-
-padding:10px 20px;
-
-border-radius:8px;
-
-box-shadow:0 6px 12px rgba(0,0,0,0.4);
-
-}
-
-#contador{
-
-font-size:26px;
-letter-spacing:4px;
-
-margin-top:5px;
-
-}
+<div class="contador-area">
+<div class="contador-box">
+VISITES
+<div id="contador">000000</div>
+</div>
+</div>
 
 <div class="footer">
 <img src="footer.jpg">
 </div>
 
 </div>
-
-<script>
-
-window.addEventListener("scroll", function(){
-
-let botones = document.querySelectorAll(".orientaline-lateral");
-
-if(window.scrollY > 300){
-botones.forEach(b => b.classList.add("orientaline-visible"));
-}else{
-botones.forEach(b => b.classList.remove("orientaline-visible"));
-}
-
-});
-
-</script>
-
-</body>
-</html>
 
 <script>
 
@@ -460,3 +402,5 @@ visitas.toString().padStart(6,"0");
 
 </script>
 
+</body>
+</html>
