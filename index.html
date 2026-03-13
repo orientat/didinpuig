@@ -83,16 +83,17 @@ transform:translateX(-50%);
 width:320px;
 max-width:85%;
 display:inline-block;
-overflow:hidden;
 }
 
-.boton-orientaline::before{
-content:"";
+.boton-orientaline{
 position:absolute;
-top:0;
-left:-150%;
-width:100%;
-height:100%;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+width:320px;
+max-width:85%;
+display:inline-block;
+}
 background:linear-gradient(
 120deg,
 transparent 30%,
@@ -384,6 +385,7 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 </body>
 </html>
+
 
 
 
