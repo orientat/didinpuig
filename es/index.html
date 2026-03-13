@@ -6,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oriéntate</title>
 
-<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
-<!-- CONTADOR DE VISITAS -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <style>
@@ -19,14 +18,10 @@ margin:0;
 background:#ffffff;
 }
 
-/* CONTENEDOR */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* IDIOMA */
 
 .lang{
 width:75%;
@@ -50,40 +45,43 @@ text-decoration:none;
 background:#a65277;
 }
 
-/* LOGO */
-
 .logo img{
 width:100%;
 margin-top:10px;
 }
 
-/* BANNER */
-
 .header-img{
 margin-top:20px;
+margin-bottom:90px;
+display:flex;
+flex-direction:column;
+align-items:center;
 position:relative;
-margin-bottom:80px;
 }
 
 .header-img img{
 width:100%;
-height:470px;
+height:auto;
+max-height:470px;
 object-fit:cover;
 border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN ORIENTALINE */
-
 .boton-orientaline{
-position:absolute;
-bottom:5px;
-left:50%;
-transform:translateX(-50%);
+margin-top:-95px;
+width:340px;
+max-width:80%;
+display:block;
+position:relative;
+border-radius:14px;
 overflow:hidden;
-display:inline-block;
-width:100%;
-max-width:320px;
+transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.boton-orientaline:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 25px rgba(0,0,0,0.35);
 }
 
 .boton-orientaline::before{
@@ -91,16 +89,16 @@ content:"";
 position:absolute;
 top:0;
 left:-150%;
-width:120%;
+width:100%;
 height:100%;
 background:linear-gradient(
 120deg,
 transparent 30%,
-rgba(255,255,255,0.7) 50%,
+rgba(255,255,255,0.9) 50%,
 transparent 70%
 );
 transform:skewX(-25deg);
-animation:shine 4s infinite;
+animation:shine 5s infinite;
 z-index:3;
 pointer-events:none;
 }
@@ -114,6 +112,7 @@ pointer-events:none;
 .boton-orientaline img{
 width:100%;
 height:auto;
+display:block;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
 position:relative;
@@ -125,8 +124,6 @@ z-index:2;
 50%{transform:translateY(-6px);}
 100%{transform:translateY(0);}
 }
-
-/* BOTONES LATERALES */
 
 .orientaline-lateral{
 position:fixed;
@@ -162,8 +159,6 @@ height:420px;
 filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
 
-/* TITULO */
-
 h2{
 text-align:center;
 margin:40px 0;
@@ -171,98 +166,66 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* GRID TARJETAS */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
-gap:25px;
-margin-bottom:70px;
+gap:30px;
+margin-bottom:80px;
 }
-
-/* TARJETAS */
 
 .card{
 background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
-border-radius:28px;
-padding:20px;
+border-radius:30px;
+padding:30px 20px;
 border:4px solid #6d2548;
 text-align:center;
-
+min-height:170px;
 display:flex;
 flex-direction:column;
-justify-content:space-between;
-
-min-height:160px;
-
+justify-content:center;
+align-items:center;
 transition:transform .3s ease, box-shadow .3s ease;
-position:relative;
-overflow:hidden;
-}
-
-/* iluminación suave */
-
-.card::after{
-content:"";
-position:absolute;
-top:-120%;
-left:-120%;
-width:200%;
-height:200%;
-background:radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%);
-opacity:0;
-transition:opacity .4s ease;
-}
-
-.card:hover::after{
-opacity:1;
 }
 
 .card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 14px 28px rgba(0,0,0,0.25);
+transform:translateY(-10px) scale(1.04);
+box-shadow:0 16px 30px rgba(0,0,0,0.30);
 }
 
-/* ICONO TARJETA */
-
 .card-icon{
-font-size:34px;
-margin-bottom:10px;
-transition:transform .4s ease;
+font-size:36px;
+margin-bottom:12px;
+display:inline-block;
+transition:transform .3s ease;
 }
 
 .card:hover .card-icon{
-animation:iconBounce .5s ease;
+animation:iconMove .6s ease;
 }
 
-@keyframes iconBounce{
-0%{transform:scale(1);}
-40%{transform:scale(1.35);}
-70%{transform:scale(1.15);}
-100%{transform:scale(1.25);}
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 .card-title{
 font-weight:bold;
-margin-bottom:15px;
-min-height:40px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+margin-bottom:14px;
+font-size:15px;
 }
 
 .card-button{
 background:white;
 color:#6d2548;
-padding:8px 16px;
+padding:8px 18px;
 border-radius:30px;
 font-weight:bold;
 display:inline-block;
+font-size:14px;
 }
-
-/* TEXTO DEPARTAMENTO */
 
 .creditos{
 text-align:center;
@@ -272,8 +235,6 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-/* CONTADOR */
-
 .contador-area{
 display:flex;
 justify-content:center;
@@ -281,42 +242,41 @@ margin-bottom:40px;
 }
 
 .contador-box{
-background:#000;
+background:#1e1e1e;
 color:#00ff90;
-font-family:monospace;
-font-size:18px;
-padding:8px 14px;
-border-radius:6px;
-letter-spacing:2px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
+font-family:"Courier New", monospace;
+font-size:16px;
+padding:8px 18px;
+border-radius:5px;
+letter-spacing:5px;
 
-/* FOOTER */
+box-shadow:
+0 0 2px #00ff90,
+0 0 5px #00ff90,
+inset 0 0 5px rgba(0,255,144,0.3);
+
+text-shadow:
+0 0 4px #00ff90,
+0 0 10px #00ff90;
+}
 
 .footer img{
 width:100%;
 margin-top:10px;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:1200px){
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
-.header-img img{height:320px;}
-.boton-orientaline{max-width:260px;}
 }
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
-.header-img img{height:260px;}
 }
 
 @media (max-width:600px){
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
-.header-img img{height:220px;}
-.boton-orientaline{max-width:180px;}
 }
 
 @media (max-width:900px){
@@ -332,34 +292,34 @@ margin-top:10px;
 <a class="orientaline-lateral orientaline-left"
 href="https://elorienta.com/movil//?yafxb=06651"
 target="_blank">
-<img src="../orientaline_boto_v.png">
+<img src="orientaline_boto_v.png">
 </a>
 
 <a class="orientaline-lateral orientaline-right"
 href="https://elorienta.com/movil//?yafxb=06651"
 target="_blank">
-<img src="../orientaline_boto_v.png">
+<img src="orientaline_boto_v.png">
 </a>
 
 <div class="lang">
-<a href="../index.html">Valencià</a>
+<a href="../index.html">Valenciano</a>
 <a href="index.html">Castellano</a>
 </div>
 
 <div class="wrapper">
 
 <div class="logo">
-<img src="../logo.jpg">
+<img src="logo.jpg">
 </div>
 
 <div class="header-img">
 
-<img src="../foto_orienta_cast1.png">
+<img src="foto_orienta_cast_1.png">
 
 <a class="boton-orientaline"
 href="https://elorienta.com/movil//?yafxb=06651"
 target="_blank">
-<img src="../orientaline_boton.png">
+<img src="orientaline_boton.png">
 </a>
 
 </div>
@@ -368,15 +328,15 @@ target="_blank">
 
 <div class="grid">
 
-<a href="transicion.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transición de Primaria</div><div class="card-button">Información</div></div></a>
+<a href="transicion.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transición desde Primaria</div><div class="card-button">Información</div></div></a>
 
-<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º ESO</div><div class="card-button">Guía alumnado</div></div></a>
+<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º de ESO</div><div class="card-button">Guía del alumnado</div></div></a>
 
-<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º ESO</div><div class="card-button">Información</div></div></a>
+<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º de ESO</div><div class="card-button">Información</div></div></a>
 
-<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º ESO</div><div class="card-button">Orientación</div></div></a>
+<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º de ESO</div><div class="card-button">Orientación</div></div></a>
 
-<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º ESO</div><div class="card-button">Futuro</div></div></a>
+<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º de ESO</div><div class="card-button">Tu futuro</div></div></a>
 
 <a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estás en PDC</div><div class="card-button">Programa</div></div></a>
 
@@ -386,7 +346,7 @@ target="_blank">
 
 <a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceso</div></div></a>
 
-<a href="otros.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Opciones</div></div></a>
+<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Opciones</div></div></a>
 
 <a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta tu futuro</div><div class="card-button">Tests</div></div></a>
 
@@ -400,12 +360,12 @@ IES Didín Puig · Departamento de Orientación Académica y Profesional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITAS: <span id="busuanzi_value_site_pv">0</span>
+VISITAS: <span id="busuanzi_value_page_pv">000000</span>
 </div>
 </div>
 
 <div class="footer">
-<img src="../footer.jpg">
+<img src="footer.jpg">
 </div>
 
 </div>
@@ -423,6 +383,49 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 }
 
 });
+
+function iniciarContador(){
+
+let el=document.getElementById("busuanzi_value_page_pv");
+
+let valor=parseInt(el.innerText);
+
+if(!valor) return;
+
+let actual=0;
+
+let pasos=50;
+
+let incremento=valor/pasos;
+
+let intervalo=setInterval(function(){
+
+actual+=incremento;
+
+if(actual>=valor){
+actual=valor;
+clearInterval(intervalo);
+}
+
+el.innerText=Math.floor(actual).toString().padStart(6,"0");
+
+},20);
+
+}
+
+let check=setInterval(function(){
+
+let el=document.getElementById("busuanzi_value_page_pv");
+
+if(el && el.innerText && parseInt(el.innerText)>0){
+
+clearInterval(check);
+
+iniciarContador();
+
+}
+
+},200);
 
 </script>
 
