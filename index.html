@@ -8,6 +8,9 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
+<!-- CONTADOR VISITES -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <style>
 
 body{
@@ -353,7 +356,7 @@ IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITES: <span id="contador">...</span>
+VISITES: <span id="busuanzi_value_page_pv">...</span>
 </div>
 </div>
 
@@ -377,15 +380,8 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
-fetch('https://api.countapi.xyz/hit/didinpuig/orientacio')
-.then(res => res.json())
-.then(res => {
-document.getElementById('contador').innerHTML = res.value;
-});
-
 </script>
 
 </body>
 </html>
-
 
