@@ -8,6 +8,9 @@
 
 <link rel="icon" type="image/png" href="../favicon.png">
 
+<!-- CONTADOR DE VISITAS -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <style>
 
 body{
@@ -269,12 +272,11 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-/* CONTADORES */
+/* CONTADOR */
 
 .contador-area{
 display:flex;
 justify-content:center;
-gap:20px;
 margin-bottom:40px;
 }
 
@@ -356,8 +358,7 @@ target="_blank">
 
 <a class="boton-orientaline"
 href="https://elorienta.com/movil//?yafxb=06651"
-target="_blank"
-onclick="contarClick()">
+target="_blank">
 <img src="../orientaline_boton.png">
 </a>
 
@@ -368,16 +369,27 @@ onclick="contarClick()">
 <div class="grid">
 
 <a href="transicion.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transición de Primaria</div><div class="card-button">Información</div></div></a>
+
 <a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º ESO</div><div class="card-button">Guía alumnado</div></div></a>
+
 <a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º ESO</div><div class="card-button">Información</div></div></a>
+
 <a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º ESO</div><div class="card-button">Orientación</div></div></a>
+
 <a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º ESO</div><div class="card-button">Futuro</div></div></a>
+
 <a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estás en PDC</div><div class="card-button">Programa</div></div></a>
+
 <a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Conoce la FP</div><div class="card-button">Información</div></div></a>
+
 <a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Conoce el Bachillerato</div><div class="card-button">Información</div></div></a>
+
 <a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceso</div></div></a>
+
 <a href="otros.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Opciones</div></div></a>
+
 <a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta tu futuro</div><div class="card-button">Tests</div></div></a>
+
 <a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educativo</div><div class="card-button">Esquema</div></div></a>
 
 </div>
@@ -388,11 +400,7 @@ IES Didín Puig · Departamento de Orientación Académica y Profesional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITAS: <span id="contador_visitas">...</span>
-</div>
-
-<div class="contador-box">
-CLICS ORIENTALINE: <span id="contador_clicks">...</span>
+VISITAS: <span id="busuanzi_value_site_pv">0</span>
 </div>
 </div>
 
@@ -403,8 +411,6 @@ CLICS ORIENTALINE: <span id="contador_clicks">...</span>
 </div>
 
 <script>
-
-/* BOTONES LATERALES */
 
 window.addEventListener("scroll", function(){
 
@@ -417,28 +423,6 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 }
 
 });
-
-/* CONTADOR VISITAS (anti caché github) */
-
-fetch('https://api.countapi.xyz/hit/didinpuig/orientacion?nocache=' + new Date().getTime())
-.then(res => res.json())
-.then(res => {
-document.getElementById('contador_visitas').innerHTML = res.value;
-});
-
-/* MOSTRAR CLICS ORIENTALINE */
-
-fetch('https://api.countapi.xyz/get/didinpuig/orientaline')
-.then(res => res.json())
-.then(res => {
-document.getElementById('contador_clicks').innerHTML = res.value || 0;
-});
-
-/* CONTAR CLIC */
-
-function contarClick(){
-fetch('https://api.countapi.xyz/hit/didinpuig/orientaline');
-}
 
 </script>
 
