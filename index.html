@@ -8,6 +8,8 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <style>
 
 body{
@@ -75,7 +77,7 @@ border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN ORIENTALINE */
+/* BOTÓN ORIENTALINE PROFESIONAL */
 
 .boton-orientaline{
 
@@ -197,7 +199,7 @@ gap:30px;
 margin-bottom:80px;
 }
 
-/* TARJETAS */
+/* TARJETAS MÁS GRANDES */
 
 .card{
 
@@ -260,7 +262,7 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-/* CONTADOR LED */
+/* CONTADOR */
 
 .contador-area{
 display:flex;
@@ -271,12 +273,12 @@ margin-bottom:40px;
 .contador-box{
 background:#000;
 color:#00ff90;
-font-family:"Courier New", monospace;
-font-size:22px;
-padding:10px 20px;
-border-radius:8px;
-letter-spacing:4px;
-box-shadow:0 0 10px #00ff90 inset, 0 0 10px rgba(0,0,0,0.4);
+font-family:monospace;
+font-size:18px;
+padding:8px 14px;
+border-radius:6px;
+letter-spacing:2px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -372,7 +374,18 @@ target="_blank">
 
 <div class="grid">
 
-<!-- tus tarjetas intactas -->
+<a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Informació</div></div></a>
+<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia alumnat</div></div></a>
+<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Informació</div></div></a>
+<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Orientació</div></div></a>
+<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Futur</div></div></a>
+<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Programa</div></div></a>
+<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Coneix l'FP</div><div class="card-button">Informació</div></div></a>
+<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Coneix el Batxillerat</div><div class="card-button">Informació</div></div></a>
+<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Coneix la Universitat</div><div class="card-button">Accés</div></div></a>
+<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Opcions</div></div></a>
+<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Tests</div></div></a>
+<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Esquema</div></div></a>
 
 </div>
 
@@ -382,7 +395,7 @@ IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITES: <span id="contador">000000</span>
+VISITES: <span id="busuanzi_value_page_pv"></span>
 </div>
 </div>
 
@@ -393,8 +406,6 @@ VISITES: <span id="contador">000000</span>
 </div>
 
 <script>
-
-/* BOTONES LATERALES */
 
 window.addEventListener("scroll", function(){
 
@@ -408,32 +419,8 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
-/* CONTADOR GLOBAL */
-
-fetch("https://api.countapi.xyz/hit/didinpuig/orientacio")
-.then(res => res.json())
-.then(res => {
-
-let final = res.value;
-let actual = 0;
-
-let contador = document.getElementById("contador");
-
-let anim = setInterval(function(){
-
-actual++;
-
-contador.innerText = actual.toString().padStart(6,"0");
-
-if(actual >= final){
-clearInterval(anim);
-}
-
-},15);
-
-});
-
 </script>
 
 </body>
 </html>
+
