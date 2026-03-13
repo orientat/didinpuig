@@ -79,6 +79,8 @@ left:50%;
 transform:translateX(-50%);
 overflow:hidden;
 display:inline-block;
+width:100%;
+max-width:320px;
 }
 
 .boton-orientaline::before{
@@ -107,7 +109,7 @@ pointer-events:none;
 }
 
 .boton-orientaline img{
-width:320px;
+width:100%;
 height:auto;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
@@ -181,16 +183,36 @@ margin-bottom:70px;
 background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
 border-radius:28px;
-padding:20px;
+padding:22px;
 border:4px solid #6d2548;
 text-align:center;
-transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
+transition:transform .25s ease, box-shadow .25s ease;
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+position:relative;
+overflow:hidden;
 }
 
 .card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 14px 28px rgba(0,0,0,0.25);
-filter:brightness(1.05);
+transform:translateY(-10px);
+box-shadow:0 18px 35px rgba(0,0,0,0.30);
+}
+
+/* brillo suave tarjeta */
+
+.card::after{
+content:"";
+position:absolute;
+top:-120%;
+left:-120%;
+width:200%;
+height:200%;
+background:radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%);
+opacity:0;
+transition:opacity .4s ease;
+}
+
+.card:hover::after{
+opacity:1;
 }
 
 /* ICONO TARJETA */
@@ -268,19 +290,20 @@ margin-top:10px;
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
 .header-img img{height:320px;}
-.boton-orientaline img{width:260px;}
+.boton-orientaline{max-width:260px;}
 }
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
 .header-img img{height:260px;}
+.boton-orientaline{max-width:220px;}
 }
 
 @media (max-width:600px){
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
 .header-img img{height:220px;}
-.boton-orientaline img{width:200px;}
+.boton-orientaline{max-width:180px;}
 }
 
 @media (max-width:900px){
@@ -346,9 +369,9 @@ target="_blank">
 
 <a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Conoce la FP</div><div class="card-button">Información</div></div></a>
 
-<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Conoce el Bachillerato</div><div class="card-button">Información</div></div></a>
+<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title"><span style="font-size:14px;">Conoce</span><br>Bachillerato</div><div class="card-button">Información</div></div></a>
 
-<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceso</div></div></a>
+<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title"><span style="font-size:14px;">Conoce</span><br>Universidad</div><div class="card-button">Acceso</div></div></a>
 
 <a href="otros.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Opciones</div></div></a>
 
