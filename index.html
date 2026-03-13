@@ -77,12 +77,11 @@ box-shadow:0 6px 18px rgba(0,0,0,0.15);
 
 .boton-orientaline{
 position:absolute;
-bottom:5px;
+bottom:-25px;
 left:50%;
 transform:translateX(-50%);
-overflow:hidden;
-display:inline-block;
-width:100%;
+display:block;
+width:90%;
 max-width:320px;
 }
 
@@ -114,6 +113,7 @@ pointer-events:none;
 .boton-orientaline img{
 width:100%;
 height:auto;
+display:block;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
 position:relative;
@@ -386,3 +386,4 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 </body>
 </html>
+
