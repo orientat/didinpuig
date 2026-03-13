@@ -8,9 +8,6 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- CONTADOR VISITES -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 <style>
 
 body{
@@ -73,16 +70,15 @@ border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN ORIENTALINE RESPONSIVE */
+/* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
 position:absolute;
-bottom:-25px;
+bottom:5px;
 left:50%;
 transform:translateX(-50%);
-display:block;
-width:90%;
-max-width:320px;
+overflow:hidden;
+display:inline-block;
 }
 
 .boton-orientaline::before{
@@ -111,9 +107,8 @@ pointer-events:none;
 }
 
 .boton-orientaline img{
-width:100%;
+width:320px;
 height:auto;
-display:block;
 filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 animation:flotar 3s ease-in-out infinite;
 position:relative;
@@ -273,7 +268,7 @@ margin-top:10px;
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
 .header-img img{height:320px;}
-.boton-orientaline{max-width:260px;}
+.boton-orientaline img{width:260px;}
 }
 
 @media (max-width:800px){
@@ -285,7 +280,7 @@ margin-top:10px;
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
 .header-img img{height:220px;}
-.boton-orientaline{max-width:200px;}
+.boton-orientaline img{width:200px;}
 }
 
 @media (max-width:900px){
@@ -358,7 +353,7 @@ IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITES: <span id="busuanzi_value_page_pv">...</span>
+VISITES: <span id="contador">...</span>
 </div>
 </div>
 
@@ -382,8 +377,13 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
+fetch('https://api.countapi.xyz/hit/didinpuig/orientacio')
+.then(res => res.json())
+.then(res => {
+document.getElementById('contador').innerHTML = res.value;
+});
+
 </script>
 
 </body>
 </html>
-
