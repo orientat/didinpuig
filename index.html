@@ -60,7 +60,7 @@ margin-top:10px;
 
 .header-img{
 margin-top:20px;
-margin-bottom:110px;
+margin-bottom:90px;
 
 display:flex;
 flex-direction:column;
@@ -81,16 +81,13 @@ box-shadow:0 6px 18px rgba(0,0,0,0.15);
 
 .boton-orientaline{
 
-position:absolute;
-bottom:-35px;
-
-left:50%;
-transform:translateX(-50%);
+margin-top:-100px;
 
 width:340px;
 max-width:80%;
 
 display:block;
+position:relative;
 
 border-radius:12px;
 
@@ -101,7 +98,7 @@ transition:transform .3s ease, box-shadow .3s ease;
 }
 
 .boton-orientaline:hover{
-transform:translateX(-50%) translateY(-4px);
+transform:translateY(-4px);
 box-shadow:0 14px 25px rgba(0,0,0,0.35);
 }
 
@@ -232,8 +229,6 @@ transform:translateY(-10px) scale(1.04);
 box-shadow:0 16px 30px rgba(0,0,0,0.30);
 }
 
-/* ICONO */
-
 .card-icon{
 font-size:36px;
 margin-bottom:12px;
@@ -300,6 +295,7 @@ margin-top:10px;
 
 .boton-orientaline{
 width:280px;
+margin-top:-60px;
 }
 
 }
@@ -310,6 +306,7 @@ width:280px;
 
 .boton-orientaline{
 width:240px;
+margin-top:-50px;
 }
 
 }
@@ -321,6 +318,7 @@ width:240px;
 
 .boton-orientaline{
 width:210px;
+margin-top:-45px;
 }
 
 }
@@ -423,8 +421,3 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 </body>
 </html>
-
-
-
-
-
