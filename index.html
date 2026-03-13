@@ -391,11 +391,32 @@ target="_blank">
 IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 </div>
 
-<div class="contador-area">
-<div class="contador-box">
-VISITES: <span id="busuanzi_value_page_pv"></span>
-</div>
-</div>
+.contador-box{
+
+background:#000;
+color:#00ff90;
+
+font-family:"Courier New", monospace;
+
+font-size:14px;
+text-align:center;
+
+padding:10px 20px;
+
+border-radius:8px;
+
+box-shadow:0 6px 12px rgba(0,0,0,0.4);
+
+}
+
+#contador{
+
+font-size:26px;
+letter-spacing:4px;
+
+margin-top:5px;
+
+}
 
 <div class="footer">
 <img src="footer.jpg">
@@ -421,3 +442,20 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 </body>
 </html>
+
+<script>
+
+let visitas = localStorage.getItem("contador_visitas");
+
+if(visitas === null){
+visitas = 1;
+}else{
+visitas = parseInt(visitas) + 1;
+}
+
+localStorage.setItem("contador_visitas", visitas);
+
+document.getElementById("contador").innerText =
+visitas.toString().padStart(6,"0");
+
+</script>
