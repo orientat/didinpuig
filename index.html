@@ -8,8 +8,6 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 <style>
 
 body{
@@ -75,30 +73,20 @@ box-shadow:0 6px 18px rgba(0,0,0,0.15);
 /* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
-position:relative;
-bottom:30px;
+position:absolute;
+bottom:5px;
 left:50%;
 transform:translateX(-50%);
-width:320px;
-max-width:85%;
+overflow:hidden;
+display:inline-block;
 }
-
-.boton-orientaline img{
-width:100%;
-height:auto;
-display:block;
-filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
-animation:flotar 3s ease-in-out infinite;
-}
-
-/* EFECTO BRILLO */
 
 .boton-orientaline::before{
 content:"";
 position:absolute;
 top:0;
 left:-150%;
-width:100%;
+width:120%;
 height:100%;
 background:linear-gradient(
 120deg,
@@ -108,6 +96,7 @@ transparent 70%
 );
 transform:skewX(-25deg);
 animation:shine 4s infinite;
+z-index:3;
 pointer-events:none;
 }
 
@@ -115,6 +104,15 @@ pointer-events:none;
 0%{left:-150%;}
 60%{left:150%;}
 100%{left:150%;}
+}
+
+.boton-orientaline img{
+width:320px;
+height:auto;
+filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+animation:flotar 3s ease-in-out infinite;
+position:relative;
+z-index:2;
 }
 
 @keyframes flotar{
@@ -173,7 +171,7 @@ font-size:32px;
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
-gap:30px;
+gap:25px;
 margin-bottom:70px;
 }
 
@@ -183,16 +181,9 @@ margin-bottom:70px;
 background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
 border-radius:28px;
-padding:30px;
+padding:20px;
 border:4px solid #6d2548;
 text-align:center;
-
-min-height:190px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-
 transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
 }
 
@@ -202,9 +193,23 @@ box-shadow:0 14px 28px rgba(0,0,0,0.25);
 filter:brightness(1.05);
 }
 
+/* ICONO TARJETA */
+
 .card-icon{
-font-size:36px;
-margin-bottom:12px;
+font-size:34px;
+margin-bottom:10px;
+transition:transform .4s ease;
+}
+
+.card:hover .card-icon{
+animation:iconBounce .5s ease;
+}
+
+@keyframes iconBounce{
+0%{transform:scale(1);}
+40%{transform:scale(1.35);}
+70%{transform:scale(1.15);}
+100%{transform:scale(1.25);}
 }
 
 .card-title{
@@ -247,6 +252,7 @@ font-size:18px;
 padding:8px 14px;
 border-radius:6px;
 letter-spacing:2px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -262,20 +268,19 @@ margin-top:10px;
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
 .header-img img{height:320px;}
-.boton-orientaline{width:260px;}
+.boton-orientaline img{width:260px;}
 }
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
 .header-img img{height:260px;}
-.boton-orientaline{width:220px;}
 }
 
 @media (max-width:600px){
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
 .header-img img{height:220px;}
-.boton-orientaline{width:180px;}
+.boton-orientaline img{width:200px;}
 }
 
 @media (max-width:900px){
@@ -348,7 +353,7 @@ IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITES: <span id="busuanzi_value_page_pv"></span>
+VISITES: <span id="contador">...</span>
 </div>
 </div>
 
@@ -372,8 +377,13 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
+fetch('https://api.countapi.xyz/hit/didinpuig/orientacio')
+.then(res => res.json())
+.then(res => {
+document.getElementById('contador').innerHTML = res.value;
+});
+
 </script>
 
 </body>
 </html>
-
