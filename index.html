@@ -18,14 +18,10 @@ margin:0;
 background:#ffffff;
 }
 
-/* CONTENEDOR */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* IDIOMA */
 
 .lang{
 width:75%;
@@ -49,14 +45,10 @@ text-decoration:none;
 background:#a65277;
 }
 
-/* LOGO */
-
 .logo img{
 width:100%;
 margin-top:10px;
 }
-
-/* BANNER */
 
 .header-img{
 margin-top:20px;
@@ -75,8 +67,6 @@ object-fit:cover;
 border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
-
-/* BOTÓN ORIENTALINE */
 
 .boton-orientaline{
 margin-top:-95px;
@@ -135,8 +125,6 @@ z-index:2;
 100%{transform:translateY(0);}
 }
 
-/* BOTONES LATERALES */
-
 .orientaline-lateral{
 position:fixed;
 top:50%;
@@ -171,8 +159,6 @@ height:420px;
 filter:drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
 
-/* TITULO */
-
 h2{
 text-align:center;
 margin:40px 0;
@@ -180,16 +166,12 @@ color:#5b2140;
 font-size:32px;
 }
 
-/* GRID TARJETAS */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:30px;
 margin-bottom:80px;
 }
-
-/* TARJETAS */
 
 .card{
 background:linear-gradient(145deg,#b56388,#a65277);
@@ -232,8 +214,6 @@ display:inline-block;
 font-size:14px;
 }
 
-/* TEXTO DEPARTAMENTO */
-
 .creditos{
 text-align:center;
 font-size:22px;
@@ -242,7 +222,7 @@ font-weight:700;
 margin-bottom:20px;
 }
 
-/* CONTADOR DIGITAL LED */
+/* CONTADOR LED */
 
 .contador-area{
 display:flex;
@@ -267,58 +247,25 @@ inset 0 0 20px rgba(0,255,144,0.3);
 text-shadow:
 0 0 6px #00ff90,
 0 0 12px #00ff90;
-
-animation:glow 2s infinite;
 }
-
-@keyframes glow{
-0%{opacity:.7}
-50%{opacity:1}
-100%{opacity:.7}
-}
-
-/* FOOTER */
 
 .footer img{
 width:100%;
 margin-top:10px;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:1200px){
-
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
-
-.boton-orientaline{
-width:280px;
-margin-top:-60px;
-}
-
 }
 
 @media (max-width:800px){
-
 .grid{grid-template-columns:repeat(3,1fr);}
-
-.boton-orientaline{
-width:240px;
-margin-top:-50px;
-}
-
 }
 
 @media (max-width:600px){
-
 .grid{grid-template-columns:repeat(2,1fr);}
 .wrapper{width:90%;}
-
-.boton-orientaline{
-width:210px;
-margin-top:-45px;
-}
-
 }
 
 @media (max-width:900px){
@@ -391,7 +338,7 @@ IES Didín Puig · Departament d'Orientació Acadèmica i Professional
 
 <div class="contador-area">
 <div class="contador-box">
-VISITES: <span id="busuanzi_value_page_pv"></span>
+VISITES: <span id="busuanzi_value_page_pv">000000</span>
 </div>
 </div>
 
@@ -415,21 +362,40 @@ botones.forEach(b => b.classList.remove("orientaline-visible"));
 
 });
 
-/* RELLENAR CON CEROS */
+/* animación contador */
 
-setInterval(function(){
+function animarContador(){
 
-let contador=document.getElementById("busuanzi_value_page_pv");
+let el=document.getElementById("busuanzi_value_page_pv");
 
-if(contador && contador.innerText){
+let final=parseInt(el.innerText.replace(/\D/g,''))||0;
 
-let valor=contador.innerText.padStart(6,"0");
+let actual=0;
 
-contador.innerText=valor;
+let duracion=1000;
+
+let pasos=60;
+
+let incremento=final/pasos;
+
+let intervalo=setInterval(function(){
+
+actual+=incremento;
+
+if(actual>=final){
+
+actual=final;
+clearInterval(intervalo);
 
 }
 
-},500);
+el.innerText=Math.floor(actual).toString().padStart(6,"0");
+
+},duracion/pasos);
+
+}
+
+setTimeout(animarContador,1200);
 
 </script>
 
