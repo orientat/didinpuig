@@ -136,17 +136,6 @@ line-height:1.6;
 margin-top:15px;
 }
 
-/* ENLLAÇOS EN CAIXA ROSA */
-
-.info a{
-color:#0066cc;
-font-weight:bold;
-}
-
-.info a:hover{
-text-decoration:underline;
-}
-
 /* EXEMPLES */
 
 .example{
@@ -293,7 +282,11 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media (max-width:500px){
+@media (max-width:600px){
+
+.grid{
+grid-template-columns:1fr;
+}
 
 .plan{
 grid-template-columns:1fr;
@@ -387,8 +380,6 @@ Nota d'admissió: <span id="final">-</span> /14
 
 <div class="info">
 
-Si vols calcular la teua <strong>nota d'accés i d'admissió</strong> amb l'eina oficial:
-
 <ul>
 <li>📑 Taules de ponderacions actualitzades</li>
 <li>📊 Càlcul de la nota d'accés</li>
@@ -432,43 +423,45 @@ Consulta sempre les taules oficials de ponderació.
 </div>
 
 </section>
+
+
 <section class="section">
 
 <h2>🧭 I després de Batxillerat, què?</h2>
 
 <div class="grid">
 
-<a href="uni.html" class="card link-card">
+<div class="card">
 <strong>🎓 Universitat</strong>
 <ul>
 <li>Graus universitaris</li>
 <li>Accés amb PAU</li>
 </ul>
-</a>
+</div>
 
-<a href="fp.html" class="card link-card">
+<div class="card">
 <strong>🛠️ FP Grau Superior</strong>
 <ul>
 <li>Cicles formatius</li>
 <li>Moltes famílies</li>
 </ul>
-</a>
+</div>
 
-<a href="altresest.html" class="card link-card">
+<div class="card">
 <strong>📚 Altres estudis</strong>
 <ul>
 <li>Artístics</li>
 <li>Esportius</li>
 </ul>
-</a>
+</div>
 
-<a href="orientafut.html" class="card link-card">
+<div class="card">
 <strong>🧭 Orienta el teu futur</strong>
 <ul>
 <li>Tests</li>
 <li>Orientació</li>
 </ul>
-</a>
+</div>
 
 </div>
 
@@ -539,44 +532,37 @@ S’organitza en <strong>dos cursos acadèmics</strong> i combina:
 
 <div class="info">
 
-En finalitzar Batxillerat pots continuar el teu itinerari acadèmic amb diferents opcions:
-
 <ul>
 
 <li>
-🎓 <strong><a href="uni.html">Estudis universitaris</a></strong><br>
-Accés mitjançant la prova d'accés a la universitat (PAU).
+🎓 <strong>Estudis universitaris</strong><br>
+Accés mitjançant la PAU.
 </li>
 
 <li>
-🛠️ <strong><a href="fp.html">Cicles Formatius de Grau Superior</a></strong><br>
-Formació professional avançada amb gran orientació pràctica.
+🛠️ <strong>Cicles Formatius de Grau Superior</strong>
 </li>
 
 <li>
-📚 <strong><a href="altresest.html">Altres estudis</a></strong><br>
-Ensenyaments artístics, esportius o altres itineraris formatius.
+📚 <strong>Altres estudis</strong>
 </li>
 
 <li>
-🧭 <strong><a href="orientafut.html">Orientació acadèmica</a></strong><br>
-Tests d’interessos i orientació personalitzada.
+🧭 <strong>Orientació acadèmica</strong>
 </li>
 
 <li>
-💼 <strong>Incorporació al món laboral</strong><br>
-Amb el títol de Batxiller també es pot accedir directament al mercat laboral.
+💼 <strong>Incorporació al món laboral</strong>
 </li>
 
 </ul>
 
-<br>
-
-Si tens dubtes sobre el teu futur acadèmic, consulta amb el <strong>Departament d’Orientació</strong>.
-
 </div>
 
 </section>
+
+
+</div>
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
