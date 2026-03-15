@@ -91,24 +91,44 @@ align-items:center;
 gap:10px;
 }
 
-/* CONSEJOS */
+/* BLOQUE CONSEJOS */
 
 .tips{
 background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
-border-left:5px solid #a65277;
+padding:25px;
+border-radius:12px;
+border-left:6px solid #a65277;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+/* TEXTO CONSEJOS */
+
+.tips-text{
+flex:1;
+line-height:1.7;
+font-size:16px;
+}
+
+/* IMAGEN CONSEJOS */
+
+.tips img{
+width:320px;
+max-width:35%;
+height:auto;
 }
 
 /* IMAGEN TRANSICIÓN */
 
-.transicio{
+.transicion{
 text-align:center;
 margin-top:20px;
 }
 
-.transicio img{
+.transicion img{
 max-width:100%;
 height:auto;
 border-radius:10px;
@@ -151,6 +171,16 @@ width:90%;
 
 footer{
 width:90%;
+}
+
+.tips{
+flex-direction:column;
+text-align:left;
+}
+
+.tips img{
+max-width:220px;
+margin-top:10px;
 }
 
 }
@@ -257,6 +287,8 @@ width:90%;
 
 <div class="tips">
 
+<div class="tips-text">
+
 📅 <strong>Utiliza la agenda.</strong><br>
 Te ayudará a organizar deberes, trabajos y exámenes.<br><br>
 
@@ -277,6 +309,10 @@ Para tener energía durante la mañana.<br><br>
 
 🎒 <strong>Prepara la mochila cada tarde.</strong><br>
 Revisa el horario del día siguiente.
+
+</div>
+
+<img src="consejos_trans.png" alt="Consejos para la ESO">
 
 </div>
 
