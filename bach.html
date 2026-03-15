@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +10,7 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:#ffffff;
 color:#333;
@@ -19,6 +20,8 @@ color:#333;
 width:75%;
 margin:auto;
 }
+
+/* BOTÓ TORNAR */
 
 .back{
 margin-top:20px;
@@ -38,6 +41,8 @@ font-size:14px;
 background:#a65277;
 }
 
+/* HEADER */
+
 header{
 background:#a65277;
 color:white;
@@ -51,6 +56,8 @@ header h1{
 margin:0;
 font-size:30px;
 }
+
+/* SECCIONS */
 
 .section{
 margin-top:40px;
@@ -75,9 +82,9 @@ gap:15px;
 padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
 text-align:center;
 font-weight:bold;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
 .ciencia{background:#eef5ff;}
@@ -85,45 +92,28 @@ font-weight:bold;
 .human{background:#fff6e9;}
 .art{background:#fff0f5;}
 
-/* FUTUR */
+/* TARGETES */
 
-.futuro{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.futuro-box{
-background:#f3f3f3;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
-}
-
-/* MATÈRIES */
-
-.table-grid{
+.grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
 }
 
-.table-box{
+.card{
 background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-display:flex;
-flex-direction:column;
 min-height:170px;
 }
 
-.table-box ul{
-padding-left:18px;
+.card ul{
 margin-top:10px;
+padding-left:18px;
 }
 
-/* INFO */
+/* INFORMACIÓ */
 
 .info{
 background:#fff2f7;
@@ -137,28 +127,27 @@ line-height:1.6;
 
 .example{
 background:#f3f3f3;
-padding:20px;
+padding:15px;
 border-radius:10px;
 border-left:5px solid #a65277;
-margin-top:15px;
+margin-top:10px;
 font-family:monospace;
 }
 
 /* SIMULADOR */
 
-.simulator{
+.sim{
 background:#fff2f7;
-padding:25px;
+padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-margin-top:20px;
 }
 
 .sim-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-top:15px;
+gap:10px;
+margin-top:10px;
 }
 
 .sim-grid input,
@@ -170,13 +159,12 @@ width:100%;
 }
 
 .result{
-margin-top:20px;
-font-size:18px;
+margin-top:15px;
 font-weight:bold;
 color:#6d2548;
 }
 
-/* BARRA VISUAL */
+/* BARRA */
 
 .progress-bar{
 width:100%;
@@ -191,21 +179,15 @@ overflow:hidden;
 height:100%;
 width:0%;
 background:red;
-transition:width 0.4s;
-}
-
-#mensaje{
-margin-top:10px;
-font-weight:bold;
+transition:0.4s;
 }
 
 /* PLANIFICACIÓ */
 
-.plan-grid{
+.plan{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
-margin-top:15px;
 }
 
 .plan-box{
@@ -221,8 +203,21 @@ height:80px;
 border-radius:6px;
 border:1px solid #ccc;
 padding:8px;
-margin-top:10px;
 }
+
+/* ENLLAÇOS */
+
+.link-card{
+text-decoration:none;
+color:#333;
+}
+
+.link-card:hover{
+transform:translateY(-3px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
 
 footer{
 background:#a65277;
@@ -236,25 +231,8 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.wrapper{width:90%;}
-
-.modalitats{grid-template-columns:repeat(2,1fr);}
-
-.table-grid{grid-template-columns:repeat(2,1fr);}
-
-.plan-grid{grid-template-columns:1fr;}
-
-.sim-grid{grid-template-columns:1fr;}
-
-footer{width:90%;}
-
-}
-
 </style>
+
 </head>
 
 
@@ -290,32 +268,11 @@ footer{width:90%;}
 
 <section class="section">
 
-<h2>Segons el que vulgues fer després…</h2>
-
-<div class="futuro">
-
-<div class="futuro-box">
-<strong>🎓 Si vols anar a la universitat</strong><br><br>
-Tria una modalitat relacionada amb els estudis que t’agradaria cursar.
-</div>
-
-<div class="futuro-box">
-<strong>🛠️ Si vols estudiar FP Superior</strong><br><br>
-Qualsevol modalitat permet accedir a un cicle formatiu de Grau Superior.
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
 <h2>Matèries de modalitat (exemples)</h2>
 
-<div class="table-grid">
+<div class="grid">
 
-<div class="table-box">
+<div class="card">
 <strong>Ciències i Tecnologia</strong>
 <ul>
 <li>Matemàtiques</li>
@@ -326,28 +283,28 @@ Qualsevol modalitat permet accedir a un cicle formatiu de Grau Superior.
 </ul>
 </div>
 
-<div class="table-box">
+<div class="card">
 <strong>Ciències Socials</strong>
 <ul>
 <li>Matemàtiques CCSS</li>
 <li>Economia</li>
 <li>Empresa</li>
 <li>Geografia</li>
-<li>Història del món contemporani</li>
+<li>Història món contemporani</li>
 </ul>
 </div>
 
-<div class="table-box">
+<div class="card">
 <strong>Humanitats</strong>
 <ul>
 <li>Llatí</li>
 <li>Grec</li>
-<li>Història del món contemporani</li>
+<li>Història món contemporani</li>
 <li>Literatura universal</li>
 </ul>
 </div>
 
-<div class="table-box">
+<div class="card">
 <strong>Arts</strong>
 <ul>
 <li>Dibuix artístic</li>
@@ -382,26 +339,23 @@ La nota d'accés es calcula amb:
 <li>40 % fase obligatòria PAU</li>
 </ul>
 
-Després es poden sumar fins a dues assignatures multiplicades per <strong>0,1 o 0,2</strong>.
+Després es poden sumar dues assignatures multiplicades per 0,1 o 0,2.
 
 </div>
 
 <div class="example">
-Exemple 1  
-Batxillerat 7,5 · PAU 7 → accés 7,3  
-Biologia 9×0,2 + Química 8×0,2 → **10,7**
+Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  
+Biologia 9×0.2 + Química 8×0.2 → **10.7**
 </div>
 
 <div class="example">
-Exemple 2  
-Batxillerat 8,2 · PAU 6,5 → accés 7,5  
-Matemàtiques 9×0,2 + Física 7×0,2 → **10,7**
+Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  
+Matemàtiques 9×0.2 + Física 7×0.2 → **10.7**
 </div>
 
 <div class="example">
-Exemple 3  
-Batxillerat 6,8 · PAU 7,5 → accés 7,1  
-Economia 8×0,1 + Matemàtiques CCSS 9×0,2 → **9,7**
+Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  
+Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → **9.7**
 </div>
 
 </section>
@@ -411,24 +365,24 @@ Economia 8×0,1 + Matemàtiques CCSS 9×0,2 → **9,7**
 
 <h2>Simulador de nota d’admissió</h2>
 
-<div class="simulator">
+<div class="sim">
 
 <div class="sim-grid">
 
-<input type="number" id="bat" placeholder="Mitjana Batxillerat">
-<input type="number" id="pau" placeholder="PAU obligatòria">
+<input id="bat" type="number" placeholder="Mitjana Batxillerat">
+<input id="pau" type="number" placeholder="PAU obligatòria">
 
 <div>
-<input type="number" id="mat1" placeholder="Assignatura 1">
-<select id="pond1">
+<input id="m1" type="number" placeholder="Assignatura 1">
+<select id="p1">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
 </select>
 </div>
 
 <div>
-<input type="number" id="mat2" placeholder="Assignatura 2">
-<select id="pond2">
+<input id="m2" type="number" placeholder="Assignatura 2">
+<select id="p2">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
 </select>
@@ -438,15 +392,13 @@ Economia 8×0,1 + Matemàtiques CCSS 9×0,2 → **9,7**
 
 <div class="result">
 
-Nota d'accés: <span id="acces">-</span> / 10  
+Nota d'accés: <span id="acces">-</span> /10  
 <br>
-Nota d'admissió: <span id="final">-</span> / 14
+Nota d'admissió: <span id="final">-</span> /14
 
 <div class="progress-bar">
 <div id="progress"></div>
 </div>
-
-<div id="mensaje"></div>
 
 </div>
 
@@ -459,60 +411,16 @@ Nota d'admissió: <span id="final">-</span> / 14
 
 <div class="info">
 
-⚠️ <strong>Recorda</strong><br><br>
+⚠️ <strong>Recorda</strong>
 
-Les ponderacions de les assignatures poden variar segons:
+Les ponderacions poden variar segons:
 
 <ul>
 <li>la universitat</li>
 <li>el grau que vulgues estudiar</li>
 </ul>
 
-Consulta sempre les <strong>taules oficials de ponderació</strong> de l'any en què et presentes a la PAU.
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Planifica el teu itinerari</h2>
-
-<div class="plan-grid">
-
-<div class="plan-box">
-<strong>1️⃣ 1r de Batxillerat</strong>
-<textarea></textarea>
-</div>
-
-<div class="plan-box">
-<strong>2️⃣ 2n de Batxillerat</strong>
-<textarea></textarea>
-</div>
-
-<div class="plan-box">
-<strong>🎯 Després del Batxillerat</strong>
-<textarea></textarea>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Com és el Batxillerat a l’IES Didín Puig</h2>
-
-<div class="info">
-
-El Batxillerat prepara per a:
-
-<ul>
-<li>Universitat</li>
-<li>Cicles Formatius de Grau Superior</li>
-</ul>
+Consulta sempre les taules oficials de ponderació.
 
 </div>
 
@@ -523,14 +431,65 @@ El Batxillerat prepara per a:
 
 <h2>I després de Batxillerat, què?</h2>
 
-<div class="info">
+<div class="grid">
 
+<a href="uni.html" class="card link-card">
+<strong>🎓 Universitat</strong>
 <ul>
-<li>Estudis universitaris</li>
-<li>Cicles Formatius de Grau Superior</li>
-<li>Altres estudis</li>
-<li>Incorporació al món laboral</li>
+<li>Graus universitaris</li>
+<li>Accés amb PAU</li>
 </ul>
+</a>
+
+<a href="fp.html" class="card link-card">
+<strong>🛠️ FP Grau Superior</strong>
+<ul>
+<li>Cicles formatius</li>
+<li>Moltes famílies</li>
+</ul>
+</a>
+
+<a href="altresest.html" class="card link-card">
+<strong>📚 Altres estudis</strong>
+<ul>
+<li>Artístics</li>
+<li>Esportius</li>
+</ul>
+</a>
+
+<a href="orientafut.html" class="card link-card">
+<strong>🧭 Orienta el teu futur</strong>
+<ul>
+<li>Tests</li>
+<li>Orientació</li>
+</ul>
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Planifica el teu itinerari</h2>
+
+<div class="plan">
+
+<div class="plan-box">
+<strong>1r de Batxillerat</strong>
+<textarea></textarea>
+</div>
+
+<div class="plan-box">
+<strong>2n de Batxillerat</strong>
+<textarea></textarea>
+</div>
+
+<div class="plan-box">
+<strong>Després del Batxillerat</strong>
+<textarea></textarea>
+</div>
 
 </div>
 
@@ -543,23 +502,22 @@ El Batxillerat prepara per a:
 IES Didín Puig · Orientació Acadèmica
 </footer>
 
+
 <script>
 
-const inputs=document.querySelectorAll("#bat,#pau,#mat1,#mat2,#pond1,#pond2");
+const inputs=document.querySelectorAll("#bat,#pau,#m1,#m2,#p1,#p2");
 
-inputs.forEach(input=>{
-input.addEventListener("input",calcular);
-});
+inputs.forEach(i=>i.addEventListener("input",calc));
 
-function calcular(){
+function calc(){
 
-let bat=parseFloat(document.getElementById("bat").value)||0;
-let pau=parseFloat(document.getElementById("pau").value)||0;
-let m1=parseFloat(document.getElementById("mat1").value)||0;
-let m2=parseFloat(document.getElementById("mat2").value)||0;
+let bat=parseFloat(bat.value)||0;
+let pau=parseFloat(pau.value)||0;
+let m1=parseFloat(m1.value)||0;
+let m2=parseFloat(m2.value)||0;
 
-let p1=parseFloat(document.getElementById("pond1").value)||0;
-let p2=parseFloat(document.getElementById("pond2").value)||0;
+let p1=parseFloat(document.getElementById("p1").value);
+let p2=parseFloat(document.getElementById("p2").value);
 
 let acces=(bat*0.6)+(pau*0.4);
 let final=acces+(m1*p1)+(m2*p2);
@@ -567,24 +525,9 @@ let final=acces+(m1*p1)+(m2*p2);
 document.getElementById("acces").innerText=acces.toFixed(2);
 document.getElementById("final").innerText=final.toFixed(2);
 
-let porcentaje=(final/14)*100;
-let barra=document.getElementById("progress");
-let mensaje=document.getElementById("mensaje");
+let percent=(final/14)*100;
 
-barra.style.width=porcentaje+"%";
-
-if(final<8){
-barra.style.background="red";
-mensaje.innerText="Nota baixa";
-}
-else if(final<11){
-barra.style.background="orange";
-mensaje.innerText="Nota mitjana";
-}
-else{
-barra.style.background="green";
-mensaje.innerText="Nota alta";
-}
+document.getElementById("progress").style.width=percent+"%";
 
 }
 
