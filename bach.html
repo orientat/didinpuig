@@ -71,6 +71,45 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
+/* TARJETAS MODALIDADES */
+
+.modalitats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.modalitat{
+background:#f3f3f3;
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+text-align:center;
+font-weight:bold;
+}
+
+/* TABLA MODALIDADES */
+
+.table-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.table-box{
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.6;
+}
+
+.table-box strong{
+color:#6d2548;
+}
+
 /* ACORDEÓN */
 
 .accordion{
@@ -101,24 +140,6 @@ line-height:1.6;
 
 .plus{
 font-size:22px;
-font-weight:bold;
-}
-
-/* TARJETAS MODALIDADES */
-
-.modalitats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
-.modalitat{
-background:#f3f3f3;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
-text-align:center;
 font-weight:bold;
 }
 
@@ -153,6 +174,10 @@ margin-right:auto;
 
 .wrapper{
 width:90%;
+}
+
+.modalitats{
+grid-template-columns:repeat(2,1fr);
 }
 
 footer{
@@ -198,6 +223,49 @@ width:90%;
 </section>
 
 
+<section class="section">
+
+<h2>Matèries de modalitat (exemples)</h2>
+
+<div class="table-grid">
+
+<div class="table-box">
+<strong>🔬 Ciències i Tecnologia</strong><br><br>
+Matemàtiques<br>
+Física<br>
+Química<br>
+Biologia<br>
+Dibuix tècnic
+</div>
+
+<div class="table-box">
+<strong>📊 Ciències Socials</strong><br><br>
+Matemàtiques CCSS<br>
+Economia<br>
+Empresa i disseny de models de negoci<br>
+Geografia
+</div>
+
+<div class="table-box">
+<strong>📚 Humanitats</strong><br><br>
+Llatí<br>
+Grec<br>
+Història del món contemporani<br>
+Literatura universal
+</div>
+
+<div class="table-box">
+<strong>🎨 Arts</strong><br><br>
+Dibuix artístic<br>
+Cultura audiovisual<br>
+Projectes artístics<br>
+Història de l'art
+</div>
+
+</div>
+
+</section>
+
 
 <section class="section">
 
@@ -208,8 +276,6 @@ width:90%;
 <p>
 En finalitzar 4t d’ESO hauràs de decidir quina modalitat cursar i després triar les matèries dins d’aquesta.
 </p>
-
-<p>Per a triar bé convé pensar què t’agradaria fer després:</p>
 
 <ul>
 <li>🎓 Universitat</li>
@@ -222,11 +288,10 @@ En finalitzar 4t d’ESO hauràs de decidir quina modalitat cursar i després tr
 </ul>
 
 <p>
-Les matèries de modalitat poden ponderar en la <strong>PAU</strong> i ajudar a millorar la nota d’admissió.
+Les matèries de modalitat poden ponderar en la <strong>PAU</strong>.
 </p>
 
 </div>
-
 
 
 <div class="accordion">Planifica les teues matèries <span class="plus">+</span></div>
@@ -245,13 +310,12 @@ Les matèries de modalitat poden ponderar en la <strong>PAU</strong> i ajudar a 
 </div>
 
 
-
 <div class="accordion">Com és el Batxillerat a l’IES Didín Puig <span class="plus">+</span></div>
 
 <div class="panel">
 
 <p>
-El Batxillerat és una etapa <strong>no obligatòria</strong> que s’inicia amb el títol d’ESO.
+El Batxillerat és una etapa <strong>no obligatòria</strong>.
 </p>
 
 <ul>
@@ -266,7 +330,6 @@ S’estructura en <strong>2 cursos</strong>.
 </div>
 
 
-
 <div class="accordion">Orientació a l’alumnat de Batxillerat <span class="plus">+</span></div>
 
 <div class="panel">
@@ -277,7 +340,6 @@ S’estructura en <strong>2 cursos</strong>.
 </ul>
 
 </div>
-
 
 
 <div class="accordion">I després de Batxillerat, què? <span class="plus">+</span></div>
