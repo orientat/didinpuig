@@ -136,6 +136,8 @@ line-height:1.6;
 margin-top:20px;
 }
 
+/* EJEMPLO */
+
 .example{
 background:#f3f3f3;
 padding:20px;
@@ -167,11 +169,6 @@ padding:20px;
 border-radius:10px;
 margin-bottom:15px;
 line-height:1.6;
-}
-
-.plus{
-font-size:22px;
-font-weight:bold;
 }
 
 /* TEXTAREA */
@@ -288,36 +285,23 @@ Qualsevol modalitat de Batxillerat permet accedir a un cicle formatiu de Grau Su
 <div class="table-grid">
 
 <div class="table-box">
-<strong>🔬 Ciències i Tecnologia</strong><br><br>
-Matemàtiques<br>
-Física<br>
-Química<br>
-Biologia<br>
-Dibuix tècnic
+<strong>🔬 Ciències i Tecnologia</strong><br>
+Matemàtiques · Física · Química · Biologia · Dibuix tècnic
 </div>
 
 <div class="table-box">
-<strong>📊 Ciències Socials</strong><br><br>
-Matemàtiques CCSS<br>
-Economia<br>
-Empresa<br>
-Geografia
+<strong>📊 Ciències Socials</strong><br>
+Matemàtiques CCSS · Economia · Empresa · Geografia
 </div>
 
 <div class="table-box">
-<strong>📚 Humanitats</strong><br><br>
-Llatí<br>
-Grec<br>
-Història<br>
-Literatura
+<strong>📚 Humanitats</strong><br>
+Llatí · Grec · Història · Literatura
 </div>
 
 <div class="table-box">
-<strong>🎨 Arts</strong><br><br>
-Dibuix artístic<br>
-Cultura audiovisual<br>
-Projectes artístics<br>
-Història de l'art
+<strong>🎨 Arts</strong><br>
+Dibuix artístic · Cultura audiovisual · Projectes artístics · Història de l'art
 </div>
 
 </div>
@@ -331,11 +315,28 @@ Història de l'art
 
 <div class="info">
 
-Les ponderacions permeten augmentar la nota d'accés a la universitat utilitzant les assignatures de modalitat relacionades amb el grau que vols estudiar.
+Les ponderacions són un sistema que permet augmentar la nota d’admissió a la universitat utilitzant les assignatures de modalitat relacionades amb el grau que vols estudiar.
 
-La nota d’admissió pot arribar fins a <strong>14 punts</strong>.
+La nota final d’accés a la universitat es calcula en dues parts:
+
+<ul>
+<li><strong>Nota d'accés</strong> (fins a 10 punts)</li>
+<li><strong>Ponderacions de matèries de modalitat</strong> (fins a 4 punts més)</li>
+</ul>
+
+La nota d'accés es calcula així:
+
+<ul>
+<li>60 % de la nota mitjana de Batxillerat</li>
+<li>40 % de la fase obligatòria de la PAU</li>
+</ul>
+
+Després es poden sumar les dues assignatures de modalitat amb millor nota multiplicades per 0,1 o 0,2 segons la relació amb el grau universitari.
+
+La nota final pot arribar fins a <strong>14 punts</strong>.
 
 </div>
+
 
 <div class="example">
 
@@ -353,80 +354,6 @@ Nota final d’admissió → **10,7**
 
 </div>
 
-<div class="info">
-
-<a href="https://universitats.gencat.cat/es/preinscripcions/ponderacions/index.html" target="_blank">
-Veure explicació completa de les ponderacions
-</a>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="accordion">Guia per a triar les matèries de Batxillerat <span class="plus">+</span></div>
-
-<div class="panel">
-
-<ul>
-<li>🎓 Universitat</li>
-<li>🛠️ Grau Superior d’FP</li>
-<li>🔬 Ciències o salut</li>
-<li>💻 Tecnologia</li>
-<li>📊 Ciències socials</li>
-<li>📚 Humanitats</li>
-<li>🎨 Art</li>
-</ul>
-
-</div>
-
-
-<div class="accordion">Planifica les teues matèries <span class="plus">+</span></div>
-
-<div class="panel">
-
-<p><strong>En acabar Batxillerat cursaré:</strong></p>
-<textarea></textarea>
-
-<p><strong>En 2n de Batxillerat cursaré:</strong></p>
-<textarea></textarea>
-
-<p><strong>En 1r de Batxillerat cursaré:</strong></p>
-<textarea></textarea>
-
-</div>
-
-
-<div class="accordion">Com és el Batxillerat a l’IES Didín Puig <span class="plus">+</span></div>
-
-<div class="panel">
-
-<p>
-El Batxillerat és una etapa no obligatòria que dura dos cursos.
-</p>
-
-<ul>
-<li>🎓 Preparació per a la universitat</li>
-<li>🛠️ Accés a cicles de Grau Superior</li>
-</ul>
-
-</div>
-
-
-<div class="accordion">I després de Batxillerat, què?</div>
-
-<div class="panel">
-
-<ul>
-<li>🎓 Universitat</li>
-<li>🛠️ FP de Grau Superior</li>
-<li>📚 Altres estudis</li>
-</ul>
-
-</div>
-
 </section>
 
 </div>
@@ -435,29 +362,6 @@ El Batxillerat és una etapa no obligatòria que dura dos cursos.
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
-
-
-<script>
-
-var acc = document.getElementsByClassName("accordion");
-
-for (var i = 0; i < acc.length; i++) {
-
-acc[i].addEventListener("click", function() {
-
-var panel = this.nextElementSibling;
-
-if (panel.style.display === "block") {
-panel.style.display = "none";
-} else {
-panel.style.display = "block";
-}
-
-});
-
-}
-
-</script>
 
 </body>
 </html>
