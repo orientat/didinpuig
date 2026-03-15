@@ -93,7 +93,7 @@ font-weight:bold;
 .human{background:#fff6e9;}
 .art{background:#fff0f5;}
 
-/* ORIENTACION FUTURO */
+/* FUTURO */
 
 .futuro{
 display:grid;
@@ -106,10 +106,9 @@ background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-line-height:1.6;
 }
 
-/* TABLA MATERIAS */
+/* MATERIAS */
 
 .table-grid{
 display:grid;
@@ -122,7 +121,6 @@ background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-line-height:1.6;
 }
 
 /* INFO */
@@ -132,7 +130,6 @@ background:#fff2f7;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-line-height:1.6;
 margin-top:20px;
 }
 
@@ -166,15 +163,33 @@ background:#fff2f7;
 padding:20px;
 border-radius:10px;
 margin-bottom:15px;
-line-height:1.6;
 }
 
-/* TEXTAREA */
+/* PLANIFICACIÓN VISUAL */
+
+.plan-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:10px;
+}
+
+.plan-box{
+background:white;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+
+.plan-box h3{
+margin-top:0;
+color:#6d2548;
+}
 
 textarea{
 width:100%;
-height:70px;
-margin-top:5px;
+height:80px;
 border-radius:6px;
 border:1px solid #ccc;
 padding:8px;
@@ -208,6 +223,10 @@ grid-template-columns:repeat(2,1fr);
 
 .table-grid{
 grid-template-columns:repeat(2,1fr);
+}
+
+.plan-grid{
+grid-template-columns:1fr;
 }
 
 .futuro{
@@ -263,12 +282,11 @@ width:90%;
 <div class="futuro-box">
 <strong>🎓 Si vols anar a la universitat</strong><br><br>
 Tria una modalitat relacionada amb els estudis que t’agradaria cursar.
-Algunes matèries de modalitat poden augmentar la teua nota d’admissió en la PAU.
 </div>
 
 <div class="futuro-box">
 <strong>🛠️ Si vols estudiar FP Superior</strong><br><br>
-Qualsevol modalitat de Batxillerat permet accedir a un cicle formatiu de Grau Superior.
+Qualsevol modalitat permet accedir a un cicle formatiu de Grau Superior.
 </div>
 
 </div>
@@ -283,23 +301,23 @@ Qualsevol modalitat de Batxillerat permet accedir a un cicle formatiu de Grau Su
 <div class="table-grid">
 
 <div class="table-box">
-<strong>🔬 Ciències i Tecnologia</strong><br>
-Matemàtiques · Física · Química · Biologia · Dibuix tècnic
+<strong>Ciències i Tecnologia</strong><br>
+Matemàtiques · Física · Química · Biologia
 </div>
 
 <div class="table-box">
-<strong>📊 Ciències Socials</strong><br>
-Matemàtiques CCSS · Economia · Empresa · Geografia
+<strong>Ciències Socials</strong><br>
+Matemàtiques CCSS · Economia · Empresa
 </div>
 
 <div class="table-box">
-<strong>📚 Humanitats</strong><br>
-Llatí · Grec · Història · Literatura
+<strong>Humanitats</strong><br>
+Llatí · Grec · Història
 </div>
 
 <div class="table-box">
-<strong>🎨 Arts</strong><br>
-Dibuix artístic · Cultura audiovisual · Projectes artístics · Història de l'art
+<strong>Arts</strong><br>
+Dibuix artístic · Cultura audiovisual
 </div>
 
 </div>
@@ -313,17 +331,15 @@ Dibuix artístic · Cultura audiovisual · Projectes artístics · Història de 
 
 <div class="info">
 
-Les ponderacions permeten augmentar la nota d’accés a la universitat utilitzant les assignatures de modalitat relacionades amb el grau que vols estudiar.
-
-La nota d’admissió pot arribar fins a <strong>14 punts</strong>.
-
-La nota final es calcula així:
+La nota d’accés a la universitat es calcula combinant:
 
 <ul>
 <li>60 % de la nota mitjana de Batxillerat</li>
 <li>40 % de la fase obligatòria de la PAU</li>
 <li>+ ponderació de fins a dues assignatures de modalitat</li>
 </ul>
+
+La nota final pot arribar fins a <strong>14 punts</strong>.
 
 </div>
 
@@ -339,7 +355,7 @@ Nota d'accés = 7,3
 Biologia → 9 × 0,2  
 Química → 8 × 0,2  
 
-Nota final d’admissió → **10,7**
+Nota final → **10,7**
 
 </div>
 
@@ -369,14 +385,24 @@ Nota final d’admissió → **10,7**
 
 <div class="panel">
 
-<p><strong>En acabar Batxillerat cursaré:</strong></p>
-<textarea></textarea>
+<div class="plan-grid">
 
-<p><strong>En 2n de Batxillerat cursaré:</strong></p>
+<div class="plan-box">
+<h3>1️⃣ 1r de Batxillerat</h3>
 <textarea></textarea>
+</div>
 
-<p><strong>En 1r de Batxillerat cursaré:</strong></p>
+<div class="plan-box">
+<h3>2️⃣ 2n de Batxillerat</h3>
 <textarea></textarea>
+</div>
+
+<div class="plan-box">
+<h3>🎯 Després de Batxillerat</h3>
+<textarea></textarea>
+</div>
+
+</div>
 
 </div>
 
