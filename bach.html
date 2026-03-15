@@ -91,7 +91,7 @@ font-weight:bold;
 .human{background:#fff6e9;}
 .art{background:#fff0f5;}
 
-/* CAIXES FUTUR */
+/* FUTUR */
 
 .futuro{
 display:grid;
@@ -106,7 +106,7 @@ border-radius:10px;
 border-left:5px solid #a65277;
 }
 
-/* TAULA MATÈRIES */
+/* MATÈRIES */
 
 .table-grid{
 display:grid;
@@ -119,23 +119,27 @@ background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
+display:flex;
+flex-direction:column;
+min-height:170px;
 }
 
-/* CAIXES INFO */
+.table-box ul{
+padding-left:18px;
+margin-top:10px;
+}
+
+.table-box li{
+margin-bottom:4px;
+}
+
+/* INFO */
 
 .info{
 background:#fff2f7;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-}
-
-.example{
-background:#f3f3f3;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
-margin-top:15px;
 }
 
 /* SIMULADOR */
@@ -163,6 +167,8 @@ border:1px solid #ccc;
 width:100%;
 }
 
+/* RESULTATS */
+
 .result{
 margin-top:20px;
 font-size:18px;
@@ -170,7 +176,7 @@ font-weight:bold;
 color:#6d2548;
 }
 
-/* BARRA PROGRÉS */
+/* BARRA */
 
 .progress-bar{
 width:100%;
@@ -266,7 +272,6 @@ width:90%;
 </style>
 </head>
 
-
 <body>
 
 <div class="wrapper">
@@ -325,23 +330,45 @@ Qualsevol modalitat permet accedir a un cicle formatiu de Grau Superior.
 <div class="table-grid">
 
 <div class="table-box">
-<strong>Ciències i Tecnologia</strong><br>
-Matemàtiques · Física · Química · Biologia
+<strong>Ciències i Tecnologia</strong>
+<ul>
+<li>Matemàtiques</li>
+<li>Física</li>
+<li>Química</li>
+<li>Biologia</li>
+<li>Dibuix tècnic</li>
+</ul>
 </div>
 
 <div class="table-box">
-<strong>Ciències Socials</strong><br>
-Matemàtiques CCSS · Economia · Empresa
+<strong>Ciències Socials</strong>
+<ul>
+<li>Matemàtiques CCSS</li>
+<li>Economia</li>
+<li>Empresa</li>
+<li>Geografia</li>
+<li>Història del món contemporani</li>
+</ul>
 </div>
 
 <div class="table-box">
-<strong>Humanitats</strong><br>
-Llatí · Grec · Història
+<strong>Humanitats</strong>
+<ul>
+<li>Llatí</li>
+<li>Grec</li>
+<li>Història del món contemporani</li>
+<li>Literatura universal</li>
+</ul>
 </div>
 
 <div class="table-box">
-<strong>Arts</strong><br>
-Dibuix artístic · Cultura audiovisual
+<strong>Arts</strong>
+<ul>
+<li>Dibuix artístic</li>
+<li>Cultura audiovisual</li>
+<li>Projectes artístics</li>
+<li>Història de l'art</li>
+</ul>
 </div>
 
 </div>
@@ -354,8 +381,6 @@ Dibuix artístic · Cultura audiovisual
 <h2>Com funcionen les ponderacions de la PAU</h2>
 
 <div class="info">
-
-La nota d’accés a la universitat es calcula combinant:
 
 <ul>
 <li>60 % de la nota mitjana de Batxillerat</li>
@@ -376,23 +401,14 @@ La nota final pot arribar fins a <strong>14 punts</strong>.
 
 <div class="simulator">
 
-Introduïx les teues notes aproximades.
-
 <div class="sim-grid">
 
-<div>
-Mitjana Batxillerat
-<input type="number" id="bat" step="0.01" min="0" max="10">
-</div>
+<input type="number" id="bat" placeholder="Mitjana Batxillerat">
+
+<input type="number" id="pau" placeholder="PAU obligatòria">
 
 <div>
-PAU obligatòria
-<input type="number" id="pau" step="0.01" min="0" max="10">
-</div>
-
-<div>
-Assignatura 1
-<input type="number" id="mat1" step="0.01" min="0" max="10">
+<input type="number" id="mat1" placeholder="Assignatura 1">
 <select id="pond1">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
@@ -400,8 +416,7 @@ Assignatura 1
 </div>
 
 <div>
-Assignatura 2
-<input type="number" id="mat2" step="0.01" min="0" max="10">
+<input type="number" id="mat2" placeholder="Assignatura 2">
 <select id="pond2">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
@@ -433,17 +448,7 @@ Nota d'admissió: <span id="final">-</span> / 14
 
 <div class="info">
 
-⚠️ <strong>Important</strong>
-
-Les ponderacions de les assignatures poden variar segons:
-
-<ul>
-<li>la universitat</li>
-<li>el grau que vulgues estudiar</li>
-<li>l'any en què et presentes a la PAU</li>
-</ul>
-
-Consulta sempre les taules oficials de ponderació de l'any corresponent.
+⚠️ Important: Les ponderacions poden variar segons la universitat, el grau i l'any de la PAU.
 
 </div>
 
@@ -457,17 +462,17 @@ Consulta sempre les taules oficials de ponderació de l'any corresponent.
 <div class="plan-grid">
 
 <div class="plan-box">
-<h3>1️⃣ 1r de Batxillerat</h3>
+<strong>1️⃣ 1r de Batxillerat</strong>
 <textarea></textarea>
 </div>
 
 <div class="plan-box">
-<h3>2️⃣ 2n de Batxillerat</h3>
+<strong>2️⃣ 2n de Batxillerat</strong>
 <textarea></textarea>
 </div>
 
 <div class="plan-box">
-<h3>🎯 Després del Batxillerat</h3>
+<strong>🎯 Després del Batxillerat</strong>
 <textarea></textarea>
 </div>
 
@@ -482,7 +487,7 @@ Consulta sempre les taules oficials de ponderació de l'any corresponent.
 
 <div class="info">
 
-El Batxillerat és una etapa no obligatòria que prepara l'alumnat per a:
+El Batxillerat prepara l'alumnat per a:
 
 <ul>
 <li>🎓 Universitat</li>
@@ -502,16 +507,12 @@ S'organitza en dos cursos i combina matèries comunes, de modalitat i optatives.
 
 <div class="info">
 
-En finalitzar Batxillerat pots continuar amb diferents opcions:
-
 <ul>
 <li>🎓 Estudis universitaris</li>
 <li>🛠️ Cicles Formatius de Grau Superior</li>
 <li>🌍 Altres estudis</li>
 <li>💼 Incorporació al món laboral</li>
 </ul>
-
-Consulta amb el Departament d’Orientació si tens dubtes sobre el teu futur acadèmic.
 
 </div>
 
@@ -520,11 +521,9 @@ Consulta amb el Departament d’Orientació si tens dubtes sobre el teu futur ac
 
 </div>
 
-
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
-
 
 <script>
 
@@ -552,23 +551,6 @@ document.getElementById("final").innerText=final.toFixed(2);
 
 let porcentaje=(final/14)*100;
 document.getElementById("progress").style.width=porcentaje+"%";
-
-let msg="";
-
-if(final<8){
-msg="Encara pots millorar la teua nota.";
-}
-else if(final<10){
-msg="Bona nota d'admissió.";
-}
-else if(final<12){
-msg="Molt bona nota!";
-}
-else{
-msg="Nota excel·lent!";
-}
-
-document.getElementById("mensaje").innerText=msg;
 
 }
 
