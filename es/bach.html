@@ -1,1 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bachillerato | Orientación</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#333;
+}
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+/* BOTÓN VOLVER */
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+/* HEADER */
+
+header{
+background:#a65277;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:15px;
+border-radius:10px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+/* SECCIONES */
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* MODALIDADES */
+
+.modalitats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.modalitat{
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+text-align:center;
+font-weight:bold;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+
+.ciencia{background:#eef5ff;}
+.social{background:#edf8f1;}
+.human{background:#fff6e9;}
+.art{background:#fff0f5;}
+
+/* TARJETAS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.card{
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+min-height:170px;
+}
+
+.card ul{
+margin-top:10px;
+padding-left:18px;
+}
+
+/* INFORMACIÓN */
+
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.6;
+}
+
+/* ENLACES EN CUADROS ROSA */
+
+.info a{
+color:#0066cc;
+font-weight:bold;
+}
+
+.info a:hover{
+text-decoration:underline;
+}
+
+/* EJEMPLOS */
+
+.example{
+background:#f3f3f3;
+padding:15px;
+border-radius:10px;
+border-left:5px solid #a65277;
+margin-top:10px;
+font-family:monospace;
+}
+
+/* SIMULADOR */
+
+.sim{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+}
+
+.sim-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:10px;
+}
+
+.sim-grid input,
+.sim-grid select{
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+width:100%;
+}
+
+.result{
+margin-top:15px;
+font-weight:bold;
+color:#6d2548;
+}
+
+/* BARRA */
+
+.progress-bar{
+width:100%;
+height:18px;
+background:#ddd;
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
+}
+
+#progress{
+height:100%;
+width:0%;
+background:red;
+transition:0.4s;
+}
+
+/* PLANIFICACIÓN */
+
+.plan{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.plan-box{
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+}
+
+textarea{
+width:100%;
+height:80px;
+border-radius:6px;
+border:1px solid #ccc;
+padding:8px;
+}
+
+/* ENLACES TARJETAS */
+
+.link-card{
+text-decoration:none;
+color:#333;
+}
+
+.link-card:hover{
+transform:translateY(-3px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.modalitats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.sim-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:500px){
+
+.plan{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Volver a Orientación</a>
+</div>
+
+<header>
+<h1>🎓 Bachillerato</h1>
+<p>IES Didín Puig · Departamento de Orientación</p>
+</header>
+
+
+<section class="section">
+
+<h2>Modalidades de Bachillerato</h2>
+
+<div class="modalitats">
+
+<div class="modalitat ciencia">🔬 Ciencias y Tecnología</div>
+<div class="modalitat social">📊 Ciencias Sociales</div>
+<div class="modalitat human">📚 Humanidades</div>
+<div class="modalitat art">🎨 Artes</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Materias de modalidad (ejemplos)</h2>
+
+<div class="grid">
+
+<div class="card">
+<strong>Ciencias y Tecnología</strong>
+<ul>
+<li>Matemáticas</li>
+<li>Física</li>
+<li>Química</li>
+<li>Biología</li>
+<li>Dibujo técnico</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Ciencias Sociales</strong>
+<ul>
+<li>Matemáticas CCSS</li>
+<li>Economía</li>
+<li>Empresa</li>
+<li>Geografía</li>
+<li>Historia del mundo contemporáneo</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Humanidades</strong>
+<ul>
+<li>Latín</li>
+<li>Griego</li>
+<li>Historia del mundo contemporáneo</li>
+<li>Literatura universal</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Artes</strong>
+<ul>
+<li>Dibujo artístico</li>
+<li>Cultura audiovisual</li>
+<li>Proyectos artísticos</li>
+<li>Historia del arte</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Cómo funcionan las ponderaciones de la PAU</h2>
+
+<div class="info">
+
+Las ponderaciones permiten aumentar la nota de admisión a la universidad.
+
+<ul>
+<li><strong>Nota de acceso</strong> (hasta 10 puntos)</li>
+<li><strong>Ponderaciones</strong> de materias de modalidad (hasta 4 puntos más)</li>
+</ul>
+
+La nota de acceso se calcula con:
+
+<ul>
+<li>60 % nota media de Bachillerato</li>
+<li>40 % fase obligatoria de la PAU</li>
+</ul>
+
+Después se pueden sumar dos asignaturas multiplicadas por 0,1 o 0,2.
+
+</div>
+
+<div class="example">
+Ejemplo 1: Bach 7.5 · PAU 7 → acceso 7.3  
+Biología 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
+</div>
+
+<div class="example">
+Ejemplo 2: Bach 8.2 · PAU 6.5 → acceso 7.5  
+Matemáticas 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
+</div>
+
+<div class="example">
+Ejemplo 3: Bach 6.8 · PAU 7.5 → acceso 7.1  
+Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Simulador de nota de admisión</h2>
+
+<div class="sim">
+
+<div class="sim-grid">
+
+<input id="bat" type="number" placeholder="Media de Bachillerato">
+<input id="pau" type="number" placeholder="PAU obligatoria">
+
+<div>
+<input id="m1" type="number" placeholder="Asignatura 1">
+<select id="p1">
+<option value="0.1">pondera 0,1</option>
+<option value="0.2">pondera 0,2</option>
+</select>
+</div>
+
+<div>
+<input id="m2" type="number" placeholder="Asignatura 2">
+<select id="p2">
+<option value="0.1">pondera 0,1</option>
+<option value="0.2">pondera 0,2</option>
+</select>
+</div>
+
+</div>
+
+<div class="result">
+
+Nota de acceso: <span id="acces">-</span> /10  
+<br>
+Nota de admisión: <span id="final">-</span> /14
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="info">
+
+⚠️ <strong>Recuerda</strong>
+
+Las ponderaciones pueden variar según:
+
+<ul>
+<li>la universidad</li>
+<li>el grado que quieras estudiar</li>
+</ul>
+
+Consulta siempre las tablas oficiales de ponderación.
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>¿Y después del Bachillerato?</h2>
+
+<div class="grid">
+
+<a href="uni.html" class="card link-card">
+<strong>🎓 Universidad</strong>
+<ul>
+<li>Grados universitarios</li>
+<li>Acceso con PAU</li>
+</ul>
+</a>
+
+<a href="fp.html" class="card link-card">
+<strong>🛠️ FP Grado Superior</strong>
+<ul>
+<li>Ciclos formativos</li>
+<li>Muchas familias</li>
+</ul>
+</a>
+
+<a href="altresest.html" class="card link-card">
+<strong>📚 Otros estudios</strong>
+<ul>
+<li>Artísticos</li>
+<li>Deportivos</li>
+</ul>
+</a>
+
+<a href="orientafut.html" class="card link-card">
+<strong>🧭 Orienta tu futuro</strong>
+<ul>
+<li>Tests</li>
+<li>Orientación</li>
+</ul>
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Planifica tu itinerario</h2>
+
+<div class="plan">
+
+<div class="plan-box">
+<strong>1º de Bachillerato</strong>
+<textarea></textarea>
+</div>
+
+<div class="plan-box">
+<strong>2º de Bachillerato</strong>
+<textarea></textarea>
+</div>
+
+<div class="plan-box">
+<strong>Después del Bachillerato</strong>
+<textarea></textarea>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Cómo es el Bachillerato en el IES Didín Puig</h2>
+
+<div class="info">
+
+El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa después de obtener el título de ESO.
+
+<br><br>
+
+Prepara al alumnado principalmente para:
+
+<ul>
+<li>🎓 <strong>Estudios universitarios</strong></li>
+<li>🛠️ <strong>Ciclos Formativos de Grado Superior</strong></li>
+</ul>
+
+<br>
+
+Se organiza en <strong>dos cursos académicos</strong> y combina:
+
+<ul>
+<li>Materias comunes</li>
+<li>Materias de modalidad</li>
+<li>Materias optativas</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Otras opciones después del Bachillerato</h2>
+
+<div class="info">
+
+Al finalizar Bachillerato puedes continuar tu itinerario académico con diferentes opciones:
+
+<ul>
+
+<li>
+🎓 <strong><a href="uni.html">Estudios universitarios</a></strong><br>
+Acceso mediante la prueba de acceso a la universidad (PAU).
+</li>
+
+<li>
+🛠️ <strong><a href="fp.html">Ciclos Formativos de Grado Superior</a></strong><br>
+Formación profesional avanzada con gran orientación práctica.
+</li>
+
+<li>
+📚 <strong><a href="altresest.html">Otros estudios</a></strong><br>
+Enseñanzas artísticas, deportivas u otros itinerarios formativos.
+</li>
+
+<li>
+🧭 <strong><a href="orientafut.html">Orientación académica</a></strong><br>
+Tests de intereses y orientación personalizada.
+</li>
+
+<li>
+💼 <strong>Incorporación al mundo laboral</strong><br>
+Con el título de Bachiller también se puede acceder directamente al mercado laboral.
+</li>
+
+</ul>
+
+<br>
+
+Si tienes dudas sobre tu futuro académico, consulta con el <strong>Departamento de Orientación</strong>.
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<footer>
+IES Didín Puig · Orientación Académica
+</footer>
+
+
+<script>
+
+const inputs=document.querySelectorAll("#bat,#pau,#m1,#m2,#p1,#p2");
+
+inputs.forEach(i=>i.addEventListener("input",calc));
+
+function calc(){
+
+let bat=parseFloat(document.getElementById("bat").value)||0;
+let pau=parseFloat(document.getElementById("pau").value)||0;
+let m1=parseFloat(document.getElementById("m1").value)||0;
+let m2=parseFloat(document.getElementById("m2").value)||0;
+
+let p1=parseFloat(document.getElementById("p1").value);
+let p2=parseFloat(document.getElementById("p2").value);
+
+let acces=(bat*0.6)+(pau*0.4);
+let final=acces+(m1*p1)+(m2*p2);
+
+document.getElementById("acces").innerText=acces.toFixed(2);
+document.getElementById("final").innerText=final.toFixed(2);
+
+let percent=(final/14)*100;
+
+let barra=document.getElementById("progress");
+
+barra.style.width=percent+"%";
+
+if(final < 8){
+barra.style.background="#d9534f";
+}
+else if(final < 11){
+barra.style.background="#f0ad4e";
+}
+else{
+barra.style.background="#5cb85c";
+}
+
+}
+
+</script>
+
+</body>
+</html>
