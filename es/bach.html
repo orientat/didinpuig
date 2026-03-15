@@ -61,6 +61,8 @@ font-size:30px;
 
 .section{
 margin-top:40px;
+padding-top:10px;
+border-top:1px solid #eee;
 }
 
 .section h2{
@@ -123,7 +125,7 @@ border-left:5px solid #a65277;
 line-height:1.6;
 }
 
-/* ENLACES EN CUADROS ROSA */
+/* ENLACES EN CAJA ROSA */
 
 .info a{
 color:#0066cc;
@@ -242,6 +244,22 @@ margin-left:auto;
 margin-right:auto;
 }
 
+/* BOTÓN SUBIR */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#a65277;
+color:white;
+border:none;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+display:none;
+}
+
 /* RESPONSIVE */
 
 @media (max-width:900px){
@@ -293,7 +311,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Modalidades de Bachillerato</h2>
+<h2>🎓 Modalidades de Bachillerato</h2>
 
 <div class="modalitats">
 
@@ -309,7 +327,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Materias de modalidad (ejemplos)</h2>
+<h2>📚 Materias de modalidad (ejemplos)</h2>
 
 <div class="grid">
 
@@ -362,7 +380,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Cómo funcionan las ponderaciones de la PAU</h2>
+<h2>📊 Cómo funcionan las ponderaciones de la PAU</h2>
 
 <div class="info">
 
@@ -377,7 +395,7 @@ La nota de acceso se calcula con:
 
 <ul>
 <li>60 % nota media de Bachillerato</li>
-<li>40 % fase obligatoria de la PAU</li>
+<li>40 % fase obligatoria PAU</li>
 </ul>
 
 Después se pueden sumar dos asignaturas multiplicadas por 0,1 o 0,2.
@@ -404,13 +422,13 @@ Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
 
 <section class="section">
 
-<h2>Simulador de nota de admisión</h2>
+<h2>🧮 Simulador de nota de admisión</h2>
 
 <div class="sim">
 
 <div class="sim-grid">
 
-<input id="bat" type="number" placeholder="Media de Bachillerato">
+<input id="bat" type="number" placeholder="Media Bachillerato">
 <input id="pau" type="number" placeholder="PAU obligatoria">
 
 <div>
@@ -470,7 +488,7 @@ Consulta siempre las tablas oficiales de ponderación.
 
 <section class="section">
 
-<h2>¿Y después del Bachillerato?</h2>
+<h2>🧭 ¿Y después del Bachillerato?</h2>
 
 <div class="grid">
 
@@ -513,7 +531,7 @@ Consulta siempre las tablas oficiales de ponderación.
 
 <section class="section">
 
-<h2>Planifica tu itinerario</h2>
+<h2>📝 Planifica tu itinerario</h2>
 
 <div class="plan">
 
@@ -539,7 +557,7 @@ Consulta siempre las tablas oficiales de ponderación.
 
 <section class="section">
 
-<h2>Cómo es el Bachillerato en el IES Didín Puig</h2>
+<h2>📘 Cómo es el Bachillerato en el IES Didín Puig</h2>
 
 <div class="info">
 
@@ -571,7 +589,7 @@ Se organiza en <strong>dos cursos académicos</strong> y combina:
 
 <section class="section">
 
-<h2>Otras opciones después del Bachillerato</h2>
+<h2>📌 Otras opciones después del Bachillerato</h2>
 
 <div class="info">
 
@@ -617,11 +635,11 @@ Si tienes dudas sobre tu futuro académico, consulta con el <strong>Departamento
 
 </div>
 
-
 <footer>
 IES Didín Puig · Orientación Académica
 </footer>
 
+<button onclick="topFunction()" id="topBtn">↑</button>
 
 <script>
 
@@ -651,16 +669,23 @@ let barra=document.getElementById("progress");
 
 barra.style.width=percent+"%";
 
-if(final < 8){
-barra.style.background="#d9534f";
-}
-else if(final < 11){
-barra.style.background="#f0ad4e";
-}
-else{
-barra.style.background="#5cb85c";
 }
 
+let btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+btn.style.display="block";
+}else{
+btn.style.display="none";
+}
+
+}
+
+function topFunction(){
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
 }
 
 </script>
