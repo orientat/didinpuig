@@ -104,6 +104,27 @@ font-size:22px;
 font-weight:bold;
 }
 
+/* TARJETAS FAMILIAS */
+
+.families{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.family{
+background:#f3f3f3;
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+font-weight:bold;
+text-align:center;
+}
+
+/* LINKS */
+
 a{
 color:#6d2548;
 font-weight:bold;
@@ -155,9 +176,11 @@ width:90%;
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
 
+
 <section class="section">
 
 <div class="accordion">Què és la Formació Professional? <span class="plus">+</span></div>
+
 <div class="panel">
 
 <p>
@@ -193,6 +216,7 @@ Més informació:
 
 
 <div class="accordion">Graus Bàsics d’FP <span class="plus">+</span></div>
+
 <div class="panel">
 
 <p>
@@ -234,6 +258,7 @@ FP Bàsica
 
 
 <div class="accordion">Graus Mitjans d’FP <span class="plus">+</span></div>
+
 <div class="panel">
 
 <p>
@@ -271,6 +296,7 @@ Informació prova d'accés
 
 
 <div class="accordion">Graus Superiors d’FP <span class="plus">+</span></div>
+
 <div class="panel">
 
 <p>
@@ -295,6 +321,7 @@ Es pot accedir amb una prova si tens <strong>19 anys</strong> (o 18 amb un grau 
 
 
 <div class="accordion">Ensenyaments d’FP en règim especial <span class="plus">+</span></div>
+
 <div class="panel">
 
 <ul>
@@ -307,34 +334,59 @@ Es pot accedir amb una prova si tens <strong>19 anys</strong> (o 18 amb un grau 
 
 
 <div class="accordion">Oferta de Graus d’FP <span class="plus">+</span></div>
+
 <div class="panel">
 
 <ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional">Oferta Comunitat Valenciana</a></li>
-<li><a href="https://www.todofp.es">Oferta tota Espanya</a></li>
+<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Oferta Comunitat Valenciana</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Oferta tota Espanya</a></li>
 </ul>
 
 </div>
 
 
 <div class="accordion">Oferta de cursos d’especialització <span class="plus">+</span></div>
+
 <div class="panel">
 
 <ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional">Cursos Comunitat Valenciana</a></li>
-<li><a href="https://www.todofp.es">Cursos tota Espanya</a></li>
+<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Cursos Comunitat Valenciana</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Cursos tota Espanya</a></li>
 </ul>
 
 </div>
 
 
 <div class="accordion">Més informació sobre Formació Professional <span class="plus">+</span></div>
+
 <div class="panel">
 
 <ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional">Conselleria FP</a></li>
-<li><a href="https://www.todofp.es">Portal TodoFP</a></li>
+<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Conselleria FP</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Portal TodoFP</a></li>
 </ul>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧰 Algunes famílies professionals</h2>
+
+<div class="families">
+
+<div class="family">💻 Informàtica</div>
+<div class="family">⚡ Electricitat i Electrònica</div>
+<div class="family">🚗 Automoció</div>
+<div class="family">🍳 Hostaleria i Turisme</div>
+<div class="family">💄 Imatge Personal</div>
+<div class="family">👶 Serveis Socioculturals</div>
+<div class="family">🏥 Sanitat</div>
+<div class="family">📦 Comerç i Màrqueting</div>
+<div class="family">🏗️ Edificació i Obra Civil</div>
+<div class="family">🌱 Agrària</div>
 
 </div>
 
@@ -354,8 +406,6 @@ var acc = document.getElementsByClassName("accordion");
 for (var i = 0; i < acc.length; i++) {
 
 acc[i].addEventListener("click", function() {
-
-this.classList.toggle("active");
 
 var panel = this.nextElementSibling;
 
