@@ -294,7 +294,6 @@ grid-template-columns:1fr;
 
 </head>
 
-
 <body>
 
 <div class="wrapper">
@@ -468,10 +467,6 @@ Nota d'admissió: <span id="final">-</span> /14
 
 <section class="section">
 
-<div class="info">
-
-<section class="section">
-
 <h2>🌐 Càlcul oficial de notes (Generalitat Valenciana)</h2>
 
 <div class="info">
@@ -521,13 +516,9 @@ box-shadow:0 2px 6px rgba(0,0,0,0.2);
 
 </div>
 
-</div>
+<br>
 
-</section>
-  
 ⚠️ <strong>Recorda</strong>
-
-Les ponderacions poden variar segons:
 
 <ul>
 <li>la universitat</li>
@@ -726,6 +717,16 @@ let barra=document.getElementById("progress");
 
 barra.style.width=percent+"%";
 
+if(final < 8){
+barra.style.background="#d9534f";
+}
+else if(final < 11){
+barra.style.background="#f0ad4e";
+}
+else{
+barra.style.background="#5cb85c";
+}
+
 }
 
 let btn=document.getElementById("topBtn");
@@ -749,4 +750,3 @@ document.documentElement.scrollTop=0;
 
 </body>
 </html>
-
