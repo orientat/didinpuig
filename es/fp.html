@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formación Profesional | Orientación</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#333;
+}
+
+/* CONTENEDOR */
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+/* BOTON VOLVER */
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+/* CABECERA */
+
+header{
+background:#a65277;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:15px;
+border-radius:10px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+/* SECCIONES */
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* ACORDEÓN */
+
+.accordion{
+background:#f3f3f3;
+border-radius:10px;
+padding:18px;
+margin-bottom:10px;
+cursor:pointer;
+font-weight:bold;
+border-left:5px solid #a65277;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.accordion:hover{
+background:#ececec;
+}
+
+.panel{
+display:none;
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.plus{
+font-size:22px;
+font-weight:bold;
+}
+
+/* FAMILIAS PROFESIONALES */
+
+.families{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+margin-top:20px;
+}
+
+.family{
+background:#f3f3f3;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+text-align:center;
+padding:20px 10px;
+transition:0.2s;
+}
+
+.family:hover{
+background:#ececec;
+transform:translateY(-2px);
+}
+
+.family a{
+text-decoration:none;
+color:#333;
+display:block;
+}
+
+.family-icon{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.family-text{
+font-weight:bold;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.families{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.families{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* FOOTER */
+
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+a{
+color:#6d2548;
+font-weight:bold;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Volver a Orientación</a>
+</div>
+
+<header>
+<h1>🎓 Formación Profesional</h1>
+<p>IES Didín Puig · Departamento de Orientación</p>
+</header>
+
+
+<section class="section">
+
+<div class="accordion">¿Qué es la Formación Profesional? <span class="plus">+</span></div>
+
+<div class="panel">
+
+<p>
+La Formación Profesional son estudios profesionales muy cercanos a la realidad del mercado laboral.
+Proporcionan una formación especializada que permite acceder al mundo del trabajo con competencias profesionales elevadas.
+</p>
+
+<p>
+Actualmente la FP se estructura en grados.
+</p>
+
+<ul>
+<li>📘 Grado Básico → Título de Técnico Básico</li>
+<li>📗 Grado Medio → Título de Técnico</li>
+<li>🎓 Grado Superior → Título de Técnico Superior</li>
+<li>⭐ Grado E → Cursos de especialización</li>
+</ul>
+
+<p>
+Más información:
+<a href="https://www.todofp.es" target="_blank">TodoFP</a>
+</p>
+
+</div>
+
+
+<div class="accordion">Grados Básicos de FP <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li>Tener 15 años</li>
+<li>Haber cursado 3º de ESO (o excepcionalmente 2º)</li>
+<li>Propuesta del equipo docente</li>
+</ul>
+
+<p>
+<a href="https://ceice.gva.es/es/web/formacion-profesional/fpb" target="_blank">
+FP Básica
+</a>
+</p>
+
+</div>
+
+
+<div class="accordion">Grados Medios de FP <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li>Título de ESO</li>
+<li>Título de FP Básica</li>
+<li>Otras titulaciones equivalentes</li>
+</ul>
+
+<p>
+También se puede acceder mediante prueba de acceso con 17 años.
+</p>
+
+</div>
+
+
+<div class="accordion">Grados Superiores de FP <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li>Título de Bachillerato</li>
+<li>Título de Grado Medio</li>
+<li>Titulación universitaria</li>
+</ul>
+
+<p>
+También se puede acceder mediante prueba con 19 años (18 con Grado Medio).
+</p>
+
+</div>
+
+
+<div class="accordion">Enseñanzas de FP en régimen especial <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li>🎨 Artes plásticas y diseño</li>
+<li>🏃 Enseñanzas deportivas</li>
+<li>🎵 Música y danza</li>
+</ul>
+
+</div>
+
+
+<div class="accordion">Oferta de Grados de FP <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li><a href="https://ceice.gva.es/es/web/formacion-profesional" target="_blank">Oferta Comunidad Valenciana</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Oferta toda España</a></li>
+</ul>
+
+</div>
+
+
+<div class="accordion">Oferta de cursos de especialización <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li><a href="https://ceice.gva.es/es/web/formacion-profesional" target="_blank">Cursos Comunidad Valenciana</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Cursos toda España</a></li>
+</ul>
+
+</div>
+
+
+<div class="accordion">Más información sobre Formación Profesional <span class="plus">+</span></div>
+
+<div class="panel">
+
+<ul>
+<li><a href="https://ceice.gva.es/es/web/formacion-profesional" target="_blank">Conselleria FP</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Portal TodoFP</a></li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧰 Algunas familias profesionales</h2>
+
+<div class="families">
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informática</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricidad y Electrónica</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoción</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostelería y Turismo</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imagen Personal</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Servicios Socioculturales</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanidad</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comercio y Marketing</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificación y Obra Civil</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agraria</div></a></div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+IES Didín Puig · Orientación Académica
+</footer>
+
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+
+acc[i].addEventListener("click", function() {
+
+var panel = this.nextElementSibling;
+
+if (panel.style.display === "block") {
+panel.style.display = "none";
+} else {
+panel.style.display = "block";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
