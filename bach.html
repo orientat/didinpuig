@@ -15,8 +15,6 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR */
-
 .wrapper{
 width:75%;
 margin:auto;
@@ -108,7 +106,7 @@ border-radius:10px;
 border-left:5px solid #a65277;
 }
 
-/* MATERIAS */
+/* TABLA MATERIAS */
 
 .table-grid{
 display:grid;
@@ -130,7 +128,6 @@ background:#fff2f7;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-margin-top:20px;
 }
 
 .example{
@@ -139,52 +136,78 @@ padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
 margin-top:15px;
-font-family:monospace;
 }
 
-/* ACORDEÓN */
+/* SIMULADOR */
 
-.accordion{
-background:#f3f3f3;
-border-radius:10px;
-padding:18px;
-margin-bottom:10px;
-cursor:pointer;
-font-weight:bold;
-border-left:5px solid #a65277;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.panel{
-display:none;
+.simulator{
 background:#fff2f7;
-padding:20px;
+padding:25px;
 border-radius:10px;
-margin-bottom:15px;
+border-left:5px solid #a65277;
+margin-top:20px;
 }
 
-/* PLANIFICACIÓN VISUAL */
+.sim-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+.sim-grid input,
+.sim-grid select{
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+width:100%;
+}
+
+.result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+color:#6d2548;
+}
+
+/* BARRA PROGRESO */
+
+.progress-bar{
+width:100%;
+height:18px;
+background:#ddd;
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
+}
+
+#progress{
+height:100%;
+width:0%;
+background:#a65277;
+transition:width 0.4s;
+}
+
+#mensaje{
+margin-top:10px;
+font-weight:bold;
+color:#6d2548;
+}
+
+/* PLANIFICACION */
 
 .plan-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-top:10px;
+gap:20px;
+margin-top:15px;
 }
 
 .plan-box{
-background:white;
+background:#f3f3f3;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
-}
-
-.plan-box h3{
-margin-top:0;
-color:#6d2548;
 }
 
 textarea{
@@ -193,6 +216,7 @@ height:80px;
 border-radius:6px;
 border:1px solid #ccc;
 padding:8px;
+margin-top:10px;
 }
 
 /* FOOTER */
@@ -229,7 +253,7 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
-.futuro{
+.sim-grid{
 grid-template-columns:1fr;
 }
 
@@ -343,19 +367,62 @@ La nota final pot arribar fins a <strong>14 punts</strong>.
 
 </div>
 
-<div class="example">
+</section>
 
-Exemple:
 
-Mitjana Batxillerat → 7,5  
-PAU obligatòria → 7,0  
+<section class="section">
 
-Nota d'accés = 7,3  
+<h2>Simulador de nota d’admissió</h2>
 
-Biologia → 9 × 0,2  
-Química → 8 × 0,2  
+<div class="simulator">
 
-Nota final → **10,7**
+Introduïx les teues notes aproximades.
+
+<div class="sim-grid">
+
+<div>
+Mitjana Batxillerat
+<input type="number" id="bat" step="0.01" min="0" max="10">
+</div>
+
+<div>
+PAU obligatòria
+<input type="number" id="pau" step="0.01" min="0" max="10">
+</div>
+
+<div>
+Assignatura 1
+<input type="number" id="mat1" step="0.01" min="0" max="10">
+<select id="pond1">
+<option value="0.1">pondera 0,1</option>
+<option value="0.2">pondera 0,2</option>
+</select>
+</div>
+
+<div>
+Assignatura 2
+<input type="number" id="mat2" step="0.01" min="0" max="10">
+<select id="pond2">
+<option value="0.1">pondera 0,1</option>
+<option value="0.2">pondera 0,2</option>
+</select>
+</div>
+
+</div>
+
+<div class="result">
+
+Nota d'accés: <span id="acces">-</span> / 10  
+<br>
+Nota d'admissió: <span id="final">-</span> / 14
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+<div id="mensaje"></div>
+
+</div>
 
 </div>
 
@@ -364,26 +431,7 @@ Nota final → **10,7**
 
 <section class="section">
 
-<div class="accordion">Guia per a triar les matèries de Batxillerat</div>
-
-<div class="panel">
-
-<ul>
-<li>🎓 Universitat</li>
-<li>🛠️ Grau Superior d’FP</li>
-<li>🔬 Ciències o salut</li>
-<li>💻 Tecnologia</li>
-<li>📊 Ciències socials</li>
-<li>📚 Humanitats</li>
-<li>🎨 Art</li>
-</ul>
-
-</div>
-
-
-<div class="accordion">Planifica les teues matèries</div>
-
-<div class="panel">
+<h2>Planifica el teu itinerari</h2>
 
 <div class="plan-grid">
 
@@ -398,44 +446,14 @@ Nota final → **10,7**
 </div>
 
 <div class="plan-box">
-<h3>🎯 Després de Batxillerat</h3>
+<h3>🎯 Després del Batxillerat</h3>
 <textarea></textarea>
 </div>
 
 </div>
 
-</div>
-
-
-<div class="accordion">Com és el Batxillerat a l’IES Didín Puig</div>
-
-<div class="panel">
-
-<p>
-El Batxillerat és una etapa no obligatòria que dura dos cursos.
-</p>
-
-<ul>
-<li>🎓 Preparació per a la universitat</li>
-<li>🛠️ Accés a cicles de Grau Superior</li>
-</ul>
-
-</div>
-
-
-<div class="accordion">I després de Batxillerat, què?</div>
-
-<div class="panel">
-
-<ul>
-<li>🎓 Universitat</li>
-<li>🛠️ FP de Grau Superior</li>
-<li>📚 Altres estudis</li>
-</ul>
-
-</div>
-
 </section>
+
 
 </div>
 
@@ -447,21 +465,47 @@ IES Didín Puig · Orientació Acadèmica
 
 <script>
 
-var acc = document.getElementsByClassName("accordion");
+const inputs=document.querySelectorAll("#bat,#pau,#mat1,#mat2,#pond1,#pond2");
 
-for (var i = 0; i < acc.length; i++) {
+inputs.forEach(input=>{
+input.addEventListener("input",calcular);
+});
 
-acc[i].addEventListener("click", function() {
+function calcular(){
 
-var panel = this.nextElementSibling;
+let bat=parseFloat(document.getElementById("bat").value)||0;
+let pau=parseFloat(document.getElementById("pau").value)||0;
+let m1=parseFloat(document.getElementById("mat1").value)||0;
+let m2=parseFloat(document.getElementById("mat2").value)||0;
 
-if (panel.style.display === "block") {
-panel.style.display = "none";
-} else {
-panel.style.display = "block";
+let p1=parseFloat(document.getElementById("pond1").value)||0;
+let p2=parseFloat(document.getElementById("pond2").value)||0;
+
+let acces=(bat*0.6)+(pau*0.4);
+let final=acces+(m1*p1)+(m2*p2);
+
+document.getElementById("acces").innerText=acces.toFixed(2);
+document.getElementById("final").innerText=final.toFixed(2);
+
+let porcentaje=(final/14)*100;
+document.getElementById("progress").style.width=porcentaje+"%";
+
+let msg="";
+
+if(final<8){
+msg="Encara pots millorar la teua nota.";
+}
+else if(final<10){
+msg="Bona nota d'admissió.";
+}
+else if(final<12){
+msg="Molt bona nota!";
+}
+else{
+msg="Nota excel·lent!";
 }
 
-});
+document.getElementById("mensaje").innerText=msg;
 
 }
 
