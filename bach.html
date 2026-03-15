@@ -61,6 +61,8 @@ font-size:30px;
 
 .section{
 margin-top:40px;
+padding-top:10px;
+border-top:1px solid #eee;
 }
 
 .section h2{
@@ -123,7 +125,7 @@ border-left:5px solid #a65277;
 line-height:1.6;
 }
 
-/* ENLLAÇOS EN QUADRES ROSA */
+/* ENLLAÇOS EN CAIXES ROSA */
 
 .info a{
 color:#0066cc;
@@ -242,7 +244,23 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE SUAU */
+/* BOTÓ TORNAR A DALT */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#a65277;
+color:white;
+border:none;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+display:none;
+}
+
+/* RESPONSIVE */
 
 @media (max-width:900px){
 
@@ -293,7 +311,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Modalitats de Batxillerat</h2>
+<h2>🎓 Modalitats de Batxillerat</h2>
 
 <div class="modalitats">
 
@@ -309,7 +327,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Matèries de modalitat (exemples)</h2>
+<h2>📚 Matèries de modalitat (exemples)</h2>
 
 <div class="grid">
 
@@ -331,7 +349,7 @@ grid-template-columns:1fr;
 <li>Economia</li>
 <li>Empresa</li>
 <li>Geografia</li>
-<li>Història món contemporani</li>
+<li>Història del món contemporani</li>
 </ul>
 </div>
 
@@ -340,7 +358,7 @@ grid-template-columns:1fr;
 <ul>
 <li>Llatí</li>
 <li>Grec</li>
-<li>Història món contemporani</li>
+<li>Història del món contemporani</li>
 <li>Literatura universal</li>
 </ul>
 </div>
@@ -362,7 +380,7 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>Com funcionen les ponderacions de la PAU</h2>
+<h2>📊 Com funcionen les ponderacions de la PAU</h2>
 
 <div class="info">
 
@@ -404,7 +422,7 @@ Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
 
 <section class="section">
 
-<h2>Simulador de nota d’admissió</h2>
+<h2>🧮 Simulador de nota d’admissió</h2>
 
 <div class="sim">
 
@@ -470,7 +488,7 @@ Consulta sempre les taules oficials de ponderació.
 
 <section class="section">
 
-<h2>I després de Batxillerat, què?</h2>
+<h2>🧭 I després de Batxillerat, què?</h2>
 
 <div class="grid">
 
@@ -513,7 +531,7 @@ Consulta sempre les taules oficials de ponderació.
 
 <section class="section">
 
-<h2>Planifica el teu itinerari</h2>
+<h2>📝 Planifica el teu itinerari</h2>
 
 <div class="plan">
 
@@ -537,91 +555,13 @@ Consulta sempre les taules oficials de ponderació.
 </section>
 
 
-<section class="section">
-
-<h2>Com és el Batxillerat a l’IES Didín Puig</h2>
-
-<div class="info">
-
-El Batxillerat és una etapa <strong>no obligatòria</strong> que es cursa després d’obtenir el títol d’ESO.
-
-<br><br>
-
-Prepara l’alumnat principalment per a:
-
-<ul>
-<li>🎓 <strong>Estudis universitaris</strong></li>
-<li>🛠️ <strong>Cicles Formatius de Grau Superior</strong></li>
-</ul>
-
-<br>
-
-S’organitza en <strong>dos cursos acadèmics</strong> i combina:
-
-<ul>
-<li>Matèries comunes</li>
-<li>Matèries de modalitat</li>
-<li>Matèries optatives</li>
-</ul>
-
 </div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Altres opcions després del Batxillerat</h2>
-
-<div class="info">
-
-En finalitzar Batxillerat pots continuar el teu itinerari acadèmic amb diferents opcions:
-
-<ul>
-
-<li>
-🎓 <strong><a href="uni.html">Estudis universitaris</a></strong><br>
-Accés mitjançant la prova d'accés a la universitat (PAU).
-</li>
-
-<li>
-🛠️ <strong><a href="fp.html">Cicles Formatius de Grau Superior</a></strong><br>
-Formació professional avançada amb gran orientació pràctica.
-</li>
-
-<li>
-📚 <strong><a href="altresest.html">Altres estudis</a></strong><br>
-Ensenyaments artístics, esportius o altres itineraris formatius.
-</li>
-
-<li>
-🧭 <strong><a href="orientafut.html">Orientació acadèmica</a></strong><br>
-Tests d’interessos i orientació personalitzada.
-</li>
-
-<li>
-💼 <strong>Incorporació al món laboral</strong><br>
-Amb el títol de Batxiller també es pot accedir directament al mercat laboral.
-</li>
-
-</ul>
-
-<br>
-
-Si tens dubtes sobre el teu futur acadèmic, consulta amb el <strong>Departament d’Orientació</strong>.
-
-</div>
-
-</section>
-
-
-</div>
-
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
 
+<button onclick="topFunction()" id="topBtn">↑</button>
 
 <script>
 
@@ -651,16 +591,23 @@ let barra=document.getElementById("progress");
 
 barra.style.width=percent+"%";
 
-if(final < 8){
-barra.style.background="#d9534f";
-}
-else if(final < 11){
-barra.style.background="#f0ad4e";
-}
-else{
-barra.style.background="#5cb85c";
 }
 
+let btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+btn.style.display="block";
+}else{
+btn.style.display="none";
+}
+
+}
+
+function topFunction(){
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
 }
 
 </script>
