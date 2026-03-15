@@ -20,8 +20,6 @@ width:75%;
 margin:auto;
 }
 
-/* BOTÓ TORNAR */
-
 .back{
 margin-top:20px;
 }
@@ -40,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CAPÇALERA */
-
 header{
 background:#a65277;
 color:white;
@@ -55,8 +51,6 @@ header h1{
 margin:0;
 font-size:30px;
 }
-
-/* SECCIONS */
 
 .section{
 margin-top:40px;
@@ -129,10 +123,6 @@ padding-left:18px;
 margin-top:10px;
 }
 
-.table-box li{
-margin-bottom:4px;
-}
-
 /* INFO */
 
 .info{
@@ -140,6 +130,18 @@ background:#fff2f7;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
+line-height:1.6;
+}
+
+/* EXEMPLES */
+
+.example{
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+margin-top:15px;
+font-family:monospace;
 }
 
 /* SIMULADOR */
@@ -167,8 +169,6 @@ border:1px solid #ccc;
 width:100%;
 }
 
-/* RESULTATS */
-
 .result{
 margin-top:20px;
 font-size:18px;
@@ -176,7 +176,7 @@ font-weight:bold;
 color:#6d2548;
 }
 
-/* BARRA */
+/* BARRA VISUAL */
 
 .progress-bar{
 width:100%;
@@ -190,14 +190,13 @@ overflow:hidden;
 #progress{
 height:100%;
 width:0%;
-background:#a65277;
+background:red;
 transition:width 0.4s;
 }
 
 #mensaje{
 margin-top:10px;
 font-weight:bold;
-color:#6d2548;
 }
 
 /* PLANIFICACIÓ */
@@ -225,8 +224,6 @@ padding:8px;
 margin-top:10px;
 }
 
-/* FOOTER */
-
 footer{
 background:#a65277;
 color:white;
@@ -243,34 +240,23 @@ margin-right:auto;
 
 @media (max-width:900px){
 
-.wrapper{
-width:90%;
-}
+.wrapper{width:90%;}
 
-.modalitats{
-grid-template-columns:repeat(2,1fr);
-}
+.modalitats{grid-template-columns:repeat(2,1fr);}
 
-.table-grid{
-grid-template-columns:repeat(2,1fr);
-}
+.table-grid{grid-template-columns:repeat(2,1fr);}
 
-.plan-grid{
-grid-template-columns:1fr;
-}
+.plan-grid{grid-template-columns:1fr;}
 
-.sim-grid{
-grid-template-columns:1fr;
-}
+.sim-grid{grid-template-columns:1fr;}
 
-footer{
-width:90%;
-}
+footer{width:90%;}
 
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -382,14 +368,40 @@ Qualsevol modalitat permet accedir a un cicle formatiu de Grau Superior.
 
 <div class="info">
 
+Les ponderacions permeten augmentar la nota d'admissió a la universitat.
+
 <ul>
-<li>60 % de la nota mitjana de Batxillerat</li>
-<li>40 % de la fase obligatòria de la PAU</li>
-<li>+ ponderació de fins a dues assignatures de modalitat</li>
+<li><strong>Nota d'accés</strong> (fins a 10 punts)</li>
+<li><strong>Ponderacions</strong> de matèries de modalitat (fins a 4 punts més)</li>
 </ul>
 
-La nota final pot arribar fins a <strong>14 punts</strong>.
+La nota d'accés es calcula amb:
 
+<ul>
+<li>60 % nota mitjana Batxillerat</li>
+<li>40 % fase obligatòria PAU</li>
+</ul>
+
+Després es poden sumar fins a dues assignatures multiplicades per <strong>0,1 o 0,2</strong>.
+
+</div>
+
+<div class="example">
+Exemple 1  
+Batxillerat 7,5 · PAU 7 → accés 7,3  
+Biologia 9×0,2 + Química 8×0,2 → **10,7**
+</div>
+
+<div class="example">
+Exemple 2  
+Batxillerat 8,2 · PAU 6,5 → accés 7,5  
+Matemàtiques 9×0,2 + Física 7×0,2 → **10,7**
+</div>
+
+<div class="example">
+Exemple 3  
+Batxillerat 6,8 · PAU 7,5 → accés 7,1  
+Economia 8×0,1 + Matemàtiques CCSS 9×0,2 → **9,7**
 </div>
 
 </section>
@@ -404,7 +416,6 @@ La nota final pot arribar fins a <strong>14 punts</strong>.
 <div class="sim-grid">
 
 <input type="number" id="bat" placeholder="Mitjana Batxillerat">
-
 <input type="number" id="pau" placeholder="PAU obligatòria">
 
 <div>
@@ -448,7 +459,16 @@ Nota d'admissió: <span id="final">-</span> / 14
 
 <div class="info">
 
-⚠️ Important: Les ponderacions poden variar segons la universitat, el grau i l'any de la PAU.
+⚠️ <strong>Recorda</strong><br><br>
+
+Les ponderacions de les assignatures poden variar segons:
+
+<ul>
+<li>la universitat</li>
+<li>el grau que vulgues estudiar</li>
+</ul>
+
+Consulta sempre les <strong>taules oficials de ponderació</strong> de l'any en què et presentes a la PAU.
 
 </div>
 
@@ -487,14 +507,12 @@ Nota d'admissió: <span id="final">-</span> / 14
 
 <div class="info">
 
-El Batxillerat prepara l'alumnat per a:
+El Batxillerat prepara per a:
 
 <ul>
-<li>🎓 Universitat</li>
-<li>🛠️ Cicles Formatius de Grau Superior</li>
+<li>Universitat</li>
+<li>Cicles Formatius de Grau Superior</li>
 </ul>
-
-S'organitza en dos cursos i combina matèries comunes, de modalitat i optatives.
 
 </div>
 
@@ -508,10 +526,10 @@ S'organitza en dos cursos i combina matèries comunes, de modalitat i optatives.
 <div class="info">
 
 <ul>
-<li>🎓 Estudis universitaris</li>
-<li>🛠️ Cicles Formatius de Grau Superior</li>
-<li>🌍 Altres estudis</li>
-<li>💼 Incorporació al món laboral</li>
+<li>Estudis universitaris</li>
+<li>Cicles Formatius de Grau Superior</li>
+<li>Altres estudis</li>
+<li>Incorporació al món laboral</li>
 </ul>
 
 </div>
@@ -550,7 +568,23 @@ document.getElementById("acces").innerText=acces.toFixed(2);
 document.getElementById("final").innerText=final.toFixed(2);
 
 let porcentaje=(final/14)*100;
-document.getElementById("progress").style.width=porcentaje+"%";
+let barra=document.getElementById("progress");
+let mensaje=document.getElementById("mensaje");
+
+barra.style.width=porcentaje+"%";
+
+if(final<8){
+barra.style.background="red";
+mensaje.innerText="Nota baixa";
+}
+else if(final<11){
+barra.style.background="orange";
+mensaje.innerText="Nota mitjana";
+}
+else{
+barra.style.background="green";
+mensaje.innerText="Nota alta";
+}
 
 }
 
