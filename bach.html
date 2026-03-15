@@ -71,7 +71,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETAS MODALIDADES */
+/* MODALIDADES */
 
 .modalitats{
 display:grid;
@@ -80,7 +80,6 @@ gap:15px;
 }
 
 .modalitat{
-background:#f3f3f3;
 padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
@@ -89,13 +88,19 @@ text-align:center;
 font-weight:bold;
 }
 
-/* TABLA MODALIDADES */
+.ciencia{background:#eef5ff;}
+.social{background:#edf8f1;}
+.human{background:#fff6e9;}
+.art{background:#fff0f5;}
+
+/* TABLA MATERIAS */
 
 .table-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:15px;
 margin-top:20px;
+align-items:stretch;
 }
 
 .table-box{
@@ -104,10 +109,37 @@ padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
 line-height:1.6;
+height:100%;
 }
 
 .table-box strong{
 color:#6d2548;
+}
+
+/* CAJA INFO */
+
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+line-height:1.6;
+border-left:5px solid #a65277;
+margin-top:25px;
+}
+
+.info a{
+display:inline-block;
+margin-top:10px;
+background:#6d2548;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.info a:hover{
+background:#a65277;
 }
 
 /* ACORDEÓN */
@@ -180,6 +212,10 @@ width:90%;
 grid-template-columns:repeat(2,1fr);
 }
 
+.table-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
 footer{
 width:90%;
 }
@@ -210,13 +246,13 @@ width:90%;
 
 <div class="modalitats">
 
-<div class="modalitat">🔬 Ciències i Tecnologia</div>
+<div class="modalitat ciencia">🔬 Ciències i Tecnologia</div>
 
-<div class="modalitat">📊 Ciències Socials</div>
+<div class="modalitat social">📊 Ciències Socials</div>
 
-<div class="modalitat">📚 Humanitats</div>
+<div class="modalitat human">📚 Humanitats</div>
 
-<div class="modalitat">🎨 Arts</div>
+<div class="modalitat art">🎨 Arts</div>
 
 </div>
 
@@ -261,6 +297,24 @@ Cultura audiovisual<br>
 Projectes artístics<br>
 Història de l'art
 </div>
+
+</div>
+
+<div class="info">
+
+<strong>ℹ️ Ponderacions de la PAU</strong><br><br>
+
+Algunes matèries de modalitat poden augmentar la teua nota d'accés a la universitat.
+
+Cada grau universitari dona més valor a determinades assignatures i aquestes ponderacions poden canviar cada any.
+
+Per això és important consultar sempre les taules actualitzades abans de triar les matèries.
+
+<br>
+
+<a href="https://universitats.gva.es" target="_blank">
+Consultar ponderacions actualitzades
+</a>
 
 </div>
 
@@ -355,7 +409,6 @@ S’estructura en <strong>2 cursos</strong>.
 </div>
 
 </section>
-
 
 </div>
 
