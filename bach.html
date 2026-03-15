@@ -123,6 +123,17 @@ border-left:5px solid #a65277;
 line-height:1.6;
 }
 
+/* ENLLAÇOS EN QUADRES ROSA */
+
+.info a{
+color:#0066cc;
+font-weight:bold;
+}
+
+.info a:hover{
+text-decoration:underline;
+}
+
 /* EXEMPLES */
 
 .example{
@@ -205,7 +216,7 @@ border:1px solid #ccc;
 padding:8px;
 }
 
-/* ENLLAÇOS */
+/* ENLLAÇOS TARGETES */
 
 .link-card{
 text-decoration:none;
@@ -231,10 +242,53 @@ margin-left:auto;
 margin-right:auto;
 }
 
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:1100px){
+
+.wrapper{
+width:90%;
+}
+
+.modalitats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.plan{
+grid-template-columns:1fr;
+}
+
+.sim-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media (max-width:600px){
+
+.modalitats{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.sim-grid{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 
 </head>
-
 
 <body>
 
@@ -345,17 +399,17 @@ Després es poden sumar dues assignatures multiplicades per 0,1 o 0,2.
 
 <div class="example">
 Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  
-Biologia 9×0.2 + Química 8×0.2 → **10.7**
+Biologia 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
 Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  
-Matemàtiques 9×0.2 + Física 7×0.2 → **10.7**
+Matemàtiques 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
 Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  
-Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → **9.7**
+Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
 </div>
 
 </section>
@@ -539,22 +593,22 @@ En finalitzar Batxillerat pots continuar el teu itinerari acadèmic amb diferent
 <ul>
 
 <li>
-🎓 <strong><a href="uni.html" style="color:#333;text-decoration:none;">Estudis universitaris</a></strong><br>
+🎓 <strong><a href="uni.html">Estudis universitaris</a></strong><br>
 Accés mitjançant la prova d'accés a la universitat (PAU).
 </li>
 
 <li>
-🛠️ <strong><a href="fp.html" style="color:#333;text-decoration:none;">Cicles Formatius de Grau Superior</a></strong><br>
+🛠️ <strong><a href="fp.html">Cicles Formatius de Grau Superior</a></strong><br>
 Formació professional avançada amb gran orientació pràctica.
 </li>
 
 <li>
-📚 <strong><a href="altresest.html" style="color:#333;text-decoration:none;">Altres estudis</a></strong><br>
+📚 <strong><a href="altresest.html">Altres estudis</a></strong><br>
 Ensenyaments artístics, esportius o altres itineraris formatius.
 </li>
 
 <li>
-🧭 <strong><a href="orientafut.html" style="color:#333;text-decoration:none;">Orientació acadèmica</a></strong><br>
+🧭 <strong><a href="orientafut.html">Orientació acadèmica</a></strong><br>
 Tests d’interessos i orientació personalitzada.
 </li>
 
