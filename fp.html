@@ -104,11 +104,11 @@ font-size:22px;
 font-weight:bold;
 }
 
-/* TARJETAS FAMILIAS */
+/* FAMILIAS PROFESIONALES */
 
 .families{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:15px;
 margin-top:20px;
 }
@@ -121,14 +121,40 @@ border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
 font-weight:bold;
 text-align:center;
+transition:0.2s;
 }
 
-/* LINKS */
+.family:hover{
+background:#ececec;
+transform:translateY(-2px);
+}
 
-a{
-color:#6d2548;
-font-weight:bold;
+.family a{
 text-decoration:none;
+color:#333;
+display:block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.families{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.families{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 /* FOOTER */
@@ -143,20 +169,6 @@ border-radius:10px;
 width:75%;
 margin-left:auto;
 margin-right:auto;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
 }
 
 </style>
@@ -189,11 +201,7 @@ Proporcionen una formació especialitzada que permet accedir al món del treball
 </p>
 
 <p>
-Actualment l’FP s’estructura en graus. En aquesta web ens referirem especialment als cicles formatius de grau D i E.
-</p>
-
-<p>
-En la Comunitat Valenciana hi ha implantats més de <strong>170 cicles formatius</strong> agrupats en <strong>26 famílies professionals</strong>.
+Actualment l’FP s’estructura en graus.
 </p>
 
 <ul>
@@ -202,10 +210,6 @@ En la Comunitat Valenciana hi ha implantats més de <strong>170 cicles formatius
 <li>🎓 Grau Superior → Títol de Tècnic Superior</li>
 <li>⭐ Grau E → Cursos d’especialització</li>
 </ul>
-
-<p>
-Els títols tenen validesa oficial en tot el territori nacional.
-</p>
 
 <p>
 Més informació:
@@ -219,40 +223,11 @@ Més informació:
 
 <div class="panel">
 
-<p>
-Els cicles de Grau Bàsic formen part de l’educació bàsica del sistema educatiu.
-</p>
-
-<strong>Titulació:</strong>
-
-<ul>
-<li>Graduat en ESO</li>
-<li>Títol de Tècnic Bàsic</li>
-</ul>
-
-<strong>Requisits d’accés:</strong>
-
 <ul>
 <li>Tindre 15 anys</li>
-<li>Haver cursat 3r ESO (o excepcionalment 2n)</li>
+<li>Haver cursat 3r ESO</li>
 <li>Proposta de l’equip docent</li>
 </ul>
-
-<strong>Estructura del cicle:</strong>
-
-<ul>
-<li>Comunicació i societat</li>
-<li>Ciències aplicades</li>
-<li>Mòduls professionals</li>
-<li>FOL</li>
-<li>FCT (pràctiques en empresa)</li>
-</ul>
-
-<p>
-<a href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
-FP Bàsica
-</a>
-</p>
 
 </div>
 
@@ -261,36 +236,11 @@ FP Bàsica
 
 <div class="panel">
 
-<p>
-Els cicles de grau mitjà condueixen al títol de <strong>Tècnic</strong>.
-</p>
-
-<strong>Requisits:</strong>
-
 <ul>
 <li>Títol d’ESO</li>
 <li>Títol d’FP Bàsica</li>
-<li>Altres titulacions equivalents</li>
+<li>Prova d’accés amb 17 anys</li>
 </ul>
-
-<p>
-Si no tens els requisits pots accedir mitjançant la <strong>prova d’accés</strong> amb 17 anys.
-</p>
-
-<strong>Estructura de la prova:</strong>
-
-<ul>
-<li>Llengua i literatura</li>
-<li>Ciències socials</li>
-<li>Matemàtiques</li>
-<li>Tecnologia i ciències</li>
-</ul>
-
-<p>
-<a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank">
-Informació prova d'accés
-</a>
-</p>
 
 </div>
 
@@ -299,71 +249,10 @@ Informació prova d'accés
 
 <div class="panel">
 
-<p>
-Els cicles de grau superior condueixen al títol de <strong>Tècnic Superior</strong>.
-</p>
-
-<strong>Accés directe:</strong>
-
 <ul>
-<li>Títol de Batxillerat</li>
+<li>Batxillerat</li>
 <li>Títol de Grau Mitjà</li>
-<li>Títol universitari</li>
-</ul>
-
-<strong>Accés per prova:</strong>
-
-<p>
-Es pot accedir amb una prova si tens <strong>19 anys</strong> (o 18 amb un grau mitjà).
-</p>
-
-</div>
-
-
-<div class="accordion">Ensenyaments d’FP en règim especial <span class="plus">+</span></div>
-
-<div class="panel">
-
-<ul>
-<li>🎨 Arts plàstiques i disseny</li>
-<li>🏃 Ensenyaments esportius</li>
-<li>🎵 Música i dansa</li>
-</ul>
-
-</div>
-
-
-<div class="accordion">Oferta de Graus d’FP <span class="plus">+</span></div>
-
-<div class="panel">
-
-<ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Oferta Comunitat Valenciana</a></li>
-<li><a href="https://www.todofp.es" target="_blank">Oferta tota Espanya</a></li>
-</ul>
-
-</div>
-
-
-<div class="accordion">Oferta de cursos d’especialització <span class="plus">+</span></div>
-
-<div class="panel">
-
-<ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Cursos Comunitat Valenciana</a></li>
-<li><a href="https://www.todofp.es" target="_blank">Cursos tota Espanya</a></li>
-</ul>
-
-</div>
-
-
-<div class="accordion">Més informació sobre Formació Professional <span class="plus">+</span></div>
-
-<div class="panel">
-
-<ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Conselleria FP</a></li>
-<li><a href="https://www.todofp.es" target="_blank">Portal TodoFP</a></li>
+<li>Prova d’accés amb 19 anys</li>
 </ul>
 
 </div>
@@ -377,22 +266,32 @@ Es pot accedir amb una prova si tens <strong>19 anys</strong> (o 18 amb un grau 
 
 <div class="families">
 
-<div class="family">💻 Informàtica</div>
-<div class="family">⚡ Electricitat i Electrònica</div>
-<div class="family">🚗 Automoció</div>
-<div class="family">🍳 Hostaleria i Turisme</div>
-<div class="family">💄 Imatge Personal</div>
-<div class="family">👶 Serveis Socioculturals</div>
-<div class="family">🏥 Sanitat</div>
-<div class="family">📦 Comerç i Màrqueting</div>
-<div class="family">🏗️ Edificació i Obra Civil</div>
-<div class="family">🌱 Agrària</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">💻 Informàtica</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">⚡ Electricitat i Electrònica</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank">🚗 Automoció</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">🍳 Hostaleria i Turisme</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank">💄 Imatge Personal</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank">👶 Serveis Socioculturals</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">🏥 Sanitat</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">📦 Comerç i Màrqueting</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank">🏗️ Edificació i Obra Civil</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank">🌱 Agrària</a></div>
 
 </div>
 
 </section>
 
 </div>
+
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
