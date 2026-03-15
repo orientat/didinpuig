@@ -125,6 +125,17 @@ border-left:5px solid #a65277;
 line-height:1.6;
 }
 
+/* AVÍS GROC */
+
+.warning{
+background:#fff8d6;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #f2c94c;
+line-height:1.6;
+margin-top:15px;
+}
+
 /* ENLLAÇOS EN CAIXA ROSA */
 
 .info a{
@@ -326,101 +337,6 @@ grid-template-columns:1fr;
 
 <section class="section">
 
-<h2>📚 Matèries de modalitat (exemples)</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>Ciències i Tecnologia</strong>
-<ul>
-<li>Matemàtiques</li>
-<li>Física</li>
-<li>Química</li>
-<li>Biologia</li>
-<li>Dibuix tècnic</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Ciències Socials</strong>
-<ul>
-<li>Matemàtiques CCSS</li>
-<li>Economia</li>
-<li>Empresa</li>
-<li>Geografia</li>
-<li>Història món contemporani</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Humanitats</strong>
-<ul>
-<li>Llatí</li>
-<li>Grec</li>
-<li>Història món contemporani</li>
-<li>Literatura universal</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Arts</strong>
-<ul>
-<li>Dibuix artístic</li>
-<li>Cultura audiovisual</li>
-<li>Projectes artístics</li>
-<li>Història de l'art</li>
-</ul>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📊 Com funcionen les ponderacions de la PAU</h2>
-
-<div class="info">
-
-Les ponderacions permeten augmentar la nota d'admissió a la universitat.
-
-<ul>
-<li><strong>Nota d'accés</strong> (fins a 10 punts)</li>
-<li><strong>Ponderacions</strong> de matèries de modalitat (fins a 4 punts més)</li>
-</ul>
-
-La nota d'accés es calcula amb:
-
-<ul>
-<li>60 % nota mitjana Batxillerat</li>
-<li>40 % fase obligatòria PAU</li>
-</ul>
-
-Després es poden sumar dues assignatures multiplicades per 0,1 o 0,2.
-
-</div>
-
-<div class="example">
-Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  
-Biologia 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
-</div>
-
-<div class="example">
-Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  
-Matemàtiques 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
-</div>
-
-<div class="example">
-Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  
-Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
-</div>
-
-</section>
-
-
-<section class="section">
-
 <h2>🧮 Simulador de nota d’admissió</h2>
 
 <div class="sim">
@@ -471,33 +387,18 @@ Nota d'admissió: <span id="final">-</span> /14
 
 <div class="info">
 
-Si vols calcular la teua <strong>nota d'accés i d'admissió a la universitat</strong> amb l'eina oficial, pots utilitzar el simulador de la Generalitat Valenciana.
-
-<br><br>
-
-En aquesta web oficial també pots consultar:
+Si vols calcular la teua <strong>nota d'accés i d'admissió</strong> amb l'eina oficial:
 
 <ul>
-
-<li>📑 <strong>Les taules de ponderacions actualitzades</strong> per a cada grau universitari.</li>
-
-<li>📊 calcular la <strong>nota d'accés a la universitat</strong></li>
-
-<li>🎓 calcular la <strong>nota d'admissió final</strong></li>
-
+<li>📑 Taules de ponderacions actualitzades</li>
+<li>📊 Càlcul de la nota d'accés</li>
+<li>🎓 Càlcul de la nota d'admissió</li>
 </ul>
-
-<br>
-
-<a href="https://universitats.gva.es/va/-/c%C3%A0lcul-qualificacions" target="_blank">
-Accedir al simulador oficial de la Generalitat Valenciana
-</a>
-
-<br><br>
 
 <div style="text-align:center">
 
-<a href="https://universitats.gva.es/es/-/c%C3%A1lculo-calificaciones" target="_blank"
+<a href="https://universitats.gva.es/es/-/c%C3%A1lculo-calificaciones"
+target="_blank"
 style="
 background:#0066cc;
 color:white;
@@ -507,7 +408,6 @@ font-weight:bold;
 text-decoration:none;
 display:inline-block;
 font-size:16px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
 ">
 
 🔗 SIMULADOR OFICIAL GVA
@@ -516,13 +416,15 @@ box-shadow:0 2px 6px rgba(0,0,0,0.2);
 
 </div>
 
-<br>
+</div>
+
+<div class="warning">
 
 ⚠️ <strong>Recorda</strong>
 
 <ul>
-<li>la universitat</li>
-<li>el grau que vulgues estudiar</li>
+<li>Les ponderacions poden variar segons la universitat.</li>
+<li>També poden variar segons el grau que vulgues estudiar.</li>
 </ul>
 
 Consulta sempre les taules oficials de ponderació.
@@ -530,8 +432,6 @@ Consulta sempre les taules oficials de ponderació.
 </div>
 
 </section>
-
-
 <section class="section">
 
 <h2>🧭 I després de Batxillerat, què?</h2>
@@ -678,9 +578,6 @@ Si tens dubtes sobre el teu futur acadèmic, consulta amb el <strong>Departament
 
 </section>
 
-
-</div>
-
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
@@ -725,18 +622,6 @@ barra.style.background="#f0ad4e";
 }
 else{
 barra.style.background="#5cb85c";
-}
-
-}
-
-let btn=document.getElementById("topBtn");
-
-window.onscroll=function(){
-
-if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
-btn.style.display="block";
-}else{
-btn.style.display="none";
 }
 
 }
