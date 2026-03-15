@@ -496,11 +496,7 @@ Consulta sempre les taules oficials de ponderació.
 </section>
 
 
-</div>
-
-<footer>
-IES Didín Puig · Orientació Acadèmica
-  <section class="section">
+<section class="section">
 
 <h2>Com és el Batxillerat a l’IES Didín Puig</h2>
 
@@ -532,10 +528,9 @@ S’organitza en <strong>dos cursos acadèmics</strong> i combina:
 </section>
 
 
-
 <section class="section">
 
-<h2>I després de Batxillerat, què?</h2>
+<h2>Altres opcions després del Batxillerat</h2>
 
 <div class="info">
 
@@ -578,6 +573,13 @@ Si tens dubtes sobre el teu futur acadèmic, consulta amb el <strong>Departament
 </div>
 
 </section>
+
+
+</div>
+
+
+<footer>
+IES Didín Puig · Orientació Acadèmica
 </footer>
 
 
@@ -589,10 +591,10 @@ inputs.forEach(i=>i.addEventListener("input",calc));
 
 function calc(){
 
-let bat=parseFloat(bat.value)||0;
-let pau=parseFloat(pau.value)||0;
-let m1=parseFloat(m1.value)||0;
-let m2=parseFloat(m2.value)||0;
+let bat=parseFloat(document.getElementById("bat").value)||0;
+let pau=parseFloat(document.getElementById("pau").value)||0;
+let m1=parseFloat(document.getElementById("m1").value)||0;
+let m2=parseFloat(document.getElementById("m2").value)||0;
 
 let p1=parseFloat(document.getElementById("p1").value);
 let p2=parseFloat(document.getElementById("p2").value);
@@ -605,7 +607,19 @@ document.getElementById("final").innerText=final.toFixed(2);
 
 let percent=(final/14)*100;
 
-document.getElementById("progress").style.width=percent+"%";
+let barra=document.getElementById("progress");
+
+barra.style.width=percent+"%";
+
+if(final < 8){
+barra.style.background="#d9534f";
+}
+else if(final < 11){
+barra.style.background="#f0ad4e";
+}
+else{
+barra.style.background="#5cb85c";
+}
 
 }
 
