@@ -15,7 +15,7 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
+/* CONTENEDOR */
 
 .wrapper{
 width:75%;
@@ -108,19 +108,18 @@ font-weight:bold;
 
 .families{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(5,1fr);
 gap:15px;
 margin-top:20px;
 }
 
 .family{
 background:#f3f3f3;
-padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
-font-weight:bold;
 text-align:center;
+padding:20px 10px;
 transition:0.2s;
 }
 
@@ -133,6 +132,16 @@ transform:translateY(-2px);
 text-decoration:none;
 color:#333;
 display:block;
+}
+
+.family-icon{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.family-text{
+font-weight:bold;
+font-size:14px;
 }
 
 /* RESPONSIVE */
@@ -188,7 +197,6 @@ margin-right:auto;
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
 
-
 <section class="section">
 
 <div class="accordion">Què és la Formació Professional? <span class="plus">+</span></div>
@@ -198,10 +206,6 @@ margin-right:auto;
 <p>
 La Formació Professional són els estudis professionals més pròxims a la realitat del mercat laboral.
 Proporcionen una formació especialitzada que permet accedir al món del treball amb competències professionals molt elevades.
-</p>
-
-<p>
-Actualment l’FP s’estructura en graus.
 </p>
 
 <ul>
@@ -218,47 +222,34 @@ Més informació:
 
 </div>
 
-
 <div class="accordion">Graus Bàsics d’FP <span class="plus">+</span></div>
-
 <div class="panel">
-
 <ul>
 <li>Tindre 15 anys</li>
 <li>Haver cursat 3r ESO</li>
 <li>Proposta de l’equip docent</li>
 </ul>
-
 </div>
 
-
 <div class="accordion">Graus Mitjans d’FP <span class="plus">+</span></div>
-
 <div class="panel">
-
 <ul>
 <li>Títol d’ESO</li>
 <li>Títol d’FP Bàsica</li>
 <li>Prova d’accés amb 17 anys</li>
 </ul>
-
 </div>
 
-
 <div class="accordion">Graus Superiors d’FP <span class="plus">+</span></div>
-
 <div class="panel">
-
 <ul>
 <li>Batxillerat</li>
 <li>Títol de Grau Mitjà</li>
 <li>Prova d’accés amb 19 anys</li>
 </ul>
-
 </div>
 
 </section>
-
 
 <section class="section">
 
@@ -266,25 +257,25 @@ Més informació:
 
 <div class="families">
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">💻 Informàtica</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informàtica</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">⚡ Electricitat i Electrònica</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricitat i Electrònica</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank">🚗 Automoció</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoció</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">🍳 Hostaleria i Turisme</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostaleria i Turisme</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank">💄 Imatge Personal</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imatge Personal</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank">👶 Serveis Socioculturals</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Serveis Socioculturals</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">🏥 Sanitat</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanitat</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">📦 Comerç i Màrqueting</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comerç i Màrqueting</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank">🏗️ Edificació i Obra Civil</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificació i Obra Civil</div></a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank">🌱 Agrària</a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agrària</div></a></div>
 
 </div>
 
@@ -292,11 +283,9 @@ Més informació:
 
 </div>
 
-
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
-
 
 <script>
 
