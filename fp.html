@@ -11,7 +11,7 @@
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#ffffff;
+background:#f5f7fb;
 color:#333;
 }
 
@@ -38,14 +38,10 @@ font-weight:bold;
 font-size:14px;
 }
 
-.back a:hover{
-background:#a65277;
-}
-
 /* CABECERA */
 
 header{
-background:#a65277;
+background:#003366;
 color:white;
 text-align:center;
 padding:25px;
@@ -58,50 +54,23 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
+/* TARJETAS */
 
-.section{
-margin-top:40px;
-}
-
-.section h2{
-color:#6d2548;
-border-left:6px solid #a65277;
-padding-left:10px;
-margin-bottom:15px;
-}
-
-/* ACORDEÓN */
-
-.accordion{
-background:#f3f3f3;
+.card{
+background:white;
 border-radius:10px;
-padding:18px;
-margin-bottom:10px;
-cursor:pointer;
-font-weight:bold;
-border-left:5px solid #a65277;
-display:flex;
-justify-content:space-between;
-align-items:center;
+padding:25px;
+margin-top:25px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
 
-.accordion:hover{
-background:#ececec;
+.card h2{
+color:#003366;
+margin-top:0;
 }
 
-.panel{
-display:none;
-background:#fff2f7;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-line-height:1.6;
-}
-
-.plus{
-font-size:22px;
-font-weight:bold;
+.card ul{
+line-height:1.7;
 }
 
 /* FAMILIAS PROFESIONALES */
@@ -114,18 +83,17 @@ margin-top:20px;
 }
 
 .family{
-background:#f3f3f3;
+background:white;
 border-radius:10px;
-border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+border-left:6px solid #003366;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
 text-align:center;
 padding:20px 10px;
 transition:0.2s;
 }
 
 .family:hover{
-background:#ececec;
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
 .family a{
@@ -142,6 +110,26 @@ margin-bottom:8px;
 .family-text{
 font-weight:bold;
 font-size:14px;
+}
+
+/* BOTÓN SUBIR */
+
+#topBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#003366;
+color:white;
+border:none;
+padding:12px 15px;
+border-radius:50%;
+font-size:18px;
+cursor:pointer;
+display:none;
+}
+
+#topBtn:hover{
+background:#0055a5;
 }
 
 /* RESPONSIVE */
@@ -169,7 +157,7 @@ grid-template-columns:repeat(2,1fr);
 /* FOOTER */
 
 footer{
-background:#a65277;
+background:#003366;
 color:white;
 text-align:center;
 padding:15px;
@@ -181,7 +169,7 @@ margin-right:auto;
 }
 
 a{
-color:#6d2548;
+color:#003366;
 font-weight:bold;
 text-decoration:none;
 }
@@ -205,42 +193,42 @@ text-decoration:none;
 </header>
 
 
-<section class="section">
+<div class="card">
 
-<div class="accordion">Què és la Formació Professional? <span class="plus">+</span></div>
-
-<div class="panel">
+<h2>Què és la Formació Professional?</h2>
 
 <p>
-La Formació Professional són estudis orientats a la formació pràctica i professional.
-Permeten adquirir competències tècniques i professionals per a incorporar-se al mercat laboral.
+La Formació Professional (FP) són estudis professionals molt pròxims a la realitat del mercat laboral. 
+Ofereixen una formació especialitzada que permet adquirir competències professionals i facilitar la incorporació al món del treball.
 </p>
 
 <p>
-Aquests estudis estan molt vinculats a les necessitats del mercat de treball i ofereixen una qualificació professional especialitzada.
+Aquests estudis estan orientats a l'ocupació i permeten també continuar la formació acadèmica.
 </p>
 
 <p>
-Més informació:
 <a href="https://www.todofp.es" target="_blank">Portal TodoFP</a>
 </p>
 
 </div>
 
 
-<div class="accordion">Com s'organitza la Formació Professional <span class="plus">+</span></div>
 
-<div class="panel">
+<div class="card">
+
+<h2>Com s’organitza la Formació Professional</h2>
 
 <p>
-La Formació Professional s'organitza en cicles formatius agrupats en famílies professionals.
+La Formació Professional s’organitza en cicles formatius agrupats en famílies professionals.
 </p>
 
-<ul>
-<li>Mòduls professionals (assignatures)</li>
-<li>Formació pràctica en empreses</li>
-<li>Duració aproximada de dos cursos acadèmics</li>
-</ul>
+<p>
+Cada cicle formatiu està format per mòduls professionals (assignatures) que combinen formació teòrica i pràctica.
+</p>
+
+<p>
+A més, els estudis inclouen un període de formació pràctica en empreses que permet aplicar els coneixements adquirits en un entorn real de treball.
+</p>
 
 <ul>
 <li>📘 Grau Bàsic</li>
@@ -252,100 +240,132 @@ La Formació Professional s'organitza en cicles formatius agrupats en famílies 
 </div>
 
 
-<div class="accordion">Accés a Grau Bàsic <span class="plus">+</span></div>
 
-<div class="panel">
+<div class="card">
 
-<ul>
-<li>Tindre entre 15 i 17 anys</li>
-<li>Haver cursat 3r d'ESO (o excepcionalment 2n)</li>
-<li>Proposta de l'equip docent</li>
-</ul>
-
-<a href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
-Informació FP Bàsica
-</a>
-
-</div>
-
-
-<div class="accordion">Accés a Grau Mitjà <span class="plus">+</span></div>
-
-<div class="panel">
+<h2>Titulacions que s'obtenen</h2>
 
 <ul>
-<li>Títol d'ESO</li>
-<li>Títol de FP Bàsica</li>
-<li>Altres titulacions equivalents</li>
+<li>Títol de Tècnic (Grau Mitjà)</li>
+<li>Títol de Tècnic Superior (Grau Superior)</li>
 </ul>
 
 <p>
-També es pot accedir mitjançant prova d'accés amb 17 anys.
+Aquestes titulacions tenen validesa acadèmica i professional.
 </p>
 
 </div>
 
 
-<div class="accordion">Accés a Grau Superior <span class="plus">+</span></div>
 
-<div class="panel">
+<div class="card">
+
+<h2>Accés a Grau Bàsic</h2>
+
+<ul>
+<li>Tindre entre 15 i 17 anys</li>
+<li>Haver cursat 3r d’ESO (o excepcionalment 2n)</li>
+<li>Proposta de l’equip docent</li>
+</ul>
+
+<p>
+<a href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
+Informació FP Bàsica
+</a>
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Accés a Grau Mitjà</h2>
+
+<ul>
+<li>Títol d’ESO</li>
+<li>Títol de FP Bàsica</li>
+<li>Altres titulacions equivalents</li>
+<li>Prova d’accés amb 17 anys</li>
+</ul>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Accés a Grau Superior</h2>
 
 <ul>
 <li>Títol de Batxillerat</li>
 <li>Títol de Grau Mitjà</li>
 <li>Titulació universitària</li>
+<li>Prova d’accés amb 19 anys (18 amb Grau Mitjà)</li>
 </ul>
-
-<p>
-També es pot accedir mitjançant prova amb 19 anys (18 amb Grau Mitjà).
-</p>
 
 </div>
 
 
-<div class="accordion">Què puc fer després de l’FP? <span class="plus">+</span></div>
 
-<div class="panel">
+<div class="card">
+
+<h2>Què puc fer després de l’FP?</h2>
 
 <ul>
 <li>Incorporar-se al món laboral</li>
 <li>Continuar estudiant</li>
-<li>Accedir a Grau Superior des de Grau Mitjà</li>
-<li>Accedir a la Universitat des de Grau Superior</li>
+<li>Accedir a Grau Superior després d’un Grau Mitjà</li>
+<li>Accedir a la Universitat des d’un Grau Superior</li>
 </ul>
 
 </div>
 
 
-<div class="accordion">Informació i admissió <span class="plus">+</span></div>
 
-<div class="panel">
+<div class="card">
+
+<h2>Més informació sobre Formació Professional</h2>
 
 <ul>
-
-<li>
-<a href="https://ceice.gva.es/es/web/formacion-profesional/admissio" target="_blank">
-Admissió FP Comunitat Valenciana
-</a>
-</li>
-
-<li>
-<a href="https://portal.edu.gva.es/formacioprofessional/" target="_blank">
-Portal FP Generalitat Valenciana
-</a>
-</li>
-
-<li>
-<a href="https://www.todofp.es" target="_blank">
-Portal TodoFP
-</a>
-</li>
-
+<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Formació Professional Comunitat Valenciana</a></li>
+<li><a href="https://www.todofp.es" target="_blank">Portal TodoFP</a></li>
 </ul>
 
 </div>
 
-</section>
+
+
+<div class="card">
+
+<h2>🧰 Algunes famílies professionals</h2>
+
+<div class="families">
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informàtica</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricitat</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoció</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostaleria</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imatge Personal</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Serveis Socioculturals</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanitat</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comerç</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificació</div></a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agrària</div></a></div>
+
+</div>
+
+</div>
+
 
 
 </div>
@@ -356,27 +376,32 @@ IES Didín Puig · Orientació Acadèmica
 </footer>
 
 
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+
 <script>
 
-var acc = document.getElementsByClassName("accordion");
+let mybutton = document.getElementById("topBtn");
 
-for (var i = 0; i < acc.length; i++) {
+window.onscroll = function() {
 
-acc[i].addEventListener("click", function() {
-
-var panel = this.nextElementSibling;
-
-if (panel.style.display === "block") {
-panel.style.display = "none";
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+mybutton.style.display = "block";
 } else {
-panel.style.display = "block";
+mybutton.style.display = "none";
 }
 
-});
+};
+
+function topFunction() {
+
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
 
 }
 
 </script>
+
 
 </body>
 </html>
