@@ -72,11 +72,11 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARGETES TIPUS MODALITAT */
+/* TARGETES TIPUS DE GRAU */
 
 .modalitats{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(5,1fr);
 gap:15px;
 }
 
@@ -87,12 +87,19 @@ border-left:5px solid #a65277;
 text-align:center;
 font-weight:bold;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
+text-decoration:none;
+color:#333;
 }
 
 .ciencia{background:#eef5ff;}
 .social{background:#edf8f1;}
 .human{background:#fff6e9;}
 .art{background:#fff0f5;}
+
+.modalitat:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
 
 /* TARGETES */
 
@@ -133,7 +140,6 @@ color:#333;
 display:flex;
 flex-direction:column;
 align-items:center;
-justify-content:center;
 text-align:center;
 }
 
@@ -260,10 +266,15 @@ Aquests estudis estan orientats a l'ocupació i permeten també continuar la for
 
 <div class="modalitats">
 
-<div class="modalitat ciencia">📘 Grau Bàsic</div>
-<div class="modalitat social">📗 Grau Mitjà</div>
-<div class="modalitat human">🎓 Grau Superior</div>
-<div class="modalitat art">⭐ Cursos d’especialització</div>
+<a class="modalitat ciencia" href="https://www.todofp.es/que-estudiar/grados-d/fp-grado-basico.html" target="_blank">📘 Grau Bàsic</a>
+
+<a class="modalitat social" href="https://www.todofp.es/que-estudiar/grados-d/grado-medio.html" target="_blank">📗 Grau Mitjà</a>
+
+<a class="modalitat human" href="https://www.todofp.es/que-estudiar/grados-d/grado-superior.html" target="_blank">🎓 Grau Superior</a>
+
+<a class="modalitat art" href="https://www.todofp.es/que-estudiar/familias-profesionales.html" target="_blank">⭐ Cursos d’especialització</a>
+
+<a class="modalitat ciencia" href="https://www.todofp.es/que-estudiar.html" target="_blank">🔎 Cercador de cicles</a>
 
 </div>
 
@@ -359,75 +370,25 @@ Els estudis inclouen també un període de <strong>formació en empreses</strong
 
 <div class="families">
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">
-<div class="family-icon">💻</div>
-<div class="family-text">Informàtica</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informàtica</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">
-<div class="family-icon">⚡</div>
-<div class="family-text">Electricitat i Electrònica</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricitat i Electrònica</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank">
-<div class="family-icon">🚗</div>
-<div class="family-text">Automoció</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoció</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">
-<div class="family-icon">🍳</div>
-<div class="family-text">Hostaleria i Turisme</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostaleria i Turisme</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank">
-<div class="family-icon">💄</div>
-<div class="family-text">Imatge Personal</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imatge Personal</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank">
-<div class="family-icon">👶</div>
-<div class="family-text">Serveis Socioculturals</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Serveis Socioculturals</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">
-<div class="family-icon">🏥</div>
-<div class="family-text">Sanitat</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanitat</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">
-<div class="family-icon">📦</div>
-<div class="family-text">Comerç i Màrqueting</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comerç i Màrqueting</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank">
-<div class="family-icon">🏗️</div>
-<div class="family-text">Edificació i Obra Civil</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificació i Obra Civil</div></a></div>
 
-<div class="family">
-<a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank">
-<div class="family-icon">🌱</div>
-<div class="family-text">Agrària</div>
-</a>
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agrària</div></a></div>
 
 </div>
 
