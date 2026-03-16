@@ -9,7 +9,7 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:#f5f7fb;
 color:#333;
@@ -52,22 +52,30 @@ margin:0;
 font-size:28px;
 }
 
-/* TARJETAS BASE */
+/* TARJETAS */
 
 .card{
 border-left:6px solid #a65277;
 border-radius:8px;
-padding:22px;
-margin-top:25px;
+padding:24px;
+margin:28px 0;
 box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
 
 .card h2{
 margin-top:0;
+margin-bottom:12px;
 color:#6d2548;
+font-size:20px;
 }
 
-/* TIPOS DE TARJETAS */
+.card ul{
+margin-top:10px;
+padding-left:18px;
+line-height:1.7;
+}
+
+/* TIPOS DE TARJETA */
 
 .info{
 background:#ffffff;
@@ -81,10 +89,8 @@ background:#f2f2f2;
 background:#f7e6ed;
 }
 
-/* LISTAS */
-
-.card ul{
-line-height:1.7;
+.highlight{
+background:#fff4cc;
 }
 
 /* FAMILIAS PROFESIONALES */
@@ -206,12 +212,12 @@ text-decoration:none;
 </header>
 
 
-<div class="card info">
+<div class="card highlight">
 
 <h2>🎓 Què és la Formació Professional?</h2>
 
 <p>
-La Formació Professional (FP) són estudis professionals molt pròxims a la realitat del mercat laboral. 
+La Formació Professional (FP) són estudis professionals molt pròxims a la realitat del mercat laboral.
 Ofereixen una formació especialitzada que permet adquirir competències professionals i facilitar la incorporació al món del treball.
 </p>
 
@@ -325,7 +331,7 @@ Informació FP Bàsica
 </div>
 
 
-<div class="card orient">
+<div class="card highlight">
 
 <h2>ℹ️ Més informació sobre Formació Professional</h2>
 
@@ -367,13 +373,11 @@ Informació FP Bàsica
 
 </div>
 
-
 </div>
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
-
 
 <button onclick="topFunction()" id="topBtn">↑</button>
 
