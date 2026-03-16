@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,18 +9,20 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
+
+/* CONTENEDOR */
 
 .wrapper{
 width:75%;
 margin:auto;
 }
 
-/* BOTÓN VOLVER */
+/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -37,15 +38,19 @@ font-weight:bold;
 font-size:14px;
 }
 
+.back a:hover{
+background:#a65277;
+}
+
 /* CABECERA */
 
 header{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:25px;
-border-radius:10px;
 margin-top:15px;
+border-radius:10px;
 }
 
 header h1{
@@ -53,42 +58,50 @@ margin:0;
 font-size:30px;
 }
 
-/* GRID TARJETAS */
+/* SECCIONES */
 
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-margin-top:35px;
+.section{
+margin-top:40px;
 }
 
-.card{
-background:white;
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* ACORDEÓN */
+
+.accordion{
+background:#f3f3f3;
 border-radius:10px;
-padding:25px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+padding:18px;
+margin-bottom:10px;
+cursor:pointer;
+font-weight:bold;
+border-left:5px solid #a65277;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.card h2{
-margin-top:0;
-color:#003366;
+.accordion:hover{
+background:#ececec;
 }
 
-.card ul{
+.panel{
+display:none;
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
 line-height:1.6;
 }
 
-/* BOTONES */
-
-.button{
-display:inline-block;
-margin-top:10px;
-padding:8px 15px;
-background:#003366;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
+.plus{
+font-size:22px;
+font-weight:bold;
 }
 
 /* FAMILIAS PROFESIONALES */
@@ -97,20 +110,38 @@ font-size:14px;
 display:grid;
 grid-template-columns:repeat(5,1fr);
 gap:15px;
-margin-top:15px;
+margin-top:20px;
 }
 
 .family{
 background:#f3f3f3;
-border-radius:8px;
-padding:15px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
 text-align:center;
+padding:20px 10px;
+transition:0.2s;
+}
+
+.family:hover{
+background:#ececec;
+transform:translateY(-2px);
 }
 
 .family a{
 text-decoration:none;
 color:#333;
+display:block;
+}
+
+.family-icon{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.family-text{
 font-weight:bold;
+font-size:14px;
 }
 
 /* RESPONSIVE */
@@ -121,9 +152,13 @@ font-weight:bold;
 width:90%;
 }
 
-.grid{
-grid-template-columns:1fr;
+.families{
+grid-template-columns:repeat(3,1fr);
 }
+
+}
+
+@media (max-width:600px){
 
 .families{
 grid-template-columns:repeat(2,1fr);
@@ -134,7 +169,7 @@ grid-template-columns:repeat(2,1fr);
 /* FOOTER */
 
 footer{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
@@ -143,6 +178,12 @@ border-radius:10px;
 width:75%;
 margin-left:auto;
 margin-right:auto;
+}
+
+a{
+color:#6d2548;
+font-weight:bold;
+text-decoration:none;
 }
 
 </style>
@@ -158,55 +199,48 @@ margin-right:auto;
 <a href="index.html">← Tornar a Orientació</a>
 </div>
 
-
 <header>
 <h1>🎓 Formació Professional</h1>
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
 
 
+<section class="section">
 
-<div class="grid">
+<div class="accordion">Què és la Formació Professional? <span class="plus">+</span></div>
 
-
-<div class="card">
-
-<h2>Què és la Formació Professional</h2>
+<div class="panel">
 
 <p>
-La Formació Professional (FP) són estudis orientats a la formació pràctica i professional. 
-Proporcionen una qualificació que permet accedir al món laboral amb competències tècniques i professionals.
+La Formació Professional són estudis orientats a la formació pràctica i professional.
+Permeten adquirir competències tècniques i professionals per a incorporar-se al mercat laboral.
 </p>
 
 <p>
-Els estudis d’FP estan molt vinculats a les necessitats del mercat laboral i ofereixen una formació especialitzada.
+Aquests estudis estan molt vinculats a les necessitats del mercat de treball i ofereixen una qualificació professional especialitzada.
 </p>
 
-<a class="button" href="https://www.todofp.es" target="_blank">
-Portal TodoFP
-</a>
+<p>
+Més informació:
+<a href="https://www.todofp.es" target="_blank">Portal TodoFP</a>
+</p>
 
 </div>
 
 
+<div class="accordion">Com s'organitza la Formació Professional <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Com s’organitza la FP</h2>
+<div class="panel">
 
 <p>
-La FP s’organitza en cicles formatius agrupats en famílies professionals.
+La Formació Professional s'organitza en cicles formatius agrupats en famílies professionals.
 </p>
 
 <ul>
 <li>Mòduls professionals (assignatures)</li>
 <li>Formació pràctica en empreses</li>
-<li>Duració aproximada de 2 cursos</li>
+<li>Duració aproximada de dos cursos acadèmics</li>
 </ul>
-
-<p>
-Els estudis es divideixen en:
-</p>
 
 <ul>
 <li>📘 Grau Bàsic</li>
@@ -218,46 +252,43 @@ Els estudis es divideixen en:
 </div>
 
 
+<div class="accordion">Accés a Grau Bàsic <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Accés a Grau Bàsic</h2>
+<div class="panel">
 
 <ul>
 <li>Tindre entre 15 i 17 anys</li>
-<li>Haver cursat 3r d’ESO (o excepcionalment 2n)</li>
-<li>Proposta de l’equip docent</li>
+<li>Haver cursat 3r d'ESO (o excepcionalment 2n)</li>
+<li>Proposta de l'equip docent</li>
 </ul>
 
-<a class="button" href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
+<a href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
 Informació FP Bàsica
 </a>
 
 </div>
 
 
+<div class="accordion">Accés a Grau Mitjà <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Accés a Grau Mitjà</h2>
+<div class="panel">
 
 <ul>
-<li>Títol d’ESO</li>
+<li>Títol d'ESO</li>
 <li>Títol de FP Bàsica</li>
 <li>Altres titulacions equivalents</li>
 </ul>
 
 <p>
-També es pot accedir mitjançant prova d’accés a partir dels 17 anys.
+També es pot accedir mitjançant prova d'accés amb 17 anys.
 </p>
 
 </div>
 
 
+<div class="accordion">Accés a Grau Superior <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Accés a Grau Superior</h2>
+<div class="panel">
 
 <ul>
 <li>Títol de Batxillerat</li>
@@ -272,42 +303,23 @@ També es pot accedir mitjançant prova amb 19 anys (18 amb Grau Mitjà).
 </div>
 
 
+<div class="accordion">Què puc fer després de l’FP? <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Titulacions que s’obtenen</h2>
-
-<ul>
-<li>Títol de Tècnic (Grau Mitjà)</li>
-<li>Títol de Tècnic Superior (Grau Superior)</li>
-</ul>
-
-<p>
-Aquests títols tenen validesa acadèmica i professional.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Què puc fer després</h2>
+<div class="panel">
 
 <ul>
 <li>Incorporar-se al món laboral</li>
 <li>Continuar estudiant</li>
-<li>Passar de Grau Mitjà a Grau Superior</li>
+<li>Accedir a Grau Superior des de Grau Mitjà</li>
 <li>Accedir a la Universitat des de Grau Superior</li>
 </ul>
 
 </div>
 
 
+<div class="accordion">Informació i admissió <span class="plus">+</span></div>
 
-<div class="card">
-
-<h2>Informació i admissió</h2>
+<div class="panel">
 
 <ul>
 
@@ -333,40 +345,38 @@ Portal TodoFP
 
 </div>
 
-
-
-<div class="card">
-
-<h2>Algunes famílies professionals</h2>
-
-<div class="families">
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">💻 Informàtica</a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">🏥 Sanitat</a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">📦 Comerç</a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">🍳 Hostaleria</a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">⚡ Electricitat</a></div>
-
-</div>
-
-</div>
-
+</section>
 
 
 </div>
-
-</div>
-
 
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
 
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+
+acc[i].addEventListener("click", function() {
+
+var panel = this.nextElementSibling;
+
+if (panel.style.display === "block") {
+panel.style.display = "none";
+} else {
+panel.style.display = "block";
+}
+
+});
+
+}
+
+</script>
 
 </body>
 </html>
