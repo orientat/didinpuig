@@ -125,15 +125,15 @@ border-left:5px solid #a65277;
 line-height:1.6;
 }
 
-/* ENLACES EN CAJA ROSA */
+/* AVISO AMARILLO */
 
-.info a{
-color:#0066cc;
-font-weight:bold;
-}
-
-.info a:hover{
-text-decoration:underline;
+.warning{
+background:#fff8d6;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #f2c94c;
+line-height:1.6;
+margin-top:15px;
 }
 
 /* EJEMPLOS */
@@ -218,18 +218,23 @@ border:1px solid #ccc;
 padding:8px;
 }
 
-/* ENLACES TARJETAS */
+/* TARJETAS ENLACE */
 
 .link-card{
 text-decoration:none;
 color:#333;
+display:block;
+transition:all 0.25s ease;
+cursor:pointer;
 }
 
 .link-card:hover{
-transform:translateY(-3px);
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+background:#fff7fa;
+transform:translateY(-4px);
+box-shadow:0 6px 16px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
 }
-
+  
 /* FOOTER */
 
 footer{
@@ -282,7 +287,11 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media (max-width:500px){
+@media (max-width:600px){
+
+.grid{
+grid-template-columns:1fr;
+}
 
 .plan{
 grid-template-columns:1fr;
@@ -293,7 +302,6 @@ grid-template-columns:1fr;
 </style>
 
 </head>
-
 
 <body>
 
@@ -468,15 +476,47 @@ Nota de admisión: <span id="final">-</span> /14
 
 <section class="section">
 
+<h2>🌐 Cálculo oficial de notas (Generalitat Valenciana)</h2>
+
 <div class="info">
+
+<ul>
+<li>📑 Tablas de ponderaciones actualizadas</li>
+<li>📊 Cálculo de la nota de acceso</li>
+<li>🎓 Cálculo de la nota de admisión</li>
+</ul>
+
+<div style="text-align:center">
+
+<a href="https://universitats.gva.es/es/-/c%C3%A1lculo-calificaciones"
+target="_blank"
+style="
+background:#0066cc;
+color:white;
+padding:14px 26px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+font-size:16px;
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+">
+
+🔗 SIMULADOR OFICIAL GVA
+
+</a>
+
+</div>
+
+</div>
+
+<div class="warning">
 
 ⚠️ <strong>Recuerda</strong>
 
-Las ponderaciones pueden variar según:
-
 <ul>
-<li>la universidad</li>
-<li>el grado que quieras estudiar</li>
+<li>Las ponderaciones pueden variar según la universidad.</li>
+<li>También pueden variar según el grado que quieras estudiar.</li>
 </ul>
 
 Consulta siempre las tablas oficiales de ponderación.
@@ -488,7 +528,7 @@ Consulta siempre las tablas oficiales de ponderación.
 
 <section class="section">
 
-<h2>🧭 ¿Y después del Bachillerato?</h2>
+<h2>🧭 Y después del Bachillerato, ¿qué?</h2>
 
 <div class="grid">
 
@@ -632,14 +672,15 @@ Si tienes dudas sobre tu futuro académico, consulta con el <strong>Departamento
 
 </section>
 
-
 </div>
 
 <footer>
 IES Didín Puig · Orientación Académica
 </footer>
 
+
 <button onclick="topFunction()" id="topBtn">↑</button>
+
 
 <script>
 
@@ -669,23 +710,35 @@ let barra=document.getElementById("progress");
 
 barra.style.width=percent+"%";
 
+if(final < 8){
+barra.style.background="#d9534f";
+}
+else if(final < 11){
+barra.style.background="#f0ad4e";
+}
+else{
+barra.style.background="#5cb85c";
 }
 
-let btn=document.getElementById("topBtn");
+}
 
-window.onscroll=function(){
+let btn = document.getElementById("topBtn");
 
-if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
-btn.style.display="block";
+window.onscroll = function(){
+
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+btn.style.display = "block";
 }else{
-btn.style.display="none";
+btn.style.display = "none";
 }
 
-}
+};
 
 function topFunction(){
-document.body.scrollTop=0;
-document.documentElement.scrollTop=0;
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 }
 
 </script>
