@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,9 +10,9 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
 
@@ -27,7 +28,7 @@ margin-top:20px;
 }
 
 .back a{
-background:#a65277;
+background:#6d2548;
 color:white;
 padding:8px 18px;
 border-radius:20px;
@@ -36,7 +37,11 @@ font-weight:bold;
 font-size:14px;
 }
 
-/* CABECERA */
+.back a:hover{
+background:#a65277;
+}
+
+/* HEADER */
 
 header{
 background:#a65277;
@@ -49,55 +54,61 @@ border-radius:10px;
 
 header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
 }
+
+/* SECCIONES */
+
+.section{
+margin-top:40px;
+padding-top:10px;
+border-top:1px solid #eee;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* TARJETAS TIPOS MODALIDAD */
+
+.modalitats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.modalitat{
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+text-align:center;
+font-weight:bold;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* PALETA */
+
+.ciencia{background:#eef5ff;}
+.social{background:#edf8f1;}
+.human{background:#fff6e9;}
+.art{background:#fff0f5;}
 
 /* TARJETAS */
 
 .card{
-border-left:6px solid #a65277;
-border-radius:8px;
-padding:24px;
-margin:28px 0;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
-transition:0.2s;
-}
-
-.card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 12px rgba(0,0,0,0.12);
-}
-
-.card h2{
-margin-top:0;
-margin-bottom:14px;
-color:#6d2548;
-font-size:20px;
-font-weight:bold;
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.6;
 }
 
 .card ul{
 margin-top:10px;
 padding-left:18px;
-line-height:1.7;
-}
-
-/* TIPOS DE TARJETAS */
-
-.info{
-background:#ffffff;
-}
-
-.access{
-background:#f2f2f2;
-}
-
-.orient{
-background:#f2d7df;
-}
-
-.highlight{
-background:#e8ddcf;
 }
 
 /* FAMILIAS PROFESIONALES */
@@ -110,17 +121,13 @@ margin-top:20px;
 }
 
 .family{
-background:white;
+background:#f3f3f3;
 border-radius:10px;
-border-left:6px solid #a65277;
-padding:18px 10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
+border-left:5px solid #a65277;
+padding:18px;
 text-align:center;
-transition:0.2s;
-}
-
-.family:hover{
-transform:translateY(-3px);
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
 }
 
 .family a{
@@ -129,56 +136,22 @@ color:#333;
 display:block;
 }
 
-.family-icon{
-font-size:28px;
-margin-bottom:8px;
+.family:hover{
+background:#fff7fa;
+transform:translateY(-4px);
+box-shadow:0 6px 16px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
 }
 
-.family-text{
-font-weight:bold;
-font-size:14px;
-}
+/* AVISO */
 
-/* BOTÓN SUBIR */
-
-#topBtn{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#a65277;
-color:white;
-border:none;
-padding:12px 15px;
-border-radius:50%;
-font-size:18px;
-cursor:pointer;
-display:none;
-}
-
-#topBtn:hover{
-background:#c06b91;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-.families{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-@media (max-width:600px){
-
-.families{
-grid-template-columns:repeat(2,1fr);
-}
-
+.warning{
+background:#fff8d6;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #f2c94c;
+line-height:1.6;
+margin-top:15px;
 }
 
 /* FOOTER */
@@ -195,10 +168,38 @@ margin-left:auto;
 margin-right:auto;
 }
 
-a{
-color:#6d2548;
-font-weight:bold;
-text-decoration:none;
+/* BOTÓN SUBIR */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#a65277;
+color:white;
+border:none;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+display:none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.modalitats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.families{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 </style>
@@ -219,67 +220,78 @@ text-decoration:none;
 </header>
 
 
-<div class="card highlight">
+<section class="section">
 
-<h2>🎓 ¿Qué es la Formación Profesional?</h2>
+<h2>📘 ¿Qué es la Formación Profesional?</h2>
 
-<p>
+<div class="card">
+
 La Formación Profesional (FP) son estudios profesionales muy cercanos a la realidad del mercado laboral.
+
 Ofrecen una formación especializada que permite adquirir competencias profesionales y facilitar la incorporación al mundo del trabajo.
-</p>
 
-<p>
+<br><br>
+
 Estos estudios están orientados al empleo y permiten también continuar la formación académica.
-</p>
 
-<p>
-<a href="https://www.todofp.es" target="_blank">Portal TodoFP</a>
-</p>
+<br><br>
 
-</div>
-
-
-<div class="card info">
-
-<h2>📚 Cómo se organiza la Formación Profesional</h2>
-
-<p>
-La Formación Profesional se organiza en ciclos formativos agrupados en familias profesionales.
-</p>
-
-<p>
-Cada ciclo formativo está formado por módulos profesionales que combinan formación teórica y práctica.
-</p>
-
-<p>
-Los estudios incluyen un periodo de formación práctica en empresas.
-</p>
-
-<ul>
-<li>📘 Grado Básico</li>
-<li>📗 Grado Medio</li>
-<li>🎓 Grado Superior</li>
-<li>⭐ Cursos de especialización</li>
-</ul>
+<a href="https://www.todofp.es" target="_blank"><strong>Portal TodoFP</strong></a>
 
 </div>
 
+</section>
 
-<div class="card info">
+
+<section class="section">
+
+<h2>📚 Tipos de grados de Formación Profesional</h2>
+
+<div class="modalitats">
+
+<div class="modalitat ciencia">📘 Grado Básico</div>
+<div class="modalitat social">📗 Grado Medio</div>
+<div class="modalitat human">🎓 Grado Superior</div>
+<div class="modalitat art">⭐ Cursos de especialización</div>
+
+</div>
+
+<div class="card">
+
+La Formación Profesional se organiza en <strong>ciclos formativos</strong> agrupados en diferentes <strong>familias profesionales</strong>.
+
+Cada ciclo está formado por <strong>módulos profesionales</strong> que combinan formación teórica y práctica.
+
+Los estudios incluyen también un período de <strong>formación en empresas</strong> que permite aplicar los conocimientos en un entorno real de trabajo.
+
+</div>
+
+</section>
+
+
+<section class="section">
 
 <h2>🎓 Titulaciones que se obtienen</h2>
 
+<div class="card">
+
 <ul>
-<li>Título de Técnico (Grado Medio)</li>
-<li>Título de Técnico Superior (Grado Superior)</li>
+<li>Título de <strong>Técnico</strong> (Grado Medio)</li>
+<li>Título de <strong>Técnico Superior</strong> (Grado Superior)</li>
 </ul>
 
 </div>
 
+</section>
 
-<div class="card access">
 
-<h2>📘 Acceso a Grado Básico</h2>
+<section class="section">
+
+<h2>📥 Acceso a la Formación Profesional</h2>
+
+<div class="card">
+
+<strong>Acceso a Grado Básico</strong>
 
 <ul>
 <li>Tener entre 15 y 17 años</li>
@@ -287,46 +299,36 @@ Los estudios incluyen un periodo de formación práctica en empresas.
 <li>Propuesta del equipo docente</li>
 </ul>
 
-<p>
-<a href="https://ceice.gva.es/es/web/formacion-profesional/fpb" target="_blank">
-Información FP Básica
-</a>
-</p>
+<hr>
 
-</div>
-
-
-<div class="card access">
-
-<h2>📗 Acceso a Grado Medio</h2>
+<strong>Acceso a Grado Medio</strong>
 
 <ul>
 <li>Título de ESO</li>
 <li>Título de FP Básica</li>
-<li>Otras titulaciones equivalentes</li>
 <li>Prueba de acceso con 17 años</li>
 </ul>
 
-</div>
+<hr>
 
-
-<div class="card access">
-
-<h2>🎓 Acceso a Grado Superior</h2>
+<strong>Acceso a Grado Superior</strong>
 
 <ul>
 <li>Título de Bachillerato</li>
 <li>Título de Grado Medio</li>
-<li>Titulación universitaria</li>
-<li>Prueba de acceso con 19 años (18 con Grado Medio)</li>
+<li>Prueba de acceso con 19 años</li>
 </ul>
 
 </div>
 
+</section>
 
-<div class="card orient">
+
+<section class="section">
 
 <h2>🚀 ¿Qué puedo hacer después de la FP?</h2>
+
+<div class="card">
 
 <ul>
 <li>Incorporarse al mundo laboral</li>
@@ -336,3 +338,88 @@ Información FP Básica
 </ul>
 
 </div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧰 Algunas familias profesionales</h2>
+
+<div class="families">
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">💻 Informática</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">⚡ Electricidad y Electrónica</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank">🚗 Automoción</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">🍳 Hostelería y Turismo</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank">💄 Imagen Personal</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank">👶 Servicios Socioculturales</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">🏥 Sanidad</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">📦 Comercio y Marketing</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank">🏗️ Edificación y Obra Civil</a></div>
+
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank">🌱 Agraria</a></div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>ℹ️ Más información sobre Formación Profesional</h2>
+
+<div class="warning">
+
+<ul>
+<li><a href="https://ceice.gva.es/es/web/formacion-profesional">Formación Profesional Comunitat Valenciana</a></li>
+<li><a href="https://www.todofp.es">Portal TodoFP</a></li>
+</ul>
+
+</div>
+
+</section>
+
+</div>
+
+
+<footer>
+IES Didín Puig · Orientación Académica
+</footer>
+
+
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+btn.style.display = "block";
+}else{
+btn.style.display = "none";
+}
+
+};
+
+function topFunction(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+</script>
+
+</body>
+</html>
