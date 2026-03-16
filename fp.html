@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,9 +10,9 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#ffffff;
 color:#333;
 }
 
@@ -20,14 +21,14 @@ width:75%;
 margin:auto;
 }
 
-/* BOTÓN VOLVER */
+/* BOTÓ TORNAR */
 
 .back{
 margin-top:20px;
 }
 
 .back a{
-background:#a65277;
+background:#6d2548;
 color:white;
 padding:8px 18px;
 border-radius:20px;
@@ -36,7 +37,11 @@ font-weight:bold;
 font-size:14px;
 }
 
-/* CABECERA */
+.back a:hover{
+background:#a65277;
+}
+
+/* HEADER */
 
 header{
 background:#a65277;
@@ -49,58 +54,64 @@ border-radius:10px;
 
 header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
 }
 
-/* TARJETAS */
+/* SECCIONS */
+
+.section{
+margin-top:40px;
+padding-top:10px;
+border-top:1px solid #eee;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* TARGETES TIPUS MODALITAT (com Bachillerat) */
+
+.modalitats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.modalitat{
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+text-align:center;
+font-weight:bold;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* PALETA IGUAL QUE BACHILLER */
+
+.ciencia{background:#eef5ff;}
+.social{background:#edf8f1;}
+.human{background:#fff6e9;}
+.art{background:#fff0f5;}
+
+/* TARGETES */
 
 .card{
-border-left:6px solid #a65277;
-border-radius:8px;
-padding:24px;
-margin:28px 0;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
-transition:0.2s;
-}
-
-.card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 12px rgba(0,0,0,0.12);
-}
-
-.card h2{
-margin-top:0;
-margin-bottom:14px;
-color:#6d2548;
-font-size:20px;
-font-weight:bold;
+background:#f3f3f3;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.6;
 }
 
 .card ul{
 margin-top:10px;
 padding-left:18px;
-line-height:1.7;
 }
 
-/* TIPOS DE TARJETAS */
-
-.info{
-background:#ffffff;
-}
-
-.access{
-background:#f2f2f2;
-}
-
-.orient{
-background:#f2d7df;
-}
-
-.highlight{
-background:#e8ddcf;
-}
-
-/* FAMILIAS PROFESIONALES */
+/* FAMÍLIES PROFESSIONALS */
 
 .families{
 display:grid;
@@ -110,17 +121,13 @@ margin-top:20px;
 }
 
 .family{
-background:white;
+background:#f3f3f3;
 border-radius:10px;
-border-left:6px solid #a65277;
-padding:18px 10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
+border-left:5px solid #a65277;
+padding:18px;
 text-align:center;
-transition:0.2s;
-}
-
-.family:hover{
-transform:translateY(-3px);
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
 }
 
 .family a{
@@ -129,56 +136,22 @@ color:#333;
 display:block;
 }
 
-.family-icon{
-font-size:28px;
-margin-bottom:8px;
+.family:hover{
+background:#fff7fa;
+transform:translateY(-4px);
+box-shadow:0 6px 16px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
 }
 
-.family-text{
-font-weight:bold;
-font-size:14px;
-}
+/* AVÍS */
 
-/* BOTÓN SUBIR */
-
-#topBtn{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#a65277;
-color:white;
-border:none;
-padding:12px 15px;
-border-radius:50%;
-font-size:18px;
-cursor:pointer;
-display:none;
-}
-
-#topBtn:hover{
-background:#c06b91;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-.families{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-@media (max-width:600px){
-
-.families{
-grid-template-columns:repeat(2,1fr);
-}
-
+.warning{
+background:#fff8d6;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #f2c94c;
+line-height:1.6;
+margin-top:15px;
 }
 
 /* FOOTER */
@@ -195,10 +168,38 @@ margin-left:auto;
 margin-right:auto;
 }
 
-a{
-color:#6d2548;
-font-weight:bold;
-text-decoration:none;
+/* BOTÓ PUJAR */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#a65277;
+color:white;
+border:none;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+display:none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.wrapper{
+width:90%;
+}
+
+.modalitats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.families{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 </style>
@@ -219,67 +220,78 @@ text-decoration:none;
 </header>
 
 
-<div class="card highlight">
+<section class="section">
 
-<h2>🎓 Què és la Formació Professional?</h2>
+<h2>📘 Què és la Formació Professional?</h2>
 
-<p>
+<div class="card">
+
 La Formació Professional (FP) són estudis professionals molt pròxims a la realitat del mercat laboral.
+
 Ofereixen una formació especialitzada que permet adquirir competències professionals i facilitar la incorporació al món del treball.
-</p>
 
-<p>
+<br><br>
+
 Aquests estudis estan orientats a l'ocupació i permeten també continuar la formació acadèmica.
-</p>
 
-<p>
-<a href="https://www.todofp.es" target="_blank">Portal TodoFP</a>
-</p>
+<br><br>
 
-</div>
-
-
-<div class="card info">
-
-<h2>📚 Com s’organitza la Formació Professional</h2>
-
-<p>
-La Formació Professional s’organitza en cicles formatius agrupats en famílies professionals.
-</p>
-
-<p>
-Cada cicle formatiu està format per mòduls professionals que combinen formació teòrica i pràctica.
-</p>
-
-<p>
-Els estudis inclouen un període de formació pràctica en empreses.
-</p>
-
-<ul>
-<li>📘 Grau Bàsic</li>
-<li>📗 Grau Mitjà</li>
-<li>🎓 Grau Superior</li>
-<li>⭐ Cursos d’especialització</li>
-</ul>
+<a href="https://www.todofp.es" target="_blank"><strong>Portal TodoFP</strong></a>
 
 </div>
 
+</section>
 
-<div class="card info">
+
+<section class="section">
+
+<h2>📚 Tipus de graus de Formació Professional</h2>
+
+<div class="modalitats">
+
+<div class="modalitat ciencia">📘 Grau Bàsic</div>
+<div class="modalitat social">📗 Grau Mitjà</div>
+<div class="modalitat human">🎓 Grau Superior</div>
+<div class="modalitat art">⭐ Cursos d’especialització</div>
+
+</div>
+
+<div class="card">
+
+La Formació Professional s’organitza en <strong>cicles formatius</strong> agrupats en diferents <strong>famílies professionals</strong>.
+
+Cada cicle està format per <strong>mòduls professionals</strong> que combinen formació teòrica i pràctica.
+
+Els estudis inclouen també un període de <strong>formació en empreses</strong> que permet aplicar els coneixements en un entorn real de treball.
+
+</div>
+
+</section>
+
+
+<section class="section">
 
 <h2>🎓 Titulacions que s'obtenen</h2>
 
+<div class="card">
+
 <ul>
-<li>Títol de Tècnic (Grau Mitjà)</li>
-<li>Títol de Tècnic Superior (Grau Superior)</li>
+<li>Títol de <strong>Tècnic</strong> (Grau Mitjà)</li>
+<li>Títol de <strong>Tècnic Superior</strong> (Grau Superior)</li>
 </ul>
 
 </div>
 
+</section>
 
-<div class="card access">
 
-<h2>📘 Accés a Grau Bàsic</h2>
+<section class="section">
+
+<h2>📥 Accés a la Formació Professional</h2>
+
+<div class="card">
+
+<strong>Accés a Grau Bàsic</strong>
 
 <ul>
 <li>Tindre entre 15 i 17 anys</li>
@@ -287,46 +299,36 @@ Els estudis inclouen un període de formació pràctica en empreses.
 <li>Proposta de l’equip docent</li>
 </ul>
 
-<p>
-<a href="https://ceice.gva.es/va/web/formacion-profesional/fpb" target="_blank">
-Informació FP Bàsica
-</a>
-</p>
+<hr>
 
-</div>
-
-
-<div class="card access">
-
-<h2>📗 Accés a Grau Mitjà</h2>
+<strong>Accés a Grau Mitjà</strong>
 
 <ul>
 <li>Títol d’ESO</li>
 <li>Títol de FP Bàsica</li>
-<li>Altres titulacions equivalents</li>
 <li>Prova d’accés amb 17 anys</li>
 </ul>
 
-</div>
+<hr>
 
-
-<div class="card access">
-
-<h2>🎓 Accés a Grau Superior</h2>
+<strong>Accés a Grau Superior</strong>
 
 <ul>
 <li>Títol de Batxillerat</li>
 <li>Títol de Grau Mitjà</li>
-<li>Titulació universitària</li>
-<li>Prova d’accés amb 19 anys (18 amb Grau Mitjà)</li>
+<li>Prova d’accés amb 19 anys</li>
 </ul>
 
 </div>
 
+</section>
 
-<div class="card orient">
+
+<section class="section">
 
 <h2>🚀 Què puc fer després de l’FP?</h2>
+
+<div class="card">
 
 <ul>
 <li>Incorporar-se al món laboral</li>
@@ -337,74 +339,84 @@ Informació FP Bàsica
 
 </div>
 
-
-<div class="card highlight">
-
-<h2>ℹ️ Més informació sobre Formació Professional</h2>
-
-<ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional" target="_blank">Formació Professional Comunitat Valenciana</a></li>
-<li><a href="https://www.todofp.es" target="_blank">Portal TodoFP</a></li>
-</ul>
-
-</div>
+</section>
 
 
-<div class="card info">
+<section class="section">
 
 <h2>🧰 Algunes famílies professionals</h2>
 
 <div class="families">
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informàtica</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank">💻 Informàtica</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricitat</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank">⚡ Electricitat i Electrònica</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoció</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank">🚗 Automoció</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostaleria</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank">🍳 Hostaleria i Turisme</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imatge Personal</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank">💄 Imatge Personal</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Serveis Socioculturals</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank">👶 Serveis Socioculturals</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanitat</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank">🏥 Sanitat</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comerç</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank">📦 Comerç i Màrqueting</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificació</div></a></div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank">🏗️ Edificació i Obra Civil</a></div>
 
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agrària</div></a></div>
-
-</div>
+<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank">🌱 Agrària</a></div>
 
 </div>
 
+</section>
+
+
+<section class="section">
+
+<h2>ℹ️ Més informació sobre Formació Professional</h2>
+
+<div class="warning">
+
+<ul>
+<li><a href="https://ceice.gva.es/va/web/formacion-profesional">Formació Professional Comunitat Valenciana</a></li>
+<li><a href="https://www.todofp.es">Portal TodoFP</a></li>
+</ul>
+
 </div>
+
+</section>
+
+</div>
+
 
 <footer>
 IES Didín Puig · Orientació Acadèmica
 </footer>
 
+
 <button onclick="topFunction()" id="topBtn">↑</button>
 
 <script>
 
-let mybutton=document.getElementById("topBtn");
+let btn = document.getElementById("topBtn");
 
-window.onscroll=function(){
+window.onscroll = function(){
 
-if(document.body.scrollTop>300||document.documentElement.scrollTop>300){
-mybutton.style.display="block";
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+btn.style.display = "block";
 }else{
-mybutton.style.display="none";
+btn.style.display = "none";
 }
 
 };
 
 function topFunction(){
-document.body.scrollTop=0;
-document.documentElement.scrollTop=0;
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 }
 
 </script>
