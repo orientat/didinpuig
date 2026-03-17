@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTÓ TORNAR */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* HEADER */
-
 header{
 background:#a65277;
 color:white;
@@ -52,13 +46,6 @@ padding:25px;
 margin-top:15px;
 border-radius:10px;
 }
-
-header h1{
-margin:0;
-font-size:30px;
-}
-
-/* SECCIONS */
 
 .section{
 margin-top:40px;
@@ -71,7 +58,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETES ESTIL ESO */
+/* TARJETES */
 
 .cards{
 display:grid;
@@ -85,7 +72,7 @@ padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
-transition:all .3s ease;
+transition:.3s;
 }
 
 .card:hover{
@@ -93,27 +80,13 @@ transform:translateY(-5px);
 box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* LINK COMPLET */
-
 .card-link{
 text-decoration:none;
 color:inherit;
 display:block;
 }
 
-/* TEXTO */
-
-.card-title{
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.card-sub{
-font-size:14px;
-color:#555;
-}
-
-/* BLOQUE INFO */
+/* INFO */
 
 .info{
 background:#fff2f7;
@@ -133,22 +106,14 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 width:75%;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 }
 
 /* RESPONSIVE */
 
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
@@ -174,16 +139,16 @@ width:90%;
 <h2>📚 Què és la Universitat?</h2>
 
 <p>
-La universitat és una etapa d'estudis superiors que es realitza després del Batxillerat o d’un cicle formatiu de grau superior.
+La universitat és una etapa d'estudis superiors que permet especialitzar-te en una professió.
 </p>
 
 <p>
-Permet especialitzar-te en una professió a través dels <strong>graus universitaris</strong>.
+S’organitza en <strong>graus universitaris</strong> i té una duració habitual de <strong>4 anys</strong>.
 </p>
 
 </section>
 
-<!-- VIES ACCÉS -->
+<!-- VIES -->
 
 <section class="section">
 
@@ -193,15 +158,15 @@ Permet especialitzar-te en una professió a través dels <strong>graus universit
 
 <a href="bach.html" class="card-link">
 <div class="card">
-<div class="card-title">🎓 Batxillerat → PAU</div>
-<div class="card-sub">Accés a la universitat mitjançant la prova d'accés</div>
+🎓 <strong>Des de Batxillerat</strong><br>
+Has de fer la <strong>PAU (Selectivitat)</strong>
 </div>
 </a>
 
 <a href="fp.html" class="card-link">
 <div class="card">
-<div class="card-title">🛠️ FP de Grau Superior</div>
-<div class="card-sub">Accés directe amb la nota del cicle formatiu</div>
+🛠️ <strong>Des de FP de Grau Superior</strong><br>
+Accés directe amb la nota final
 </div>
 </a>
 
@@ -209,28 +174,86 @@ Permet especialitzar-te en una professió a través dels <strong>graus universit
 
 </section>
 
-<!-- INFO EXTRA -->
+<!-- PAU -->
 
 <section class="section">
 
-<h2>ℹ️ Informació important</h2>
+<h2>📝 Prova d'accés (PAU)</h2>
 
 <div class="info">
 
-🎯 La nota d'accés és clau per a entrar en el grau que vols.
+📘 La PAU és necessària si vens de Batxillerat.
 
 <br><br>
 
-📊 Cada carrera té una <strong>nota de tall diferent</strong>.
+📊 La nota final combina:
+<ul>
+<li>Nota de Batxillerat</li>
+<li>Exàmens de la PAU</li>
+</ul>
+
+🔗 Informació oficial:
+<a href="https://ceice.gva.es/es/web/universidad/pruebas-de-acceso-a-la-universidad" target="_blank">
+Web oficial PAU Comunitat Valenciana
+</a>
+
+</div>
+
+</section>
+
+<!-- NOTES DE TALL -->
+
+<section class="section">
+
+<h2>📊 Notes de tall</h2>
+
+<div class="info">
+
+🎯 Cada grau universitari té una nota mínima d'accés.
 
 <br><br>
 
-🔗 Pots consultar notes de tall ací:
-<a href="https://notesdetall.es/" target="_blank">notesdetall.es</a>
+📈 Aquesta nota canvia cada any segons la demanda.
 
 <br><br>
 
-📘 També és important informar-se bé de cada grau abans de decidir.
+🔗 Consulta-les ací:
+<a href="https://notesdetall.es/" target="_blank">
+notesdetall.es
+</a>
+
+</div>
+
+</section>
+
+<!-- ORIENTACIÓ -->
+
+<section class="section">
+
+<h2>🤔 Com triar grau?</h2>
+
+<div class="cards">
+
+<div class="card">🎯 Pensa en els teus interessos</div>
+<div class="card">💪 Valora les teues capacitats</div>
+<div class="card">📊 Consulta les notes de tall</div>
+<div class="card">🔍 Informa’t sobre eixides professionals</div>
+
+</div>
+
+</section>
+
+<!-- WEBS -->
+
+<section class="section">
+
+<h2>🌐 Informació oficial</h2>
+
+<div class="info">
+
+🔗 <a href="https://www.todofp.es/" target="_blank">TodoFP</a><br><br>
+
+🔗 <a href="https://www.universidades.gob.es/" target="_blank">Ministeri d'Universitats</a>
 
 </div>
 
