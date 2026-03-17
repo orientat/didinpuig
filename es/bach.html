@@ -9,6 +9,10 @@
 
 <style>
 
+/* ===================== */
+/* BASE */
+/* ===================== */
+
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
@@ -21,7 +25,9 @@ width:75%;
 margin:auto;
 }
 
+/* ===================== */
 /* BOTÓN VOLVER */
+/* ===================== */
 
 .back{
 margin-top:20px;
@@ -41,7 +47,9 @@ font-size:14px;
 background:#a65277;
 }
 
+/* ===================== */
 /* HEADER */
+/* ===================== */
 
 header{
 background:#a65277;
@@ -57,7 +65,9 @@ margin:0;
 font-size:30px;
 }
 
+/* ===================== */
 /* SECCIONES */
+/* ===================== */
 
 .section{
 margin-top:40px;
@@ -72,50 +82,152 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
+/* ===================== */
 /* MODALIDADES */
+/* ===================== */
 
 .modalitats{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
 }
 
 .modalitat{
-padding:18px;
-border-radius:10px;
-border-left:5px solid #a65277;
+padding:25px 15px;
+border-radius:14px;
+border-left:6px solid #a65277;
 text-align:center;
-font-weight:bold;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+
+min-height:200px;
 }
 
+/* COLORES */
 .ciencia{background:#eef5ff;}
 .social{background:#edf8f1;}
 .human{background:#fff6e9;}
 .art{background:#fff0f5;}
 
-/* TARJETAS */
+.modalitat span{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.modalitat .title{
+font-size:16px;
+font-weight:bold;
+line-height:1.4;
+margin-bottom:15px;
+}
+
+.modalitat a{
+font-size:13px;
+text-decoration:none;
+color:#6d2548;
+margin-top:auto;
+}
+
+/* ===================== */
+/* TARJETAS GENERALES */
+/* ===================== */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:15px;
+gap:20px;
+align-items:start;
 }
 
 .card{
-background:#f3f3f3;
-padding:20px;
-border-radius:10px;
+background:#f9f9f9;
+padding:18px;
+border-radius:12px;
 border-left:5px solid #a65277;
-min-height:170px;
+box-shadow:0 2px 6px rgba(0,0,0,0.06);
+transition:0.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card strong{
+display:block;
+margin-bottom:8px;
 }
 
 .card ul{
-margin-top:10px;
-padding-left:18px;
+margin:8px 0 0 15px;
+padding:0;
+line-height:1.5;
 }
 
-/* INFORMACIÓN */
+/* ===================== */
+/* BACHILLERATO (IMPORTANTE) */
+/* ===================== */
+
+.batx-layout{
+display:grid;
+grid-template-columns:2fr 1.2fr;
+gap:20px;
+align-items:start;
+}
+
+.batx-side{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:5px;
+margin-right:10px;
+}
+
+/* TARJETAS BACH */
+.batx-card{
+background:white;
+padding:16px;
+border-radius:12px;
+border-left:5px solid #a65277;
+box-shadow:0 2px 6px rgba(0,0,0,0.06);
+text-align:center;
+transition:0.25s;
+}
+
+.batx-card.ciencia{
+background:#eef5ff;
+}
+
+.batx-card.social{
+background:#edf8f1;
+}
+
+.batx-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.batx-card span{
+font-size:28px;
+display:block;
+margin-bottom:6px;
+}
+
+.batx-card a{
+display:block;
+margin-top:6px;
+font-size:13px;
+color:#6d2548;
+text-decoration:none;
+}
+
+/* ===================== */
+/* INFO / BLOQUES */
+/* ===================== */
 
 .info{
 background:#fff2f7;
@@ -124,8 +236,6 @@ border-radius:10px;
 border-left:5px solid #a65277;
 line-height:1.6;
 }
-
-/* AVISO AMARILLO */
 
 .warning{
 background:#fff8d6;
@@ -136,8 +246,6 @@ line-height:1.6;
 margin-top:15px;
 }
 
-/* EJEMPLOS */
-
 .example{
 background:#f3f3f3;
 padding:15px;
@@ -147,7 +255,9 @@ margin-top:10px;
 font-family:monospace;
 }
 
+/* ===================== */
 /* SIMULADOR */
+/* ===================== */
 
 .sim{
 background:#fff2f7;
@@ -177,7 +287,9 @@ font-weight:bold;
 color:#6d2548;
 }
 
-/* BARRA */
+/* ===================== */
+/* OTROS */
+/* ===================== */
 
 .progress-bar{
 width:100%;
@@ -194,8 +306,6 @@ width:0%;
 background:red;
 transition:0.4s;
 }
-
-/* PLANIFICACIÓN */
 
 .plan{
 display:grid;
@@ -218,7 +328,9 @@ border:1px solid #ccc;
 padding:8px;
 }
 
-/* TARJETAS ENLACE */
+/* ===================== */
+/* LINK CARDS */
+/* ===================== */
 
 .link-card{
 text-decoration:none;
@@ -234,8 +346,10 @@ transform:translateY(-4px);
 box-shadow:0 6px 16px rgba(0,0,0,0.18);
 border-left:5px solid #6d2548;
 }
-  
+
+/* ===================== */
 /* FOOTER */
+/* ===================== */
 
 footer{
 background:#a65277;
@@ -249,7 +363,9 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* BOTÓN SUBIR */
+/* ===================== */
+/* BOTÓN TOP */
+/* ===================== */
 
 #topBtn{
 position:fixed;
@@ -265,38 +381,28 @@ font-size:18px;
 display:none;
 }
 
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
 
 @media (max-width:900px){
 
-.wrapper{
-width:90%;
-}
+.wrapper{width:90%;}
 
-.modalitats{
-grid-template-columns:repeat(2,1fr);
-}
+.modalitats{grid-template-columns:repeat(2,1fr);}
 
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
+.grid{grid-template-columns:repeat(2,1fr);}
 
-.sim-grid{
-grid-template-columns:repeat(2,1fr);
-}
+.sim-grid{grid-template-columns:repeat(2,1fr);}
 
+.batx-layout{grid-template-columns:1fr;}
 }
 
 @media (max-width:600px){
 
-.grid{
-grid-template-columns:1fr;
-}
+.grid{grid-template-columns:1fr;}
 
-.plan{
-grid-template-columns:1fr;
-}
-
+.plan{grid-template-columns:1fr;}
 }
 
 </style>
@@ -316,75 +422,42 @@ grid-template-columns:1fr;
 <p>IES Didín Puig · Departamento de Orientación</p>
 </header>
 
-
 <section class="section">
-
-<h2>🎓 Modalidades de Bachillerato</h2>
 
 <div class="modalitats">
 
-<div class="modalitat ciencia">🔬 Ciencias y Tecnología</div>
-<div class="modalitat social">📊 Ciencias Sociales</div>
-<div class="modalitat human">📚 Humanidades</div>
-<div class="modalitat art">🎨 Artes</div>
-
+<div class="modalitat ciencia">
+<span>🔬</span>
+<div class="title">Ciencias y Tecnología</div>
+<a href="#">Pulsa aquí para ver las materias</a>
 </div>
 
+<div class="modalitat social">
+<span>📊</span>
+<div class="title">Humanidades y Ciencias Sociales</div>
+<a href="#">Pulsa aquí para ver las materias</a>
+</div>
+
+<div class="modalitat human">
+<span>🎭</span>
+<div class="title">Artes. Vía música y Artes Escénicas</div>
+<a href="#">Pulsa aquí para ver las materias</a>
+</div>
+
+<div class="modalitat human">
+<span>🎨</span>
+<div class="title">Artes. Vía Artes Plásticas, Imagen y Diseño</div>
+<a href="#">Pulsa aquí para ver las materias</a>
+</div>
+
+<div class="modalitat art">
+<span>📚</span>
+<div class="title">General</div>
+<a href="#">Pulsa aquí para ver las materias</a>
+</div>
+
+</div>
 </section>
-
-
-<section class="section">
-
-<h2>📚 Materias de modalidad (ejemplos)</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>Ciencias y Tecnología</strong>
-<ul>
-<li>Matemáticas</li>
-<li>Física</li>
-<li>Química</li>
-<li>Biología</li>
-<li>Dibujo técnico</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Ciencias Sociales</strong>
-<ul>
-<li>Matemáticas CCSS</li>
-<li>Economía</li>
-<li>Empresa</li>
-<li>Geografía</li>
-<li>Historia del mundo contemporáneo</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Humanidades</strong>
-<ul>
-<li>Latín</li>
-<li>Griego</li>
-<li>Historia del mundo contemporáneo</li>
-<li>Literatura universal</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Artes</strong>
-<ul>
-<li>Dibujo artístico</li>
-<li>Cultura audiovisual</li>
-<li>Proyectos artísticos</li>
-<li>Historia del arte</li>
-</ul>
-</div>
-
-</div>
-
-</section>
-
 
 <section class="section">
 
@@ -427,7 +500,6 @@ Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
 
 </section>
 
-
 <section class="section">
 
 <h2>🧮 Simulador de nota de admisión</h2>
@@ -436,7 +508,7 @@ Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
 
 <div class="sim-grid">
 
-<input id="bat" type="number" placeholder="Nota Media Bachillerato">
+<input id="bat" type="number" placeholder="Nota media Bachillerato">
 <input id="pau" type="number" placeholder="Nota PAU obligatoria">
 
 <div>
@@ -488,7 +560,6 @@ Consulta siempre las tablas oficiales de ponderación.
 
 </section>
 
-
 <section class="section">
 
 <h2>🌐 Cálculo oficial de notas y tabla de ponderaciones (Generalitat Valenciana)</h2>
@@ -498,12 +569,12 @@ Consulta siempre las tablas oficiales de ponderación.
 <ul>
 <li>📑 Tablas de ponderaciones actualizadas</li>
 <li>📊 Criterios para el cálculo de la nota de acceso</li>
-<li>🎓 Información admisión, consultas y incidencias</li> 
+<li>🎓 Información de admisión, consultas e incidencias</li>
 </ul>
 
 <div style="text-align:center">
 
-<a href="https://universitats.gva.es/es/-/c%C3%A1lculo-calificaciones"
+<a href="https://universitats.gva.es/va/-/c%C3%A0lcul-qualificacions"
 target="_blank"
 style="
 background:#0066cc;
@@ -524,7 +595,6 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 </div>
 
 </div>
-
 
 <section class="section">
 
@@ -568,7 +638,6 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 
 </section>
 
-
 <section class="section">
 
 <h2>📝 Planifica tu itinerario</h2>
@@ -594,12 +663,15 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 
 </section>
 
-
 <section class="section">
 
 <h2>📘 Cómo es el Bachillerato en el IES Didín Puig</h2>
 
 <div class="info">
+
+<div class="batx-layout">
+
+<div>
 
 El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa después de obtener el título de ESO.
 
@@ -622,10 +694,33 @@ Se organiza en <strong>dos cursos académicos</strong> y combina:
 <li>Materias optativas</li>
 </ul>
 
+<br>
+
+</div>
+
+<div class="batx-side">
+
+<div class="batx-title">
+En nuestro centro ofrecemos estas modalidades:
+</div>
+
+<div class="batx-card ciencia">
+<span>🔬</span>
+Ciencias y Tecnología
+<a href="#">Ver materias</a>
+</div>
+
+<div class="batx-card social">
+<span>📊</span>
+Humanidades y Ciencias Sociales
+<a href="#">Ver materias</a>
+</div>
+
+</div>
+
 </div>
 
 </section>
-
 
 <section class="section">
 
@@ -678,9 +773,7 @@ Si tienes dudas sobre tu futuro académico, consulta con el <strong>Departamento
 IES Didín Puig · Orientación Académica
 </footer>
 
-
 <button onclick="topFunction()" id="topBtn">↑</button>
-
 
 <script>
 
