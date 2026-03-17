@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Universitat | Orientació</title>
+<title>Universidad | Orientación</title>
 
 <style>
 
@@ -47,8 +47,9 @@ margin-top:15px;
 border-radius:10px;
 }
 
-.section{
-margin-top:40px;
+header h1{
+margin:0;
+font-size:30px;
 }
 
 .section h2{
@@ -58,26 +59,27 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETES */
+/* TARJETAS GENERALES */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:#f3f3f3;
-padding:18px;
-border-radius:10px;
+padding:28px;
+border-radius:12px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 transition:.3s;
+line-height:1.8;
+font-size:16px;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 8px 18px rgba(0,0,0,0.15);
+box-shadow:0 10px 22px rgba(0,0,0,0.15);
 }
 
 .card-link{
@@ -86,14 +88,45 @@ color:inherit;
 display:block;
 }
 
-/* INFO */
+.card-bach{
+background:#d9e4f5;
+}
+
+.card-fp{
+background:#dcefe4;
+}
+
+/* BLOQUES ROSA */
+
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-top:10px;
+align-items:stretch;
+}
+
+.info-box{
+display:flex;
+flex-direction:column;
+height:100%;
+}
 
 .info{
 background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
+padding:22px;
+border-radius:12px;
+line-height:1.7;
 border-left:5px solid #a65277;
+flex:1;
+}
+
+/* 4 TARJETAS */
+
+.cards-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 }
 
 /* FOOTER */
@@ -103,10 +136,11 @@ background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
-margin-top:40px;
+margin-top:60px;
 border-radius:10px;
 width:75%;
-margin:auto;
+margin-left:auto;
+margin-right:auto;
 }
 
 /* RESPONSIVE */
@@ -114,6 +148,20 @@ margin:auto;
 @media (max-width:900px){
 .wrapper{width:90%;}
 footer{width:90%;}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.cards-4{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media (max-width:500px){
+.cards-4{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -124,49 +172,39 @@ footer{width:90%;}
 <div class="wrapper">
 
 <div class="back">
-<a href="index.html">← Tornar a Orientació</a>
+<a href="index.html">← Volver a Orientación</a>
 </div>
 
 <header>
-<h1>🎓 Universitat</h1>
-<p>IES Didín Puig · Orientació</p>
+<h1>🎓 Universidad</h1>
+<p>IES Didín Puig · Orientación</p>
 </header>
 
-<!-- INTRO -->
-
 <section class="section">
+<h2>📚 ¿Qué es la Universidad?</h2>
 
-<h2>📚 Què és la Universitat?</h2>
+<p>La universidad es una etapa de estudios superiores que permite especializarte en una profesión.</p>
 
-<p>
-La universitat és una etapa d'estudis superiors que permet especialitzar-te en una professió.
-</p>
-
-<p>
-S’organitza en <strong>graus universitaris</strong> i té una duració habitual de <strong>4 anys</strong>.
-</p>
+<p>Se organiza en <strong>grados universitarios</strong> y tiene una duración habitual de <strong>4 años</strong>.</p>
 
 </section>
 
-<!-- VIES -->
-
 <section class="section">
-
-<h2>🧭 Vies d'accés</h2>
+<h2>🧭 Vías de acceso</h2>
 
 <div class="cards">
 
 <a href="bach.html" class="card-link">
-<div class="card">
-🎓 <strong>Des de Batxillerat</strong><br>
-Has de fer la <strong>PAU (Selectivitat)</strong>
+<div class="card card-bach">
+🎓 <strong>Desde Bachillerato</strong><br>
+Debes realizar la <strong>PAU (Selectividad)</strong>
 </div>
 </a>
 
 <a href="fp.html" class="card-link">
-<div class="card">
-🛠️ <strong>Des de FP de Grau Superior</strong><br>
-Accés directe amb la nota final
+<div class="card card-fp">
+🛠️ <strong>Desde FP de Grado Superior</strong><br>
+Acceso directo con la nota final
 </div>
 </a>
 
@@ -174,86 +212,67 @@ Accés directe amb la nota final
 
 </section>
 
-<!-- PAU -->
-
 <section class="section">
 
-<h2>📝 Prova d'accés (PAU)</h2>
+<div class="info-grid">
 
+<div class="info-box">
+<h2>📝 Prueba de acceso (PAU)</h2>
 <div class="info">
-
-📘 La PAU és necessària si vens de Batxillerat.
-
+📘 La PAU es necesaria si vienes de Bachillerato.
 <br><br>
-
 📊 La nota final combina:
 <ul>
-<li>Nota de Batxillerat</li>
-<li>Exàmens de la PAU</li>
+<li>Nota de Bachillerato</li>
+<li>Exámenes de la PAU</li>
 </ul>
 
-🔗 Informació oficial:
-<a href="https://universitats.gva.es/va/prova-acces-universitat-pau">
-Web oficial PAU Comunitat Valenciana
+🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
+Web oficial PAU Comunidad Valenciana
 </a>
+</div>
+</div>
+
+<div class="info-box">
+<h2>📊 Notas de corte</h2>
+<div class="info">
+🎯 Cada grado universitario tiene una nota mínima de acceso.
+<br><br>
+🔗 <a href="https://notesdetall.es/" target="_blank">Web notas de corte</a>
+</div>
+</div>
 
 </div>
 
 </section>
 
-<!-- NOTES DE TALL -->
+<section class="section">
+<h2>🤔 ¿Cómo elegir grado?</h2>
+
+<div class="cards-4">
+<div class="card">🎯 Piensa en tus intereses</div>
+<div class="card">💪 Valora tus capacidades</div>
+<div class="card">📊 Consulta las notas de corte</div>
+<div class="card">🔍 Infórmate sobre salidas profesionales</div>
+</div>
+
+</section>
 
 <section class="section">
 
-<h2>📊 Notes de tall</h2>
+<h2>🌐 Información oficial</h2>
 
 <div class="info">
 
-🎯 Cada grau universitari té una nota mínima d'accés.
+🔗 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitario Valenciano</a><br><br>
 
-<br><br>
+🔗 <a href="https://www.ciencia.gob.es/Universidades.html" target="_blank">Ministerio de Universidades</a><br><br>
 
-📈 Aquesta nota canvia cada any segons la demanda.
+🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">Preguntas frecuentes acceso por PAU</a><br><br>
 
-<br><br>
+🔗 <a href="https://www.todofp.es/" target="_blank">TodoFP - Acceso desde FP a la Universidad</a><br><br>
 
-🔗 Consulta-les ací:
-<a href="https://notesdetall.es/" target="_blank">
-notesdetall.es
-</a>
-
-</div>
-
-</section>
-
-<!-- ORIENTACIÓ -->
-
-<section class="section">
-
-<h2>🤔 Com triar grau?</h2>
-
-<div class="cards">
-
-<div class="card">🎯 Pensa en els teus interessos</div>
-<div class="card">💪 Valora les teues capacitats</div>
-<div class="card">📊 Consulta les notes de tall</div>
-<div class="card">🔍 Informa’t sobre eixides professionals</div>
-
-</div>
-
-</section>
-
-<!-- WEBS -->
-
-<section class="section">
-
-<h2>🌐 Informació oficial</h2>
-
-<div class="info">
-
-🔗 <a href="https://www.todofp.es/" target="_blank">TodoFP</a><br><br>
-
-🔗 <a href="https://www.universidades.gob.es/" target="_blank">Ministeri d'Universitats</a>
+🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Preguntas frecuentes acceso por FP</a>
 
 </div>
 
@@ -262,7 +281,7 @@ notesdetall.es
 </div>
 
 <footer>
-Departament d'Orientació · IES Didín Puig
+IES Didín Puig · Orientación Académica
 </footer>
 
 </body>
