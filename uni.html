@@ -38,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* HEADER AJUSTAT */
-
 header{
 background:#a65277;
 color:white;
@@ -61,25 +59,27 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETES */
+/* TARJETES MILLORADES */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-padding:18px;
-border-radius:10px;
+padding:28px;
+border-radius:12px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 transition:.3s;
+line-height:1.8;
+font-size:16px;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 8px 18px rgba(0,0,0,0.15);
+box-shadow:0 10px 22px rgba(0,0,0,0.15);
 }
 
 .card-link{
@@ -87,8 +87,6 @@ text-decoration:none;
 color:inherit;
 display:block;
 }
-
-/* COLORS PERSONALITZATS */
 
 .card-bach{
 background:#d9e4f5;
@@ -98,13 +96,20 @@ background:#d9e4f5;
 background:#dcefe4;
 }
 
-/* INFO */
+/* BLOCS ROSATS EN GRID */
+
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-top:10px;
+}
 
 .info{
 background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
+padding:22px;
+border-radius:12px;
+line-height:1.7;
 border-left:5px solid #a65277;
 }
 
@@ -126,6 +131,9 @@ margin:auto;
 @media (max-width:900px){
 .wrapper{width:90%;}
 footer{width:90%;}
+.info-grid{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -176,15 +184,17 @@ Accés directe amb la nota final
 
 </section>
 
+<!-- BLOCS ROSATS EN PARAL·LEL -->
 <section class="section">
+
+<div class="info-grid">
+
+<div>
 <h2>📝 Prova d'accés (PAU)</h2>
 
 <div class="info">
-
 📘 La PAU és necessària si vens de Batxillerat.
-
 <br><br>
-
 📊 La nota final combina:
 <ul>
 <li>Nota de Batxillerat</li>
@@ -194,21 +204,18 @@ Accés directe amb la nota final
 🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
 Web oficial PAU Comunitat Valenciana
 </a>
-
+</div>
 </div>
 
-</section>
-
-<section class="section">
+<div>
 <h2>📊 Notes de tall</h2>
 
 <div class="info">
-
 🎯 Cada grau universitari té una nota mínima d'accés.
-
 <br><br>
-
 🔗 <a href="https://notesdetall.es/" target="_blank">Web notes de tall</a>
+</div>
+</div>
 
 </div>
 
@@ -218,17 +225,13 @@ Web oficial PAU Comunitat Valenciana
 <h2>🤔 Com triar grau?</h2>
 
 <div class="cards">
-
 <div class="card">🎯 Pensa en els teus interessos</div>
 <div class="card">💪 Valora les teues capacitats</div>
 <div class="card">📊 Consulta les notes de tall</div>
 <div class="card">🔍 Informa’t sobre eixides professionals</div>
-
 </div>
 
 </section>
-
-<!-- WEBS -->
 
 <section class="section">
 
@@ -253,9 +256,8 @@ Web oficial PAU Comunitat Valenciana
 </div>
 
 <footer>
-IES Didín Puig · Orientació Acadèmica
+Departament d'Orientació · IES Didín Puig
 </footer>
-
 
 </body>
 </html>
