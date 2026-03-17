@@ -259,6 +259,62 @@ margin-top:10px;
 font-family:monospace;
 }
 
+/* LAYOUT DINS DEL REQUADRE */
+
+.batx-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:25px;
+align-items:start;
+}
+
+/* COLUMNA DRETA */
+.batx-side{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* TARGETES */
+.batx-card{
+background:white;
+padding:16px;
+border-radius:12px;
+border-left:5px solid #a65277;
+box-shadow:0 2px 6px rgba(0,0,0,0.06);
+text-align:center;
+transition:0.25s;
+}
+
+.batx-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.batx-card span{
+font-size:28px;
+display:block;
+margin-bottom:6px;
+}
+
+.batx-card a{
+display:block;
+margin-top:6px;
+font-size:13px;
+color:#6d2548;
+text-decoration:none;
+}
+
+.batx-card a:hover{
+text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+.batx-layout{
+grid-template-columns:1fr;
+}
+}
   /* TARGETES DINS DEL REQUADRE */
 
 .batx-cards-inline{
