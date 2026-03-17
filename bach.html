@@ -77,35 +77,45 @@ margin-bottom:15px;
 .modalitats{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:15px;
+gap:20px;
 }
 
 .modalitat{
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
+background:white;
+padding:25px 15px;
+border-radius:14px;
+border-left:6px solid #a65277;
 text-align:center;
-font-weight:bold;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
 display:flex;
 flex-direction:column;
+align-items:center;
 justify-content:space-between;
-min-height:140px;
-font-size:16px;
+
+min-height:200px;
 }
 
+/* ICONES GRANS I CENTRADES */
 .modalitat span{
-font-size:28px;
-display:block;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:15px;
 }
 
+/* TEXT PRINCIPAL */
+.modalitat .title{
+font-size:16px;
+font-weight:bold;
+line-height:1.4;
+margin-bottom:15px;
+}
+
+/* ENLLAÇ MÉS FI I BAIX */
 .modalitat a{
-margin-top:10px;
 font-size:13px;
-font-weight:normal;
 text-decoration:none;
 color:#6d2548;
+margin-top:auto;
 }
 
 .modalitat a:hover{
@@ -342,31 +352,31 @@ grid-template-columns:1fr;
 
 <div class="modalitat ciencia">
 <span>🔬</span>
-Ciències i Tecnologia
+<div class="title">Ciències i Tecnologia</div>
 <a href="#">Punxa ací per veure les matèries</a>
 </div>
 
 <div class="modalitat social">
 <span>📊</span>
-Humanitats i Ciències Socials
+<div class="title">Humanitats i Ciències Socials</div>
 <a href="#">Punxa ací per veure les matèries</a>
 </div>
 
 <div class="modalitat human">
 <span>🎭</span>
-Arts. Via música i Art Escèniques
+<div class="title">Arts. Via música i Arts Escèniques</div>
 <a href="#">Punxa ací per veure les matèries</a>
 </div>
 
 <div class="modalitat human">
 <span>🎨</span>
-Arts. Via Art Plàstiques, Imatge i Disseny
+<div class="title">Arts. Via Arts Plàstiques, Imatge i Disseny</div>
 <a href="#">Punxa ací per veure les matèries</a>
 </div>
 
 <div class="modalitat art">
 <span>📚</span>
-General
+<div class="title">General</div>
 <a href="#">Punxa ací per veure les matèries</a>
 </div>
 
