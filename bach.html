@@ -9,6 +9,10 @@
 
 <style>
 
+/* ===================== */
+/* BASE */
+/* ===================== */
+
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
@@ -21,7 +25,9 @@ width:75%;
 margin:auto;
 }
 
+/* ===================== */
 /* BOTÓ TORNAR */
+/* ===================== */
 
 .back{
 margin-top:20px;
@@ -41,7 +47,9 @@ font-size:14px;
 background:#a65277;
 }
 
+/* ===================== */
 /* HEADER */
+/* ===================== */
 
 header{
 background:#a65277;
@@ -57,7 +65,9 @@ margin:0;
 font-size:30px;
 }
 
+/* ===================== */
 /* SECCIONS */
+/* ===================== */
 
 .section{
 margin-top:40px;
@@ -72,7 +82,9 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
+/* ===================== */
 /* MODALITATS */
+/* ===================== */
 
 .modalitats{
 display:grid;
@@ -81,7 +93,6 @@ gap:20px;
 }
 
 .modalitat{
-background:white;
 padding:25px 15px;
 border-radius:14px;
 border-left:6px solid #a65277;
@@ -96,31 +107,17 @@ justify-content:space-between;
 min-height:200px;
 }
 
-/* COLORS SUAUS PER MODALITAT */
+/* COLORS */
+.ciencia{background:#eef5ff;}
+.social{background:#edf8f1;}
+.human{background:#fff6e9;}
+.art{background:#fff0f5;}
 
-.ciencia{
-background:#eef5ff;
-}
-
-.social{
-background:#edf8f1;
-}
-
-.human{
-background:#fff6e9;
-}
-
-.art{
-background:#fff0f5;
-}
-  
-/* ICONES GRANS I CENTRADES */
 .modalitat span{
 font-size:42px;
 margin-bottom:15px;
 }
 
-/* TEXT PRINCIPAL */
 .modalitat .title{
 font-size:16px;
 font-weight:bold;
@@ -128,7 +125,6 @@ line-height:1.4;
 margin-bottom:15px;
 }
 
-/* ENLLAÇ MÉS FI I BAIX */
 .modalitat a{
 font-size:13px;
 text-decoration:none;
@@ -136,11 +132,9 @@ color:#6d2548;
 margin-top:auto;
 }
 
-.modalitat a:hover{
-text-decoration:underline;
-}
-
-/* TARGETES */
+/* ===================== */
+/* TARGETES GENERALS */
+/* ===================== */
 
 .grid{
 display:grid;
@@ -158,7 +152,6 @@ box-shadow:0 2px 6px rgba(0,0,0,0.06);
 transition:0.25s;
 }
 
-/* EFECTE HOVER */
 .card:hover{
 transform:translateY(-4px);
 box-shadow:0 8px 18px rgba(0,0,0,0.12);
@@ -175,91 +168,9 @@ padding:0;
 line-height:1.5;
 }
 
-.batx-container{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:25px;
-align-items:start;
-}
-
-.batx-cards{
-display:grid;
-gap:15px;
-}
-
-.batx-card{
-background:#f9f9f9;
-padding:18px;
-border-radius:12px;
-border-left:5px solid #a65277;
-box-shadow:0 2px 6px rgba(0,0,0,0.06);
-text-align:center;
-transition:0.25s;
-}
-
-.batx-card:hover{
-transform:translateY(-4px);
-box-shadow:0 8px 18px rgba(0,0,0,0.12);
-}
-
-.batx-card span{
-font-size:32px;
-display:block;
-margin-bottom:10px;
-}
-
-.batx-card a{
-display:block;
-margin-top:10px;
-font-size:13px;
-color:#6d2548;
-text-decoration:none;
-}
-
-.batx-card a:hover{
-text-decoration:underline;
-}
-
-/* RESPONSIVE */
-@media (max-width:900px){
-.batx-container{
-grid-template-columns:1fr;
-}
-}
-
-/* INFORMACIÓ */
-
-.info{
-background:#fff2f7;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
-line-height:1.6;
-}
-
-/* AVÍS GROC */
-
-.warning{
-background:#fff8d6;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #f2c94c;
-line-height:1.6;
-margin-top:15px;
-}
-
-/* EXEMPLES */
-
-.example{
-background:#f3f3f3;
-padding:15px;
-border-radius:10px;
-border-left:5px solid #a65277;
-margin-top:10px;
-font-family:monospace;
-}
-
-/* LAYOUT DINS DEL REQUADRE */
+/* ===================== */
+/* BATXILLERAT (IMPORTANT) */
+/* ===================== */
 
 .batx-layout{
 display:grid;
@@ -268,23 +179,21 @@ gap:20px;
 align-items:start;
 }
 
-/* TÍTOL MODALITATS */
+.batx-side{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:5px;
+}
+
 .batx-title{
 font-weight:bold;
 font-size:14px;
 margin-bottom:10px;
 color:#6d2548;
-line-height:1.4;
 }
 
-/* COLUMNA DRETA */
-.batx-side{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-/* TARGETES */
+/* TARGETES BATX */
 .batx-card{
 background:white;
 padding:16px;
@@ -314,67 +223,39 @@ color:#6d2548;
 text-decoration:none;
 }
 
-.batx-card a:hover{
-text-decoration:underline;
-}
+/* ===================== */
+/* INFO / BLOCS */
+/* ===================== */
 
-/* RESPONSIVE */
-@media (max-width:900px){
-.batx-layout{
-grid-template-columns:1fr;
-}
-}
-
-  /* TARGETES DINS DEL REQUADRE */
-
-.batx-cards-inline{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-margin-top:10px;
-}
-
-.batx-card{
-background:white;
-padding:18px;
-border-radius:12px;
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 2px 6px rgba(0,0,0,0.06);
-text-align:center;
-transition:0.25s;
+line-height:1.6;
 }
 
-.batx-card:hover{
-transform:translateY(-4px);
-box-shadow:0 8px 18px rgba(0,0,0,0.12);
+.warning{
+background:#fff8d6;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #f2c94c;
+line-height:1.6;
+margin-top:15px;
 }
 
-.batx-card span{
-font-size:30px;
-display:block;
-margin-bottom:8px;
+.example{
+background:#f3f3f3;
+padding:15px;
+border-radius:10px;
+border-left:5px solid #a65277;
+margin-top:10px;
+font-family:monospace;
 }
 
-.batx-card a{
-display:block;
-margin-top:8px;
-font-size:13px;
-color:#6d2548;
-text-decoration:none;
-}
-
-.batx-card a:hover{
-text-decoration:underline;
-}
-
-/* RESPONSIVE */
-@media (max-width:700px){
-.batx-cards-inline{
-grid-template-columns:1fr;
-}
-}
-
+/* ===================== */
 /* SIMULADOR */
+/* ===================== */
 
 .sim{
 background:#fff2f7;
@@ -404,7 +285,9 @@ font-weight:bold;
 color:#6d2548;
 }
 
-/* BARRA */
+/* ===================== */
+/* ALTRES */
+/* ===================== */
 
 .progress-bar{
 width:100%;
@@ -421,8 +304,6 @@ width:0%;
 background:red;
 transition:0.4s;
 }
-
-/* PLANIFICACIÓ */
 
 .plan{
 display:grid;
@@ -445,8 +326,9 @@ border:1px solid #ccc;
 padding:8px;
 }
 
-/* ENLLAÇOS TARGETES */
-
+/* ===================== */
+/* LINK CARDS */
+/* ===================== */
 
 .link-card{
 text-decoration:none;
@@ -462,8 +344,10 @@ transform:translateY(-4px);
 box-shadow:0 6px 16px rgba(0,0,0,0.18);
 border-left:5px solid #6d2548;
 }
-  
+
+/* ===================== */
 /* FOOTER */
+/* ===================== */
 
 footer{
 background:#a65277;
@@ -477,7 +361,9 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* BOTÓ TORNAR A DALT */
+/* ===================== */
+/* BOTÓ TOP */
+/* ===================== */
 
 #topBtn{
 position:fixed;
@@ -493,38 +379,28 @@ font-size:18px;
 display:none;
 }
 
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
 
 @media (max-width:900px){
 
-.wrapper{
-width:90%;
-}
+.wrapper{width:90%;}
 
-.modalitats{
-grid-template-columns:repeat(2,1fr);
-}
+.modalitats{grid-template-columns:repeat(2,1fr);}
 
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
+.grid{grid-template-columns:repeat(2,1fr);}
 
-.sim-grid{
-grid-template-columns:repeat(2,1fr);
-}
+.sim-grid{grid-template-columns:repeat(2,1fr);}
 
+.batx-layout{grid-template-columns:1fr;}
 }
 
 @media (max-width:600px){
 
-.grid{
-grid-template-columns:1fr;
-}
+.grid{grid-template-columns:1fr;}
 
-.plan{
-grid-template-columns:1fr;
-}
-
+.plan{grid-template-columns:1fr;}
 }
 
 </style>
