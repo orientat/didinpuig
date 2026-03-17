@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Universidad | Orientación</title>
+<title>Universitat | Orientació</title>
 
 <style>
 
@@ -15,10 +15,14 @@ background:#ffffff;
 color:#333;
 }
 
+/* CONTENEDOR */
+
 .wrapper{
 width:75%;
 margin:auto;
 }
+
+/* BOTÓ TORNAR */
 
 .back{
 margin-top:20px;
@@ -38,6 +42,8 @@ font-size:14px;
 background:#a65277;
 }
 
+/* HEADER */
+
 header{
 background:#a65277;
 color:white;
@@ -52,6 +58,8 @@ margin:0;
 font-size:30px;
 }
 
+/* SECCIONS */
+
 .section{
 margin-top:40px;
 }
@@ -63,9 +71,11 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
+/* TARJETES ESTIL ESO */
+
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
@@ -75,7 +85,35 @@ padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
+transition:all .3s ease;
 }
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* LINK COMPLET */
+
+.card-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+/* TEXTO */
+
+.card-title{
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.card-sub{
+font-size:14px;
+color:#555;
+}
+
+/* BLOQUE INFO */
 
 .info{
 background:#fff2f7;
@@ -84,6 +122,8 @@ border-radius:10px;
 line-height:1.6;
 border-left:5px solid #a65277;
 }
+
+/* FOOTER */
 
 footer{
 background:#a65277;
@@ -97,17 +137,18 @@ margin-left:auto;
 margin-right:auto;
 }
 
-.bienvenida{
-width:75%;
-margin:30px auto;
-text-align:center;
-font-size:18px;
-}
+/* RESPONSIVE */
 
 @media (max-width:900px){
-.wrapper{width:90%;}
-footer{width:90%;}
-.bienvenida{width:90%;}
+
+.wrapper{
+width:90%;
+}
+
+footer{
+width:90%;
+}
+
 }
 
 </style>
@@ -118,192 +159,87 @@ footer{width:90%;}
 <div class="wrapper">
 
 <div class="back">
-<a href="index.html">← Volver a Orientación</a>
+<a href="index.html">← Tornar a Orientació</a>
 </div>
 
 <header>
-<h1>🎓 Universidad</h1>
-<p>IES Didín Puig · Orientación</p>
+<h1>🎓 Universitat</h1>
+<p>IES Didín Puig · Orientació</p>
 </header>
 
 <!-- INTRO -->
 
 <section class="section">
-<h2>📚 ¿Qué es la Universidad?</h2>
 
-<p>La universidad es una etapa de estudios superiores a la que se accede normalmente después del Bachillerato o desde FP de Grado Superior.</p>
+<h2>📚 Què és la Universitat?</h2>
 
-<p>Permite formarte en una profesión concreta a través de los <strong>grados universitarios</strong>, que suelen durar unos <strong>4 años</strong>.</p>
+<p>
+La universitat és una etapa d'estudis superiors que es realitza després del Batxillerat o d’un cicle formatiu de grau superior.
+</p>
+
+<p>
+Permet especialitzar-te en una professió a través dels <strong>graus universitaris</strong>.
+</p>
 
 </section>
 
-<!-- ORIENTACIÓN -->
+<!-- VIES ACCÉS -->
 
 <section class="section">
-<h2>🤔 ¿Es para ti?</h2>
+
+<h2>🧭 Vies d'accés</h2>
 
 <div class="cards">
-<div class="card">📚 Te gusta estudiar contenidos teóricos</div>
-<div class="card">🎯 Tienes claro o quieres descubrir tu profesión</div>
-<div class="card">⏳ Estás dispuesto/a a estudiar varios años</div>
-<div class="card">🧠 Tienes autonomía y constancia</div>
+
+<a href="bach.html" class="card-link">
+<div class="card">
+<div class="card-title">🎓 Batxillerat → PAU</div>
+<div class="card-sub">Accés a la universitat mitjançant la prova d'accés</div>
 </div>
+</a>
 
-</section>
-
-<!-- ACCESO SIMPLE -->
-
-<section class="section">
-<h2>🧭 Vías de acceso</h2>
-
-<div class="cards">
-<div class="card">🎓 Bachillerato → PAU → Universidad</div>
-<div class="card">🛠️ FP Superior → Universidad</div>
+<a href="fp.html" class="card-link">
+<div class="card">
+<div class="card-title">🛠️ FP de Grau Superior</div>
+<div class="card-sub">Accés directe amb la nota del cicle formatiu</div>
 </div>
-
-</section>
-
-<!-- ACCESO DETALLADO BACH -->
-
-<section class="section">
-<h2>📝 Acceso desde Bachillerato</h2>
-
-<div class="info">
-
-El título de Bachillerato permite acceder a la universidad tras superar la <strong>PAU</strong>.
-
-<br><br>
-
-<strong>Nota de acceso:</strong>
-
-<ul>
-<li>60% media Bachillerato</li>
-<li>40% fase obligatoria PAU</li>
-</ul>
-
-<br>
-
-Se pueden sumar las notas de la <strong>fase voluntaria</strong>.
-
-<br><br>
-
-<strong>Fórmula:</strong><br>
-0,6 × Bachillerato + 0,4 × PAU + ponderaciones
-
-<br><br>
-
-<a href="https://www.gva.es/es/inicio/procedimientos?id_proc=17074" target="_blank">
-Información oficial PAU
 </a>
 
 </div>
 
 </section>
 
-<!-- ACCESO FP -->
+<!-- INFO EXTRA -->
 
 <section class="section">
-<h2>🎓 Acceso desde FP de Grado Superior</h2>
+
+<h2>ℹ️ Informació important</h2>
 
 <div class="info">
 
-El título de Técnico Superior permite acceder directamente.
+🎯 La nota d'accés és clau per a entrar en el grau que vols.
 
 <br><br>
 
-La nota es la <strong>media del ciclo formativo</strong>.
+📊 Cada carrera té una <strong>nota de tall diferent</strong>.
 
 <br><br>
 
-Se puede realizar la fase voluntaria de la PAU para subir nota.
-
-</div>
-
-</section>
-
-<!-- CONVALIDACIONES -->
-
-<section class="section">
-<h2>🔄 Convalidaciones desde FP</h2>
-
-<div class="info">
-
-Algunas asignaturas universitarias pueden convalidarse si has cursado FP de Grado Superior.
+🔗 Pots consultar notes de tall ací:
+<a href="https://notesdetall.es/" target="_blank">notesdetall.es</a>
 
 <br><br>
 
-Depende de la universidad y del grado.
+📘 També és important informar-se bé de cada grau abans de decidir.
 
 </div>
 
 </section>
 
-<!-- UNIVERSIDADES -->
-
-<section class="section">
-<h2>🏫 Universidades de la Comunidad Valenciana</h2>
-
-<div class="cards">
-
-<div class="card"><strong>UV</strong><br><a href="https://www.uv.es" target="_blank">Universitat de València</a></div>
-
-<div class="card"><strong>UPV</strong><br><a href="https://www.upv.es" target="_blank">Universitat Politècnica de València</a></div>
-
-<div class="card"><strong>UA</strong><br><a href="https://www.ua.es" target="_blank">Universitat d'Alacant</a></div>
-
-<div class="card"><strong>UJI</strong><br><a href="https://www.uji.es" target="_blank">Universitat Jaume I</a></div>
-
-<div class="card"><strong>UMH</strong><br><a href="https://www.umh.es" target="_blank">Universitat Miguel Hernández</a></div>
-
-</div>
-
-</section>
-
-<!-- BUSCAR ESTUDIOS -->
-
-<section class="section">
-<h2>🔎 ¿Qué estudiar?</h2>
-
-<div class="info">
-
-Puedes consultar la oferta de grados aquí:
-
-<br><br>
-
-<a href="https://universidades.gva.es/es/mapa-de-titulaciones" target="_blank">
-Mapa de titulaciones universitarias
-</a>
-
-</div>
-
-</section>
-
-<!-- CENTRO -->
-
-<section class="section">
-<h2>🏫 Información del centro</h2>
-
-<div class="info">
-
-Desde el centro se organizan:
-
-<ul>
-<li>Visitas a universidades</li>
-<li>Jornadas de puertas abiertas</li>
-</ul>
-
-</div>
-
-</section>
-
-</div>
-
-<div class="bienvenida">
-Tu futuro empieza con una buena decisión 🎯
 </div>
 
 <footer>
-Departamento de Orientación · IES Didín Puig
+Departament d'Orientació · IES Didín Puig
 </footer>
 
 </body>
