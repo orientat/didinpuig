@@ -177,7 +177,6 @@ margin:10px auto 0;
 border-radius:2px;
 }
 
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
@@ -185,7 +184,7 @@ gap:30px;
 margin-bottom:80px;
 }
 
-/* 🔥 CARDS PERFECTAMENT ALINEADES */
+/* 🔥 SOLO ESTO ES NUEVO / MODIFICADO */
 .card{
 background:linear-gradient(145deg,#b56388,#8f3f63);
 color:white;
@@ -197,20 +196,15 @@ min-height:200px;
 
 display:flex;
 flex-direction:column;
-justify-content:space-between; /* clau */
+justify-content:space-between;
 align-items:center;
 
 transition:transform .3s ease, box-shadow .3s ease;
-cursor:pointer;
 }
 
 .card:hover{
 transform:translateY(-10px) scale(1.04);
 box-shadow:0 16px 30px rgba(0,0,0,0.30);
-}
-
-.card:active{
-transform:scale(0.97);
 }
 
 .card-icon{
@@ -231,7 +225,6 @@ animation:iconMove .6s ease;
 100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
-/* 🔥 TÍTOL CONTROLAT */
 .card-title{
 font-weight:bold;
 margin-bottom:14px;
@@ -244,7 +237,6 @@ justify-content:center;
 text-align:center;
 }
 
-/* 🔥 BOTÓ SEMPRE ABAIX */
 .card-button{
 background:white;
 color:#6d2548;
@@ -256,6 +248,7 @@ font-size:14px;
 
 margin-top:auto;
 }
+/* 🔥 FIN CAMBIOS */
 
 .creditos{
 text-align:center;
@@ -286,7 +279,6 @@ width:100%;
 margin-top:10px;
 }
 
-/* RESPONSIVE */
 @media (max-width:1200px){
 .grid{grid-template-columns:repeat(4,1fr);}
 .wrapper{width:85%;}
@@ -310,27 +302,144 @@ margin-top:10px;
 
 <body>
 
+<a class="orientaline-lateral orientaline-left"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank" rel="noopener noreferrer">
+<img src="orientaline_boto_v.png" alt="Acceso lateral Orientaline">
+</a>
+
+<a class="orientaline-lateral orientaline-right"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank" rel="noopener noreferrer">
+<img src="orientaline_boto_v.png" alt="Acceso lateral Orientaline">
+</a>
+
+<div class="lang">
+<a href="index.html">Valencià</a>
+<a href="es/index.html">Castellano</a>
+</div>
+
 <div class="wrapper">
+
+<div class="logo">
+<img src="logo.jpg" alt="Logo IES Didín Puig">
+</div>
+
+<div class="header-img">
+<img src="foto_orienta_val1.png" alt="Orientación académica">
+<a class="boton-orientaline"
+href="https://elorienta.com/movil//?yafxb=06651"
+target="_blank" rel="noopener noreferrer">
+<img src="orientaline_boto.png" alt="Acceso a Orientaline">
+</a>
+</div>
 
 <h2>ORIENTACIÓ ACADÈMICA</h2>
 
 <div class="grid">
 
-<a href="#"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Consulta informació</div></div></a>
+<a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transició de Primària</div><div class="card-button">Consulta informació</div></div></a>
 
-<a href="#"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia de l’alumnat</div></div></a>
+<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estàs en 1r d'ESO</div><div class="card-button">Guia de l’alumnat</div></div></a>
 
-<a href="#"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Consulta opcions</div></div></a>
+<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estàs en 2n d'ESO</div><div class="card-button">Consulta opcions</div></div></a>
 
-<a href="#"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Rep orientació</div></div></a>
+<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estàs en 3r d'ESO</div><div class="card-button">Rep orientació</div></div></a>
 
-<a href="#"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Explora el futur</div></div></a>
+<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estàs en 4t d'ESO</div><div class="card-button">Explora el futur</div></div></a>
 
-<a href="#"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Consulta el programa</div></div></a>
+<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estàs en PDC</div><div class="card-button">Consulta el programa</div></div></a>
+
+<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Coneix l'FP</div><div class="card-button">Descobreix opcions</div></div></a>
+
+<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Coneix el Batxillerat</div><div class="card-button">Consulta itineraris</div></div></a>
+
+<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Coneix la Universitat</div><div class="card-button">Accedeix a informació</div></div></a>
+
+<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Altres estudis</div><div class="card-button">Explora opcions</div></div></a>
+
+<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta el teu futur</div><div class="card-button">Fes els tests</div></div></a>
+
+<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educatiu</div><div class="card-button">Consulta esquema</div></div></a>
 
 </div>
 
+<div class="creditos">
+IES Didín Puig · Departament d'Orientació Educativa i Professional
 </div>
+
+<div class="contador-area">
+<div class="contador-box">
+VISITES: <span id="busuanzi_value_page_pv">000000</span>
+</div>
+</div>
+
+<div class="footer">
+<img src="footer.jpg" alt="Pie de página">
+</div>
+
+</div>
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+let botones = document.querySelectorAll(".orientaline-lateral");
+
+if(window.scrollY > 200){
+botones.forEach(b => b.classList.add("orientaline-visible"));
+}else{
+botones.forEach(b => b.classList.remove("orientaline-visible"));
+}
+
+});
+
+/* contador animado */
+
+function iniciarContador(){
+
+let el=document.getElementById("busuanzi_value_page_pv");
+
+let valor=parseInt(el.innerText);
+
+if(!valor) return;
+
+let actual=0;
+
+let pasos=50;
+
+let incremento=valor/pasos;
+
+let intervalo=setInterval(function(){
+
+actual+=incremento;
+
+if(actual>=valor){
+actual=valor;
+clearInterval(intervalo);
+}
+
+el.innerText=Math.floor(actual).toString().padStart(6,"0");
+
+},20);
+
+}
+
+let check=setInterval(function(){
+
+let el=document.getElementById("busuanzi_value_page_pv");
+
+if(el && el.innerText && parseInt(el.innerText)>0){
+
+clearInterval(check);
+
+iniciarContador();
+
+}
+
+},200);
+
+</script>
 
 </body>
 </html>
