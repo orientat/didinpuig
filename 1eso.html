@@ -139,7 +139,7 @@ justify-content:center;
 transition:transform .2s ease;
 }
 
-/* ANIMACIÓ ICONES CORRECTA */
+/* ANIMACIÓ ICONES */
 
 .subject:hover .icon{
 animation:iconMove .6s ease;
@@ -173,25 +173,27 @@ line-height:1.6;
 border-left:5px solid #a65277;
 }
 
-/* 🔥 BOTÓ DOCUMENT (única millora) */
+/* 🔥 BOTÓ INLINE (nova millora) */
 
-.link-doc{
-display:inline-block;
-margin-top:8px;
-font-size:18px;
-font-weight:bold;
-color:white;
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
 background:#6d2548;
-padding:8px 14px;
-border-radius:20px;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
 text-decoration:none;
 transition:all .2s ease;
 }
 
-.link-doc:hover{
+.link-inline:hover{
 background:#a65277;
 transform:translateY(-2px);
-box-shadow:0 6px 12px rgba(0,0,0,0.15);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
@@ -271,10 +273,10 @@ width:90%;
 <h2>⏰ Matèries en 1r d'ESO (30 hores setmanals)</h2>
 
 <p>
-<strong>📄 En aquest enllaç pots veure la DISTRIBUCIÓ DE LES HORES LECTIVES SETMANALS DE GVA.</strong><br>
+<strong>📄 En aquest enllaç pots veure la DISTRIBUCIÓ DE LES HORES LECTIVES SETMANALS DE GVA.</strong>
 
-<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-doc">
-📄 Veure document oficial GVA
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-inline">
+🔗 PÀGINA OFICIAL GVA
 </a>
 
 </p>
