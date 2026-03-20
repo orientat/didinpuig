@@ -71,7 +71,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* TARJETAS INFORMACIÓN */
+/* TARJETAS INFO */
 
 .cards{
 display:grid;
@@ -106,15 +106,14 @@ border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
 text-decoration:none;
 color:inherit;
+min-height:60px; /* 🔥 CLAVE: iguala altura */
 }
-
-/* HOVER */
 
 .subject a:hover{
 background:#ececec;
 }
 
-/* CAJA INFORMACIÓN FINAL */
+/* INFO FINAL */
 
 .info{
 background:#fff2f7;
@@ -134,8 +133,7 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 width:75%;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 }
 
 /* RESPONSIVE */
@@ -170,13 +168,13 @@ width:90%;
 
 <section class="section">
 
-<h2>📚 Què és l'ESO? Recordem algunes coses</h2>
+<h2>📚 Què és l'ESO?</h2>
 
 <div class="cards">
 <div class="card">🏫 <strong>Educació Secundària Obligatòria</strong></div>
-<div class="card">📖 És <strong>secundària</strong> perquè ve després de l'Educació Primària.</div>
-<div class="card">👩‍🎓 És <strong>obligatòria</strong> entre <strong>12 i 16 anys</strong>.</div>
-<div class="card">📅 Té una duració de <strong>4 cursos</strong>.</div>
+<div class="card">📖 Etapa posterior a Primària</div>
+<div class="card">👩‍🎓 Entre 12 i 16 anys</div>
+<div class="card">📅 Duració: 4 cursos</div>
 </div>
 
 </section>
@@ -185,10 +183,9 @@ width:90%;
 
 <h2>📖 Com és 1r d'ESO?</h2>
 
-<p>Algunes matèries ja les coneixes, però altres seran noves.</p>
-<p>Tindràs un professor diferent per a cada assignatura.</p>
-<p>Tindràs també tutor/a i hora de tutoria.</p>
-<p>És important organitzar-se bé i utilitzar l'agenda.</p>
+<p>Noves matèries i professorat diferent.</p>
+<p>Tindràs tutor/a i hora de tutoria.</p>
+<p>Important organitzar-se bé.</p>
 
 </section>
 
@@ -203,53 +200,29 @@ width:90%;
 
 <div class="subjects">
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">📘 Valencià: Llengua i Literatura — 3 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank" class="subject">📘 Valencià: Llengua i Literatura — 3 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">📗 Castellà: Llengua i Literatura — 3 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank" class="subject">📗 Castellà: Llengua i Literatura — 3 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank">🌍 Llengua Estrangera — 4 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank" class="subject">🌍 Llengua Estrangera — 4 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank">🏛️ Geografia i Història — 3 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank" class="subject">🏛️ Geografia i Història — 3 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank">🏃 Educació Física — 2 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank" class="subject">🏃 Educació Física — 2 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank">➗ Matemàtiques — 4 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank" class="subject">➗ Matemàtiques — 4 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank">🔬 Biologia i Geologia — 3 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank" class="subject">🔬 Biologia i Geologia — 3 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank">🎵 Música — 2 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank" class="subject">🎵 Música — 2 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank">💻 Tecnologia i Digitalització — 2 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank" class="subject">💻 Tecnologia i Digitalització — 2 h</a>
 
-<div class="subject">
-<span>⭐ Optativa — 2 h</span>
-</div>
+<a href="#" class="subject">⭐ Optativa — 2 h</a>
 
-<div class="subject">
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank">⛪ Religió / Atenció Educativa — 1 h</a>
-</div>
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank" class="subject">⛪ Religió / Atenció Educativa — 1 h</a>
 
-<div class="subject">
-<span>🧑‍🏫 Tutoria — 1 h</span>
-</div>
+<a href="#" class="subject">🧑‍🏫 Tutoria — 1 h</a>
 
 </div>
 
@@ -265,11 +238,9 @@ En aquest curs són: Taller d’Aprofundiment i Projecte Interdisciplinar.
 <h2>➡️ En acabar 1r d'ESO</h2>
 
 <div class="info">
-
-✅ Si promociones → 2n d'ESO<br><br>
-📘 Consulta <a href="2eso.html">2n d'ESO</a><br><br>
-🔁 Si no → repeteixes 1r
-
+Promoció → 2n ESO<br><br>
+Consulta <a href="2eso.html">2n d'ESO</a><br><br>
+Repetició si no es promociona
 </div>
 
 </section>
@@ -277,13 +248,8 @@ En aquest curs són: Taller d’Aprofundiment i Projecte Interdisciplinar.
 </div>
 
 <footer>
-IES Didín Puig · Departament d'Orientació Educativa i Professional
+IES Didín Puig · Departament d'Orientació
 </footer>
 
 </body>
 </html>
-
-
-
-
-
