@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CABECERA */
-
 header{
 background:#a65277;
 color:white;
@@ -58,8 +52,6 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
-
 .section{
 margin-top:50px;
 }
@@ -70,8 +62,6 @@ border-left:6px solid #a65277;
 padding-left:10px;
 margin-bottom:15px;
 }
-
-/* TARJETAS INFORMACIÓN */
 
 .cards{
 display:grid;
@@ -129,8 +119,6 @@ border-left:5px solid #6d2548;
 transform:scale(0.98);
 }
 
-/* ICONES */
-
 .icon{
 font-size:24px;
 min-width:28px;
@@ -138,8 +126,6 @@ display:flex;
 justify-content:center;
 transition:transform .2s ease;
 }
-
-/* ANIMACIÓ ICONES CORRECTA */
 
 .subject:hover .icon{
 animation:iconMove .6s ease;
@@ -152,8 +138,6 @@ animation:iconMove .6s ease;
 100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
-/* LLISTA */
-
 ul{
 padding-left:20px;
 line-height:1.7;
@@ -163,8 +147,6 @@ li{
 margin-bottom:6px;
 }
 
-/* INFO */
-
 .info{
 background:#fff2f7;
 padding:20px;
@@ -173,7 +155,7 @@ line-height:1.6;
 border-left:5px solid #a65277;
 }
 
-/* 🔥 NOU BOTÓ DOCUMENT */
+/* BOTÓ DOCUMENT */
 
 .link-doc{
 display:inline-block;
@@ -194,8 +176,6 @@ transform:translateY(-2px);
 box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
-
 footer{
 background:#a65277;
 color:white;
@@ -204,22 +184,12 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 width:75%;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 }
-
-/* RESPONSIVE */
 
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
@@ -243,12 +213,10 @@ width:90%;
 <h2>📚 Què és l'ESO? Recordem algunes coses</h2>
 
 <div class="cards">
-
 <div class="card">🏫 <strong>Educació Secundària Obligatòria</strong></div>
 <div class="card">📖 És <strong>secundària</strong> perquè ve després de l'Educació Primària.</div>
 <div class="card">👩‍🎓 És <strong>obligatòria</strong> perquè l'han de cursar els joves entre <strong>12 i 16 anys</strong>.</div>
 <div class="card">📅 Té una duració de <strong>4 cursos</strong>.</div>
-
 </div>
 
 </section>
@@ -276,33 +244,33 @@ width:90%;
 <a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-doc">
 📄 Veure document oficial
 </a>
-
 </p>
 
 <div class="subjects">
 
-<!-- (tot igual que tenies) -->
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📘</span> Valencià — 3 h</a></div>
 
-</div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📗</span> Castellà — 3 h</a></div>
 
-<p style="margin-top:15px; line-height:1;">
-Cada curs s'informarà de <strong>l'oferta d'optatives del centre</strong>.<br><br>
-En aquest curs són: Taller d’Aprofundiment i Projecte Interdisciplinar.
-</p>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank"><span class="icon">🌍</span> Llengua Estrangera — 4 h</a></div>
 
-</section>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank"><span class="icon">🏛️</span> Geografia i Història — 3 h</a></div>
 
-<section class="section">
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank"><span class="icon">🏃</span> Educació Física — 2 h</a></div>
 
-<h2>➡️ En acabar 1r d'ESO</h2>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank"><span class="icon">➗</span> Matemàtiques — 4 h</a></div>
 
-<div class="info">
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank"><span class="icon">🔬</span> Biologia i Geologia — 3 h</a></div>
 
-✅ Si estàs en condicions de promocionar, passaràs a <strong>2n d'ESO</strong>.<br><br>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank"><span class="icon">🎵</span> Música — 2 h</a></div>
 
-📘 Consulta la informació sobre <strong><a href="2eso.html">2n d'ESO</a></strong> per conéixer com serà el següent curs.<br><br>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank"><span class="icon">💻</span> Tecnologia i Digitalització — 2 h</a></div>
 
-🔁 Si no estàs en condicions de promocionar, repetiràs <strong>1r d'ESO, si no estàs repetint</strong>.
+<div class="subject"><a href="#"><span class="icon">⭐</span> Optativa — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank"><span class="icon">⛪</span> Religió / Atenció Educativa — 1 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoria — 1 h</a></div>
 
 </div>
 
