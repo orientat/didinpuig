@@ -61,7 +61,7 @@ font-size:30px;
 /* SECCIONES */
 
 .section{
-margin-top:40px;
+margin-top:50px;
 }
 
 .section h2{
@@ -100,13 +100,70 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
-gap:10px;
+min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
-/* CAJA INFORMACIÓN FINAL */
+.subject a{
+display:flex;
+align-items:center;
+gap:12px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.subject:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+.subject:active{
+transform:scale(0.98);
+}
+
+/* ICONES */
+
+.icon{
+font-size:24px;
+min-width:28px;
+display:flex;
+justify-content:center;
+transition:transform .2s ease;
+}
+
+/* ANIMACIÓN ICONOS */
+
+.subject:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* LISTA */
+
+ul{
+padding-left:20px;
+line-height:1.7;
+}
+
+li{
+margin-bottom:6px;
+}
+
+/* INFO */
 
 .info{
 background:#fff2f7;
@@ -116,25 +173,27 @@ line-height:1.6;
 border-left:5px solid #a65277;
 }
 
-/* IMAGEN ESQUEMA */
+/* BOTÓN INLINE AZUL */
 
-.esquema{
-text-align:center;
-margin-top:20px;
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
 }
 
-.esquema img{
-max-width:100%;
-height:auto;
-}
-
-/* TEXTO FINAL */
-
-.benvinguda{
-width:75%;
-margin:30px auto;
-text-align:center;
-font-size:18px;
+.link-inline:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
@@ -159,10 +218,6 @@ margin-right:auto;
 width:90%;
 }
 
-.benvinguda{
-width:90%;
-}
-
 footer{
 width:90%;
 }
@@ -171,7 +226,6 @@ width:90%;
 
 </style>
 </head>
-
 
 <body>
 
@@ -186,101 +240,135 @@ width:90%;
 <p>IES Didín Puig · Orientación</p>
 </header>
 
-
 <section class="section">
 
 <h2>📚 ¿Qué es la ESO? Recordamos algunas cosas</h2>
 
 <div class="cards">
 
-<div class="card">
-🏫 <strong>Educación Secundaria Obligatoria</strong>
-</div>
-
-<div class="card">
-📖 Es <strong>secundaria</strong> porque viene después de la Educación Primaria.
-</div>
-
-<div class="card">
-👩‍🎓 Es <strong>obligatoria</strong> porque la deben cursar los jóvenes entre <strong>12 y 16 años</strong>.
-</div>
-
-<div class="card">
-📅 Tiene una duración de <strong>4 cursos</strong>.
-</div>
+<div class="card">🏫 <strong>Educación Secundaria Obligatoria</strong></div>
+<div class="card">📖 Es <strong>secundaria</strong> porque viene después de la Educación Primaria.</div>
+<div class="card">👩‍🎓 Es <strong>obligatoria</strong> porque deben cursarla los jóvenes entre <strong>12 y 16 años</strong>.</div>
+<div class="card">📅 Tiene una duración de <strong>4 cursos</strong>.</div>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
 <h2>📖 ¿Cómo es 1º de ESO?</h2>
 
-<p>
-Algunas materias de la ESO ya las conoces, pero otras serán nuevas.
-</p>
-
-<p>
-Para cada materia tendrás un <strong>profesor o profesora diferente</strong>.
-</p>
-
-<p>
-También tendrás un <strong>tutor o tutora</strong>, con quien tendrás una hora de tutoría además de las clases de su asignatura.
-</p>
-
-<p>
-Tendrás <strong>12 materias</strong>, por eso es muy <strong>importante que te organices bien para estudiar</strong> y que utilices la agenda como herramienta de trabajo.
-</p>
+<ul>
+<li>Algunas materias de la ESO ya las conoces, pero otras serán nuevas.</li>
+<li>Para cada materia tendrás un <strong>profesor o profesora diferente</strong>.</li>
+<li>También tendrás un <strong>tutor o tutora</strong>, con quien tendrás una hora de tutoría además de las clases de su asignatura.</li>
+<li>Tendrás <strong>12 materias</strong>, por eso es muy <strong>importante organizarse bien para estudiar</strong> y utilizar la agenda como herramienta de trabajo.</li>
+</ul>
 
 </section>
-
-
 
 <section class="section">
 
 <h2>⏰ Materias en 1º de ESO (30 horas semanales)</h2>
 
+<p>
+<strong>📄 En este enlace puedes ver la DISTRIBUCIÓN DE LAS HORAS LECTIVAS SEMANALES DE GVA.</strong>
+
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-inline">
+🔗 PÁGINA OFICIAL GVA
+</a>
+
+</p>
+
 <div class="subjects">
 
-<div class="subject">📘 Valenciano: Lengua y Literatura — 3 h</div>
-<div class="subject">📗 Castellano: Lengua y Literatura — 3 h</div>
-<div class="subject">🌍 Lengua Extranjera — 4 h</div>
-<div class="subject">🏛️ Geografía e Historia — 3 h</div>
-<div class="subject">🏃 Educación Física — 2 h</div>
-<div class="subject">➗ Matemáticas — 4 h</div>
-<div class="subject">🔬 Biología y Geología — 3 h</div>
-<div class="subject">🎵 Música — 2 h</div>
-<div class="subject">💻 Tecnología y Digitalización — 2 h</div>
-<div class="subject">⭐ Optativa — 2 h</div>
-<div class="subject">⛪ Religión / Atención Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoría — 1 h</div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">
+<span class="icon">📘</span> Valenciano: Lengua y Literatura — 3 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">
+<span class="icon">📗</span> Castellano: Lengua y Literatura — 3 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank">
+<span class="icon">🌍</span> Lengua Extranjera — 4 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank">
+<span class="icon">🏛️</span> Geografía e Historia — 3 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank">
+<span class="icon">🏃</span> Educación Física — 2 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank">
+<span class="icon">➗</span> Matemáticas — 4 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank">
+<span class="icon">🔬</span> Biología y Geología — 3 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank">
+<span class="icon">🎵</span> Música — 2 h
+</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank">
+<span class="icon">💻</span> Tecnología y Digitalización — 2 h
+</a>
+</div>
+
+<div class="subject">
+<a href="#"><span class="icon">⭐</span> Optativa — 2 h</a>
+</div>
+
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank">
+<span class="icon">⛪</span> Religión / Atención Educativa — 1 h
+</a>
+</div>
+
+<div class="subject">
+<a href="#"><span class="icon">🧑‍🏫</span> Tutoría — 1 h</a>
+</div>
 
 </div>
 
-<p style="margin-top:15px;">
-Cada curso se informará de <strong>la oferta de optativas del centro</strong>.
+<p style="margin-top:15px; line-height:1;">
+Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>
+En este curso son: Taller de Profundización y Proyecto Interdisciplinar.
 </p>
 
 </section>
 
-
-
 <section class="section">
 
-<h2>➡️ Al terminar 1º de ESO</h2>
+<h2>➡️ Al finalizar 1º de ESO</h2>
 
 <div class="info">
 
-✅ Si estás en condiciones de promocionar, pasarás a <strong>2º de ESO</strong>.
+✅ Si estás en condiciones de promocionar, pasarás a <strong>2º de ESO</strong>.<br><br>
 
-<br><br>
-
-📘 Consulta la información sobre <strong><a href="2eso.html">2º de ESO</a></strong> para conocer cómo será el siguiente curso.
-
-<br><br>
+📘 Consulta la información sobre <strong><a href="2eso.html">2º de ESO</a></strong> para conocer cómo será el siguiente curso.<br><br>
 
 🔁 Si no estás en condiciones de promocionar, repetirás <strong>1º de ESO, si no estás repitiendo</strong>.
 
