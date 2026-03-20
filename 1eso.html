@@ -95,7 +95,6 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
 }
 
-/* 🔥 SOLO MODIFICADO ESTO */
 .subject{
 background:#f3f3f3;
 padding:15px 18px;
@@ -122,11 +121,27 @@ background:#ececec;
 cursor:pointer;
 }
 
+/* ICONES */
+
 .icon{
 font-size:22px;
 min-width:28px;
 display:flex;
 justify-content:center;
+transition:transform .3s ease;
+}
+
+/* ANIMACIÓ ICONES */
+
+.subject:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 /* CAJA INFORMACIÓN FINAL */
@@ -351,6 +366,7 @@ En aquest curs són: Taller d’Aprofundiment i Projecte Interdisciplinar.
 </p>
 
 </section>
+
 
 <section class="section">
 
