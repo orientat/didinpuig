@@ -100,10 +100,11 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 4px 10px rgba(0,0,0,0.08); /* 🔥 sombra base */
 display:flex;
 align-items:center;
 min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
 .subject a{
@@ -119,6 +120,8 @@ color:inherit;
 .subject:hover{
 background:#ececec;
 cursor:pointer;
+transform:translateY(-5px) scale(1.02); /* 🔥 movimiento */
+box-shadow:0 12px 22px rgba(0,0,0,0.18); /* 🔥 elevación */
 }
 
 /* ICONES */
@@ -289,6 +292,8 @@ En aquest enllaç pots veure la DISTRIBUCIÓ DE LES HORES LECTIVES SETMANALS DE 
 </p>
 
 <div class="subjects">
+
+<!-- 🔥 TOT IGUAL QUE TENIES -->
 
 <div class="subject">
 <a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">
