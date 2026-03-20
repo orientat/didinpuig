@@ -61,7 +61,7 @@ font-size:30px;
 /* SECCIONES */
 
 .section{
-margin-top:50px; /* 🔥 millor separació */
+margin-top:50px;
 }
 
 .section h2{
@@ -100,7 +100,7 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 6px 14px rgba(0,0,0,0.10); /* 🔥 millor ombra base */
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
 min-height:60px;
@@ -122,10 +122,8 @@ background:#ececec;
 cursor:pointer;
 transform:translateY(-5px) scale(1.02);
 box-shadow:0 14px 26px rgba(0,0,0,0.18);
-border-left:5px solid #6d2548; /* 🔥 reforç visual */
+border-left:5px solid #6d2548;
 }
-
-/* CLICK EFECTO PRO */
 
 .subject:active{
 transform:scale(0.98);
@@ -134,27 +132,36 @@ transform:scale(0.98);
 /* ICONES */
 
 .icon{
-font-size:24px; /* 🔥 un poc més grans */
+font-size:24px;
 min-width:28px;
 display:flex;
 justify-content:center;
 transition:transform .3s ease;
 }
 
-/* ANIMACIÓ ICONES */
-
 .subject:hover .icon{
 animation:iconMove .6s ease;
 }
 
 @keyframes iconMove{
-0%{transform:translateY(0) rotate(0deg);}
-30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
-60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
-100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+0%{transform:translateY(0);}
+30%{transform:translateY(-8px) scale(1.2);}
+60%{transform:translateY(-4px) scale(1.1);}
+100%{transform:translateY(0);}
 }
 
-/* CAJA INFORMACIÓN FINAL */
+/* LLISTA MILLORADA */
+
+ul{
+padding-left:20px;
+line-height:1.7;
+}
+
+li{
+margin-bottom:6px;
+}
+
+/* INFO FINAL */
 
 .info{
 background:#fff2f7;
@@ -214,10 +221,21 @@ width:90%;
 
 <div class="cards">
 
-<div class="card">🏫 <strong>Educació Secundària Obligatòria</strong></div>
-<div class="card">📖 És <strong>secundària</strong> perquè ve després de l'Educació Primària.</div>
-<div class="card">👩‍🎓 És <strong>obligatòria</strong> perquè l'han de cursar els joves entre <strong>12 i 16 anys</strong>.</div>
-<div class="card">📅 Té una duració de <strong>4 cursos</strong>.</div>
+<div class="card">
+🏫 <strong>Educació Secundària Obligatòria</strong>
+</div>
+
+<div class="card">
+📖 És <strong>secundària</strong> perquè ve després de l'Educació Primària.
+</div>
+
+<div class="card">
+👩‍🎓 És <strong>obligatòria</strong> perquè l'han de cursar els joves entre <strong>12 i 16 anys</strong>.
+</div>
+
+<div class="card">
+📅 Té una duració de <strong>4 cursos</strong>.
+</div>
 
 </div>
 
@@ -227,10 +245,12 @@ width:90%;
 
 <h2>📖 Com és 1r d'ESO?</h2>
 
-<p>Algunes matèries de l'ESO ja les coneixes, però altres seran noves.</p>
-<p>Per a cada matèria tindràs un <strong>professor o professora diferent</strong>.</p>
-<p>També tindràs un <strong>tutor o tutora</strong>, amb qui tindràs una hora de tutoria a més de les classes de la seua assignatura.</p>
-<p>Tindràs <strong>12 matèries</strong>, per això és molt <strong>important que t'organitzes bé per a estudiar</strong> i que utilitzes l'agenda com a eina de treball.</p>
+<ul>
+<li>Algunes matèries de l'ESO ja les coneixes, però altres seran noves.</li>
+<li>Per a cada matèria tindràs un <strong>professor o professora diferent</strong>.</li>
+<li>També tindràs un <strong>tutor o tutora</strong>, amb qui tindràs una hora de tutoria a més de les classes de la seua assignatura.</li>
+<li>Tindràs <strong>12 matèries</strong>, per això és molt <strong>important que t'organitzes bé per a estudiar</strong> i que utilitzes l'agenda com a eina de treball.</li>
+</ul>
 
 </section>
 
@@ -247,31 +267,73 @@ width:90%;
 
 <div class="subjects">
 
-<!-- TOT IGUAL -->
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">
+<span class="icon">📘</span> Valencià: Llengua i Literatura — 3 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📘</span> Valencià: Llengua i Literatura — 3 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank">
+<span class="icon">📗</span> Castellà: Llengua i Literatura — 3 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📗</span> Castellà: Llengua i Literatura — 3 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank">
+<span class="icon">🌍</span> Llengua Estrangera — 4 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank"><span class="icon">🌍</span> Llengua Estrangera — 4 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank">
+<span class="icon">🏛️</span> Geografia i Història — 3 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank"><span class="icon">🏛️</span> Geografia i Història — 3 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank">
+<span class="icon">🏃</span> Educació Física — 2 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank"><span class="icon">🏃</span> Educació Física — 2 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank">
+<span class="icon">➗</span> Matemàtiques — 4 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank"><span class="icon">➗</span> Matemàtiques — 4 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank">
+<span class="icon">🔬</span> Biologia i Geologia — 3 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank"><span class="icon">🔬</span> Biologia i Geologia — 3 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank">
+<span class="icon">🎵</span> Música — 2 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank"><span class="icon">🎵</span> Música — 2 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank">
+<span class="icon">💻</span> Tecnologia i Digitalització — 2 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank"><span class="icon">💻</span> Tecnologia i Digitalització — 2 h</a></div>
+<div class="subject">
+<a href="#"><span class="icon">⭐</span> Optativa — 2 h</a>
+</div>
 
-<div class="subject"><a href="#"><span class="icon">⭐</span> Optativa — 2 h</a></div>
+<div class="subject">
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank">
+<span class="icon">⛪</span> Religió / Atenció Educativa — 1 h
+</a>
+</div>
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank"><span class="icon">⛪</span> Religió / Atenció Educativa — 1 h</a></div>
-
-<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoria — 1 h</a></div>
+<div class="subject">
+<a href="#"><span class="icon">🧑‍🏫</span> Tutoria — 1 h</a>
+</div>
 
 </div>
 
@@ -287,9 +349,13 @@ En aquest curs són: Taller d’Aprofundiment i Projecte Interdisciplinar.
 <h2>➡️ En acabar 1r d'ESO</h2>
 
 <div class="info">
+
 ✅ Si estàs en condicions de promocionar, passaràs a <strong>2n d'ESO</strong>.<br><br>
-📘 Consulta la informació sobre <strong><a href="2eso.html">2n d'ESO</a></strong>.<br><br>
-🔁 Si no estàs en condicions de promocionar, repetiràs <strong>1r d'ESO</strong>.
+
+📘 Consulta la informació sobre <strong><a href="2eso.html">2n d'ESO</a></strong> per conéixer com serà el següent curs.<br><br>
+
+🔁 Si no estàs en condicions de promocionar, repetiràs <strong>1r d'ESO, si no estàs repetint</strong>.
+
 </div>
 
 </section>
