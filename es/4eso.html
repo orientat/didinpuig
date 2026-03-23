@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CABECERA */
-
 header{
 background:#a65277;
 color:white;
@@ -58,8 +52,6 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
-
 .section{
 margin-top:40px;
 }
@@ -71,7 +63,13 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* MATERIAS */
+/* INTRO */
+
+.intro p{
+line-height:1.8;
+}
+
+/* SUBJECTES */
 
 .subjects{
 display:grid;
@@ -84,13 +82,85 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
-gap:10px;
+min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
-/* BLOQUES OPCIÓN */
+.subject a{
+display:flex;
+align-items:center;
+gap:12px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.subject:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+.subject:active{
+transform:scale(0.98);
+}
+
+/* ICONES */
+
+.icon{
+font-size:24px;
+min-width:28px;
+display:flex;
+justify-content:center;
+transition:transform .2s ease;
+transform-origin:center;
+}
+
+/* ANIMACIÓ ICONES */
+
+.subject:hover .icon,
+.block-item:hover .icon,
+.option:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* BOTÓ INLINE */
+
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
+}
+
+.link-inline:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* BLOQUES */
 
 .blocks{
 display:grid;
@@ -103,10 +173,44 @@ background:#f3f3f3;
 padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* OPCIONES FUTURO */
+/* MINI TARGETES */
+
+.block-items{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:10px;
+}
+
+.block-item{
+background:#ffffff;
+padding:12px 14px;
+border-radius:10px;
+border-left:4px solid #a65277;
+display:flex;
+align-items:flex-start;
+gap:12px;
+text-decoration:none;
+color:inherit;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.block-item:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-3px) scale(1.01);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:4px solid #6d2548;
+}
+
+.block-item div{
+line-height:1.5;
+}
+
+/* OPCIONS */
 
 .options{
 display:grid;
@@ -117,14 +221,56 @@ margin-top:15px;
 
 .option{
 background:#f3f3f3;
-padding:20px;
-border-radius:10px;
+padding:25px 20px;
+border-radius:14px;
 text-align:center;
 font-weight:bold;
 border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:160px;
+cursor:pointer;
 }
 
-/* CAJAS INFO */
+.option:nth-child(1){background:#e8edf3;}
+.option:nth-child(2){background:#e7f0ec;}
+.option:nth-child(3){background:#f2e9df;}
+.option:nth-child(4){background:#efe3ea;}
+
+.option a{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.option .icon{
+font-size:42px;
+}
+
+.option:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+.info .block-item{
+background:#ffffff;
+}
+
+.info .block-item:hover{
+background:#f9f9f9;
+}
+
+/* INFO */
 
 .info{
 background:#fff2f7;
@@ -134,12 +280,38 @@ line-height:1.6;
 border-left:5px solid #a65277;
 }
 
+/* LINKS FALSOS */
+.fake-link{
+color:#1a0dab;
+text-decoration:underline;
+font-weight:bold;
+}
+
+/* WARNING */
+
 .warning{
 background:#fff3cd;
 padding:20px;
 border-radius:10px;
-line-height:1.6;
-margin-top:15px;
+border-left:5px solid #a65277;
+line-height:1.8;
+}
+
+.warning ul{
+list-style:none;
+padding-left:0;
+margin:0;
+}
+
+.warning li{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-bottom:14px;
+}
+
+.warning li span{
+flex:1;
 }
 
 /* FOOTER */
@@ -156,23 +328,100 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
-footer{
-width:90%;
+/* ASSISTENT */
+
+.assistant{
+opacity:0;
+pointer-events:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+cursor:pointer;
+transition:opacity .3s ease;
 }
 
+.assistant.active{
+opacity:1;
+pointer-events:auto;
+}
+
+/* finestra interior */
+.assistant-box{
+background:#eef5ff;
+padding:25px;
+border-radius:12px;
+width:90%;
+max-width:500px;
+border-left:5px solid #1565c0;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+position:relative;
+
+transform:scale(0.9);
+transition:transform .3s ease;
+}
+
+.assistant.active .assistant-box{
+transform:scale(1);
+}
+
+.question{
+margin-bottom:15px;
+}
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:#1565c0;
+color:white;   
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0d47a1;
+}
+
+/* RESULTAT */
+
+.result{
+margin-top:15px;
+padding:15px;
+background:#fff;
+border-radius:10px;
+border-left:5px solid #6d2548;
+display:none;
+opacity:0;
+transform:translateY(10px);
+transition:all .3s ease;
+}
+
+.question.error{
+border:2px solid #e53935;
+border-radius:8px;
+padding:8px;
+background:#fdecea;
+}
+
+.question select.error{
+border:2px solid #e53935;
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -187,44 +436,48 @@ width:90%;
 <p>IES Didín Puig · Departamento de Orientación</p>
 </header>
 
-
-<section class="section">
-
+<section class="section intro">
 <h2>📚 Plan de estudios de 4º de ESO</h2>
-
 <p>
-Este curso tiene más cambios que los anteriores. Tendrás que elegir entre varias <strong>materias de opción</strong> aquellas que mejor te preparen para los estudios que quieras realizar después de la ESO.
+Este curso tiene más cambios que los anteriores. Tendrás que elegir entre varias <strong>materias de opción</strong> las que mejor te preparen para los estudios que quieras hacer después de la ESO.
 </p>
-
 </section>
-
-
 
 <section class="section">
 
 <h2>⏰ Materias en 4º de ESO (33 horas semanales)</h2>
 
+<p>
+📄 En este enlace puedes ver la <strong>DISTRIBUCIÓN DE LAS HORAS LECTIVAS SEMANALES</strong>
+
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_4t.pdf" target="_blank" class="link-inline">
+🔗 PÁGINA OFICIAL GVA
+</a>
+</p>
+
+<p style="margin-top:15px;">
+📄 Y si pinchas en las siguientes tarjetas, puedes ver los <strong>ELEMENTOS DEL CURRÍCULO DE CADA MATERIA:</strong>
+</p>
+
 <div class="subjects">
 
-<div class="subject">📘 Valenciano: Lengua y Literatura — 3 h</div>
-<div class="subject">📗 Castellano: Lengua y Literatura — 3 h</div>
-<div class="subject">🌍 Lengua Extranjera — 3 h</div>
-<div class="subject">🏛️ Geografía e Historia — 3 h</div>
-<div class="subject">🏃 Educación Física — 2 h</div>
-<div class="subject">➗ Matemáticas A o B — 4 h</div>
-<div class="subject">🤝 Educación en Valores Cívicos — 2 h</div>
-<div class="subject">⭐ Materia de opción 1 — 3 h</div>
-<div class="subject">⭐ Materia de opción 2 — 3 h</div>
-<div class="subject">⭐ Materia de opción 3 — 3 h</div>
-<div class="subject">📚 Optativa — 2 h</div>
-<div class="subject">⛪ Religión / Atención Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoría — 1 h</div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf"><span class="icon">📘</span> Valenciano: Lengua y Literatura — 3 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf"><span class="icon">📗</span> Castellano: Lengua y Literatura — 3 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf"><span class="icon">🌍</span> Lengua Extranjera — 3 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf"><span class="icon">🏛️</span> Geografía e Historia — 3 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf"><span class="icon">🏃</span> Educación Física — 2 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf"><span class="icon">➗</span> Matemáticas A o B — 4 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf"><span class="icon">🤝</span> Educación en Valores Cívicos — 2 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Materia de opción 1 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Materia de opción 2 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Materia de opción 3 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">📚</span> Optativa — 2 h</a></div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf"><span class="icon">⛪</span> Religión / Atención Educativa — 1 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoría — 1 h</a></div>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
@@ -232,146 +485,437 @@ Este curso tiene más cambios que los anteriores. Tendrás que elegir entre vari
 
 <div class="info">
 
-📘 <strong>Matemáticas A</strong><br>
-Recomendadas para alumnado que no continuará estudiando matemáticas, por ejemplo si quiere cursar un <a href="fp.html"><strong>Ciclo Formativo de Formación Profesional</strong></a>.
+<div class="block-items">
 
-<br><br>
+<a href="fp.html" class="block-item">
+<span class="icon">📘</span>
+<div>
+<strong>Matemáticas A</strong><br>
+Recomendadas para el alumnado que no continuará estudiando matemáticas, por ejemplo si quiere cursar un 
+<span class="fake-link">Ciclo Formativo de Formación Profesional</span>.
+</div>
+</a>
+<a href="bach.html" class="block-item">
+<span class="icon">📗</span>
+<div>
+<strong>Matemáticas B</strong><br>
+Recomendadas para quien quiera cursar 
+<span class="fake-link">Bachillerato</span>.
+</div>
+</a>
 
-📗 <strong>Matemáticas B</strong><br>
-Recomendadas para quien quiera cursar <a href="bach.html"><strong>Bachillerato</strong></a>.
+</div>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
 <h2>⭐ Materias de opción</h2>
 
-<p>Deberás elegir <strong>una materia de cada bloque</strong> sin repetir ninguna.</p>
+<p>Tendrás que elegir <strong>una materia de cada bloque</strong> sin repetir ninguna.</p>
 
 <div class="blocks">
-
 <div class="block">
-<strong>Bloque 1</strong><br><br>
-⚗️ Física y Química<br>  
-🧭 Formación y Orientación Personal i Profesional<br>  
-🏛️ Latín   
+<strong>Bloque 1</strong>
+
+<div class="block-items">
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Fisica-i-Quimica.pdf" class="block-item">
+<span class="icon">⚗️</span> Física y Química
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Formacio-i-Orientacio-Personal-i-Professional.pdf" class="block-item">
+<span class="icon">🧭</span> Formación y Orientación Personal y Profesional
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llati.pdf" class="block-item">
+<span class="icon">🏛️</span> Latín
+</a>
+
+</div>
 </div>
 
 <div class="block">
-<strong>Bloque 2</strong><br><br>
-📊 Economía<br>   
-🎵 Música<br>   
-💻 Tecnología   
+<strong>Bloque 2</strong>
+
+<div class="block-items">
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Economia-i-Emprenedoria.pdf" class="block-item">
+<span class="icon">📊</span> Economía
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" class="block-item">
+<span class="icon">🎵</span> Música
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia.pdf" class="block-item">
+<span class="icon">💻</span> Tecnología
+</a>
+
+</div>
 </div>
 
 <div class="block">
-<strong>Bloque 3</strong><br><br>
-🔬 Biología y Geología<br>   
-💻 Digitalitzación<br>   
-🎨 Expresión Artística
+<strong>Bloque 3</strong>
+
+<div class="block-items">
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" class="block-item">
+<span class="icon">🔬</span> Biología y Geología
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Digitalitzacio.pdf" class="block-item">
+<span class="icon">💻</span> Digitalización
+</a>
+
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Expressio-artistica.pdf" class="block-item">
+<span class="icon">🎨</span> Expresión Artística
+</a>
+
+</div>
 </div>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
 <h2>🧭 ¿Qué quieres hacer después de 4º de ESO?</h2>
 
-<p>¿Sabes qué quieres hacer cuando termines 4º de ESO?</p>
+<p>¿Sabes qué quieres hacer cuando acabes 4º de ESO?</p>
 
 <div class="options">
 
 <div class="option">
-<a href="bach.html">🎓 BACHILLERATO</a>
+<a href="bach.html"><span class="icon">🎓</span> BACHILLERATO</a>
 </div>
 
 <div class="option">
-<a href="fp.html">🛠️ FP (CICLOS FORMATIVOS)</a>
+<a href="fp.html"><span class="icon">🛠️</span> FP (CICLOS FORMATIVOS)</a>
 </div>
 
 <div class="option">
-<a href="altres.html">📚 OTROS ESTUDIOS</a>
+<a href="altres.html"><span class="icon">📚</span> OTROS ESTUDIOS</a>
 </div>
 
-<div class="option">
-🤔 AÚN NO SÉ QUÉ HACER
+<div class="option" onclick="toggleAssistant()">
+<span class="icon">🤔</span> AÚN NO SÉ QUÉ HACER
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="section">
 
-<h2>⚠️ Si 4º de ESO no va bien</h2>
+<div id="assistant" class="assistant" onclick="toggleAssistant()">
+
+<div class="assistant-box" onclick="event.stopPropagation()">
+    
+<button onclick="toggleAssistant()" style="
+position:absolute;
+top:10px;
+right:10px;
+background:#ffffff;
+color:#d32f2f;  
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:50%;
+width:32px;
+height:32px;
+
+display:flex;                
+align-items:center;          
+justify-content:center;     
+
+line-height:1;              
+padding:0;                   
+
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+">
+✖
+</button>
+
+<h3>🧭 Te ayudamos a decidir</h3>
+
+<div class="question">
+<strong>1. ¿Te gusta estudiar teoría?</strong><br>
+<select id="q1">
+<option value="">Selecciona</option>
+<option value="si">Sí</option>
+<option value="no">No</option>
+</select>
+</div>
+
+<div class="question">
+<strong>2. ¿Prefieres cosas prácticas?</strong><br>
+<select id="q2">
+<option value="">Selecciona</option>
+<option value="si">Sí</option>
+<option value="no">No</option>
+</select>
+</div>
+
+<div class="question">
+<strong>3. ¿Tienes claro qué quieres estudiar?</strong><br>
+<select id="q3">
+<option value="">Selecciona</option>
+<option value="si">Sí</option>
+<option value="no">No</option>
+</select>
+</div>
+
+<div class="question">
+<strong>4. ¿Cómo son tus notas habitualmente?</strong><br>
+<select id="q4">
+<option value="">Selecciona</option>
+<option value="altes">Buenas o muy buenas</option>
+<option value="mitjanes">Normales</option>
+<option value="baixes">Bajas</option>
+</select>
+</div>
+
+<div class="question">
+<strong>5. ¿Qué te gusta más?</strong><br>
+<select id="q5">
+<option value="">Selecciona</option>
+<option value="estudiar">Estudiar y continuar formándome</option>
+<option value="treballar">Aprender una profesión práctica</option>
+<option value="dubte">No lo tengo claro</option>
+</select>
+</div>
+
+<div class="question">
+<strong>6. ¿Tienes pensado ir a la universidad?</strong><br>
+<select id="q6">
+<option value="">Selecciona</option>
+<option value="si">Sí</option>
+<option value="no">No</option>
+<option value="no_se">No lo sé</option>
+</select>
+</div>
+
+<button onclick="calcular()">Ver recomendación</button>
+
+<div id="result" class="result"></div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+
+<h2>⚠️ Si 4º de ESO no te va bien</h2>
 
 <div class="warning">
 
 <ul>
 
-<li>🔁 Repetir 4º de ESO ordinario o cursar <strong><a href="pdc.html">4º de PDC</a></strong> si cumples los requisitos.</li>
+<li><span>🔁 Repetir 4º de ESO ordinario o cursar <strong><a href="pdc.html">4º de PDC</a></strong> si cumples los requisitos.</span></li>
 
-<li>🛠️ Preparar la <strong>prueba de acceso a ciclos de FP</strong> si tienes 17 años o los cumples el año en que terminas 4º.</li>
+<li><span>🛠️ Preparar la <strong><a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos">Prueba de acceso a Ciclos de FP</a></strong> si tienes 17 años o los cumples el año que acabas 4º.</span></li>
 
-<li>🧭 Participar en el programa <strong>JOOP</strong> del ayuntamiento para descubrir tu vocación.</li>
-
+<li><span>🧭 Participar en el programa <strong><a href="https://ivaj.gva.es/es/joop">JOOP</a></strong> del IVAJ para descubrir tu vocación. La información de este programa la tienes disponible en el <strong><a href="https://xarxajove.info/mapa-de-recursos/espais/punt-jove-guadassuar/">Punt Jove o CIJ de la localidad</a></strong>.</span></li>
 </ul>
 
 </div>
 
 </section>
 
-
-
 <section class="section">
 
-<h2>📜 Si no terminas 4º de ESO</h2>
+<h2>📜 Si no acabas 4º de ESO</h2>
 
 <div class="info">
 
-📘 Cursar un <strong>Ciclo Formativo de Grado Básico</strong>. Obtendrás el título de ESO y el título de Técnico Básico.
+📘 Cursar un <strong><a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles">Ciclo Formativo de Grado Básico</a></strong>. Obtendrás el título de ESO y el título de Técnico Básico.     
 
 <br><br>
 
-👨‍🎓 Preparar la <strong>prueba libre de la ESO</strong> en Centros de Formación de Personas Adultas (mayores de 18 años).
+👨‍🎓 Preparar la <strong><a href="https://ceice.gva.es/va/web/ordenacion-academica/educacion-de-personas-adultas/pruebas-libres">prueba libre de la ESO</a></strong> en Centros de Formación de Personas Adultas (mayores de 18 años).
 
 <br><br>
 
-💻 Obtener el graduado de ESO <strong>a distancia</strong>.
+💻 Obtener el graduado de <strong><a href="https://portal.edu.gva.es/ceedcv/graduat-es-a-distancia/">ESO a distancia</a></strong>.   
 
 </div>
 
 </section>
 
-
-
 <section class="section">
 
 <div class="info">
-
 En cualquier caso, consulta con tu <strong>tutor o tutora</strong> o con el <strong>Departamento de Orientación</strong>.
-
 </div>
 
 </section>
 
-
 </div>
-
 
 <footer>
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
 </footer>
+<script>
+
+function toggleAssistant(){
+let a = document.getElementById("assistant");
+
+if(a.classList.contains("active")){
+    a.classList.remove("active");
+    document.body.style.overflow = "auto";
+} else {
+    a.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+}
+document.addEventListener("keydown", function(e){
+if(e.key === "Escape"){
+document.getElementById("assistant").classList.remove("active");
+document.body.style.overflow = "auto";
+}
+});
+
+function calcular(){
+
+let q1 = document.getElementById("q1").value;
+let q2 = document.getElementById("q2").value;
+let q3 = document.getElementById("q3").value;
+let q4 = document.getElementById("q4").value;
+let q5 = document.getElementById("q5").value;
+let q6 = document.getElementById("q6").value;
+let result = document.getElementById("result"); //
+
+// VALIDACIÓ
+
+// NETEJAR ERRORS PREVIS
+document.querySelectorAll(".question").forEach(q => q.classList.remove("error"));
+document.querySelectorAll("select").forEach(s => s.classList.remove("error"));
+
+let falta = false;
+
+// COMPROVAR UNA A UNA
+
+if(!q1){
+document.getElementById("q1").classList.add("error");
+document.getElementById("q1").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q2){
+document.getElementById("q2").classList.add("error");
+document.getElementById("q2").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q3){
+document.getElementById("q3").classList.add("error");
+document.getElementById("q3").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q4){
+document.getElementById("q4").classList.add("error");
+document.getElementById("q4").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q5){
+document.getElementById("q5").classList.add("error");
+document.getElementById("q5").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q6){
+document.getElementById("q6").classList.add("error");
+document.getElementById("q6").parentElement.classList.add("error");
+falta = true;
+}
+
+// SI FALTA ALGUNA
+
+if(falta){
+result.innerHTML = "⚠️ Por favor, responde todas las preguntas antes de ver la recomendación.";
+result.style.display = "block";
+result.style.background = "#fdecea";
+result.style.opacity = "1";
+result.style.transform = "translateY(0)";
+return;
+}
+
+let batx = 0;
+let fp = 0;
+// criteris
+
+if(q1==="si") batx++;
+if(q2==="si") fp++;
+
+if(q4==="altes") batx+=2;
+if(q4==="baixes") fp+=2;
+
+if(q5==="estudiar") batx+=2;
+if(q5==="treballar") fp+=2;
+
+if(q6==="si") batx+=2;
+if(q6==="no") fp+=2;
+
+// decisió final
+
+let missatge = "";
+let color = "";
+
+// PERFILS MILLORATS
+
+if(batx > fp){
+
+    if(q5==="estudiar" && q4==="altes"){
+        missatge = "🎓 Perfil académico alto. Recomendamos BACHILLERATO, con posibilidad de universidad.<br><br><a href='bach.html'>👉 Ver opciones de Bachillerato</a>";
+    }
+    else if(q5==="estudiar"){
+        missatge = "🎓 Perfil académico. Recomendamos BACHILLERATO, pero es importante elegir bien las materias.<br><br><a href='bach.html'>👉 Ver itinerarios</a>";
+    }
+    else{
+        missatge = "🎓 Podrías hacer BACHILLERATO, pero valora también opciones más prácticas según tus intereses.";
+    }
+
+    color = "#e3f2fd"; // blau suau
+}
+
+else if(fp > batx){
+
+    if(q2==="si" && q5==="treballar"){
+        missatge = "🛠️ Perfil práctico claro. Recomendamos FORMACIÓN PROFESIONAL (grado medio).<br><br><a href='fp.html'>👉 Ver ciclos formativos</a>";
+    }
+    else if(q4==="baixes"){
+        missatge = "🛠️ La FP puede ser una muy buena opción para ti, especialmente si prefieres aprender de manera práctica.<br><br><a href='fp.html'>👉 Explorar opciones</a>";
+    }
+    else{
+        missatge = "🛠️ Tienes un perfil práctico. Explora ciclos formativos relacionados con tus intereses.<br><br><a href='fp.html'>👉 Ver FP</a>";
+    }
+
+    color = "#e8f5e9"; // verd suau
+}
+
+else{
+    missatge = "🤔 Estás en un punto intermedio. Habla con el Departamento de Orientación para ayudarte a decidir mejor.";
+    color = "#fff3e0"; // taronja suau
+}
+
+// APLICAR RESULTAT
+
+result.innerHTML = missatge;
+result.style.display = "block";
+
+setTimeout(()=>{
+    result.style.opacity = "1";
+    result.style.transform = "translateY(0)";
+},10);
+
+result.style.background = color;
+}
+
+</script>
 
 </body>
 </html>
