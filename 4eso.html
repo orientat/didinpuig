@@ -168,6 +168,39 @@ border-radius:10px;
 border-left:5px solid #a65277;
 }
 
+/* MINI TARGETES DINS DELS BLOCS */
+
+.block-items{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.block-item{
+background:#ffffff;
+padding:10px 12px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:inherit;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+transition:all .2s ease;
+}
+
+.block-item:hover{
+background:#f0f0f0;
+transform:translateX(5px);
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
+}
+
+.block-item .icon{
+font-size:18px;
+min-width:22px;
+}
+  
 /* OPCIONS */
 
 .options{
