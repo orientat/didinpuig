@@ -660,6 +660,27 @@ let a = document.getElementById("assistant");
 a.style.display = (a.style.display === "block") ? "none" : "block";
 }
 
+function calcular(){
+
+let q1 = document.getElementById("q1").value;
+let q2 = document.getElementById("q2").value;
+let q3 = document.getElementById("q3").value;
+
+let result = document.getElementById("result");
+
+if(q1==="si" && q2==="no"){
+result.innerHTML="🎓 Et podria anar bé el Batxillerat.";
+}
+else if(q2==="si"){
+result.innerHTML="🛠️ Potser la Formació Professional és una bona opció per a tu.";
+}
+else{
+result.innerHTML="📚 Encara estàs descobrint el teu camí. Parla amb Orientació!";
+}
+
+result.style.display="block";
+}
+
 </script>
 </body>
 </html>
