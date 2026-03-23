@@ -653,6 +653,36 @@ box-shadow:0 2px 6px rgba(0,0,0,0.2);
 </select>
 </div>
 
+<div class="question">
+<strong>4. Com són les teues notes habitualment?</strong><br>
+<select id="q4">
+<option value="">Selecciona</option>
+<option value="altes">Bones o molt bones</option>
+<option value="mitjanes">Normals</option>
+<option value="baixes">Baixes</option>
+</select>
+</div>
+
+<div class="question">
+<strong>5. Què t’agrada més?</strong><br>
+<select id="q5">
+<option value="">Selecciona</option>
+<option value="estudiar">Estudiar i continuar formant-me</option>
+<option value="treballar">Aprendre una professió pràctica</option>
+<option value="dubte">No ho tinc clar</option>
+</select>
+</div>
+
+<div class="question">
+<strong>6. Tens pensat anar a la universitat?</strong><br>
+<select id="q6">
+<option value="">Selecciona</option>
+<option value="si">Sí</option>
+<option value="no">No</option>
+<option value="no_se">No ho sé</option>
+</select>
+</div>
+
 <button onclick="calcular()">Veure recomanació</button>
 
 <div id="result" class="result"></div>
@@ -738,17 +768,39 @@ function calcular(){
 let q1 = document.getElementById("q1").value;
 let q2 = document.getElementById("q2").value;
 let q3 = document.getElementById("q3").value;
+let q4 = document.getElementById("q4").value;
+let q5 = document.getElementById("q5").value;
+let q6 = document.getElementById("q6").value;
 
 let result = document.getElementById("result");
 
-if(q1==="si" && q2==="no"){
-result.innerHTML="🎓 Et podria anar bé el Batxillerat.";
+let batx = 0;
+let fp = 0;
+
+// criteris
+
+if(q1==="si") batx++;
+if(q2==="si") fp++;
+
+if(q4==="altes") batx+=2;
+if(q4==="baixes") fp+=2;
+
+if(q5==="estudiar") batx+=2;
+if(q5==="treballar") fp+=2;
+
+if(q6==="si") batx+=2;
+if(q6==="no") fp+=2;
+
+// decisió final
+
+if(batx > fp){
+result.innerHTML="🎓 Et recomanem el BATXILLERAT. Tens un perfil acadèmic i orientat a continuar estudiant.";
 }
-else if(q2==="si"){
-result.innerHTML="🛠️ Potser la Formació Professional és una bona opció per a tu.";
+else if(fp > batx){
+result.innerHTML="🛠️ Et recomanem la FORMACIÓ PROFESSIONAL. Tens un perfil més pràctic i orientat al món laboral.";
 }
 else{
-result.innerHTML="📚 Encara estàs descobrint el teu camí. Parla amb Orientació!";
+result.innerHTML="🤔 Estàs en un punt intermig. Parla amb el Departament d’Orientació per decidir millor.";
 }
 
 result.style.display="block";
