@@ -63,7 +63,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* 🔥 NOVA MILLORA (INTERLINEAT TEXT INTRO) */
+/* INTRO */
 
 .intro p{
 line-height:1.8;
@@ -111,23 +111,30 @@ border-left:5px solid #6d2548;
 transform:scale(0.98);
 }
 
+/* ICONES */
+
 .icon{
 font-size:24px;
 min-width:28px;
 display:flex;
 justify-content:center;
 transition:transform .2s ease;
+transform-origin:center;
 }
 
-.subject:hover .icon{
+/* ANIMACIÓ ICONES (IGUAL QUE 1ESO) */
+
+.subject:hover .icon,
+.block-item:hover .icon,
+.option:hover .icon{
 animation:iconMove .6s ease;
 }
 
 @keyframes iconMove{
-0%{transform:translateY(0);}
-30%{transform:translateY(-8px);}
-60%{transform:translateY(-4px);}
-100%{transform:translateY(0);}
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 /* BOTÓ INLINE */
@@ -168,13 +175,7 @@ border-radius:10px;
 border-left:5px solid #a65277;
 }
 
-/* ANIMACIÓ ICONES */
-
-.subject:hover .icon{
-animation:iconMove .6s ease;
-}
-
-/* MINI TARGETES DINS DELS BLOCS */
+/* MINI TARGETES */
 
 .block-items{
 display:flex;
@@ -188,14 +189,11 @@ background:#ffffff;
 padding:12px 14px;
 border-radius:10px;
 border-left:4px solid #a65277;
-
 display:flex;
 align-items:center;
 gap:10px;
-
 text-decoration:none;
 color:inherit;
-
 box-shadow:0 6px 14px rgba(0,0,0,0.10);
 transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
@@ -208,10 +206,6 @@ box-shadow:0 14px 26px rgba(0,0,0,0.18);
 border-left:4px solid #6d2548;
 }
 
-.block-item:hover .icon{
-animation:iconMove .6s ease;
-}
-  
 /* OPCIONS */
 
 .options{
@@ -258,10 +252,6 @@ color:inherit;
 font-size:42px;
 }
 
-.option:hover .icon{
-animation:iconMove .6s ease;
-}
-
 .option:hover{
 transform:translateY(-5px) scale(1.02);
 box-shadow:0 14px 26px rgba(0,0,0,0.18);
@@ -285,7 +275,7 @@ background:#fff3cd;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #a65277;
-line-height:1.6;
+line-height:1.8;
 }
 
 .warning ul{
@@ -298,7 +288,7 @@ margin:0;
 display:flex;
 align-items:flex-start;
 gap:10px;
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 .warning li span{
@@ -339,15 +329,12 @@ footer{width:90%;}
 <h1>🎓 Estàs en 4t d'ESO</h1>
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
-  
+
 <section class="section intro">
-
 <h2>📚 Pla d'estudis de 4t d'ESO</h2>
-
 <p>
 Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <strong>matèries d'opció</strong> les que millor et prepararan per als estudis que vulgues fer després de l’ESO.
 </p>
-
 </section>
 
 <section class="section">
