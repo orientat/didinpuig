@@ -845,6 +845,12 @@ else{
 
 result.innerHTML = missatge;
 result.style.display = "block";
+
+setTimeout(()=>{
+    result.style.opacity = "1";
+    result.style.transform = "translateY(0)";
+},10);
+
 result.style.background = color;
 }
 
