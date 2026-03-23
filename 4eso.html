@@ -118,10 +118,10 @@ animation:iconMove .6s ease;
 }
 
 @keyframes iconMove{
-0%{transform:translateY(0);}
-30%{transform:translateY(-8px) scale(1.2);}
-60%{transform:translateY(-4px) scale(1.1);}
-100%{transform:translateY(0) scale(1.15);}
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 /* 🔵 BOTÓ INLINE */
@@ -163,7 +163,7 @@ border-left:5px solid #a65277;
 box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* 🔥 OPCIONES MEJORADAS */
+/* 🔥 OPCIONES FUTURO MEJORADAS */
 
 .options{
 display:grid;
@@ -174,21 +174,23 @@ margin-top:15px;
 
 .option{
 background:#f3f3f3;
-padding:20px;
 border-radius:10px;
-text-align:center;
-font-weight:bold;
 border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
 .option a{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+padding:20px;
 text-decoration:none;
 color:inherit;
-display:block;
+font-weight:bold;
 }
-
-/* 🔥 HOVER IGUAL QUE SUBJECT */
 
 .option:hover{
 background:#ececec;
@@ -196,10 +198,6 @@ cursor:pointer;
 transform:translateY(-5px) scale(1.02);
 box-shadow:0 14px 26px rgba(0,0,0,0.18);
 border-left:5px solid #6d2548;
-}
-
-.option:active{
-transform:scale(0.98);
 }
 
 /* CAJAS INFO */
@@ -322,57 +320,9 @@ Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <
 </div>
 
 <div class="option">
-🤔 ENCARA NO SÉ QUÈ FER
+<a href="#">🤔 ENCARA NO SÉ QUÈ FER</a>
 </div>
 
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>⚠️ Si 4t d'ESO no et va bé</h2>
-
-<div class="warning">
-
-<ul>
-
-<li>🔁 Repetir 4t d'ESO ordinari o cursar <strong><a href="pdc.html">4t de PDC</a></strong> si compleixes els requisits.</li>
-
-<li>🛠️ Preparar la <strong><a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos">Prova d'accés a Cicles d'FP</a></strong> si tens 17 anys o els complixes l'any que acabes 4t.</li>
-
-<li>🧭 Participar en el programa <strong><a href="https://ivaj.gva.es/es/joop">JOOP</a></strong> de l'IVAJ per descobrir la teua vocació. La informació d'aquest programa la tens disponible al <strong><a href="https://xarxajove.info/mapa-de-recursos/espais/punt-jove-guadassuar/">Punt Jove o CIJ de la localitat</a></strong>. </li>   
-
-</ul>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>📜 Si no acabes 4t d’ESO</h2>
-
-<div class="info">
-
-📘 Cursar un <strong><a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles">Cicle Formatiu de Grau Bàsic</a></strong>. Obtindràs el títol d'ESO i el títol de Tècnic Bàsic.     
-
-<br><br>
-
-👨‍🎓 Preparar la <strong><a href="https://ceice.gva.es/va/web/ordenacion-academica/educacion-de-personas-adultas/pruebas-libres">prova lliure de l’ESO<a></strong> en Centres de Formació de Persones Adultes (majors de 18 anys).
-
-<br><br>
-
-💻 Obtenir el graduat d'<strong><a href="https://portal.edu.gva.es/ceedcv/graduat-es-a-distancia/">ESO a distància<a></strong>.    
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="info">
-En qualsevol cas, consulta amb el teu <strong>tutor o tutora</strong> o amb el <strong>Departament d’Orientació</strong>.
 </div>
 
 </section>
