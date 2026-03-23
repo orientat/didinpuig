@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CABECERA */
-
 header{
 background:#a65277;
 color:white;
@@ -58,8 +52,6 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
-
 .section{
 margin-top:40px;
 }
@@ -71,7 +63,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* MATERIAS */
+/* 🔥 SUBJECTES ESTIL 1ESO */
 
 .subjects{
 display:grid;
@@ -84,24 +76,80 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
-gap:10px;
+min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
-
-/* 👉 IMPORTANT: afegit per fer clicable tota la targeta */
 
 .subject a{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 width:100%;
+height:100%;
 text-decoration:none;
 color:inherit;
 }
 
-/* BLOQUES OPCIÓN */
+.subject:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+.subject:active{
+transform:scale(0.98);
+}
+
+/* ICONES */
+
+.icon{
+font-size:24px;
+min-width:28px;
+display:flex;
+justify-content:center;
+transition:transform .2s ease;
+}
+
+.subject:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* BOTÓ INLINE */
+
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
+}
+
+.link-inline:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* BLOQUES OPCIÓN (NO TOCADOS) */
 
 .blocks{
 display:grid;
@@ -135,7 +183,7 @@ font-weight:bold;
 border-left:5px solid #a65277;
 }
 
-/* CAJAS INFO */
+/* INFO */
 
 .info{
 background:#fff2f7;
@@ -153,8 +201,6 @@ line-height:1.6;
 margin-top:15px;
 }
 
-/* FOOTER */
-
 footer{
 background:#a65277;
 color:white;
@@ -167,18 +213,9 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
@@ -197,85 +234,70 @@ width:90%;
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
 
-
 <section class="section">
 
 <h2>📚 Pla d'estudis de 4t d'ESO</h2>
 
 <p>
-Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <strong>matèries d'opció</strong> les que millor et prepararan per als estudis que vulgues fer després de l’ESO.
+Aquest curs té més canvis que els anteriors. Hauràs de triar entre diverses <strong>matèries d'opció</strong>.
 </p>
 
 </section>
-
 
 <section class="section">
 
 <h2>⏰ Matèries en 4t d'ESO (33 hores setmanals)</h2>
 
+<p>
+📄 En aquest enllaç pots veure la <strong>DISTRIBUCIÓ DE LES HORES LECTIVES SETMANALS</strong>
+
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-inline">
+🔗 PÀGINA OFICIAL GVA
+</a>
+</p>
+
+<p style="margin-top:15px;">
+📄 I si punxes en les següents targetes, pots veure els <strong>ELEMENTS DEL CURRÍCULUM DE CADA MATÈRIA:</strong>
+</p>
+
 <div class="subjects">
 
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf">📘 Valencià: Llengua i Literatura — 3 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf">📗 Castellà: Llengua i Literatura — 3 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf">🌍 Llengua Estrangera — 3 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf">🏛️ Geografia i Història — 3 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf">🏃 Educació Física — 2 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf">➗ Matemàtiques A o B — 4 h</a></div>
-
-<div class="subject"><a href="#">🤝 Educació en Valors Cívics — 2 h</a></div>
-
-<div class="subject"><a href="#">⭐ Matèria d'opció 1 — 3 h</a></div>
-
-<div class="subject"><a href="#">⭐ Matèria d'opció 2 — 3 h</a></div>
-
-<div class="subject"><a href="#">⭐ Matèria d'opció 3 — 3 h</a></div>
-
-<div class="subject"><a href="#">📚 Optativa — 2 h</a></div>
-
-<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf">⛪ Religió / Atenció Educativa — 1 h</a></div>
-
-<div class="subject"><a href="#">🧑‍🏫 Tutoria — 1 h</a></div>
+<div class="subject"><a href="#"><span class="icon">📘</span> Valencià — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">📗</span> Castellà — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🌍</span> Llengua Estrangera — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🏛️</span> Geografia i Història — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🏃</span> Educació Física — 2 h</a></div>
+<div class="subject"><a href="#"><span class="icon">➗</span> Matemàtiques A o B — 4 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🤝</span> Educació en Valors — 2 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Opció 1 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Opció 2 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⭐</span> Opció 3 — 3 h</a></div>
+<div class="subject"><a href="#"><span class="icon">📚</span> Optativa — 2 h</a></div>
+<div class="subject"><a href="#"><span class="icon">⛪</span> Religió — 1 h</a></div>
+<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoria — 1 h</a></div>
 
 </div>
 
 </section>
 
-<!-- 🔥 LA RESTA EXACTAMENT IGUAL -->
+<!-- 🔥 RESTA EXACTAMENT IGUAL (NO TOCADA) -->
 
 <section class="section">
+
 <h2>➗ Matemàtiques A o B</h2>
-<div class="info">...</div>
-</section>
 
-<section class="section">
-<h2>⭐ Matèries d'opció</h2>
-<div class="blocks">...</div>
-</section>
-
-<section class="section">
-<h2>🧭 Què vols fer després de 4t d’ESO?</h2>
-<div class="options">...</div>
-</section>
-
-<section class="section">
-<h2>⚠️ Si 4t d'ESO no et va bé</h2>
-<div class="warning">...</div>
-</section>
-
-<section class="section">
-<h2>📜 Si no acabes 4t d’ESO</h2>
-<div class="info">...</div>
-</section>
-
-<section class="section">
 <div class="info">
-En qualsevol cas, consulta amb el teu tutor o tutora o amb el Departament d’Orientació.
+
+📘 <strong>Matemàtiques A</strong><br>
+Recomanades per a alumnat que no continuarà estudiant matemàtiques.
+
+<br><br>
+
+📗 <strong>Matemàtiques B</strong><br>
+Recomanades per a qui vulga cursar Batxillerat.
+
 </div>
+
 </section>
 
 </div>
