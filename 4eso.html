@@ -789,13 +789,60 @@ let result = document.getElementById("result"); //
 
 // VALIDACIÓ
 
-if(!q1 || !q2 || !q3 || !q4 || !q5 || !q6){
-    result.innerHTML = "⚠️ Per favor, respon totes les preguntes abans de veure la recomanació.";
-    result.style.display = "block";
-    result.style.background = "#fdecea";
-    result.style.opacity = "1";
-    result.style.transform = "translateY(0)";
-    return;
+// NETEJAR ERRORS PREVIS
+document.querySelectorAll(".question").forEach(q => q.classList.remove("error"));
+document.querySelectorAll("select").forEach(s => s.classList.remove("error"));
+
+let falta = false;
+
+// COMPROVAR UNA A UNA
+
+if(!q1){
+document.getElementById("q1").classList.add("error");
+document.getElementById("q1").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q2){
+document.getElementById("q2").classList.add("error");
+document.getElementById("q2").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q3){
+document.getElementById("q3").classList.add("error");
+document.getElementById("q3").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q4){
+document.getElementById("q4").classList.add("error");
+document.getElementById("q4").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q5){
+document.getElementById("q5").classList.add("error");
+document.getElementById("q5").parentElement.classList.add("error");
+falta = true;
+}
+
+if(!q6){
+document.getElementById("q6").classList.add("error");
+document.getElementById("q6").parentElement.classList.add("error");
+falta = true;
+}
+
+// SI FALTA ALGUNA
+
+if(falta){
+result.innerHTML = "⚠️ Per favor, respon totes les preguntes abans de veure la recomanació.";
+result.style.display = "block";
+result.style.background = "#fdecea";
+result.style.opacity = "1";
+result.style.transform = "translateY(0)";
+return;
+}
 }
 let batx = 0;
 let fp = 0;
