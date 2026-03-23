@@ -335,17 +335,25 @@ footer{width:90%;}
 /* ASSISTENT */
 
 .assistant{
-display:none;
+opacity:0;
+pointer-events:none;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.5);
+display:flex;
 justify-content:center;
 align-items:center;
 z-index:999;
 cursor:pointer;
+transition:opacity .3s ease;
+}
+
+.assistant.active{
+opacity:1;
+pointer-events:auto;
 }
 
 /* finestra interior */
@@ -358,6 +366,14 @@ max-width:500px;
 border-left:5px solid #1565c0;
 box-shadow:0 10px 30px rgba(0,0,0,0.3);
 position:relative;
+}
+.assistant-box{
+transform:scale(0.9);
+transition:transform .3s ease;
+}
+
+.assistant.active .assistant-box{
+transform:scale(1);
 }
 
 .question{
@@ -692,12 +708,20 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 function toggleAssistant(){
 let a = document.getElementById("assistant");
 
-if(a.style.display === "flex"){
-    a.style.display = "none";
+if(a.classList.contains("active")){
+    a.classList.remove("active");
+    document.body.style.overflow = "auto";
 } else {
-    a.style.display = "flex";
+    a.classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 }
+document.addEventListener("keydown", function(e){
+if(e.key === "Escape"){
+document.getElementById("assistant").classList.remove("active");
+document.body.style.overflow = "auto";
+}
+});
 
 function calcular(){
 
