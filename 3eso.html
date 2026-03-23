@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CABECERA */
-
 header{
 background:#a65277;
 color:white;
@@ -58,8 +52,6 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
-
 .section{
 margin-top:40px;
 }
@@ -71,7 +63,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* MATERIAS */
+/* SUBJECTES ESTIL 1ESO */
 
 .subjects{
 display:grid;
@@ -84,13 +76,78 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
-gap:10px;
+min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
-/* CAJAS INFO */
+.subject a{
+display:flex;
+align-items:center;
+gap:12px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.subject:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+.subject:active{
+transform:scale(0.98);
+}
+
+.icon{
+font-size:24px;
+min-width:28px;
+display:flex;
+justify-content:center;
+transition:transform .2s ease;
+}
+
+.subject:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* BOTÓ INLINE */
+
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
+}
+
+.link-inline:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* CAJAS INFO (NO TOCADES) */
 
 .info{
 background:#fff2f7;
@@ -108,8 +165,6 @@ line-height:1.6;
 margin-top:15px;
 }
 
-/* FOOTER */
-
 footer{
 background:#a65277;
 color:white;
@@ -122,23 +177,13 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -152,7 +197,6 @@ width:90%;
 <h1>📚 Estàs en 3r d'ESO!</h1>
 <p>IES Didín Puig · Orientació</p>
 </header>
-
 
 <section class="section">
 
@@ -173,28 +217,51 @@ Hi ha alguns canvis importants. A més de tindre <strong>dues hores més de clas
 
 </section>
 
-
-
 <section class="section">
 
 <h2>⏰ Matèries en 3r d'ESO (32 hores setmanals)</h2>
 
+<p>
+📄 En aquest enllaç pots veure la <strong>DISTRIBUCIÓ DE LES HORES LECTIVES SETMANALS</strong>
+
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_val_1r.pdf" target="_blank" class="link-inline">
+🔗 PÀGINA OFICIAL GVA
+</a>
+</p>
+
+<p style="margin-top:15px;">
+📄 I si punxes en les següents targetes, pots veure els <strong>ELEMENTS DEL CURRÍCULUM DE CADA MATÈRIA:</strong>
+</p>
+
 <div class="subjects">
 
-<div class="subject">📘 Valencià: Llengua i Literatura — 3 h</div>
-<div class="subject">📗 Castellà: Llengua i Literatura — 3 h</div>
-<div class="subject">🌍 Llengua Estrangera — 3 h</div>
-<div class="subject">🏛️ Geografia i Història — 3 h</div>
-<div class="subject">🏃 Educació Física — 2 h</div>
-<div class="subject">➗ Matemàtiques — 4 h</div>
-<div class="subject">🔬 Biologia i Geologia — 2 h</div>
-<div class="subject">⚗️ Física i Química — 2 h</div>
-<div class="subject">🎵 Música — 2 h</div>
-<div class="subject">🎨 Educació Plàstica, Visual i Audiovisual — 2 h</div>
-<div class="subject">💻 Tecnologia i Digitalització — 2 h</div>
-<div class="subject">⭐ Optativa — 2 h</div>
-<div class="subject">⛪ Religió / Atenció Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoria — 1 h</div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📘</span> Valencià: Llengua i Literatura — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-castellana-i-literatura-Valencia-llengua-i-literatura-1.pdf" target="_blank"><span class="icon">📗</span> Castellà: Llengua i Literatura — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Llengua-estrangera-1.pdf" target="_blank"><span class="icon">🌍</span> Llengua Estrangera — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-i-Historia.pdf" target="_blank"><span class="icon">🏛️</span> Geografia i Història — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-Fisica.pdf" target="_blank"><span class="icon">🏃</span> Educació Física — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematiques-1.pdf" target="_blank"><span class="icon">➗</span> Matemàtiques — 4 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-i-Geologia.pdf" target="_blank"><span class="icon">🔬</span> Biologia i Geologia — 2 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">⚗️</span> Física i Química — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica%C2%B7.pdf" target="_blank"><span class="icon">🎵</span> Música — 2 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">🎨</span> Educació Plàstica, Visual i Audiovisual — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-i-Digitalitzacio.pdf" target="_blank"><span class="icon">💻</span> Tecnologia i Digitalització — 2 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">⭐</span> Optativa — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacio-en-Valors-Civics-i-Etics-1.pdf" target="_blank"><span class="icon">⛪</span> Religió / Atenció Educativa — 1 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoria — 1 h</a></div>
 
 </div>
 
@@ -204,7 +271,7 @@ Cada curs s'informarà de l'<strong>oferta d'optatives del centre</strong>. En a
 
 </section>
 
-
+<!-- 🔒 RESTA INTACTA -->
 
 <section class="section">
 
@@ -222,29 +289,19 @@ Si no estàs en condicions de promocionar a 4t d'ESO tens diverses opcions:
 
 <ul>
 
-<li>
-🔁 <strong>Repetir 3r d'ESO</strong> si no estàs repetint aquest curs.
-</li>
+<li>🔁 <strong>Repetir 3r d'ESO</strong> si no estàs repetint aquest curs.</li>
 
-<li>
-📚 Si ja has repetit aquest curs, pots promocionar a <strong>4t d'ESO</strong>, però hauràs de recuperar les matèries pendents de cursos anteriors.
-</li>
+<li>📚 Si ja has repetit aquest curs, pots promocionar a <strong>4t d'ESO</strong>, però hauràs de recuperar les matèries pendents de cursos anteriors.</li>
 
-<li>
-🧭 <strong>Incorporar-te al Programa de Diversificació Curricular (3r de PDC)</strong> si compleixes els requisits d'accés. Consulta amb el teu tutor o tutora i/o polsa <a href="pdc.html"><strong>ací</strong></a> per a més informació.
-</li>
+<li>🧭 <strong>Incorporar-te al Programa de Diversificació Curricular (3r de PDC)</strong> si compleixes els requisits d'accés. Consulta amb el teu tutor o tutora i/o polsa <a href="pdc.html"><strong>ací</strong></a>.</li>
 
-<li>
-🛠️ Matricular-te en un Cicle de <strong>Formació Professional Bàsica</strong> en un altre Centre (alumnat a partir de 15 anys).
-</li>
+<li>🛠️ Matricular-te en un Cicle de <strong>Formació Professional Bàsica</strong> en un altre Centre (alumnat a partir de 15 anys).</li>
 
 </ul>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
@@ -267,7 +324,6 @@ Si no estàs en condicions de promocionar a 4t d'ESO tens diverses opcions:
 </section>
 
 </div>
-
 
 <footer>
 IES Didín Puig · Departament d'Orientació Educativa i Professional
