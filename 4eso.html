@@ -793,17 +793,51 @@ if(q6==="no") fp+=2;
 
 // decisió final
 
+let missatge = "";
+let color = "";
+
+// PERFILS MILLORATS
+
 if(batx > fp){
-result.innerHTML="🎓 Et recomanem el BATXILLERAT. Tens un perfil acadèmic i orientat a continuar estudiant.";
-}
-else if(fp > batx){
-result.innerHTML="🛠️ Et recomanem la FORMACIÓ PROFESSIONAL. Tens un perfil més pràctic i orientat al món laboral.";
-}
-else{
-result.innerHTML="🤔 Estàs en un punt intermig. Parla amb el Departament d’Orientació per decidir millor.";
+
+    if(q5==="estudiar" && q4==="altes"){
+        missatge = "🎓 Perfil acadèmic alt. Recomanem BATXILLERAT científic o social, amb possibilitat d'universitat.<br><br><a href='bach.html'>👉 Veure opcions de Batxillerat</a>";
+    }
+    else if(q5==="estudiar"){
+        missatge = "🎓 Perfil acadèmic. Recomanem BATXILLERAT, però és important triar bé les matèries.<br><br><a href='bach.html'>👉 Veure itineraris</a>";
+    }
+    else{
+        missatge = "🎓 Podries fer BATXILLERAT, però valora també opcions més pràctiques segons els teus interessos.";
+    }
+
+    color = "#e3f2fd"; // blau suau
 }
 
-result.style.display="block";
+else if(fp > batx){
+
+    if(q2==="si" && q5==="treballar"){
+        missatge = "🛠️ Perfil pràctic clar. Recomanem FORMACIÓ PROFESSIONAL (grau mitjà).<br><br><a href='fp.html'>👉 Veure cicles formatius</a>";
+    }
+    else if(q4==="baixes"){
+        missatge = "🛠️ FP pot ser una molt bona opció per a tu, especialment si prefereixes aprendre de manera pràctica.<br><br><a href='fp.html'>👉 Explorar opcions</a>";
+    }
+    else{
+        missatge = "🛠️ Tens un perfil pràctic. Explora cicles formatius relacionats amb els teus interessos.<br><br><a href='fp.html'>👉 Veure FP</a>";
+    }
+
+    color = "#e8f5e9"; // verd suau
+}
+
+else{
+    missatge = "🤔 Estàs en un punt intermig. Parla amb el Departament d’Orientació per ajudar-te a decidir millor.";
+    color = "#fff3e0"; // taronja suau
+}
+
+// APLICAR RESULTAT
+
+result.innerHTML = missatge;
+result.style.display = "block";
+result.style.background = color;
 }
 
 </script>
