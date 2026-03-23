@@ -172,8 +172,6 @@ gap:20px;
 margin-top:15px;
 }
 
-/* 🔥 MILLORA: afegim comportament tipus subject */
-
 .option{
 background:#f3f3f3;
 padding:20px;
@@ -182,7 +180,7 @@ text-align:center;
 font-weight:bold;
 border-left:5px solid #a65277;
 
-/* AFEGIT */
+/* AFEGITS */
 box-shadow:0 6px 14px rgba(0,0,0,0.10);
 transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 display:flex;
@@ -191,19 +189,33 @@ justify-content:center;
 min-height:80px;
 }
 
-/* AFEGIT: fer tota la targeta clicable */
+/* 🔥 ICONES EN OPCIONS (AFEGEIX, NO SUBSTITUEIX) */
 
 .option a{
 display:flex;
 align-items:center;
 justify-content:center;
+gap:12px;
 width:100%;
 height:100%;
 text-decoration:none;
 color:inherit;
 }
 
-/* AFEGIT: hover igual que subject */
+/* Icona gran com subject */
+
+.option .icon{
+font-size:28px;
+min-width:32px;
+}
+
+/* Animació */
+
+.option:hover .icon{
+animation:iconMove .6s ease;
+}
+
+/* Hover */
 
 .option:hover{
 background:#ececec;
@@ -378,19 +390,19 @@ Recomanades per a qui vulga cursar <a href="bach.html"><strong>Batxillerat</stro
 <div class="options">
 
 <div class="option">
-<a href="bach.html">🎓 BATXILLERAT</a>
+<a href="bach.html"><span class="icon">🎓</span> BATXILLERAT</a>
 </div>
 
 <div class="option">
-<a href="fp.html">🛠️ FP (CICLES FORMATIUS)</a>
+<a href="fp.html"><span class="icon">🛠️</span> FP (CICLES FORMATIUS)</a>
 </div>
 
 <div class="option">
-<a href="altres.html">📚 ALTRES ESTUDIS</a>
+<a href="altres.html"><span class="icon">📚</span> ALTRES ESTUDIS</a>
 </div>
 
 <div class="option">
-🤔 ENCARA NO SÉ QUÈ FER
+<span class="icon">🤔</span> ENCARA NO SÉ QUÈ FER
 </div>
 
 </div>
