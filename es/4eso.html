@@ -859,11 +859,11 @@ let fp = 0;
 if(q1==="si") batx++;
 if(q2==="si") fp++;
 
-if(q4==="altes") batx+=2;
-if(q4==="baixes") fp+=2;
+if(q4==="altas") batx+=2;
+if(q4==="bajas") fp+=2;
 
 if(q5==="estudiar") batx+=2;
-if(q5==="treballar") fp+=2;
+if(q5==="trabajar") fp+=2;
 
 if(q6==="si") batx+=2;
 if(q6==="no") fp+=2;
@@ -877,7 +877,7 @@ let color = "";
 
 if(batx > fp){
 
-    if(q5==="estudiar" && q4==="altes"){
+    if(q5==="estudiar" && q4==="altas"){
         missatge = "🎓 Perfil académico alto. Recomendamos BACHILLERATO, con posibilidad de universidad.<br><br><a href='bach.html'>👉 Ver opciones de Bachillerato</a>";
     }
     else if(q5==="estudiar"){
@@ -892,10 +892,10 @@ if(batx > fp){
 
 else if(fp > batx){
 
-    if(q2==="si" && q5==="treballar"){
+    if(q2==="si" && q5==="trabajar"){
         missatge = "🛠️ Perfil práctico claro. Recomendamos FORMACIÓN PROFESIONAL (grado medio).<br><br><a href='fp.html'>👉 Ver ciclos formativos</a>";
     }
-    else if(q4==="baixes"){
+    else if(q4==="bajas"){
         missatge = "🛠️ La FP puede ser una muy buena opción para ti, especialmente si prefieres aprender de manera práctica.<br><br><a href='fp.html'>👉 Explorar opciones</a>";
     }
     else{
