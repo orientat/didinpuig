@@ -15,14 +15,10 @@ background:#ffffff;
 color:#333;
 }
 
-/* CONTENEDOR GENERAL */
-
 .wrapper{
 width:75%;
 margin:auto;
 }
-
-/* BOTON VOLVER */
 
 .back{
 margin-top:20px;
@@ -42,8 +38,6 @@ font-size:14px;
 background:#a65277;
 }
 
-/* CABECERA */
-
 header{
 background:#a65277;
 color:white;
@@ -58,8 +52,6 @@ margin:0;
 font-size:30px;
 }
 
-/* SECCIONES */
-
 .section{
 margin-top:40px;
 }
@@ -71,7 +63,7 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* MATERIAS */
+/* SUBJECTES */
 
 .subjects{
 display:grid;
@@ -84,13 +76,78 @@ background:#f3f3f3;
 padding:15px 18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 display:flex;
 align-items:center;
-gap:10px;
+min-height:60px;
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
-/* CAJAS INFO */
+.subject a{
+display:flex;
+align-items:center;
+gap:12px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.subject:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+.subject:active{
+transform:scale(0.98);
+}
+
+.icon{
+font-size:24px;
+min-width:28px;
+display:flex;
+justify-content:center;
+transition:transform .2s ease;
+}
+
+.subject:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* BOTÓ INLINE */
+
+.link-inline{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-left:10px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
+}
+
+.link-inline:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* CAJAS */
 
 .info{
 background:#fff2f7;
@@ -108,7 +165,35 @@ line-height:1.6;
 margin-top:15px;
 }
 
-/* FOOTER */
+/* 🔧 AJUSTES WARNING */
+
+.warning > p{
+margin-bottom:12px;
+}
+
+.warning ul{
+list-style:none;
+padding-left:0;
+margin:0;
+}
+
+.warning li{
+margin:0 0 12px 0;
+line-height:1.6;
+}
+
+/* 🔧 LISTA LIMPIA GENERAL */
+
+.list-clean{
+list-style:none;
+padding-left:0;
+margin-top:15px;
+}
+
+.list-clean li{
+margin:0 0 10px 0;
+line-height:1.6;
+}
 
 footer{
 background:#a65277;
@@ -122,23 +207,13 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -153,7 +228,6 @@ width:90%;
 <p>IES Didín Puig · Orientación</p>
 </header>
 
-
 <section class="section">
 
 <h2>📖 ¿Cómo es 3º de ESO?</h2>
@@ -166,49 +240,71 @@ A continuación tienes el plan de estudios de <strong>3º de ESO</strong>.
 Hay algunos cambios importantes. Además de tener <strong>dos horas más de clase a la semana</strong>, vuelven algunas materias que ya conocías de <strong>1º de ESO</strong>, como:
 </p>
 
-<ul>
+<ul style="margin-top:15px; line-height:1.8;">
 <li>🔬 Biología y Geología</li>
 <li>💻 Tecnología y Digitalización</li>
 </ul>
 
 </section>
 
-
-
 <section class="section">
 
 <h2>⏰ Materias en 3º de ESO (32 horas semanales)</h2>
 
+<p>
+📄 En este enlace puedes ver la <strong>DISTRIBUCIÓN DE LAS HORAS LECTIVAS SEMANALES</strong>
+
+<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+l%27ESO_LOMLOE_cast_3r.pdf" target="_blank" class="link-inline">
+🔗 PÁGINA OFICIAL GVA
+</a>
+</p>
+
+<p style="margin-top:15px;">
+📄 Y si pinchas en las siguientes tarjetas, puedes ver los <strong>ELEMENTOS DEL CURRÍCULO DE CADA MATERIA:</strong>
+</p>
+
 <div class="subjects">
 
-<div class="subject">📘 Valenciano: Lengua y Literatura — 3 h</div>
-<div class="subject">📗 Castellano: Lengua y Literatura — 3 h</div>
-<div class="subject">🌍 Lengua Extranjera — 3 h</div>
-<div class="subject">🏛️ Geografía e Historia — 3 h</div>
-<div class="subject">🏃 Educación Física — 2 h</div>
-<div class="subject">➗ Matemáticas — 4 h</div>
-<div class="subject">🔬 Biología y Geología — 2 h</div>
-<div class="subject">⚗️ Física y Química — 2 h</div>
-<div class="subject">🎵 Música — 2 h</div>
-<div class="subject">🎨 Educación Plástica, Visual y Audiovisual — 2 h</div>
-<div class="subject">💻 Tecnología y Digitalización — 2 h</div>
-<div class="subject">⭐ Optativa — 2 h</div>
-<div class="subject">⛪ Religión / Atención Educativa — 1 h</div>
-<div class="subject">🧑‍🏫 Tutoría — 1 h</div>
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Lengua-castellana-y-literatura-Valenciano-lengua-y-literatura-1.pdf" target="_blank"><span class="icon">📘</span> Valenciano: Lengua y Literatura — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Lengua-castellana-y-literatura-Valenciano-lengua-y-literatura-1.pdf" target="_blank"><span class="icon">📗</span> Castellano: Lengua y Literatura — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Lengua-extranjera-1.pdf" target="_blank"><span class="icon">🌍</span> Lengua Extranjera — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Geografia-e-Historia.pdf" target="_blank"><span class="icon">🏛️</span> Geografía e Historia — 3 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacion-Fisica-1.pdf" target="_blank"><span class="icon">🏃</span> Educación Física — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Matematicas-2.pdf" target="_blank"><span class="icon">➗</span> Matemáticas — 4 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Biologia-y-Geologia-1.pdf" target="_blank"><span class="icon">🔬</span> Biología y Geología — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Fisica-y-Quimica-1.pdf"><span class="icon">⚗️</span> Física y Química — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Musica-1.pdf" target="_blank"><span class="icon">🎵</span> Música — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Educacion-plastica-visual-y-audiovisual-1.pdf"><span class="icon">🎨</span> Educación Plástica, Visual y Audiovisual — 2 h</a></div>
+
+<div class="subject"><a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/02/Tecnologia-y-digitalizacion-1.pdf" target="_blank"><span class="icon">💻</span> Tecnología y Digitalización — 2 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">⭐</span> Optativa — 2 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">⛪</span> Religión / Atención Educativa — 1 h</a></div>
+
+<div class="subject"><a href="#"><span class="icon">🧑‍🏫</span> Tutoría — 1 h</a></div>
 
 </div>
 
-<p style="margin-top:15px;">
-Cada curso se informará de la <strong>oferta de optativas del centro</strong>. En este curso son: Programación, Inteligencia Artificial y Robótica, Alemán y Taller de Profundización.
+<p style="margin-top:15px; line-height:1;">
+Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>
+En este curso son: Programación, Inteligencia Artificial y Robótica, Alemán y Taller de Profundización.
 </p>
 
 </section>
 
-
-
 <section class="section">
 
-<h2>➡️ Al terminar 3º de ESO</h2>
+<h2>➡️ Al acabar 3º de ESO</h2>
 
 <div class="info">
 
@@ -222,29 +318,20 @@ Si no estás en condiciones de promocionar a 4º de ESO tienes varias opciones:
 
 <ul>
 
-<li>
-🔁 <strong>Repetir 3º de ESO</strong> si no estás repitiendo este curso.
-</li>
+<li>🔁 <strong>Repetir 3º de ESO</strong> si no estás repitiendo este curso.</li>
 
-<li>
-📚 Si ya has repetido este curso, puedes promocionar a <strong>4º de ESO</strong>, pero tendrás que recuperar las materias pendientes de cursos anteriores.
-</li>
+<li>📚 Si ya has repetido este curso, puedes promocionar a <strong>4º de ESO</strong>, pero tendrás que recuperar las materias pendientes de cursos anteriores.</li>
 
-<li>
-🧭 <strong>Incorporarte al Programa de Diversificación Curricular (3º de PDC)</strong> si cumples los requisitos de acceso. Consulta con tu tutor o tutora y/o pulsa <a href="pdc.html"><strong>aquí</strong></a> para más información.
-</li>
+<li>🧭 Incorporarte al <strong>Programa de Diversificación Curricular</strong> <a href="pdc.html"><strong>3º de PDC</strong></a> si cumples los requisitos de acceso. 
+Consulta con tu tutor o tutora.</li>
 
-<li>
-🛠️ Matricularte en un Ciclo de <strong>Formación Profesional Básica</strong> en otro centro (alumnado a partir de 15 años).
-</li>
+<li>🛠️ Matricularte en un Ciclo de <strong>Formación Profesional Básica</strong> en otro Centro (alumnado a partir de 15 años).</li>
 
 </ul>
 
 </div>
 
 </section>
-
-
 
 <section class="section">
 
@@ -267,7 +354,6 @@ Si no estás en condiciones de promocionar a 4º de ESO tienes varias opciones:
 </section>
 
 </div>
-
 
 <footer>
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
