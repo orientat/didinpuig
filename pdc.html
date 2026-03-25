@@ -66,7 +66,7 @@ margin-bottom:15px;
 /* ICONOS */
 
 .icon{
-font-size:42px;
+font-size:60px;
 transition:transform .2s ease;
 }
 
@@ -83,7 +83,7 @@ animation:iconMove .6s ease;
 100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
-/* TARJETAS 4º ESO */
+/* TARJETAS */
 
 .options{
 display:grid;
@@ -97,7 +97,6 @@ background:#f3f3f3;
 padding:25px 20px;
 border-radius:14px;
 text-align:center;
-font-weight:bold;
 border-left:5px solid #a65277;
 box-shadow:0 6px 14px rgba(0,0,0,0.10);
 transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
@@ -105,7 +104,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-min-height:160px;
+min-height:220px;
 cursor:pointer;
 }
 
@@ -122,6 +121,22 @@ width:100%;
 height:100%;
 text-decoration:none;
 color:inherit;
+}
+
+.option-title{
+font-size:20px;
+font-weight:bold;
+}
+
+.option-sub{
+font-size:14px;
+margin-top:5px;
+}
+
+.option-extra{
+font-size:13px;
+color:#6d2548;
+margin-top:10px;
 }
 
 .option:hover{
@@ -147,8 +162,6 @@ border-radius:10px;
 line-height:1.6;
 margin-top:15px;
 }
-
-/* LISTAS LIMPIAS */
 
 .info ul,
 .warning ul{
@@ -187,8 +200,7 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 width:75%;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 }
 
 @media (max-width:900px){
@@ -243,13 +255,9 @@ Els programes de diversificació curricular estan orientats a la
 <strong>consecució del títol de l’ESO</strong> per part de l’alumnat que:
 
 <ul>
-
 <li>📘 Presenta <strong>dificultats rellevants d’aprenentatge</strong>.</li>
-
 <li>📚 Ha rebut mesures de suport en <strong>1r o 2n d’ESO</strong>.</li>
-
 <li>🧭 Pot beneficiar-se d’aquesta <strong>mesura d’atenció a la diversitat</strong> per obtindre el títol.</li>
-
 </ul>
 
 </div>
@@ -265,14 +273,18 @@ Els programes de diversificació curricular estan orientats a la
 <div class="option">
 <a href="#">
 <span class="icon">📘</span>
-PDC 3r
+<div class="option-title">PDC 3r</div>
+<div class="option-sub">Primer curs del Programa de Diversificació Curricular</div>
+<div class="option-extra">Punxa per veure la distribució de les hores lectives setmanals</div>
 </a>
 </div>
 
 <div class="option">
 <a href="#">
 <span class="icon">📗</span>
-PDC 4t
+<div class="option-title">PDC 4t</div>
+<div class="option-sub">Segon curs del Programa de Diversificació Curricular</div>
+<div class="option-extra">Punxa per veure la distribució de les hores lectives setmanals</div>
 </a>
 </div>
 
