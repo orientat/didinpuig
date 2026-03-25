@@ -197,8 +197,26 @@ margin-top:15px;
 line-height:1.6;
 }
 
-.link-grande{
-font-size:18px;
+/* 🔵 BOTÓN GVA */
+
+.link-btn{
+display:inline-flex;
+align-items:center;
+gap:6px;
+padding:6px 12px;
+background:#1565c0;
+color:white;
+border-radius:18px;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+transition:all .2s ease;
+}
+
+.link-btn:hover{
+background:#1976d2;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* CAJAS */
@@ -217,19 +235,6 @@ padding:20px;
 border-radius:10px;
 line-height:1.6;
 margin-top:15px;
-}
-
-.info ul,
-.warning ul{
-list-style:none;
-padding-left:0;
-margin:10px 0 0 0;
-}
-
-.info li,
-.warning li{
-margin:0 0 10px 0;
-line-height:1.6;
 }
 
 /* IMÁGENES */
@@ -322,146 +327,12 @@ Els programes de diversificació curricular estan orientats a la
 
 <section class="section">
 
-<h2>📅 Cursos del programa</h2>
-
-<div class="options">
-
-<div>
-
-<div class="option">
-<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+3r+ESO+PDC_val.pdf" target="_blank">
-<span class="icon">📘</span>
-<div class="option-title">3r ESO - PDC</div>
-<div class="option-sub"><strong>Primer curs del Programa de Diversificació Curricular</strong></div>
-<div class="option-extra">Punxa per veure la distribució de les hores lectives setmanals</div>
-</a>
-</div>
-
-<div class="materies-title">⏰ Matèries en 3r de PDC (32 hores setmanals)</div>
-
-<div class="subjects">
-
-<div class="subject">
-<strong>Àmbit Lingüístic i Social — 9 h</strong>
-<small>
-- Valencià: Llengua i Literatura<br>
-- Llengua Castellana i Literatura<br>
-- Geografia i Història
-</small>
-</div>
-
-<div class="subject">
-<strong>Àmbit Científic — 8 h</strong>
-<small>
-- Matemàtiques<br>
-- Biologia i Geologia<br>
-- Física i Química
-</small>
-</div>
-
-<div class="subject">
-<strong>Àmbit Pràctic — 4 h</strong>
-<small>
-- Tecnologia i Digitalització<br>
-- Educació Plàstica, Visual i Audiovisual
-</small>
-</div>
-
-<div class="subject">Llengua Estrangera — 3 h</div>
-<div class="subject">Educació Física — 2 h</div>
-<div class="subject">Música — 2 h</div>
-<div class="subject">Optativa — 2 h</div>
-<div class="subject">Religió / Atenció educativa — 1 h</div>
-<div class="subject">Tutoria — 1 h</div>
-
-</div>
-
-<div class="optatives-text">
-Cada curs s'informarà de <strong>l'oferta d'optatives del centre</strong>.<br><br>
-En aquest curs es pot elegir una d'entre aquestes matèries:<br>
-- Segona Llengua Estrangera: Alemany<br> 
-- Tallers d'Aprofundiment
-</div>
-
-</div>
-
-<div>
-
-<div class="option">
-<a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+4t+ESO+PDC_val.pdf" target="_blank">
-<span class="icon">📗</span>
-<div class="option-title">4t ESO - PDC</div>
-<div class="option-sub"><strong>Segon curs del Programa de Diversificació Curricular</strong></div>
-<div class="option-extra">Punxa per veure la distribució de les hores lectives setmanals</div>
-</a>
-</div>
-
-<div class="materies-title">⏰ Matèries en 4t de PDC (32 hores setmanals)</div>
-
-<div class="subjects">
-
-<div class="subject">
-<strong>Àmbit Lingüístic i Social — 9 h</strong>
-<small>
-- Valencià: Llengua i Literatura<br>
-- Llengua Castellana i Literatura<br>
-- Geografia i Història
-</small>
-</div>
-
-<div class="subject">
-<strong>Àmbit Científic — 9 h</strong>
-<small>
-- Matemàtiques<br>
-- Biologia i Geologia<br>
-- Física i Química
-</small>
-</div>
-
-<div class="subject">
-<strong>Àmbit Pràctic — 4 h</strong>
-<small>
-- Tecnologia i Digitalització<br>
-- Expressió Artística
-</small>
-</div>
-
-<div class="subject">Llengua Estrangera — 3 h</div>
-<div class="subject">Educació Física — 2 h</div>
-<div class="subject">Educació en Valors Cívics i Ètics — 1 h</div>
-<div class="subject">Optativa — 2 h</div>
-<div class="subject">Religió o Atenció educativa — 1 h</div>
-<div class="subject">Tutoria — 1 h</div>
-
-</div>
-
-<div class="optatives-text">
-Cada curs s'informarà de <strong>l'oferta d'optatives del centre</strong>.<br><br>
-En aquest curs es pot elegir una d'entre aquestes matèries:<br> 
-- Filosofia <br> 
-- Segona Llengua Estrangera: Alemany<br> 
-- Competència Comunicativa Oral en Anglès
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
 <h2>ℹ️ Més informació</h2>
 
 <div class="warning">
 
-Pots consultar la informació oficial en la web de la Conselleria:
-
-<br><br>
-
-<a href="https://ceice.gva.es/es/web/ordenacion-academica/programa-de-diversificacion-curricular" 
-target="_blank" class="link-grande">
-🌐 Programa de Diversificació Curricular (GVA)
+Pots consultar la informació oficial del Programa de Diversificació Curricular en aquest enllaç: <a href="https://ceice.gva.es/es/web/ordenacion-academica/programa-de-diversificacion-curricular" 
+target="_blank" class="link-btn"> 🔗 PÀGINA OFICIAL GVA
 </a>
 
 </div>
