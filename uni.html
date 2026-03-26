@@ -59,6 +59,25 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
+/* ICONOS ANIMADOS */
+
+.icon{
+font-size:55px;
+margin-bottom:10px;
+transition:transform .2s ease;
+}
+
+.card:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
 /* TARJETES GENERALS */
 
 .cards{
@@ -73,8 +92,8 @@ border-radius:12px;
 border-left:5px solid #a65277;
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
 transition:.3s;
-line-height:1.8;
 font-size:16px;
+text-align:center;
 }
 
 .card:hover{
@@ -88,12 +107,21 @@ color:inherit;
 display:block;
 }
 
+/* TITULO TARJETA */
+
+.card-title{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+}
+
 /* TEXTO EXPLICATIVO */
 
 .card-info{
 font-size:13px;
 color:#6d2548;
-margin-top:10px;
+margin-top:12px;
+text-align:left;
 }
 
 /* TEXTO HOVER */
@@ -146,7 +174,7 @@ border-left:5px solid #a65277;
 flex:1;
 }
 
-/* 🔥 FORÇAR 4 TARGETES EN "COM TRIAR GRAU" */
+/* 🔥 FORÇAR 4 TARGETES */
 
 .cards-4{
 display:grid;
@@ -221,7 +249,11 @@ grid-template-columns:1fr;
 
 <a href="bach.html" class="card-link">
 <div class="card card-bach">
-🎓 <strong>Des de Batxillerat</strong><br>
+
+<div class="icon">🎓</div>
+
+<div class="card-title">Des de Batxillerat</div>
+
 Has de fer la <strong>PAU (Prova d'Accés a la Universitat)</strong>
 
 <div class="card-info">
@@ -238,7 +270,11 @@ Punxa per veure-ho
 
 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-" class="card-link">
 <div class="card card-fp">
-🛠️ <strong>Des de FP de Grau Superior</strong><br>
+
+<div class="icon">🛠️</div>
+
+<div class="card-title">Des de FP de Grau Superior</div>
+
 Accés directe amb la nota mitjana final
 
 <div class="card-info">
