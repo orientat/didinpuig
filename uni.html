@@ -107,15 +107,11 @@ color:inherit;
 display:block;
 }
 
-/* TITULO TARJETA */
-
 .card-title{
 font-size:22px;
 font-weight:bold;
 margin-bottom:12px;
 }
-
-/* TEXTO EXPLICATIVO */
 
 .card-info{
 font-size:13px;
@@ -124,8 +120,6 @@ margin-top:18px;
 line-height:1.6;
 text-align:center;
 }
-
-/* TEXTO HOVER */
 
 .card-extra{
 font-size:15px;
@@ -144,13 +138,8 @@ opacity:1;
 transform:translateY(0);
 }
 
-.card-bach{
-background:#d9e4f5;
-}
-
-.card-fp{
-background:#dcefe4;
-}
+.card-bach{ background:#d9e4f5; }
+.card-fp{ background:#dcefe4; }
 
 /* BLOCS ROSATS */
 
@@ -173,24 +162,15 @@ border-radius:12px;
 line-height:1.7;
 border-left:5px solid #a65277;
 flex:1;
-}
-
-/* HOVER TARJETAS ROSAS */
-
-.info{
-background:#fff2f7;
-padding:25px;
-border-radius:12px;
-line-height:1.7;
-border-left:5px solid #a65277;
-flex:1;
 transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .info:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 22px rgba(0,0,0,0.12);
+transform:translateY(-6px);
+box-shadow:0 16px 30px rgba(0,0,0,0.18);
 }
+
+/* ENLLAÇOS SIMPLES */
 
 .simple-link{
 display:flex;
@@ -204,7 +184,19 @@ transition:transform .2s ease;
 transform:translateX(4px);
 }
 
-/* ===== BLOQUE ENLACES PRO ===== */
+.simple-link a{
+text-decoration:none;
+color:#1565c0;
+font-weight:500;
+transition:.2s;
+}
+
+.simple-link a:hover{
+text-decoration:underline;
+color:#0d47a1;
+}
+
+/* BLOQUE ENLACES PRO */
 
 .links-group{
 margin-bottom:20px;
@@ -241,33 +233,12 @@ text-decoration:underline;
 color:#0d47a1;
 }
 
-/* 🔥 FORÇAR 4 TARGETES */
+/* TARJETES 4 */
 
 .cards-4{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
-}
-
-/* ENLLAÇOS ESTIL SIMPLE (com imatge 2) */
-
-.simple-link{
-display:flex;
-align-items:center;
-gap:8px;
-margin-bottom:12px;
-}
-
-.simple-link a{
-text-decoration:none;
-color:#1565c0;
-font-weight:500;
-transition:.2s;
-}
-
-.simple-link a:hover{
-text-decoration:underline;
-color:#0d47a1;
 }
 
 /* FOOTER */
@@ -289,20 +260,12 @@ margin-right:auto;
 @media (max-width:900px){
 .wrapper{width:90%;}
 footer{width:90%;}
-
-.info-grid{
-grid-template-columns:1fr;
-}
-
-.cards-4{
-grid-template-columns:1fr 1fr;
-}
+.info-grid{grid-template-columns:1fr;}
+.cards-4{grid-template-columns:1fr 1fr;}
 }
 
 @media (max-width:500px){
-.cards-4{
-grid-template-columns:1fr;
-}
+.cards-4{grid-template-columns:1fr;}
 }
 
 </style>
@@ -337,84 +300,61 @@ grid-template-columns:1fr;
 
 <a href="bach.html" class="card-link">
 <div class="card card-bach">
-
 <div class="icon">🎓</div>
-
 <div class="card-title">Des de Batxillerat</div>
-
 Has de fer la <strong>PAU (Prova d'Accés a la Universitat)</strong>
-
 <div class="card-info">
 Es important saber com funcionen les ponderacions de la PAU <br> 
 i la fórmula per a calcular la nota d'admissió
 </div>
-
-<div class="card-extra">
-Punxa per veure-ho
-</div>
-
+<div class="card-extra">Punxa per veure-ho</div>
 </div>
 </a>
 
 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-" class="card-link">
 <div class="card card-fp">
-
 <div class="icon">🛠️</div>
-
 <div class="card-title">Des de FP de Grau Superior</div>
-
 Accés directe amb la <strong>nota mitjana final</strong>
-
 <div class="card-info">
 Es important saber com accedir des del Grau Superior d’FP<br> 
 i com funciona procediment d’admissió 
 </div>
-
-<div class="card-extra">
-Punxa per veure-ho
-</div>
-
+<div class="card-extra">Punxa per veure-ho</div>
 </div>
 </a>
 
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="info-grid">
 
-  <div class="info-box">
-    <h2>📝 Prova d'accés (PAU)</h2>
-    <div class="info">
+<div class="info-box">
+<h2>📝 Prova d'accés (PAU)</h2>
+<div class="info">
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
+Web oficial PAU Comunitat Valenciana
+</a>
+</div>
+</div>
+</div>
 
-      <div class="simple-link">
-        <span>🔗</span>
-        <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
-        Web oficial PAU Comunitat Valenciana
-        </a>
-      </div>
+<div class="info-box">
+<h2>📊 Notes de tall</h2>
+<div class="info">
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://www.elorienta.com/materiales/corte/" target="_blank">
+Notes de tall Orientaline
+</a>
+</div>
+</div>
+</div>
 
-    </div> 
-  </div> 
-
-  <div class="info-box">
-    <h2>📊 Notes de tall</h2>
-    <div class="info">
-
-      <div class="simple-link">
-        <span>🔗</span>
-        <a href="https://www.elorienta.com/materiales/corte/" target="_blank">
-        Notes de tall Orientaline
-        </a>
-      </div>
-
-    </div> 
-  </div> 
-
-</div> 
-
+</div>
 </section>
 
 <section class="section">
@@ -438,69 +378,61 @@ Punxa per veure-ho
 <div class="links-group">
 <span class="links-group-title">📘 Informació general</span>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://universitats.gva.es/documents/389338055/389339982/GU%C3%8DA+PAU+2026.pdf/c0522e02-96ed-88c4-edeb-c5e5cd82dd08?t=1768810450603" target="_blank">Guia PAU</a>
 </div>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://www.uv.es/uvweb/universidad/es/estudios-grado/admision/bachillerato/informacion-pruebas-1285852996917.html" target="_blank">Recomanacions per a estudiants PAU</a>
 </div>
-</div>
 
+</div>
 
 <div class="links-group">
 <span class="links-group-title">📝 Accés a la Universitat (PAU)</span>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">Informació general PAU</a>
 </div>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">Preguntes freqüents accés per PAU</a>
 </div>
-</div>
 
+</div>
 
 <div class="links-group">
 <span class="links-group-title">🛠️ Accés des de Formació Professional</span>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Accés a la universitat des de FP</a>
 </div>
-</div>
 
+</div>
 
 <div class="links-group">
 <span class="links-group-title">📊 Eines clau</span>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://universitats.gva.es/documents/389338055/389340585/PONDERACIONES%2B2025-cast-Actual11-06-25.pdf" target="_blank">Taula de ponderacions (accés i admissió)</a>
 </div>
-</div>
 
+</div>
 
 <div class="links-group">
 <span class="links-group-title">🏛️ Organismes oficials</span>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitari Valencià</a>
 </div>
 
-<div class="link-item">
-<span class="link-icon">🔗</span>
+<div class="link-item"><span class="link-icon">🔗</span>
 <a href="https://www.ciencia.gob.es/Universidades.html" target="_blank">Ministeri d'Universitats</a>
 </div>
-</div>
 
 </div>
 
+</div>
 </section>
 
 </div>
