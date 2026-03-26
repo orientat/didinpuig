@@ -59,7 +59,7 @@ padding-left:10px;
 margin-bottom:25px;
 }
 
-/* ICONOS */
+/* ICONOS ANIMADOS */
 
 .icon{
 font-size:60px;
@@ -72,13 +72,13 @@ animation:iconMove .6s ease;
 }
 
 @keyframes iconMove{
-0%{transform:translateY(0);}
-30%{transform:translateY(-8px) scale(1.2);}
-60%{transform:translateY(-4px) scale(1.1);}
-100%{transform:translateY(0) scale(1.15);}
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
-/* TARJETES */
+/* TARJETES GENERALS */
 
 .cards{
 display:grid;
@@ -92,6 +92,7 @@ border-radius:16px;
 border-left:5px solid #a65277;
 box-shadow:0 4px 14px rgba(0,0,0,0.10);
 transition:.3s;
+font-size:16px;
 text-align:center;
 }
 
@@ -100,11 +101,21 @@ transform:translateY(-6px);
 box-shadow:0 16px 30px rgba(0,0,0,0.18);
 }
 
+.card-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+/* TITULO TARJETA */
+
 .card-title{
 font-size:22px;
 font-weight:bold;
 margin-bottom:12px;
 }
+
+/* TEXTO EXPLICATIVO */
 
 .card-info{
 font-size:13px;
@@ -113,6 +124,8 @@ margin-top:18px;
 line-height:1.6;
 text-align:center;
 }
+
+/* TEXTO HOVER */
 
 .card-extra{
 font-size:15px;
@@ -123,6 +136,7 @@ opacity:0;
 transform:translateY(8px);
 transition:all .3s ease;
 text-align:center;
+letter-spacing:0.5px;
 }
 
 .card:hover .card-extra{
@@ -130,15 +144,28 @@ opacity:1;
 transform:translateY(0);
 }
 
-.card-bach{background:#d9e4f5;}
-.card-fp{background:#dcefe4;}
+.card-bach{
+background:#d9e4f5;
+}
 
-/* INFO GRID */
+.card-fp{
+background:#dcefe4;
+}
+
+/* BLOCS ROSATS */
 
 .info-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:25px;
+margin-top:10px;
+align-items:stretch;
+}
+
+.info-box{
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
 .info{
@@ -147,21 +174,15 @@ padding:22px;
 border-radius:12px;
 line-height:1.7;
 border-left:5px solid #a65277;
+flex:1;
 }
 
-/* 🔥 MEJORA BLOQUE INFO INTERÉS */
+/* 🔥 FORÇAR 4 TARGETES */
 
-.info strong{
-display:block;
-margin-top:20px;
-margin-bottom:10px;
-color:#6d2548;
-font-size:16px;
-}
-
-.info a{
-display:block;
-margin-bottom:10px;
+.cards-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 }
 
 /* FOOTER */
@@ -174,7 +195,8 @@ padding:15px;
 margin-top:60px;
 border-radius:10px;
 width:75%;
-margin:auto;
+margin-left:auto;
+margin-right:auto;
 }
 
 /* RESPONSIVE */
@@ -182,7 +204,20 @@ margin:auto;
 @media (max-width:900px){
 .wrapper{width:90%;}
 footer{width:90%;}
-.info-grid{grid-template-columns:1fr;}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.cards-4{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media (max-width:500px){
+.cards-4{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -205,6 +240,7 @@ footer{width:90%;}
 <h2>📚 Què és la Universitat?</h2>
 
 <p>La universitat és una etapa d'estudis superiors que permet especialitzar-te en una professió.</p>
+
 <p>S’organitza en <strong>graus universitaris</strong> i té una duració habitual de <strong>4 anys</strong>.</p>
 
 </section>
@@ -218,6 +254,7 @@ footer{width:90%;}
 <div class="card card-bach">
 
 <div class="icon">🎓</div>
+
 <div class="card-title">Des de Batxillerat</div>
 
 Has de fer la <strong>PAU (Prova d'Accés a la Universitat)</strong>
@@ -227,7 +264,9 @@ Es important saber com funcionen les ponderacions de la PAU <br>
 i la fórmula per a calcular la nota d'admissió
 </div>
 
-<div class="card-extra">Punxa per veure-ho</div>
+<div class="card-extra">
+Punxa per veure-ho
+</div>
 
 </div>
 </a>
@@ -236,6 +275,7 @@ i la fórmula per a calcular la nota d'admissió
 <div class="card card-fp">
 
 <div class="icon">🛠️</div>
+
 <div class="card-title">Des de FP de Grau Superior</div>
 
 Accés directe amb la <strong>nota mitjana final</strong>
@@ -245,7 +285,9 @@ Es important saber com accedir des del Grau Superior d’FP<br>
 i com funciona procediment d’admissió 
 </div>
 
-<div class="card-extra">Punxa per veure-ho</div>
+<div class="card-extra">
+Punxa per veure-ho
+</div>
 
 </div>
 </a>
@@ -256,37 +298,77 @@ i com funciona procediment d’admissió
 
 <section class="section">
 
+<div class="info-grid">
+
+<div class="info-box">
+<h2>📝 Prova d'accés (PAU)</h2>
+<div class="info">
+
+🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
+Web oficial PAU Comunitat Valenciana
+</a>
+
+</div>
+</div>
+
+<div class="info-box">
+<h2>📊 Notes de tall</h2>
+<div class="info">
+
+🔗 <a href="https://www.elorienta.com/materiales/corte/" target="_blank">Notes de tall Orientaline</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+<h2>🤔 Com triar grau?</h2>
+
+<div class="cards-4">
+<div class="card">🎯 Pensa en els teus interessos</div>
+<div class="card">💪 Valora les teues capacitats</div>
+<div class="card">📊 Consulta les notes de tall</div>
+<div class="card">🔍 Informa’t sobre eixides professionals</div>
+</div>
+
+</section>
+
+<section class="section">
+
 <h2>🌐 Informació d'interés</h2>
 
 <div class="info">
 
-<strong>📘 Informació general</strong>
+<strong>📘 Informació general</strong><br><br>
 
-🔗 <a href="https://universitats.gva.es/documents/389338055/389339982/GUIA%2BPAU%2B2025_Actual29-04-25.pdf" target="_blank">Guia PAU</a>
+🔗 <a href="https://universitats.gva.es/documents/389338055/389339982/GUIA%2BPAU%2B2025_Actual29-04-25.pdf" target="_blank">Guia PAU</a><br><br>
 
-🔗 <a href="https://www.uv.es/uvweb/universidad/es/estudios-grado/admision/bachillerato/informacion-pruebas-1285852996917.html" target="_blank">Recomanacions per a estudiants PAU</a>
-
-
-<strong>📝 Accés a la Universitat (PAU)</strong>
-
-🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">Informació general PAU</a>
-
-🔗 <a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">Preguntes freqüents accés per PAU</a>
+🔗 <a href="https://www.uv.es/uvweb/universidad/es/estudios-grado/admision/bachillerato/informacion-pruebas-1285852996917.html" target="_blank">Recomanacions per a estudiants PAU</a><br><br>
 
 
-<strong>🛠️ Accés des de Formació Professional</strong>
+<strong>📝 Accés a la Universitat (PAU)</strong><br><br>
 
-🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Accés a la universitat des de FP</a>
+🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">Informació general PAU</a><br><br>
 
-
-<strong>📊 Eines clau</strong>
-
-🔗 <a href="https://universitats.gva.es/documents/389338055/389340585/PONDERACIONES%2B2025-cast-Actual11-06-25.pdf" target="_blank">Taula de ponderacions</a>
+🔗 <a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">Preguntes freqüents accés per PAU</a><br><br>
 
 
-<strong>🏛️ Organismes oficials</strong>
+<strong>🛠️ Accés des de Formació Professional</strong><br><br>
 
-🔗 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitari Valencià</a>
+🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Accés a la universitat des de FP</a><br><br>
+
+
+<strong>📊 Eines clau</strong><br><br>
+
+🔗 <a href="https://universitats.gva.es/documents/389338055/389340585/PONDERACIONES%2B2025-cast-Actual11-06-25.pdf" target="_blank">Taula de ponderacions (accés i admissió)</a><br><br>
+
+
+<strong>🏛️ Organismes oficials</strong><br><br>
+
+🔗 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitari Valencià</a><br><br>
 
 🔗 <a href="https://www.ciencia.gob.es/Universidades.html" target="_blank">Ministeri d'Universitats</a>
 
