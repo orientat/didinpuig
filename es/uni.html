@@ -56,36 +56,90 @@ font-size:30px;
 color:#6d2548;
 border-left:6px solid #a65277;
 padding-left:10px;
-margin-bottom:15px;
+margin-bottom:25px;
 }
 
-/* TARJETAS GENERALES */
+/* ICONOS ANIMADOS */
+
+.icon{
+font-size:60px;
+margin-bottom:20px;
+transition:transform .2s ease;
+}
+
+.card:hover .icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
+}
+
+/* TARJETES GENERALS */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+gap:50px;
 }
 
 .card{
-padding:28px;
-border-radius:12px;
+padding:20px 25px;
+border-radius:16px;
 border-left:5px solid #a65277;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+box-shadow:0 4px 14px rgba(0,0,0,0.10);
 transition:.3s;
-line-height:1.8;
 font-size:16px;
+text-align:center;
 }
 
 .card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 22px rgba(0,0,0,0.15);
+transform:translateY(-6px);
+box-shadow:0 16px 30px rgba(0,0,0,0.18);
 }
 
 .card-link{
 text-decoration:none;
 color:inherit;
 display:block;
+}
+
+/* TITULO TARJETA */
+
+.card-title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+/* TEXTO EXPLICATIVO */
+
+.card-info{
+font-size:13px;
+color:#6d2548;
+margin-top:18px;
+line-height:1.6;
+text-align:center;
+}
+
+/* TEXTO HOVER */
+
+.card-extra{
+font-size:13px;
+color:#6d2548;
+margin-top:15px;
+opacity:0;
+transform:translateY(8px);
+transition:all .3s ease;
+text-align:center;
+}
+
+.card:hover .card-extra{
+opacity:1;
+transform:translateY(0);
 }
 
 .card-bach{
@@ -96,7 +150,7 @@ background:#d9e4f5;
 background:#dcefe4;
 }
 
-/* BLOQUES ROSA */
+/* BLOCS ROSATS */
 
 .info-grid{
 display:grid;
@@ -121,7 +175,7 @@ border-left:5px solid #a65277;
 flex:1;
 }
 
-/* 4 TARJETAS */
+/* 🔥 FORÇAR 4 TARGETES */
 
 .cards-4{
 display:grid;
@@ -183,7 +237,7 @@ grid-template-columns:1fr;
 <section class="section">
 <h2>📚 ¿Qué es la Universidad?</h2>
 
-<p>La universidad es una etapa de estudios superiores que permite especializarte en una profesión.</p>
+<p>La universidad es una etapa de estudios superiores que te permite especializarte en una profesión.</p>
 
 <p>Se organiza en <strong>grados universitarios</strong> y tiene una duración habitual de <strong>4 años</strong>.</p>
 
@@ -196,15 +250,43 @@ grid-template-columns:1fr;
 
 <a href="bach.html" class="card-link">
 <div class="card card-bach">
-🎓 <strong>Desde Bachillerato</strong><br>
-Debes realizar la <strong>PAU (Selectividad)</strong>
+
+<div class="icon">🎓</div>
+
+<div class="card-title">Desde Bachillerato</div>
+
+Tienes que hacer la <strong>PAU (Prueba de Acceso a la Universidad)</strong>
+
+<div class="card-info">
+Es importante saber cómo funcionan las ponderaciones de la PAU <br> 
+y la fórmula para calcular la nota de admisión
+</div>
+
+<div class="card-extra">
+Pincha para verlo
+</div>
+
 </div>
 </a>
 
-<a href="fp.html" class="card-link">
+<a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-" class="card-link">
 <div class="card card-fp">
-🛠️ <strong>Desde FP de Grado Superior</strong><br>
-Acceso directo con la nota final
+
+<div class="icon">🛠️</div>
+
+<div class="card-title">Desde FP de Grado Superior</div>
+
+Acceso directo con la <strong>nota media final</strong>
+
+<div class="card-info">
+Es importante saber cómo acceder desde el Grado Superior de FP<br> 
+y cómo funciona el procedimiento de admisión 
+</div>
+
+<div class="card-extra">
+Pincha para verlo
+</div>
+
 </div>
 </a>
 
@@ -219,26 +301,20 @@ Acceso directo con la nota final
 <div class="info-box">
 <h2>📝 Prueba de acceso (PAU)</h2>
 <div class="info">
-📘 La PAU es necesaria si vienes de Bachillerato.
-<br><br>
-📊 La nota final combina:
-<ul>
-<li>Nota de Bachillerato</li>
-<li>Exámenes de la PAU</li>
-</ul>
 
 🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
-Web oficial PAU Comunidad Valenciana
+Web oficial PAU Comunitat Valenciana
 </a>
+
 </div>
 </div>
 
 <div class="info-box">
 <h2>📊 Notas de corte</h2>
 <div class="info">
-🎯 Cada grado universitario tiene una nota mínima de acceso.
-<br><br>
-🔗 <a href="https://notesdetall.es/" target="_blank">Web notas de corte</a>
+
+🔗 <a href="https://www.elorienta.com/materiales/corte/" target="_blank">Notas de corte Orientaline</a>
+
 </div>
 </div>
 
@@ -260,19 +336,22 @@ Web oficial PAU Comunidad Valenciana
 
 <section class="section">
 
-<h2>🌐 Información oficial</h2>
+<h2>🌐 Información de interés</h2>
 
 <div class="info">
+
+Guía PAU<br>
+Preguntas frecuentes<br>
+Recomendaciones para estudiantes PAU<br>
+Tabla de ponderaciones para la preinscripción (acceso y admisión)<br><br>
 
 🔗 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitario Valenciano</a><br><br>
 
 🔗 <a href="https://www.ciencia.gob.es/Universidades.html" target="_blank">Ministerio de Universidades</a><br><br>
 
-🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">Preguntas frecuentes acceso por PAU</a><br><br>
+🔗 <a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">Preguntas Frecuentes acceso por PAU</a><br><br>
 
-🔗 <a href="https://www.todofp.es/" target="_blank">TodoFP - Acceso desde FP a la Universidad</a><br><br>
-
-🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Preguntas frecuentes acceso por FP</a>
+🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Preguntas Frecuentes acceso por FP</a>
 
 </div>
 
