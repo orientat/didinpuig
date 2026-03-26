@@ -222,6 +222,27 @@ grid-template-columns:repeat(4,1fr);
 gap:25px;
 }
 
+/* ENLLAÇOS ESTIL SIMPLE (com imatge 2) */
+
+.simple-link{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:12px;
+}
+
+.simple-link a{
+text-decoration:none;
+color:#1565c0;
+font-weight:500;
+transition:.2s;
+}
+
+.simple-link a:hover{
+text-decoration:underline;
+color:#0d47a1;
+}
+
 /* FOOTER */
 
 footer{
@@ -341,20 +362,22 @@ Punxa per veure-ho
 <h2>📝 Prova d'accés (PAU)</h2>
 <div class="info">
 
-🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
 Web oficial PAU Comunitat Valenciana
 </a>
-
-</div>
 </div>
 
 <div class="info-box">
 <h2>📊 Notes de tall</h2>
 <div class="info">
 
-🔗 <a href="https://www.elorienta.com/materiales/corte/" target="_blank">Notes de tall Orientaline</a>
-
-</div>
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://www.elorienta.com/materiales/corte/" target="_blank">
+Notes de tall Orientaline
+</a>
 </div>
 
 </div>
