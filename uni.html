@@ -522,6 +522,19 @@ padding-top:15px;
 box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* EFECTO BLUR FONDO */
+body.modal-open .wrapper,
+body.modal-open header,
+body.modal-open footer{
+filter:blur(4px);
+transition:.3s ease;
+}
+
+/* SUAVIDAD GENERAL */
+.wrapper, header, footer{
+transition:.3s ease;
+}
+
 </style>
 </head>
 
@@ -933,20 +946,23 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
   
 <script>
 function openModal(id){
-document.getElementById(id).style.display = "flex";
+  document.getElementById(id).style.display = "flex";
+  document.body.classList.add("modal-open");
 }
 
 function closeModal(id){
-document.getElementById(id).style.display = "none";
+  document.getElementById(id).style.display = "none";
+  document.body.classList.remove("modal-open");
 }
 
 /* cerrar haciendo click fuera */
 window.onclick = function(event){
-document.querySelectorAll('.modal-overlay').forEach(modal => {
-if(event.target === modal){
-modal.style.display = "none";
-}
-});
+  document.querySelectorAll('.modal-overlay').forEach(modal => {
+    if(event.target === modal){
+      modal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  });
 }
 </script>
 </body>
