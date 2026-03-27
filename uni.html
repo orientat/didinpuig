@@ -493,6 +493,35 @@ text-align:center;
 margin-top:15px;
 }
 
+/* SCROLL SUAVE */
+.modal{
+scroll-behavior:smooth;
+}
+
+/* CABECERA FIJA */
+.modal-header{
+position:sticky;
+top:0;
+background:#ffffff;
+padding-bottom:10px;
+z-index:10;
+border-bottom:1px solid #eee;
+}
+
+/* MEJORAS VISUALES */
+.modal{
+padding-top:0; /* importante */
+}
+
+.modal-content{
+padding-top:15px;
+}
+
+/* SOMBRA SUAVE EN CABECERA */
+.modal-header{
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
 </style>
 </head>
 
@@ -661,11 +690,14 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 
 <!-- MODAL BATXILLERAT -->
 <div class="modal-overlay" id="modalBatx">
-  <div class="modal">
+ <div class="modal">
+  
+  <div class="modal-header">
     <button class="modal-close" onclick="closeModal('modalBatx')">✖</button>
-    
     <h3>🎓 Accés a la Universitat des de Batxillerat</h3>
+  </div>
 
+  <div class="modal-content">
     <p>
       Per accedir a la universitat des de Batxillerat és necessari obtindre el títol i superar les <strong>Proves d’Accés a la Universitat (PAU)</strong>.
     </p>
@@ -780,13 +812,19 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 
   </div>
 </div>
+</div>
+
 
 <!-- MODAL FP -->
 <div class="modal-overlay" id="modalFP">
   <div class="modal">
+  
+  <div class="modal-header">
     <button class="modal-close" onclick="closeModal('modalFP')">✖</button>
-
     <h3>🛠️ Accés a la Universitat des de FP de Grau Superior</h3>
+  </div>
+
+  <div class="modal-content">
 
     <p>
     Amb el títol de <strong>Tècnic Superior de Formació Professional</strong> pots accedir directament a la universitat mitjançant el procediment d’admissió.
@@ -891,6 +929,8 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 
   </div>
 </div>
+</div>
+  
 <script>
 function openModal(id){
 document.getElementById(id).style.display = "flex";
