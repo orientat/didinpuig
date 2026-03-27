@@ -628,5 +628,69 @@ Notes de tall Orientaline
 IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
 
+<!-- MODAL BATXILLERAT -->
+<div class="modal-overlay" id="modalBatx">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modalBatx')">✖</button>
+
+    <h3>🎓 Accés des de Batxillerat</h3>
+
+    <p>Per accedir a la universitat des de Batxillerat és necessari superar la PAU.</p>
+
+    <p><strong>Càlcul de la nota:</strong></p>
+    <p>(QMB × 0.6 + QFG × 0.4) + A × M1 + B × M2</p>
+
+    <ul>
+      <li>60% Batxillerat</li>
+      <li>40% fase obligatòria</li>
+      <li>Fase voluntària per pujar nota</li>
+    </ul>
+
+    <p><strong>Important:</strong> les ponderacions poden variar segons el grau.</p>
+
+  </div>
+</div>
+
+
+<!-- MODAL FP -->
+<div class="modal-overlay" id="modalFP">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modalFP')">✖</button>
+
+    <h3>🛠️ Accés des de FP de Grau Superior</h3>
+
+    <p>Pots accedir directament a la universitat amb la nota mitjana del cicle.</p>
+
+    <p><strong>Càlcul de la nota:</strong></p>
+    <p>NMC + (A × M1) + (B × M2)</p>
+
+    <ul>
+      <li>100% nota del cicle</li>
+      <li>Opció de pujar nota amb PAU</li>
+      <li>Fins a 14 punts</li>
+    </ul>
+
+    <p><strong>Avantatge:</strong> possibilitat de convalidar assignatures.</p>
+
+  </div>
+</div>  
+<script>
+function openModal(id){
+document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display = "none";
+}
+
+/* cerrar haciendo click fuera */
+window.onclick = function(event){
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+if(event.target === modal){
+modal.style.display = "none";
+}
+});
+}
+</script>
 </body>
 </html>
