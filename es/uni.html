@@ -59,6 +59,11 @@ padding-left:10px;
 margin-bottom:25px;
 }
 
+.section p{
+line-height:1.7;
+margin-bottom:12px;
+}
+
 /* ICONOS ANIMADOS */
 
 .icon{
@@ -105,17 +110,14 @@ box-shadow:0 16px 30px rgba(0,0,0,0.18);
 text-decoration:none;
 color:inherit;
 display:block;
+cursor:pointer;
 }
-
-/* TITULO TARJETA */
 
 .card-title{
 font-size:22px;
 font-weight:bold;
 margin-bottom:12px;
 }
-
-/* TEXTO EXPLICATIVO */
 
 .card-info{
 font-size:13px;
@@ -125,16 +127,16 @@ line-height:1.6;
 text-align:center;
 }
 
-/* TEXTO HOVER */
-
 .card-extra{
-font-size:13px;
+font-size:15px;
+font-weight:bold;
 color:#6d2548;
 margin-top:15px;
-opacity:0;
-transform:translateY(8px);
+opacity:1;
+transform:none;
 transition:all .3s ease;
 text-align:center;
+letter-spacing:0.5px;
 }
 
 .card:hover .card-extra{
@@ -142,40 +144,117 @@ opacity:1;
 transform:translateY(0);
 }
 
-.card-bach{
-background:#d9e4f5;
-}
-
-.card-fp{
-background:#dcefe4;
-}
+.card-bach{ background:#d9e4f5; }
+.card-fp{ background:#dcefe4; }
 
 /* BLOCS ROSATS */
 
 .info-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:50px;
 margin-top:10px;
-align-items:stretch;
 }
 
 .info-box{
 display:flex;
 flex-direction:column;
-height:100%;
 }
 
 .info{
 background:#fff2f7;
-padding:22px;
+padding:25px;
 border-radius:12px;
 line-height:1.7;
 border-left:5px solid #a65277;
 flex:1;
+transition:transform .25s ease, box-shadow .25s ease;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-/* 🔥 FORÇAR 4 TARGETES */
+.info-warning{
+background:#fff3cd;
+border-left:5px solid #d4b15a;
+}
+
+  
+/* ENLLAÇOS SIMPLES */
+
+.simple-link{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:8px;
+width:100%;            
+}
+
+.simple-link span{
+font-size:18px;
+transition:transform .2s ease;
+}
+
+.simple-link:hover span{
+transform:translateX(3px) scale(1.2) rotate(-8deg);
+}
+
+.simple-link:hover{
+transform:translateX(4px);
+}
+
+.simple-link a{
+text-decoration:none;
+color:#1565c0;
+font-size:19px;
+font-weight:600;
+transition:.2s;
+}
+
+.simple-link a:hover{
+text-decoration:underline;
+color:#0d47a1;
+}
+
+/* BLOQUE ENLACES PRO */
+
+.links-group{
+margin-bottom:20px;
+}
+
+.links-group-title{
+font-weight:bold;
+color:#6d2548;
+margin-bottom:10px;
+display:block;
+}
+
+.link-item{
+display:flex;
+align-items:flex-start;
+gap:8px;
+margin-bottom:10px;
+}
+
+.link-icon{
+color:#a65277;
+font-size:14px;
+margin-top:3px;
+}
+
+.link-item a{
+text-decoration:none;
+color:#1565c0;
+transition:.2s;
+}
+
+.link-item a:hover{
+text-decoration:underline;
+color:#0d47a1;
+}
+
+/* TARJETES 4 */
 
 .cards-4{
 display:grid;
@@ -202,20 +281,277 @@ margin-right:auto;
 @media (max-width:900px){
 .wrapper{width:90%;}
 footer{width:90%;}
-
-.info-grid{
-grid-template-columns:1fr;
-}
-
-.cards-4{
-grid-template-columns:1fr 1fr;
-}
+.info-grid{grid-template-columns:1fr;}
+.cards-4{grid-template-columns:1fr 1fr;}
 }
 
 @media (max-width:500px){
-.cards-4{
-grid-template-columns:1fr;
+.cards-4{grid-template-columns:1fr;}
 }
+
+/* ===== DASHBOARD ENLACES ===== */
+
+.links-dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:15px;
+}
+
+.links-card{
+background:#fff2f7;
+padding:20px;
+border-radius:14px;
+border-left:5px solid #a65277;
+transition:.3s;
+min-height:260px;
+}
+
+.links-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.12);
+}
+
+.links-card-title{
+font-weight:bold;
+color:#6d2548;
+margin-bottom:12px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.links-card a{
+display:block;
+text-decoration:none;
+color:#1565c0;
+margin-bottom:8px;
+transition:.2s;
+}
+
+.links-card a:hover{
+text-decoration:underline;
+color:#0d47a1;
+transform:translateX(3px);
+}
+.links-card:nth-child(1){ border-left-color:#6a8fd8; }
+.links-card:nth-child(2){ border-left-color:#a65277; }
+.links-card:nth-child(3){ border-left-color:#4caf50; }
+.links-card:nth-child(4){ border-left-color:#ff9800; }
+.links-card:nth-child(5){ border-left-color:#607d8b; }
+
+/* ===== DASHBOARD PRO ALUMNAT ===== */
+
+.links-card{
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+.links-card::after{
+content:"→";
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+font-size:18px;
+color:#a65277;
+opacity:0;
+transition:.3s;
+}
+
+.links-card:hover::after{
+opacity:1;
+right:12px;
+}
+
+.links-card a{
+padding:6px 0;
+}
+
+.links-card-title{
+font-size:18px;
+}
+
+.links-card{
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
+  
+/* EFECTE CLICKABLE COMPLET */
+
+.links-card a{
+position:relative;
+z-index:2;
+}
+
+.links-card{
+transition:.3s;
+}
+
+.links-card:hover{
+transform:translateY(-6px) scale(1.02);
+box-shadow:0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* ICONOS EN TARJETAS DASHBOARD */
+
+.links-card-title span{
+font-size:22px;
+transition:transform .3s ease;
+display:inline-block;
+}
+
+/* ANIMACIÓN SUAVE */
+
+.links-card:hover .links-card-title span{
+transform:translateY(-3px) scale(1.2) rotate(-6deg);
+}
+
+/* ===== MODAL ===== */
+
+.modal-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal{
+background:#ffffff;
+width:90%;
+max-width:700px;
+max-height:85vh;
+overflow-y:auto;
+border-radius:16px;
+padding:25px;
+position:relative;
+animation:fadeIn .3s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.modal-close{
+position:absolute;
+top:12px;
+right:12px;
+background:#eee;
+border:none;
+border-radius:50%;
+width:35px;
+height:35px;
+font-size:18px;
+cursor:pointer;
+}
+
+.modal h3{
+margin-top:0;
+color:#6d2548;
+}
+
+.modal-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+border-bottom:1px solid #eee;
+}
+
+.modal-header h3{
+margin:0;
+}
+
+.modal p{
+line-height:1.6;
+margin-bottom:10px;
+}
+
+.modal ul{
+padding-left:18px;
+}
+
+
+/* ===== BLOQUES VISUALES MODAL ===== */
+
+.modal-box{
+background:#f8f9fb;
+border-left:4px solid #a65277;
+padding:10px 15px;
+border-radius:8px;
+margin:10px 0;
+}
+
+.modal-highlight{
+background:#fff3cd;
+border-left:4px solid #d4b15a;
+padding:10px 15px;
+border-radius:8px;
+margin:10px 0;
+}
+
+.modal-formula{
+background:#eef3ff;
+border-left:4px solid #6a8fd8;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+text-align:center;
+}
+
+.modal-section{
+margin-top:15px;
+}
+
+/* SCROLL SUAVE */
+.modal{
+scroll-behavior:smooth;
+}
+
+/* CABECERA FIJA */
+.modal-header{
+position:sticky;
+top:0;
+background:#ffffff;
+padding-bottom:10px;
+z-index:10;
+border-bottom:1px solid #eee;
+}
+
+/* MEJORAS VISUALES */
+.modal{
+padding-top:0; /* importante */
+}
+
+.modal-content{
+padding-top:15px;
+}
+
+/* SOMBRA SUAVE EN CABECERA */
+.modal-header{
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* EFECTO BLUR FONDO */
+body.modal-open .wrapper,
+body.modal-open header,
+body.modal-open footer{
+filter:blur(4px);
+transition:.3s ease;
+}
+
+/* SUAVIDAD GENERAL */
+.wrapper, header, footer{
+transition:.3s ease;
 }
 
 </style>
@@ -236,11 +572,26 @@ grid-template-columns:1fr;
 
 <section class="section">
 <h2>📚 ¿Qué es la Universidad?</h2>
+<p>
+La universidad es una etapa de estudios superiores que permite especializarte en una profesión y orientar tu futuro académico y laboral.
+</p>
 
-<p>La universidad es una etapa de estudios superiores que te permite especializarte en una profesión.</p>
+<p>
+Se organiza en <strong>grados universitarios</strong> con una duración habitual de <strong>4 años</strong>, aunque puede variar según los estudios.
+</p>
 
-<p>Se organiza en <strong>grados universitarios</strong> y tiene una duración habitual de <strong>4 años</strong>.</p>
+<p>
+👉 <strong>Es importante informarte bien antes de decidir:</strong> conocer las vías de acceso, las notas de corte y las salidas profesionales te ayudará a tomar una decisión más acertada.
+</p>
 
+<p style="margin-top:15px; font-weight:bold; color:#6d2548;">
+🤔 ¿Sabes qué opciones tienes para acceder a la universidad?
+</p>
+
+
+<p style="margin-top:15px; font-weight:bold; color:#6d2548;">
+📌 Explora las vías de acceso que tienes a continuación y descubre qué camino se adapta mejor a ti.
+</p>
 </section>
 
 <section class="section">
@@ -248,78 +599,62 @@ grid-template-columns:1fr;
 
 <div class="cards">
 
-<a href="bach.html" class="card-link">
-<div class="card card-bach">
-
-<div class="icon">🎓</div>
-
-<div class="card-title">Desde Bachillerato</div>
-
-Tienes que hacer la <strong>PAU (Prueba de Acceso a la Universidad)</strong>
-
-<div class="card-info">
-Es importante saber cómo funcionan las ponderaciones de la PAU <br> 
-y la fórmula para calcular la nota de admisión
+<div class="card-link" onclick="openModal('modalBatx')">
+  <div class="card card-bach">
+    <div class="icon">🎓</div>
+    <div class="card-title">Desde el Bachillerato</div>
+    Tienes que hacer la <strong>PAU (Prueba de Acceso a la Universidad)</strong>
+    <div class="card-info">
+      Es importante saber cómo funcionan las ponderaciones de la PAU 
+      y la fórmula para calcular la nota de admisión
+    </div>
+    <div class="card-extra">Pincha para más información</div>
+  </div>
 </div>
 
-<div class="card-extra">
-Pincha para verlo
+<div class="card-link" onclick="openModal('modalFP')">
+  <div class="card card-fp">
+    <div class="icon">🛠️</div>
+    <div class="card-title">Desde la FP de Grado Superior</div>
+    Acceso directo con la <strong>nota media final</strong>
+    <div class="card-info">
+      Es importante saber cómo acceder desde los Ciclos Formativos de Grado Superior 
+      y cómo funciona el procedimiento de admisión 
+    </div>
+    <div class="card-extra">Pincha para más información</div>
+  </div>
 </div>
-
 </div>
-</a>
-
-<a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-" class="card-link">
-<div class="card card-fp">
-
-<div class="icon">🛠️</div>
-
-<div class="card-title">Desde FP de Grado Superior</div>
-
-Acceso directo con la <strong>nota media final</strong>
-
-<div class="card-info">
-Es importante saber cómo acceder desde el Grado Superior de FP<br> 
-y cómo funciona el procedimiento de admisión 
-</div>
-
-<div class="card-extra">
-Pincha para verlo
-</div>
-
-</div>
-</a>
-
-</div>
-
 </section>
 
 <section class="section">
-
 <div class="info-grid">
 
 <div class="info-box">
 <h2>📝 Prueba de acceso (PAU)</h2>
-<div class="info">
-
-🔗 <a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
-Web oficial PAU Comunitat Valenciana
+<div class="info info-warning">
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://universitats.gva.es/va/prova-acces-universitat-pau" target="_blank">
+Web oficial PAU Comunidad Valenciana
 </a>
-
+</div>
 </div>
 </div>
 
 <div class="info-box">
 <h2>📊 Notas de corte</h2>
-<div class="info">
-
-🔗 <a href="https://www.elorienta.com/materiales/corte/" target="_blank">Notas de corte Orientaline</a>
-
+<div class="info info-warning">
+<div class="simple-link">
+<span>🔗</span>
+<a href="https://www.elorienta.com/materiales/corte/" target="_blank">
+Notas de corte Orientaline
+</a>
 </div>
 </div>
-
 </div>
 
+</div>
 </section>
 
 <section class="section">
@@ -338,23 +673,60 @@ Web oficial PAU Comunitat Valenciana
 
 <h2>🌐 Información de interés</h2>
 
-<div class="info">
+<div class="links-dashboard">
 
-Guía PAU<br>
-Preguntas frecuentes<br>
-Recomendaciones para estudiantes PAU<br>
-Tabla de ponderaciones para la preinscripción (acceso y admisión)<br><br>
+<div class="links-card">
+<div class="links-card-title"><span>📘</span> Información general y recomendaciones</div>
 
-🔗 <a href="https://universitats.gva.es/va/inici" target="_blank">Sistema Universitario Valenciano</a><br><br>
-
-🔗 <a href="https://www.ciencia.gob.es/Universidades.html" target="_blank">Ministerio de Universidades</a><br><br>
-
-🔗 <a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">Preguntas Frecuentes acceso por PAU</a><br><br>
-
-🔗 <a href="https://ceice.gva.es/va/web/formacion-profesional/acceso-a-universidad-desde-el-grado-superior" target="_blank">Preguntas Frecuentes acceso por FP</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/GU%C3%8DA+PAU+2026.pdf/c0522e02-96ed-88c4-edeb-c5e5cd82dd08?t=1768810450603" target="_blank">🔗 Guía PAU 2025-2026</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/Horario_PAU_2026.pdf/50ab62a0-18cf-e860-394b-a665c0fc5998?t=1762169825859" target="_blank">🔗 Horario Pruebas de Acceso 2025-2026</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/Calendari_PAU+2025+amb+3conv_val-Actual25-02-26.pdf/303dc5d7-277e-68bb-466d-28ac536b463d?t=1740568483357" target="_blank">🔗 Calendario PAU 2025-2026</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/Instruccions+Matricula+PAU+2025+30abril2025_Actul05-05-25.pdf/52e9de11-4be8-7578-d31f-76e8d0e832a7?t=1746435978793" target="_blank">🔗 Instrucciones para la matrícula</a>
+<a href="https://universitats.gva.es/va/preguntas-frecuentes-pau" target="_blank">🔗 Preguntas frecuentes PAU</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/ORIENTACIONS-UEO+ESTUDIANTAT+PAU.pdf/1ff300ce-73a6-3b28-7e45-05bd1961f01d?t=1773401026006" target="_blank">🔗 Recomendaciones para estudiantes PAU</a>
 
 </div>
 
+<div class="links-card">
+<div class="links-card-title"><span>📊</span> Herramientas clave y recursos útiles</div>
+
+<a href="https://universitats.gva.es/documents/389338055/389340585/PONDERACIONES+2026_2+-+cas.pdf/ae7d7643-bceb-4415-0ec7-b0db1aa24047?t=1762867018766" target="_blank">🔗 Tabla de ponderaciones</a>
+<a href="https://icv.gva.es/auto/aplicaciones/visors_tematics/geogrados/va/" target="_blank">🔗 Mapa interactivo de titulaciones universitarias</a>  
+<a href="https://universitats.gva.es/documents/389338055/389339982/ORIENTACIONS-UEO+ESTUDIANTAT+PAU.pdf/1ff300ce-73a6-3b28-7e45-05bd1961f01d?t=1773401026006" target="_blank">🔗 Orientaciones UEO Estudiantes PAU</a>
+<a href="https://universitats.gva.es/documents/389338055/389339982/GU%C3%8DA+PAU+2026.pdf/c0522e02-96ed-88c4-edeb-c5e5cd82dd08?t=1768810450603" target="_blank">🔗 Guía PAU</a>
+<a href="https://icv.gva.es/auto/aplicaciones/visors_tematics/geogrados/va/" target="_blank">🔗 Mapa interactivo de enseñanzas artísticas superiores</a>
+
+</div>
+
+
+<div class="links-card">
+<div class="links-card-title"><span>🏛️</span> Universidades y centros superiores públicos</div>
+
+<a href="https://universitats.gva.es/va/presentacio" target="_blank">🔗 Sistema Universitario Valenciano (SUV)</a>
+<a href="https://www.uv.es" target="_blank">🔗 Universidad de Valencia (UV)</a>
+<a href="https://www.upv.es" target="_blank">🔗 Universidad Politécnica de Valencia (UPV)</a>
+<a href="https://www.uji.es" target="_blank">🔗 Universidad Jaume I de Castellón (UJI)</a>
+<a href="https://www.ua.es" target="_blank">🔗 Universidad de Alicante (UA)</a>
+<a href="https://www.umh.es" target="_blank">🔗 Universidad Miguel Hernández de Elche (UMH)</a>
+<a href="https://iseacv.gva.es/va/" target="_blank">🔗 Instituto Superior de Enseñanzas Artísticas de la Comunidad Valenciana (ISEACV)</a>
+
+</div>
+
+
+<div class="links-card">
+<div class="links-card-title"><span>🏫</span> Universidades y centros superiores privados</div>
+
+<a href="https://www.ucv.es" target="_blank">🔗 Universidad Católica de Valencia San Vicente Mártir (UCV)</a>
+<a href="https://www.uchceu.es" target="_blank">🔗 Universidad Cardenal Herrera-CEU (UCH-CEU)</a>
+<a href="https://universidadeuropea.com/" target="_blank">🔗 Universidad Europea de Valencia (UEV)</a>
+<a href="https://www.universidadviu.com/es/" target="_blank">🔗 Universidad Internacional Valenciana (VIU)</a> 
+<a href="https://www.floridauniversitaria.es" target="_blank">🔗 Florida Universitaria</a>
+<a href="https://www.esic.edu" target="_blank">🔗 ESIC Business & Marketing School</a>
+<a href="https://edem.eu" target="_blank">🔗 EDEM Escuela de empresa y negocios</a>
+
+</div>
+
+</div>
 </section>
 
 </div>
@@ -363,5 +735,267 @@ Tabla de ponderaciones para la preinscripción (acceso y admisión)<br><br>
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
 </footer>
 
+<div class="modal-overlay" id="modalBatx">
+ <div class="modal">
+  
+  <div class="modal-header">
+    <button class="modal-close" onclick="closeModal('modalBatx')">✖</button>
+    <h3>🎓 Acceso a la Universidad desde Bachillerato</h3>
+  </div>
+
+  <div class="modal-content">
+    <p>
+      Para acceder a la universidad desde Bachillerato es necesario obtener el título y superar las <strong>Pruebas de Acceso a la Universidad (PAU)</strong>.
+    </p>
+
+   <div class="modal-box">
+<p><strong>La nota de admisión se calcula combinando:</strong></p>
+
+<ul>
+  <li>📊 Media de Bachillerato (60%)</li>
+  <li>📝 Fase obligatoria de la PAU (40%)</li>
+  <li>➕ Fase voluntaria (para subir nota)</li>
+</ul>
+</div>
+
+  <div class="modal-highlight">
+💡 <strong>Importante:</strong> las ponderaciones pueden variar según el grado.
+</div>
+
+    <hr>
+
+    <h4>📐 Cálculo de la nota</h4>
+    
+<div class="modal-formula">
+(QMB × 0.6 + QFG × 0.4) + A × M1 + B × M2
+</div>
+
+    <ul>
+      <li><strong>QMB:</strong> Media de Bachillerato</li>
+      <li><strong>QFG:</strong> Fase obligatoria</li>
+      <li><strong>M1 y M2:</strong> Dos mejores notas de la fase voluntaria</li>
+      <li><strong>A y B:</strong> Ponderaciones (0,1 o 0,2)</li>
+    </ul>
+
+    <p>
+      👉 Nota mínima: <strong>5</strong><br>
+      👉 Nota máxima: <strong>14</strong>
+    </p>
+
+    <hr>
+
+    <h4>⭐ Importancia de las ponderaciones</h4>
+
+    <p>No todas las asignaturas puntúan igual.</p>
+
+    <ul>
+      <li>Algunas ponderan <strong>0,2</strong> (muy importantes)</li>
+      <li>Otras <strong>0,1 o 0</strong></li>
+    </ul>
+
+   <div class="modal-box">
+<p><strong>Por eso es clave:</strong></p>
+<ul>
+  <li>Consultar la tabla de ponderaciones</li>
+  <li>Revisar las notas de corte</li>
+</ul>
+</div>
+    
+    <p style="font-size:14px; color:#666;">
+      (Estos recursos los tienes en el apartado de información de interés)
+    </p>
+
+    <hr>
+
+    <h4>🧩 Estructura de la PAU</h4>
+
+    <p><strong>🔹 Fase Obligatoria</strong></p>
+
+    <ul>
+      <li>Castellano: Lengua y Literatura</li>
+      <li>Valenciano: Lengua y Literatura</li>
+      <li>Lengua extranjera</li>
+      <li>Historia de España o Filosofía</li>
+      <li>Asignatura de modalidad</li>
+    </ul>
+
+    <p>✔ Validez indefinida</p>
+
+    <p><strong>🔹 Fase Voluntaria</strong></p>
+
+    <ul>
+      <li>Sirve para subir nota</li>
+      <li>Puedes examinarte de varias asignaturas</li>
+      <li>Cuentan las dos mejores</li>
+      <li>Se aplican ponderaciones (0,1 o 0,2)</li>
+    </ul>
+
+    <p>✔ Clave para carreras con nota alta</p>
+
+    <hr>
+
+    <h4>💡 Consejo de orientación</h4>
+
+    <p><strong>Si tienes claro qué quieres estudiar:</strong></p>
+
+    <ul>
+      <li>Elige asignaturas que ponderen 0.2</li>
+      <li>Planifica la fase voluntaria</li>
+    </ul>
+
+  <div class="modal-highlight">
+💡 <strong>Consejo:</strong> Elegir bien las asignaturas de 2º de Bachillerato puede marcar la diferencia en tu nota final.
+</div>
+
+    <p><strong>Si no lo tienes claro:</strong></p>
+
+    <ul>
+      <li>Mantén opciones abiertas</li>
+      <li>Consulta notas de corte y salidas profesionales</li>
+      <li>Utiliza el simulador de nota que tienes disponible en el apartado de "Bachillerato"</li>
+      <li>Practica con ejemplos de notas reales</li>
+    </ul>
+
+  </div>
+</div>
+</div>
+
+
+<div class="modal-overlay" id="modalFP">
+  <div class="modal">
+  
+  <div class="modal-header">
+    <button class="modal-close" onclick="closeModal('modalFP')">✖</button>
+    <h3>🛠️ Acceso a la Universidad desde FP de Grado Superior</h3>
+  </div>
+
+  <div class="modal-content">
+
+    <p>
+    Con el título de <strong>Técnico Superior de Formación Profesional</strong> puedes acceder directamente a la universidad mediante el procedimiento de admisión.
+    </p>
+
+    <div class="modal-box">
+      <p><strong>La nota de admisión se calcula combinando:</strong></p>
+      <ul>
+        <li>📊 Nota media del ciclo formativo (100%)</li>
+        <li>➕ Fase voluntaria de la PAU (para subir nota)</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="modal-section">
+      <h4>📐 Cálculo de la nota</h4>
+
+      <div class="modal-formula">
+        NMC + (A × M1) + (B × M2)
+      </div>
+
+      <ul>
+        <li><strong>NMC:</strong> Nota media del ciclo</li>
+        <li><strong>M1 y M2:</strong> Dos mejores notas de la fase voluntaria</li>
+        <li><strong>A y B:</strong> Ponderaciones (0,1 o 0,2)</li>
+      </ul>
+
+      <p>👉 Nota máxima: <strong>14</strong></p>
+    </div>
+
+    <hr>
+
+    <div class="modal-section">
+      <h4>📈 Cómo subir nota</h4>
+
+      <ul>
+        <li>Puedes presentarte a la <strong>fase voluntaria de la PAU</strong></li>
+        <li>Puedes examinarte de varias asignaturas</li>
+        <li>Cuentan las <strong>dos mejores calificaciones</strong></li>
+      </ul>
+
+      <div class="modal-box">
+        ✔ Notas ≥ 5<br>
+        ✔ Ponderaciones 0,1 o 0,2
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="modal-section">
+      <h4>⏳ Validez de las notas</h4>
+
+      <div class="modal-box">
+        <ul>
+          <li>Las notas sirven durante <strong>3 convocatorias</strong></li>
+          <li>Puedes reutilizarlas si continúas estudiando</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="modal-section">
+      <h4>🎓 Convalidaciones (ventaja FP)</h4>
+
+        <div class="modal-highlight">
+💡 <strong>Ventaja:</strong> posibilidad de convalidar asignaturas
+</div>
+
+      <ul>
+        <li>Depende de la universidad</li>
+        <li>Puede reducir la duración de los estudios</li>
+      </ul>
+
+      <p style="font-size:14px; color:#666;">
+        Consulta siempre la universidad concreta
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="modal-section">
+      <h4>💡 Consejo de orientación</h4>
+
+      <p><strong>Si tienes claro el grado:</strong></p>
+      <ul>
+        <li>Revisa las ponderaciones</li>
+        <li>Preséntate a la fase voluntaria</li>
+      </ul>
+
+      <p><strong>Si no lo tienes claro:</strong></p>
+      <ul>
+        <li>Aprovecha el ciclo para especializarte</li>
+        <li>Mantén opciones abiertas</li>
+      </ul>
+
+      <div class="modal-highlight">
+        💡 La adjudicación de plazas se hace según la nota de admisión
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+  
+<script>
+function openModal(id){
+  document.getElementById(id).style.display = "flex";
+  document.body.classList.add("modal-open");
+}
+
+function closeModal(id){
+  document.getElementById(id).style.display = "none";
+  document.body.classList.remove("modal-open");
+}
+
+/* cerrar haciendo click fuera */
+window.onclick = function(event){
+  document.querySelectorAll('.modal-overlay').forEach(modal => {
+    if(event.target === modal){
+      modal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  });
+}
+</script>
 </body>
 </html>
