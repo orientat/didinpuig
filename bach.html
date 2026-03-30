@@ -421,6 +421,25 @@ padding-top:0;
 margin-top:20px;
 }
 
+.inline-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:10px 0 15px 0;
+}
+
+.inline-list span{
+position:relative;
+padding:0 10px;
+}
+
+.inline-list span:not(:last-child)::after{
+content:"|";
+position:absolute;
+right:-6px;
+color:#999;
+}
+
 </style>
 
 </head>
@@ -466,11 +485,11 @@ S’organitza en <strong>dos cursos</strong> i té un enfocament competencial, b
 📌 <strong>En Batxillerat cursaràs:</strong>
 </p>
 
-<ul>
-<li>Matèries comunes</li>
-<li>Matèries de modalitat</li>
-<li>Matèries optatives</li>
-</ul>
+<div class="inline-list">
+<span>Matèries comunes</span>
+<span>Matèries de modalitat</span>
+<span>Matèries optatives</span>
+</div>
 
 <p>
 📊 <strong>Les matèries de modalitat són clau perquè:</strong>
