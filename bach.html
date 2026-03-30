@@ -51,6 +51,34 @@ background:#a65277;
 /* HEADER */
 /* ===================== */
 
+
+/* CURSOR MANITA EN ELEMENTOS CLICABLES */
+.modalitat,
+.batx-card,
+.link-card{
+cursor:pointer;
+}
+
+/* HOVER TARJETAS (igual estilo universidad) */
+.modalitat:hover,
+.batx-card:hover,
+.link-card:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 30px rgba(0,0,0,0.18);
+}
+
+/* ICONOS ANIMADOS */
+.modalitat span,
+.batx-card span{
+transition:transform .3s ease;
+display:inline-block;
+}
+
+.modalitat:hover span,
+.batx-card:hover span{
+transform:translateY(-6px) scale(1.2) rotate(-6deg);
+}
+
 header{
 background:#a65277;
 color:white;
