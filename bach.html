@@ -1419,8 +1419,10 @@ document.getElementById(id).style.display = "flex";
 }
 
 function closeModal(e){
-let overlay = document.querySelectorAll(".modal-overlay");
-overlay.forEach(m => m.style.display = "none");
+let modal = e.target.closest(".modal-overlay");
+if(modal){
+modal.style.display = "none";
+}
 }
 
 </script>
