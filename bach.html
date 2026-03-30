@@ -423,11 +423,16 @@ margin-top:20px;
 
 .inline-list{
 display:inline;
+margin:0;
 }
 
 .inline-list span{
 display:inline;
-padding:0 8px;
+padding:0 6px;
+}
+
+.inline-list span:first-child{
+margin-left:0;
 }
 
 .inline-list span:not(:last-child)::after{
@@ -475,12 +480,12 @@ S’organitza en <strong>dos cursos</strong> i té un enfocament competencial, b
 
 <p>
 📌 <strong>En Batxillerat cursaràs:</strong>
-
-<div class="inline-list">
+<span class="inline-list">
 <span>Matèries comunes</span>
 <span>Matèries de modalitat</span>
 <span>Matèries optatives</span>
-</div>
+</span>
+</p>
 
 <p>
 📊 <strong>Les matèries de modalitat són clau perquè:</strong>
