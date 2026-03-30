@@ -253,38 +253,60 @@ margin-right:10px;
 /* TARGETES BATX */
 .batx-card{
 background:white;
-padding:16px;
-border-radius:12px;
+padding:18px 16px;
+border-radius:14px;
 border-left:5px solid #a65277;
-box-shadow:0 2px 6px rgba(0,0,0,0.06);
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 text-align:center;
-transition:0.25s;
+transition:all .25s ease;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:6px;
+
+min-height:110px;
 }
 
-.batx-card.ciencia{
-background:#eef5ff;
+/* COLORES */
+.batx-card.ciencia{background:#eef5ff;}
+.batx-card.social{background:#edf8f1;}
+
+/* ICONO */
+.batx-card > span:first-child{
+font-size:28px;
+transition:transform .3s ease;
 }
 
-.batx-card.social{
-background:#edf8f1;
+/* TEXTO PRINCIPAL */
+.batx-card{
+font-size:15px;
+font-weight:600;
+line-height:1.3;
 }
+
+/* HINT */
+.batx-card .hint{
+font-size:12px;
+opacity:0.6;
+margin-top:2px;
+}
+
+/* HOVER CONTROLADO */
 .batx-card:hover{
-transform:translateY(-4px);
+transform:translateY(-3px);
 box-shadow:0 8px 18px rgba(0,0,0,0.12);
 }
 
-.batx-card > span:first-child{
-font-size:28px;
-display:block;
-margin-bottom:6px;
+/* ICONO EN HOVER */
+.batx-card:hover > span:first-child{
+transform:scale(1.1);
 }
 
-.batx-card a{
-display:block;
-margin-top:6px;
-font-size:13px;
-color:#6d2548;
-text-decoration:none;
+/* HINT EN HOVER */
+.batx-card:hover .hint{
+opacity:1;
 }
 
 /* ===================== */
