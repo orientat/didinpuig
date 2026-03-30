@@ -422,21 +422,16 @@ margin-top:20px;
 }
 
 .inline-list{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin:10px 0 15px 0;
+display:inline;
 }
 
 .inline-list span{
-position:relative;
-padding:0 10px;
+display:inline;
+padding:0 8px;
 }
 
 .inline-list span:not(:last-child)::after{
-content:"|";
-position:absolute;
-right:-6px;
+content:" | ";
 color:#999;
 }
 
