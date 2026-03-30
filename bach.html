@@ -1239,5 +1239,184 @@ behavior:"smooth"
 
 </script>
 
+<!-- MODAL CIÈNCIES -->
+<div id="modal-ciencia" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal(event)">✖</span>
+
+<h3>🔬 Ciències i Tecnologia</h3>
+
+<div class="blocks">
+
+<div class="block">
+<strong>📘 Matèries comunes</strong>
+
+<div class="block-items">
+
+<div class="block-item"><span class="icon">📘</span><div>Llengua Castellana i Literatura I</div></div>
+<div class="block-item"><span class="icon">📗</span><div>Valencià: Llengua i Literatura I</div></div>
+<div class="block-item"><span class="icon">🌍</span><div>Llengua Estrangera I</div></div>
+<div class="block-item"><span class="icon">🏃</span><div>Educació Física</div></div>
+<div class="block-item"><span class="icon">🤔</span><div>Filosofia</div></div>
+
+</div>
+</div>
+
+<div class="block">
+<strong>🔬 Modalitat</strong>
+
+<div class="block-items">
+
+<div class="block-item"><span class="icon">➗</span><div>Matemàtiques I</div></div>
+<div class="block-item"><span class="icon">⚗️</span><div>Física i Química</div></div>
+<div class="block-item"><span class="icon">🧬</span><div>Biologia, Geologia i Ciències Ambientals</div></div>
+<div class="block-item"><span class="icon">💻</span><div>Tecnologia i Enginyeria I</div></div>
+
+</div>
+</div>
+
+<div class="block">
+<strong>⭐ Optatives</strong>
+
+<div class="block-items">
+
+<div class="block-item"><span class="icon">🧠</span><div>Programació</div></div>
+<div class="block-item"><span class="icon">📊</span><div>Projectes interdisciplinaris</div></div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- MODAL SOCIAL -->
+<div id="modal-social" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal(event)">✖</span>
+
+<h3>📊 Humanitats i Ciències Socials</h3>
+
+<div class="blocks">
+
+<div class="block">
+<strong>📘 Matèries comunes</strong>
+<div class="block-items">
+<div class="block-item"><span class="icon">📘</span><div>Llengua Castellana i Literatura I</div></div>
+<div class="block-item"><span class="icon">📗</span><div>Valencià</div></div>
+<div class="block-item"><span class="icon">🌍</span><div>Llengua Estrangera</div></div>
+</div>
+</div>
+
+<div class="block">
+<strong>📊 Modalitat</strong>
+<div class="block-items">
+<div class="block-item"><span class="icon">➗</span><div>Matemàtiques CCSS I</div></div>
+<div class="block-item"><span class="icon">📈</span><div>Economia</div></div>
+<div class="block-item"><span class="icon">🏛️</span><div>Història del món contemporani</div></div>
+<div class="block-item"><span class="icon">📚</span><div>Llatí</div></div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- MODAL GENERAL -->
+<div id="modal-general" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal(event)">✖</span>
+
+<h3>📚 Batxillerat General</h3>
+
+<div class="blocks">
+
+<div class="block">
+<strong>📚 Estructura</strong>
+
+<div class="block-items">
+<div class="block-item"><span class="icon">📊</span><div>Matèria general</div></div>
+<div class="block-item"><span class="icon">🧩</span><div>Treball interdisciplinari</div></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- MODAL ARTS ESCÈNIQUES -->
+<div id="modal-arts1" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal(event)">✖</span>
+
+<h3>🎭 Arts Escèniques</h3>
+
+<div class="blocks">
+
+<div class="block">
+<strong>🎭 Modalitat</strong>
+
+<div class="block-items">
+<div class="block-item"><span class="icon">🎭</span><div>Arts escèniques</div></div>
+<div class="block-item"><span class="icon">🎵</span><div>Anàlisi musical</div></div>
+<div class="block-item"><span class="icon">🎤</span><div>Llenguatge musical</div></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- MODAL ARTS PLÀSTIQUES -->
+<div id="modal-arts2" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal(event)">✖</span>
+
+<h3>🎨 Arts Plàstiques</h3>
+
+<div class="blocks">
+
+<div class="block">
+<strong>🎨 Modalitat</strong>
+
+<div class="block-items">
+<div class="block-item"><span class="icon">🎨</span><div>Dibuix artístic</div></div>
+<div class="block-item"><span class="icon">📐</span><div>Dibuix tècnic</div></div>
+<div class="block-item"><span class="icon">🖼️</span><div>Cultura audiovisual</div></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+function openModal(id){
+document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(e){
+if(e.target.classList.contains("modal") || e.target.classList.contains("close")){
+e.currentTarget.style.display = "none";
+}
+}
+
+</script>
+ 
 </body>
 </html>
