@@ -543,10 +543,14 @@ box-shadow:0 8px 18px rgba(0,0,0,0.12);
 .batx-layout{
 display:grid;
 grid-template-columns:2fr 1.2fr;
-gap:20px;
+gap:25px;
 align-items:start;
 }
 
+.batx-layout > div:first-child{
+max-width:95%;
+}
+  
 .batx-side{
 display:flex;
 flex-direction:column;
