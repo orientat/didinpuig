@@ -652,7 +652,7 @@ font-weight:600;
 }
 
 .batx-subtitle{
-font-weight:500;
+font-weight:600;
 font-size:17px;
 margin-top:15px;
 margin-bottom:8px;
@@ -673,12 +673,23 @@ box-shadow:0 8px 18px rgba(0,0,0,0.12);
 font-size:28px;
 }
 
-/* TEXTO PEQUEÑO */
-.batx-card .hint{
+/* ===================== */
+/* HINT (TEXTO pequeño tarjetas) */
+/* ===================== */
+
+.hint{
+display:block;
 font-size:13px;
+color:#6d2548;
 opacity:0.7;
 margin-top:10px;
-color:#6d2548;
+transition:all .25s ease;
+}
+
+/* HOVER DEL HINT */
+.modalitat:hover .hint,
+.batx-card:hover .hint{
+opacity:1;
 }
 
 /* ===================== */
