@@ -610,6 +610,31 @@ opacity:0.7;
 margin-top:10px;
 color:#6d2548;
 }
+
+/* ===================== */
+/* EFECTOS INTERACTIVOS BATX */
+/* ===================== */
+
+/* CURSOR MANITA */
+.batx-card{
+cursor:pointer;
+}
+
+/* ANIMACIÓN ICONO */
+.batx-card > span:first-child{
+transition:transform .3s ease;
+}
+
+/* EFECTO HOVER COMPLETO */
+.batx-card:hover > span:first-child{
+transform:translateY(-6px) scale(1.2) rotate(-6deg);
+}
+
+/* MEJORAR HOVER GENERAL (igual que arriba) */
+.batx-card:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 30px rgba(0,0,0,0.18);
+}
 </style>
 
 </head>
