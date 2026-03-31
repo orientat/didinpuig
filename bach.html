@@ -1220,13 +1220,13 @@ behavior:"smooth"
 <script>
 
 function openModal(id){
-document.getElementById(id).style.display = "flex";
+document.getElementById(id).classList.add("active");
 }
 
 function closeModal(e){
 let modal = e.target.closest(".modal-overlay");
 if(modal){
-modal.style.display = "none";
+modal.classList.remove("active");
 }
 }
 
