@@ -9,230 +9,332 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f4f6f9;
+background:#ffffff;
+color:#333;
+}
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
 }
 
 header{
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:25px;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px 20px;
-}
-
-/* ACORDEÓN */
-
-.accordion{
-background:#f1f5ff;
-border:2px solid #2f6df6;
-border-radius:12px;
-padding:18px;
-margin-bottom:15px;
-cursor:pointer;
-font-weight:bold;
-color:#2f6df6;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-size:18px;
-}
-
-.accordion:hover{
-background:#e8edff;
-}
-
-.panel{
-display:none;
-background:white;
+margin-top:15px;
 border-radius:10px;
-padding:20px;
-margin-top:-10px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
 margin-bottom:15px;
-line-height:1.6;
 }
 
-.plus{
-font-size:22px;
-font-weight:bold;
+/* BLOQUES */
+
+.blocks{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px;
 }
 
-a{
-color:#003366;
-font-weight:bold;
-text-decoration:none;
+.block{
+background:#f3f3f3;
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
 }
 
-ul{
+/* MINI TARGETES */
+
+.block-items{
+display:flex;
+flex-direction:column;
+gap:12px;
 margin-top:10px;
 }
 
+.block-item{
+background:#ffffff;
+padding:12px 14px;
+border-radius:10px;
+border-left:4px solid #a65277;
+display:flex;
+align-items:flex-start;
+gap:12px;
+text-decoration:none;
+color:inherit;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.block-item:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-3px) scale(1.01);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:4px solid #6d2548;
+}
+
+.block-item div{
+line-height:1.5;
+}
+
+/* ICONES */
+
+.icon{
+font-size:22px;
+min-width:28px;
+display:flex;
+justify-content:center;
+}
+
+/* INFO */
+
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+line-height:1.6;
+border-left:5px solid #a65277;
+}
+
+/* WARNING */
+
+.warning{
+background:#fff3cd;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.8;
+}
+
+/* FOOTER */
+
 footer{
-margin-top:40px;
-background:#003366;
+background:#a65277;
 color:white;
 text-align:center;
 padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+@media (max-width:900px){
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
-
 </head>
 
 <body>
+
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Tornar a Orientació</a>
+</div>
 
 <header>
 <h1>🧭 Orienta el teu futur</h1>
 <p>IES Didín Puig · Departament d’Orientació</p>
 </header>
 
-<div class="container">
-
-
-<div class="accordion">🔍 Qüestionaris i eines d’orientació acadèmica i professional <span class="plus">+</span></div>
-<div class="panel">
+<section class="section">
+<h2>🔎 Eines per orientar el teu futur</h2>
 
 <p>
-Si estàs decidint el teu itinerari educatiu o professional, aquests qüestionaris poden ajudar-te a conéixer millor els teus interessos i explorar diferents professions.
+Si estàs decidint el teu itinerari acadèmic o professional, aquestes eines poden ajudar-te a conéixer millor els teus interessos i explorar diferents opcions.
 </p>
 
-<p><strong>OrientaLine – Plataforma d’orientació acadèmica</strong></p>
-<p>📝 Per a qui: ESO i Batxillerat</p>
+</section>
 
-<p><strong>Educaweb – El Gran Recorregut</strong></p>
-<p>📝 Per a qui: ESO i Batxillerat</p>
+<section class="section">
 
-<p><strong>MyWayPass – Test d’interessos</strong></p>
-<p>📝 Plataforma interactiva per explorar vocacions professionals</p>
+<div class="blocks">
 
-<p><strong>Elige Profesión – Test d’interessos</strong></p>
+<!-- QÜESTIONARIS -->
 
-<p><strong>Test d’interessos de Barcelona Activa</strong></p>
-<p>📝 Especialment útil per a alumnat de Batxillerat</p>
+<div class="block">
+<strong>🔍 Qüestionaris d’orientació</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🧠</span>
+<div><strong>OrientaLine</strong><br>Per a ESO i Batxillerat</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📘</span>
+<div><strong>Educaweb – El Gran Recorregut</strong><br>Per a ESO i Batxillerat</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🌐</span>
+<div><strong>MyWayPass</strong><br>Exploració d’interessos professionals</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📊</span>
+<div><strong>Elige Profesión</strong><br>Test d’interessos</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🏙️</span>
+<div><strong>Barcelona Activa</strong><br>Especialment per a Batxillerat</div>
+</div>
 
 </div>
 
+</div>
 
-<div class="accordion">🛠️ Eines específiques sobre Formació Professional <span class="plus">+</span></div>
-<div class="panel">
+<!-- FP -->
 
-<p><strong>TodoFP</strong></p>
+<div class="block">
+<strong>🛠️ Orientació en Formació Professional</strong>
 
-<p>
-Portal oficial amb informació sobre cicles formatius i professions.
-</p>
+<div class="block-items">
 
-<p><strong>FPBide – Qüestionari d’orientació per a FP</strong></p>
+<div class="block-item">
+<span class="icon">📚</span>
+<div><strong>TodoFP</strong><br>Informació sobre cicles i professions</div>
+</div>
 
-<p>
-Ajuda a identificar quin tipus de Formació Professional pot encaixar millor amb els teus interessos.
-</p>
+<div class="block-item">
+<span class="icon">🧭</span>
+<div><strong>FPBide</strong><br>Qüestionari d’orientació per a FP</div>
+</div>
 
 </div>
 
+</div>
 
-<div class="accordion">💼 Eines d’orientació laboral <span class="plus">+</span></div>
-<div class="panel">
+<!-- LABORAL -->
 
-<p><strong>LABORA – Orientació i cerca d’ocupació</strong></p>
+<div class="block">
+<strong>💼 Orientació laboral</strong>
 
-<p>
-Ofereix recursos per conéixer opcions d’ocupació, formació i orientació professional.
-</p>
+<div class="block-items">
 
-<p>
-Inclou assessorament en planificació de carrera i accés a programes de formació.
-</p>
+<div class="block-item">
+<span class="icon">🏢</span>
+<div><strong>LABORA</strong><br>Recursos d’ocupació i formació</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📈</span>
+<div>Planificació de carrera i assessorament professional</div>
+</div>
 
 </div>
 
+</div>
 
-<div class="accordion">📌 Consells per utilitzar aquests qüestionaris <span class="plus">+</span></div>
-<div class="panel">
+<!-- CONSELLS -->
+
+<div class="block">
+<strong>📌 Consells d’orientació</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🧩</span>
+<div>No hi ha respostes correctes o incorrectes</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📚</span>
+<div>Complementa els resultats amb informació</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🎯</span>
+<div>Els interessos poden canviar amb el temps</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>⚠️ Errors habituals en triar estudis</h2>
+
+<div class="warning">
 
 <ul>
-
-<li>🧩 No hi ha respostes correctes o incorrectes. Els tests només ofereixen orientació.</li>
-
-<li>📚 Complementa els resultats amb informació addicional i assessorament.</li>
-
-<li>🎯 Els interessos canvien amb el temps, és útil repetir alguns tests.</li>
-
+<li>Triar sense informació suficient</li>
+<li>Decidir per pressió externa</li>
+<li>No valorar alternatives</li>
+<li>Triar el més fàcil</li>
+<li>Guiar-se només per eixides laborals</li>
+<li>Decidir amb presses</li>
 </ul>
 
 <p>
-Si necessites ajuda, consulta amb la teua orientadora o tutor/a de l’institut.
+Una bona decisió implica conéixer-te, informar-te i reflexionar.
 </p>
 
 </div>
 
+</section>
 
-<div class="accordion">⚠️ Els 7 errors més comuns en triar estudis <span class="plus">+</span></div>
-<div class="panel">
+<section class="section">
 
-<ul>
-
-<li>Triar sense suficient informació.</li>
-
-<li>Estudiar només perquè “alguna cosa cal fer”.</li>
-
-<li>No valorar totes les alternatives possibles.</li>
-
-<li>Decidir pel que diuen o fan els altres.</li>
-
-<li>Triar la via més fàcil.</li>
-
-<li>Guiar-se només per les eixides laborals.</li>
-
-<li>Decidir amb presses.</li>
-
-</ul>
-
-<p>
-Prendre una bona decisió implica conéixer-te bé, informar-te i valorar les diferents opcions.
-</p>
-
-<p>
-Triar els teus estudis és una decisió personal, però pots recolzar-te en la teua família i en l’assessorament del professorat i del Departament d’Orientació.
-</p>
-
+<div class="info">
+Si tens dubtes, consulta amb el teu <strong>tutor o tutora</strong> o amb el <strong>Departament d’Orientació</strong>.
 </div>
 
+</section>
 
 </div>
 
 <footer>
 IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
-
-
-<script>
-
-var acc = document.getElementsByClassName("accordion");
-
-for (var i = 0; i < acc.length; i++) {
-
-acc[i].addEventListener("click", function() {
-
-var panel = this.nextElementSibling;
-
-if (panel.style.display === "block") {
-panel.style.display = "none";
-} else {
-panel.style.display = "block";
-}
-
-});
-
-}
-
-</script>
 
 </body>
 </html>
