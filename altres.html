@@ -15,15 +15,9 @@ background:#ffffff;
 color:#333;
 }
 
-.wrapper{
-width:75%;
-margin:auto;
-}
+.wrapper{width:75%;margin:auto;}
 
-.back{
-margin-top:20px;
-}
-
+.back{margin-top:20px;}
 .back a{
 background:#6d2548;
 color:white;
@@ -31,11 +25,6 @@ padding:8px 18px;
 border-radius:20px;
 text-decoration:none;
 font-weight:bold;
-font-size:14px;
-}
-
-.back a:hover{
-background:#a65277;
 }
 
 header{
@@ -47,9 +36,7 @@ margin-top:15px;
 border-radius:10px;
 }
 
-.section{
-margin-top:40px;
-}
+.section{margin-top:40px;}
 
 .section h2{
 color:#6d2548;
@@ -89,15 +76,11 @@ transition:.3s;
 }
 
 .block-item:hover{
-background:#ececec;
 transform:translateY(-4px);
 box-shadow:0 12px 22px rgba(0,0,0,0.18);
 }
 
-.icon{
-font-size:24px;
-min-width:30px;
-}
+.icon{font-size:24px;}
 
 /* MODAL */
 
@@ -119,7 +102,7 @@ background:#ffffff;
 padding:25px;
 border-radius:12px;
 width:90%;
-max-width:520px;
+max-width:580px;
 border-left:5px solid #a65277;
 position:relative;
 line-height:1.6;
@@ -130,31 +113,37 @@ position:absolute;
 top:10px;
 right:15px;
 cursor:pointer;
-font-size:18px;
-}
-
-.modal a{
-color:#1565c0;
 font-weight:bold;
-text-decoration:none;
 }
 
-.modal a:hover{
-text-decoration:underline;
-}
+/* INFO BLOQUES */
 
-/* PERFIL */
-
-.perfil{
+.info-box{
 margin-top:15px;
 padding:12px;
 background:#f7f7f7;
 border-radius:8px;
-border-left:4px solid #6d2548;
+border-left:4px solid #a65277;
 font-size:14px;
 }
 
-/* FOOTER */
+.itinerario{
+background:#eef5ff;
+border-left:4px solid #1565c0;
+}
+
+.salidas{
+background:#e8f5e9;
+border-left:4px solid #2e7d32;
+}
+
+.enlace{
+margin-top:10px;
+display:inline-block;
+font-weight:bold;
+color:#1565c0;
+text-decoration:none;
+}
 
 footer{
 background:#a65277;
@@ -165,11 +154,6 @@ margin-top:40px;
 border-radius:10px;
 width:75%;
 margin:auto;
-}
-
-@media (max-width:900px){
-.wrapper{width:90%;}
-footer{width:90%;}
 }
 
 </style>
@@ -185,45 +169,33 @@ footer{width:90%;}
 
 <header>
 <h1>📚 Altres Estudis</h1>
-<p>IES Didín Puig · Departament d’Orientació</p>
+<p>Altres opcions formatives i professionals després de l’ESO</p>
 </header>
 
 <section class="section">
 
 <div class="blocks">
 
-<!-- SEGURETAT -->
+<!-- SEGURIDAD -->
 <div class="block">
-<strong>👮 Seguretat</strong>
+<strong>👮 Forces i Cossos de Seguretat</strong>
 
 <div class="block-item" onclick="openModal('policia')"><span class="icon">👮‍♂️</span>Policia Nacional</div>
 <div class="block-item" onclick="openModal('guardia')"><span class="icon">🛡️</span>Guàrdia Civil</div>
 <div class="block-item" onclick="openModal('local')"><span class="icon">🏙️</span>Policia Local</div>
 <div class="block-item" onclick="openModal('bomberos')"><span class="icon">🚒</span>Bombers</div>
+<div class="block-item" onclick="openModal('militar')"><span class="icon">🎖️</span>Forces Armades</div>
 
 </div>
 
-<!-- EXÈRCIT -->
+<!-- REGIMEN ESPECIAL -->
 <div class="block">
-<strong>🪖 Forces Armades</strong>
+<strong>🎓 Ensenyaments de Règim Especial</strong>
 
-<div class="block-item" onclick="openModal('militar')"><span class="icon">🎖️</span>Exèrcit</div>
-
-</div>
-
-<!-- IDIOMES -->
-<div class="block">
-<strong>🌍 Idiomes</strong>
-
-<div class="block-item" onclick="openModal('idiomes')"><span class="icon">🗣️</span>Escoles Oficials d’Idiomes</div>
-
-</div>
-
-<!-- ARTÍSTICS -->
-<div class="block">
-<strong>🎨 Ensenyaments especials</strong>
-
-<div class="block-item" onclick="openModal('artistics')"><span class="icon">🎵</span>Artístics, esportius i musicals</div>
+<div class="block-item" onclick="openModal('idiomes')"><span class="icon">🌍</span>Idiomes (EOI)</div>
+<div class="block-item" onclick="openModal('musica')"><span class="icon">🎵</span>Música i Dansa</div>
+<div class="block-item" onclick="openModal('arts')"><span class="icon">🖌️</span>Arts Plàstiques i Disseny</div>
+<div class="block-item" onclick="openModal('esport')"><span class="icon">⚽</span>Ensenyaments Esportius</div>
 
 </div>
 
@@ -237,126 +209,118 @@ footer{width:90%;}
 IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
 
-<!-- MODALS COMPLETOS -->
+<!-- ================= MODALES ================= -->
 
-<!-- POLICIA -->
-<div id="policia" class="modal">
-<div class="modal-content">
+<div id="policia" class="modal"><div class="modal-content">
 <span class="close" onclick="closeModal('policia')">✖</span>
 <h3>👮 Policia Nacional</h3>
-<ul>
-<li>+18 anys</li>
-<li>Bachiller o grau</li>
-<li>Proves físiques, teòriques i entrevista</li>
-</ul>
-<div class="perfil">👉 Perfil: vocació de servei, treball en equip, acció</div>
-<a href="https://www.policia.es" target="_blank">Web oficial</a>
-</div>
+
+<div class="info-box">
+Requisits: nacionalitat espanyola, +18 anys, títol de Batxiller o equivalent, carnet B.
 </div>
 
-<!-- GUARDIA -->
-<div id="guardia" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('guardia')">✖</span>
-<h3>🛡️ Guàrdia Civil</h3>
-<ul>
-<li>ESO o superior</li>
-<li>Proves físiques i teòriques</li>
-<li>Moltes especialitats</li>
-</ul>
-<div class="perfil">👉 Perfil: disciplina, natura, seguretat</div>
-<a href="https://www.guardiacivil.es" target="_blank">Web oficial</a>
-</div>
+<div class="info-box">
+Proves: físiques (resistència, agilitat), examen teòric, psicotècnics, entrevista i reconeixement mèdic.
 </div>
 
-<!-- LOCAL -->
-<div id="local" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('local')">✖</span>
-<h3>🏙️ Policia Local</h3>
-<ul>
-<li>Depén de cada ajuntament</li>
-<li>Bachiller habitualment</li>
-<li>Oposició + proves físiques</li>
-</ul>
-<div class="perfil">👉 Perfil: proximitat, contacte amb persones</div>
-</div>
+<div class="info-box itinerario">
+🎯 ESO → Batxillerat → oposició → Acadèmia d’Àvila
 </div>
 
-<!-- BOMBEROS -->
-<div id="bomberos" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('bomberos')">✖</span>
-<h3>🚒 Bombers</h3>
-<ul>
-<li>Bachiller o FP</li>
-<li>Proves físiques exigents</li>
-<li>Oposicions</li>
-</ul>
-<div class="perfil">👉 Perfil: valentia, resistència, equip</div>
-</div>
+<div class="info-box salidas">
+💼 Salides: seguretat ciutadana, investigació criminal, unitats especials.
 </div>
 
-<!-- MILITAR -->
-<div id="militar" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('militar')">✖</span>
-<h3>🪖 Forces Armades</h3>
-<ul>
-<li>ESO → Tropa</li>
-<li>Bachiller → Suboficials</li>
-<li>EBAU → Oficials</li>
-</ul>
-<div class="perfil">👉 Perfil: disciplina, esforç, vocació</div>
-<a href="https://reclutamiento.defensa.gob.es" target="_blank">Web oficial</a>
-</div>
-</div>
+</div></div>
 
-<!-- IDIOMES -->
-<div id="idiomes" class="modal">
-<div class="modal-content">
+<div id="idiomes" class="modal"><div class="modal-content">
 <span class="close" onclick="closeModal('idiomes')">✖</span>
-<h3>🌍 Idiomes</h3>
-<ul>
-<li>Títols oficials</li>
-<li>Nivells A2–C2</li>
-</ul>
-<div class="perfil">👉 Perfil: comunicació, viatges, cultura</div>
-<a href="https://portal.edu.gva.es/eoivirtual/" target="_blank">EOI</a>
-</div>
+<h3>🌍 Idiomes (EOI)</h3>
+
+<div class="info-box">
+Accés a partir de 16 anys. Prova de nivell inicial.
 </div>
 
-<!-- ARTÍSTICS -->
-<div id="artistics" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal('artistics')">✖</span>
-<h3>🎨 Ensenyaments especials</h3>
-<ul>
-<li>Música, dansa, art</li>
-<li>Esportius</li>
-<li>Prova específica</li>
-</ul>
-<div class="perfil">👉 Perfil: creativitat, expressió</div>
-<a href="https://ceice.gva.es" target="_blank">GVA</a>
+<div class="info-box">
+Nivells oficials: A2 · B1 · B2 · C1 · C2
 </div>
+
+<div class="info-box">
+Certificats oficials vàlids per universitat, oposicions i treball.
 </div>
+
+<div class="info-box itinerario">
+🎯 ESO / Batx → EOI → certificat oficial → universitat / treball
+</div>
+
+<div class="info-box salidas">
+💼 Salides: estudis internacionals, oposicions, treball amb idiomes.
+</div>
+
+</div></div>
+
+<div id="musica" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('musica')">✖</span>
+<h3>🎵 Música i Dansa</h3>
+
+<div class="info-box">
+Estudis en conservatoris professionals amb prova específica.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → prova → conservatori → estudis superiors
+</div>
+
+<div class="info-box salidas">
+💼 Salides: músic, docent, arts escèniques.
+</div>
+
+</div></div>
+
+<div id="arts" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('arts')">✖</span>
+<h3>🖌️ Arts Plàstiques i Disseny</h3>
+
+<div class="info-box">
+Dibuix, fotografia, disseny gràfic, il·lustració.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → prova → escola d’art → grau superior
+</div>
+
+<div class="info-box salidas">
+💼 Salides: dissenyador, artista, creatiu digital.
+</div>
+
+</div></div>
+
+<div id="esport" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('esport')">✖</span>
+<h3>⚽ Ensenyaments Esportius</h3>
+
+<div class="info-box">
+Formació de tècnic esportiu amb prova física.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → prova → tècnic esportiu
+</div>
+
+<div class="info-box salidas">
+💼 Salides: entrenador, monitor esportiu.
+</div>
+
+</div></div>
 
 <script>
-
-function openModal(id){
-document.getElementById(id).style.display="flex";
-}
-
-function closeModal(id){
-document.getElementById(id).style.display="none";
-}
-
+function openModal(id){document.getElementById(id).style.display="flex";}
+function closeModal(id){document.getElementById(id).style.display="none";}
 window.onclick=function(e){
 document.querySelectorAll(".modal").forEach(m=>{
 if(e.target==m){m.style.display="none";}
 });
 }
-
 </script>
 
 </body>
