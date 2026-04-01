@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Otros Estudios | Orientación</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#333;
+}
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+header{
+background:#a65277;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:15px;
+border-radius:10px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* BLOQUES */
+
+.blocks{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px;
+}
+
+.block{
+background:#f3f3f3;
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+}
+
+/* MINI TARJETAS */
+
+.block-items{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:10px;
+}
+
+.block-item{
+background:#ffffff;
+padding:12px 14px;
+border-radius:10px;
+border-left:4px solid #a65277;
+display:flex;
+align-items:flex-start;
+gap:12px;
+text-decoration:none;
+color:inherit;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.block-item:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-3px) scale(1.01);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:4px solid #6d2548;
+}
+
+.block-item div{
+line-height:1.5;
+}
+
+/* ICONOS */
+
+.icon{
+font-size:22px;
+min-width:28px;
+display:flex;
+justify-content:center;
+}
+
+/* INFO */
+
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+line-height:1.6;
+border-left:5px solid #a65277;
+}
+
+/* FOOTER */
+
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+@media (max-width:900px){
+.wrapper{width:90%;}
+footer{width:90%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Volver a Orientación</a>
+</div>
+
+<header>
+<h1>📚 Otros Estudios</h1>
+<p>IES Didín Puig · Departamento de Orientación</p>
+</header>
+
+<section class="section">
+<h2>🔎 Otras opciones formativas</h2>
+
+<p>
+Además de los itinerarios más habituales, existen otras vías formativas y profesionales que también pueden ser una buena opción según tus intereses.
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="blocks">
+
+<!-- SEGURIDAD -->
+
+<div class="block">
+<strong>👮 Fuerzas y Cuerpos de Seguridad</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🚒</span>
+<div>Bomberos</div>
+</div>
+
+<div class="block-item">
+<span class="icon">👮‍♂️</span>
+<div>Policía Nacional</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🛡️</span>
+<div>Guardia Civil</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🏙️</span>
+<div>Policía Local</div>
+</div>
+
+</div>
+
+<div style="margin-top:10px; font-size:14px;">
+Consulta convocatorias en ayuntamientos y webs oficiales.
+</div>
+
+</div>
+
+<!-- EJÉRCITO -->
+
+<div class="block">
+<strong>🪖 Ejército / Fuerzas Armadas</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🎖️</span>
+<div>
+Acceso con diferentes niveles de estudios y múltiples especialidades profesionales.
+</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📈</span>
+<div>
+Posibilidad de formación continua y promoción interna.
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- IDIOMAS -->
+
+<div class="block">
+<strong>🌍 Idiomas</strong>
+
+<div class="block-items">
+
+<a href="https://ceice.gva.es" target="_blank" class="block-item">
+<span class="icon">🏫</span>
+<div>Conselleria de Educación</div>
+</a>
+
+<a href="https://portal.edu.gva.es/eoivirtual/" target="_blank" class="block-item">
+<span class="icon">🗣️</span>
+<div>Escuelas Oficiales de Idiomas (EOI)</div>
+</a>
+
+</div>
+
+<div style="margin-top:10px; font-size:14px;">
+Permiten obtener titulaciones oficiales de idiomas.
+</div>
+
+</div>
+
+<!-- ARTÍSTICOS -->
+
+<div class="block">
+<strong>🎨 Estudios artísticos, deportivos y musicales</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🎵</span>
+<div>Enseñanzas musicales</div>
+</div>
+
+<div class="block-item">
+<span class="icon">⚽</span>
+<div>Enseñanzas deportivas</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🖌️</span>
+<div>Enseñanzas artísticas</div>
+</div>
+
+</div>
+
+<div style="margin-top:10px; font-size:14px;">
+Consulta estos estudios dentro de la FP en régimen especial.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="info">
+Si tienes dudas sobre estas opciones, consulta con el <strong>Departamento de Orientación</strong> del centro.
+</div>
+
+</section>
+
+</div>
+
+<footer>
+IES Didín Puig · Departamento de Orientación Educativa y Profesional
+</footer>
+
+</body>
+</html>
