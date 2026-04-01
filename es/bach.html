@@ -136,6 +136,7 @@ margin-bottom:16px;
 .section ul li{
 margin-bottom:8px;
 }
+
 .batx-layout p:last-child{
 margin-bottom:0;
 }
@@ -143,6 +144,23 @@ margin-bottom:0;
 .section:first-of-type{
 margin-top:20px;
 }
+
+/* ===================== */
+/* LISTAS TARJETAS (alineación PRO) */
+/* ===================== */
+
+.card ul{
+padding-left:18px;
+margin-left:0;
+list-style-position:outside;
+text-align:justify;
+}
+
+.card ul li{
+margin-bottom:10px;
+line-height:1.6;
+}
+
 
 /* ===================== */
 /* MODALIDADES */
@@ -219,6 +237,30 @@ transition:.25s;
 .card:hover{
 transform:translateY(-4px);
 box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* ICONOS ANIMADOS EN TARJETAS */
+
+.card strong .icon{
+display:inline-block;
+transition:transform .3s ease;
+margin-right:6px;
+}
+
+.card:hover strong .icon{
+transform:translateY(-4px) scale(1.2) rotate(-6deg);
+}
+
+/* TEXTO TARJETAS "DESPRÉS DE BATX" */
+
+.card ul{
+font-size:12px;
+color:#1f3a5f; /* azul oscuro elegante */
+}
+
+.card ul li{
+margin-bottom:8px;
+line-height:1.6;
 }
 
 /* ===================== */
@@ -455,6 +497,7 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 }
+
 /* ===================== */
 /* BOTÓN TOP */
 /* ===================== */
@@ -745,7 +788,7 @@ justify-content:flex-start;
 gap:6px;
 }
   
-/* COLOR AZUL (como en castellano) */
+/* COLOR AZUL */
 .links-card.becas{
 background:#eef4ff;
 border-left:5px solid #6a8fd8;
@@ -778,6 +821,19 @@ text-decoration:underline;
 color:#0d47a1;
 transform:translateX(3px);
 }
+
+/* ICONOS ANIMADOS EN BECAS */
+
+.links-card-title span{
+font-size:22px;
+transition:transform .3s ease;
+display:inline-block;
+}
+
+.links-card:hover .links-card-title span{
+transform:translateY(-3px) scale(1.2) rotate(-6deg);
+}
+  
 </style>
 
 </head>
