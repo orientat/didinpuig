@@ -8,6 +8,8 @@
 
 <style>
 
+/* BASE */
+
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
@@ -15,9 +17,15 @@ background:#ffffff;
 color:#333;
 }
 
-.wrapper{width:75%;margin:auto;}
+.wrapper{
+width:75%;
+margin:auto;
+}
 
-.back{margin-top:20px;}
+.back{
+margin-top:20px;
+}
+
 .back a{
 background:#6d2548;
 color:white;
@@ -25,6 +33,10 @@ padding:8px 18px;
 border-radius:20px;
 text-decoration:none;
 font-weight:bold;
+}
+
+.back a:hover{
+background:#a65277;
 }
 
 header{
@@ -36,7 +48,9 @@ margin-top:15px;
 border-radius:10px;
 }
 
-.section{margin-top:40px;}
+.section{
+margin-top:40px;
+}
 
 .section h2{
 color:#6d2548;
@@ -76,11 +90,15 @@ transition:.3s;
 }
 
 .block-item:hover{
+background:#ececec;
 transform:translateY(-4px);
-box-shadow:0 12px 22px rgba(0,0,0,0.18);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
 }
 
-.icon{font-size:24px;}
+.icon{
+font-size:24px;
+min-width:30px;
+}
 
 /* MODAL */
 
@@ -102,7 +120,7 @@ background:#ffffff;
 padding:25px;
 border-radius:12px;
 width:90%;
-max-width:580px;
+max-width:620px;
 border-left:5px solid #a65277;
 position:relative;
 line-height:1.6;
@@ -145,6 +163,12 @@ color:#1565c0;
 text-decoration:none;
 }
 
+.enlace:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
 footer{
 background:#a65277;
 color:white;
@@ -156,7 +180,13 @@ width:75%;
 margin:auto;
 }
 
+@media (max-width:900px){
+.wrapper{width:90%;}
+footer{width:90%;}
+}
+
 </style>
+
 </head>
 
 <body>
@@ -169,7 +199,7 @@ margin:auto;
 
 <header>
 <h1>📚 Altres Estudis</h1>
-<p>Altres opcions formatives i professionals després de l’ESO</p>
+<p>Explora altres opcions formatives i professionals després de l’ESO</p>
 </header>
 
 <section class="section">
@@ -216,11 +246,11 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 <h3>👮 Policia Nacional</h3>
 
 <div class="info-box">
-Requisits: nacionalitat espanyola, +18 anys, títol de Batxiller o equivalent, carnet B.
+Requisits: nacionalitat espanyola, +18 anys, Batxiller o equivalent, carnet B.
 </div>
 
 <div class="info-box">
-Proves: físiques (resistència, agilitat), examen teòric, psicotècnics, entrevista i reconeixement mèdic.
+Proves: físiques (resistència, agilitat), teòriques, psicotècnics, entrevista i mèdiques.
 </div>
 
 <div class="info-box itinerario">
@@ -228,9 +258,100 @@ Proves: físiques (resistència, agilitat), examen teòric, psicotècnics, entre
 </div>
 
 <div class="info-box salidas">
-💼 Salides: seguretat ciutadana, investigació criminal, unitats especials.
+💼 Seguretat ciutadana, investigació criminal, unitats especials.
 </div>
 
+<a class="enlace" href="https://www.policia.es" target="_blank">Web oficial</a>
+</div></div>
+
+<div id="guardia" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('guardia')">✖</span>
+<h3>🛡️ Guàrdia Civil</h3>
+
+<div class="info-box">
+ESO o superior, proves físiques i teòriques.
+</div>
+
+<div class="info-box">
+Especialitats: trànsit, muntanya, medi ambient (SEPRONA).
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → FP/Batx → oposició
+</div>
+
+<div class="info-box salidas">
+💼 Seguretat, investigació, protecció mediambiental.
+</div>
+
+<a class="enlace" href="https://www.guardiacivil.es" target="_blank">Web oficial</a>
+</div></div>
+
+<div id="local" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('local')">✖</span>
+<h3>🏙️ Policia Local</h3>
+
+<div class="info-box">
+Depén de cada ajuntament. Normalment requereix Batxiller.
+</div>
+
+<div class="info-box">
+Proves físiques, teòriques i psicotècniques.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → Batx → oposició municipal
+</div>
+
+<div class="info-box salidas">
+💼 Seguretat ciutadana i proximitat amb la població.
+</div>
+
+</div></div>
+
+<div id="bomberos" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('bomberos')">✖</span>
+<h3>🚒 Bombers</h3>
+
+<div class="info-box">
+Requisits: Batxiller o FP. Carnet de conduir habitual.
+</div>
+
+<div class="info-box">
+Proves físiques exigents, teòriques i pràctiques.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → FP/Batx → oposició autonòmica o municipal
+</div>
+
+<div class="info-box salidas">
+💼 Emergències, rescats, protecció civil.
+</div>
+
+</div></div>
+
+<div id="militar" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('militar')">✖</span>
+<h3>🪖 Forces Armades</h3>
+
+<div class="info-box">
+ESO → tropa · Batx → suboficials · EBAU → oficials.
+</div>
+
+<div class="info-box">
+Proves físiques, psicotècniques i mèdiques.
+</div>
+
+<div class="info-box itinerario">
+🎯 ESO → accés directe o promoció interna
+</div>
+
+<div class="info-box salidas">
+💼 Carrera militar, logística, seguretat.
+</div>
+
+<a class="enlace" href="https://reclutamiento.defensa.gob.es" target="_blank">Web oficial</a>
 </div></div>
 
 <div id="idiomes" class="modal"><div class="modal-content">
@@ -238,7 +359,7 @@ Proves: físiques (resistència, agilitat), examen teòric, psicotècnics, entre
 <h3>🌍 Idiomes (EOI)</h3>
 
 <div class="info-box">
-Accés a partir de 16 anys. Prova de nivell inicial.
+Accés a partir de 16 anys amb prova de nivell.
 </div>
 
 <div class="info-box">
@@ -246,17 +367,18 @@ Nivells oficials: A2 · B1 · B2 · C1 · C2
 </div>
 
 <div class="info-box">
-Certificats oficials vàlids per universitat, oposicions i treball.
+Certificats oficials útils per oposicions, universitat i treball.
 </div>
 
 <div class="info-box itinerario">
-🎯 ESO / Batx → EOI → certificat oficial → universitat / treball
+🎯 ESO/Batx → EOI → certificat → estudis o treball
 </div>
 
 <div class="info-box salidas">
-💼 Salides: estudis internacionals, oposicions, treball amb idiomes.
+💼 Treball internacional, oposicions, estudis superiors.
 </div>
 
+<a class="enlace" href="https://portal.edu.gva.es/eoivirtual/" target="_blank">EOI GVA</a>
 </div></div>
 
 <div id="musica" class="modal"><div class="modal-content">
@@ -264,7 +386,11 @@ Certificats oficials vàlids per universitat, oposicions i treball.
 <h3>🎵 Música i Dansa</h3>
 
 <div class="info-box">
-Estudis en conservatoris professionals amb prova específica.
+Estudis en conservatoris amb prova específica.
+</div>
+
+<div class="info-box">
+Inclou grau professional i superior.
 </div>
 
 <div class="info-box itinerario">
@@ -272,7 +398,7 @@ Estudis en conservatoris professionals amb prova específica.
 </div>
 
 <div class="info-box salidas">
-💼 Salides: músic, docent, arts escèniques.
+💼 Músic, docent, arts escèniques.
 </div>
 
 </div></div>
@@ -282,7 +408,11 @@ Estudis en conservatoris professionals amb prova específica.
 <h3>🖌️ Arts Plàstiques i Disseny</h3>
 
 <div class="info-box">
-Dibuix, fotografia, disseny gràfic, il·lustració.
+Cicles de grau mitjà i superior en escoles d’art.
+</div>
+
+<div class="info-box">
+Disseny, fotografia, il·lustració, audiovisuals.
 </div>
 
 <div class="info-box itinerario">
@@ -290,7 +420,7 @@ Dibuix, fotografia, disseny gràfic, il·lustració.
 </div>
 
 <div class="info-box salidas">
-💼 Salides: dissenyador, artista, creatiu digital.
+💼 Dissenyador, artista, creatiu digital.
 </div>
 
 </div></div>
@@ -303,12 +433,16 @@ Dibuix, fotografia, disseny gràfic, il·lustració.
 Formació de tècnic esportiu amb prova física.
 </div>
 
+<div class="info-box">
+Especialitats: futbol, bàsquet, muntanya, etc.
+</div>
+
 <div class="info-box itinerario">
-🎯 ESO → prova → tècnic esportiu
+🎯 ESO → prova → tècnic esportiu → especialització
 </div>
 
 <div class="info-box salidas">
-💼 Salides: entrenador, monitor esportiu.
+💼 Entrenador, monitor esportiu, preparador físic.
 </div>
 
 </div></div>
