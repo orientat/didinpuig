@@ -47,11 +47,6 @@ margin-top:15px;
 border-radius:10px;
 }
 
-header h1{
-margin:0;
-font-size:30px;
-}
-
 .section{
 margin-top:40px;
 }
@@ -60,10 +55,9 @@ margin-top:40px;
 color:#6d2548;
 border-left:6px solid #a65277;
 padding-left:10px;
-margin-bottom:15px;
 }
 
-/* BLOQUES */
+/* GRID */
 
 .blocks{
 display:grid;
@@ -76,61 +70,88 @@ background:#f3f3f3;
 padding:18px;
 border-radius:10px;
 border-left:5px solid #a65277;
-box-shadow:0 6px 14px rgba(0,0,0,0.10);
 }
 
-/* MINI TARJETAS */
-
-.block-items{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:10px;
-}
+/* TARJETAS */
 
 .block-item{
 background:#ffffff;
-padding:12px 14px;
+padding:14px;
 border-radius:10px;
 border-left:4px solid #a65277;
+cursor:pointer;
+margin-top:10px;
 display:flex;
-align-items:flex-start;
+align-items:center;
 gap:12px;
-text-decoration:none;
-color:inherit;
 box-shadow:0 6px 14px rgba(0,0,0,0.10);
-transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+transition:.3s;
 }
 
 .block-item:hover{
 background:#ececec;
-cursor:pointer;
-transform:translateY(-3px) scale(1.01);
-box-shadow:0 14px 26px rgba(0,0,0,0.18);
-border-left:4px solid #6d2548;
+transform:translateY(-4px);
+box-shadow:0 12px 22px rgba(0,0,0,0.18);
 }
-
-.block-item div{
-line-height:1.5;
-}
-
-/* ICONOS */
 
 .icon{
-font-size:22px;
-min-width:28px;
-display:flex;
-justify-content:center;
+font-size:24px;
+min-width:30px;
 }
 
-/* INFO */
+/* MODAL */
 
-.info{
-background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal-content{
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+width:90%;
+max-width:520px;
 border-left:5px solid #a65277;
+position:relative;
+line-height:1.6;
+}
+
+.close{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:18px;
+}
+
+.modal a{
+color:#1565c0;
+font-weight:bold;
+text-decoration:none;
+}
+
+.modal a:hover{
+text-decoration:underline;
+}
+
+/* PERFIL */
+
+.perfil{
+margin-top:15px;
+padding:12px;
+background:#f7f7f7;
+border-radius:8px;
+border-left:4px solid #6d2548;
+font-size:14px;
 }
 
 /* FOOTER */
@@ -143,8 +164,7 @@ padding:15px;
 margin-top:40px;
 border-radius:10px;
 width:75%;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 }
 
 @media (max-width:900px){
@@ -169,141 +189,44 @@ footer{width:90%;}
 </header>
 
 <section class="section">
-<h2>🔎 Otras opciones formativas</h2>
-
-<p>
-Además de los itinerarios más habituales, existen otras vías formativas y profesionales que también pueden ser una buena opción según tus intereses.
-</p>
-
-</section>
-
-<section class="section">
 
 <div class="blocks">
 
 <!-- SEGURIDAD -->
-
 <div class="block">
-<strong>👮 Fuerzas y Cuerpos de Seguridad</strong>
+<strong>👮 Seguridad</strong>
 
-<div class="block-items">
-
-<div class="block-item">
-<span class="icon">🚒</span>
-<div>Bomberos</div>
-</div>
-
-<div class="block-item">
-<span class="icon">👮‍♂️</span>
-<div>Policía Nacional</div>
-</div>
-
-<div class="block-item">
-<span class="icon">🛡️</span>
-<div>Guardia Civil</div>
-</div>
-
-<div class="block-item">
-<span class="icon">🏙️</span>
-<div>Policía Local</div>
-</div>
-
-</div>
-
-<div style="margin-top:10px; font-size:14px;">
-Consulta convocatorias en ayuntamientos y webs oficiales.
-</div>
+<div class="block-item" onclick="openModal('policia')"><span class="icon">👮‍♂️</span>Policía Nacional</div>
+<div class="block-item" onclick="openModal('guardia')"><span class="icon">🛡️</span>Guardia Civil</div>
+<div class="block-item" onclick="openModal('local')"><span class="icon">🏙️</span>Policía Local</div>
+<div class="block-item" onclick="openModal('bomberos')"><span class="icon">🚒</span>Bomberos</div>
 
 </div>
 
 <!-- EJÉRCITO -->
-
 <div class="block">
-<strong>🪖 Ejército / Fuerzas Armadas</strong>
+<strong>🪖 Fuerzas Armadas</strong>
 
-<div class="block-items">
-
-<div class="block-item">
-<span class="icon">🎖️</span>
-<div>
-Acceso con diferentes niveles de estudios y múltiples especialidades profesionales.
-</div>
-</div>
-
-<div class="block-item">
-<span class="icon">📈</span>
-<div>
-Posibilidad de formación continua y promoción interna.
-</div>
-</div>
-
-</div>
+<div class="block-item" onclick="openModal('militar')"><span class="icon">🎖️</span>Ejército</div>
 
 </div>
 
 <!-- IDIOMAS -->
-
 <div class="block">
 <strong>🌍 Idiomas</strong>
 
-<div class="block-items">
-
-<a href="https://ceice.gva.es" target="_blank" class="block-item">
-<span class="icon">🏫</span>
-<div>Conselleria de Educación</div>
-</a>
-
-<a href="https://portal.edu.gva.es/eoivirtual/" target="_blank" class="block-item">
-<span class="icon">🗣️</span>
-<div>Escuelas Oficiales de Idiomas (EOI)</div>
-</a>
-
-</div>
-
-<div style="margin-top:10px; font-size:14px;">
-Permiten obtener titulaciones oficiales de idiomas.
-</div>
+<div class="block-item" onclick="openModal('idiomas')"><span class="icon">🗣️</span>Escuelas Oficiales de Idiomas</div>
 
 </div>
 
 <!-- ARTÍSTICOS -->
-
 <div class="block">
-<strong>🎨 Estudios artísticos, deportivos y musicales</strong>
+<strong>🎨 Enseñanzas especiales</strong>
 
-<div class="block-items">
-
-<div class="block-item">
-<span class="icon">🎵</span>
-<div>Enseñanzas musicales</div>
-</div>
-
-<div class="block-item">
-<span class="icon">⚽</span>
-<div>Enseñanzas deportivas</div>
-</div>
-
-<div class="block-item">
-<span class="icon">🖌️</span>
-<div>Enseñanzas artísticas</div>
-</div>
+<div class="block-item" onclick="openModal('artisticos')"><span class="icon">🎵</span>Artísticos, deportivos y musicales</div>
 
 </div>
 
-<div style="margin-top:10px; font-size:14px;">
-Consulta estos estudios dentro de la FP en régimen especial.
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="info">
-Si tienes dudas sobre estas opciones, consulta con el <strong>Departamento de Orientación</strong> del centro.
 </div>
 
 </section>
@@ -313,6 +236,121 @@ Si tienes dudas sobre estas opciones, consulta con el <strong>Departamento de Or
 <footer>
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
 </footer>
+
+<!-- MODALES -->
+
+<div id="policia" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('policia')">✖</span>
+<h3>👮 Policía Nacional</h3>
+<ul>
+<li>+18 años</li>
+<li>Bachiller o grado</li>
+<li>Pruebas físicas, teóricas y entrevista</li>
+</ul>
+<div class="perfil">👉 Perfil: vocación de servicio, trabajo en equipo, acción</div>
+<a href="https://www.policia.es" target="_blank">Web oficial</a>
+</div>
+</div>
+
+<div id="guardia" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('guardia')">✖</span>
+<h3>🛡️ Guardia Civil</h3>
+<ul>
+<li>ESO o superior</li>
+<li>Pruebas físicas y teóricas</li>
+<li>Múltiples especialidades</li>
+</ul>
+<div class="perfil">👉 Perfil: disciplina, naturaleza, seguridad</div>
+<a href="https://www.guardiacivil.es" target="_blank">Web oficial</a>
+</div>
+</div>
+
+<div id="local" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('local')">✖</span>
+<h3>🏙️ Policía Local</h3>
+<ul>
+<li>Depende del ayuntamiento</li>
+<li>Bachiller normalmente</li>
+<li>Oposición + pruebas físicas</li>
+</ul>
+<div class="perfil">👉 Perfil: cercanía, trato con personas</div>
+</div>
+</div>
+
+<div id="bomberos" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('bomberos')">✖</span>
+<h3>🚒 Bomberos</h3>
+<ul>
+<li>Bachiller o FP</li>
+<li>Pruebas físicas exigentes</li>
+<li>Oposiciones</li>
+</ul>
+<div class="perfil">👉 Perfil: valentía, resistencia, trabajo en equipo</div>
+</div>
+</div>
+
+<div id="militar" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('militar')">✖</span>
+<h3>🪖 Fuerzas Armadas</h3>
+<ul>
+<li>ESO → Tropa</li>
+<li>Bachiller → Suboficiales</li>
+<li>EBAU → Oficiales</li>
+</ul>
+<div class="perfil">👉 Perfil: disciplina, esfuerzo, vocación</div>
+<a href="https://reclutamiento.defensa.gob.es" target="_blank">Web oficial</a>
+</div>
+</div>
+
+<div id="idiomas" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('idiomas')">✖</span>
+<h3>🌍 Idiomas</h3>
+<ul>
+<li>Títulos oficiales</li>
+<li>Niveles A2–C2</li>
+</ul>
+<div class="perfil">👉 Perfil: comunicación, viajes, cultura</div>
+<a href="https://portal.edu.gva.es/eoivirtual/" target="_blank">EOI</a>
+</div>
+</div>
+
+<div id="artisticos" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('artisticos')">✖</span>
+<h3>🎨 Enseñanzas especiales</h3>
+<ul>
+<li>Música, danza, arte</li>
+<li>Deportivos</li>
+<li>Prueba específica</li>
+</ul>
+<div class="perfil">👉 Perfil: creatividad, expresión</div>
+<a href="https://ceice.gva.es" target="_blank">GVA</a>
+</div>
+</div>
+
+<script>
+
+function openModal(id){
+document.getElementById(id).style.display="flex";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+
+window.onclick=function(e){
+document.querySelectorAll(".modal").forEach(m=>{
+if(e.target==m){m.style.display="none";}
+});
+}
+
+</script>
 
 </body>
 </html>
