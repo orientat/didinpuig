@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orienta tu futuro | Orientación</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#333;
+}
+
+.wrapper{
+width:75%;
+margin:auto;
+}
+
+.back{
+margin-top:20px;
+}
+
+.back a{
+background:#6d2548;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.back a:hover{
+background:#a65277;
+}
+
+header{
+background:#a65277;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:15px;
+border-radius:10px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+color:#6d2548;
+border-left:6px solid #a65277;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* BLOQUES */
+
+.blocks{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px;
+}
+
+.block{
+background:#f3f3f3;
+padding:18px;
+border-radius:10px;
+border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+}
+
+/* MINI TARJETAS */
+
+.block-items{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:10px;
+}
+
+.block-item{
+background:#ffffff;
+padding:12px 14px;
+border-radius:10px;
+border-left:4px solid #a65277;
+display:flex;
+align-items:flex-start;
+gap:12px;
+text-decoration:none;
+color:inherit;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.block-item:hover{
+background:#ececec;
+cursor:pointer;
+transform:translateY(-3px) scale(1.01);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:4px solid #6d2548;
+}
+
+.block-item div{
+line-height:1.5;
+}
+
+/* ICONOS */
+
+.icon{
+font-size:22px;
+min-width:28px;
+display:flex;
+justify-content:center;
+}
+
+/* INFO */
+
+.info{
+background:#fff2f7;
+padding:20px;
+border-radius:10px;
+line-height:1.6;
+border-left:5px solid #a65277;
+}
+
+/* WARNING */
+
+.warning{
+background:#fff3cd;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #a65277;
+line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
+}
+
+@media (max-width:900px){
+.wrapper{width:90%;}
+footer{width:90%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="back">
+<a href="index.html">← Volver a Orientación</a>
+</div>
+
+<header>
+<h1>🧭 Orienta tu futuro</h1>
+<p>IES Didín Puig · Departamento de Orientación</p>
+</header>
+
+<section class="section">
+<h2>🔎 Herramientas para orientar tu futuro</h2>
+
+<p>
+Si estás decidiendo tu itinerario académico o profesional, estas herramientas pueden ayudarte a conocerte mejor y explorar diferentes opciones.
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="blocks">
+
+<!-- CUESTIONARIOS -->
+
+<div class="block">
+<strong>🔍 Cuestionarios de orientación</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🧠</span>
+<div><strong>OrientaLine</strong><br>Para ESO y Bachillerato</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📘</span>
+<div><strong>Educaweb – El Gran Recorrido</strong><br>Para ESO y Bachillerato</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🌐</span>
+<div><strong>MyWayPass</strong><br>Exploración de intereses profesionales</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📊</span>
+<div><strong>Elige Profesión</strong><br>Test de intereses</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🏙️</span>
+<div><strong>Barcelona Activa</strong><br>Especialmente para Bachillerato</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- FP -->
+
+<div class="block">
+<strong>🛠️ Orientación en Formación Profesional</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">📚</span>
+<div><strong>TodoFP</strong><br>Información sobre ciclos y profesiones</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🧭</span>
+<div><strong>FPBide</strong><br>Cuestionario de orientación para FP</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- LABORAL -->
+
+<div class="block">
+<strong>💼 Orientación laboral</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🏢</span>
+<div><strong>LABORA</strong><br>Recursos de empleo y formación</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📈</span>
+<div>Planificación de carrera y asesoramiento profesional</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- CONSEJOS -->
+
+<div class="block">
+<strong>📌 Consejos de orientación</strong>
+
+<div class="block-items">
+
+<div class="block-item">
+<span class="icon">🧩</span>
+<div>No hay respuestas correctas o incorrectas</div>
+</div>
+
+<div class="block-item">
+<span class="icon">📚</span>
+<div>Complementa los resultados con información</div>
+</div>
+
+<div class="block-item">
+<span class="icon">🎯</span>
+<div>Los intereses pueden cambiar con el tiempo</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>⚠️ Errores habituales al elegir estudios</h2>
+
+<div class="warning">
+
+<ul>
+<li>Elegir sin suficiente información</li>
+<li>Decidir por presión externa</li>
+<li>No valorar alternativas</li>
+<li>Elegir lo más fácil</li>
+<li>Guiarse solo por salidas laborales</li>
+<li>Decidir con prisas</li>
+</ul>
+
+<p>
+Una buena decisión implica conocerte, informarte y reflexionar.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="info">
+Si tienes dudas, consulta con tu <strong>tutor o tutora</strong> o con el <strong>Departamento de Orientación</strong>.
+</div>
+
+</section>
+
+</div>
+
+<footer>
+IES Didín Puig · Departamento de Orientación Educativa y Profesional
+</footer>
+
+</body>
+</html>
