@@ -18,7 +18,7 @@ color:#333;
 /* WRAPPER */
 
 .wrapper{
-width:1100px;
+width:75%;
 margin:auto;
 }
 
@@ -49,114 +49,30 @@ margin-top:15px;
 border-radius:10px;
 }
 
-/* DIAGRAMA */
-
-.diagram{
-position:relative;
-height:650px;
-margin-top:40px;
-}
-
-/* CAJAS */
-
-.box{
-position:absolute;
-padding:10px 16px;
-color:white;
-font-weight:bold;
-border-radius:6px;
-font-size:14px;
-text-align:center;
-white-space:nowrap;
-}
-
-/* COLORES EXACTOS */
-
-.master{background:#b03060;}
-.uni{background:#c03a73;}
-.prova{background:#e0a72f;}
-.bach{background:#5f8fc1;}
-.tBach{background:#7ea9d4;}
-
-.gs{background:#2f7f7f;}
-.tGS{background:#4fa7a7;}
-
-.gm{background:#3aa63a;}
-.tGM{background:#5fc15f;}
-
-.fpb{background:#8c1d4f;}
-.tFPB{background:#b79ad6;}
-
-.eso{background:#5db7a4;}
-.tESO{background:#7fd1c2;}
-
-.gray{background:#6b6b6b;}
-.greenDark{background:#2f7f7f;}
-.green{background:#3aa63a;}
-
-.lab{
-background:#c0392b;
-writing-mode: vertical-rl;
-transform: rotate(180deg);
-display:flex;
-align-items:center;
-justify-content:center;
-height:420px;
-width:60px;
-}
-
-/* POSICIONES */
-
-/* IZQUIERDA */
-.masterBox{left:60px; top:20px;}
-.uniBox{left:60px; top:70px;}
-.provaBatx{left:60px; top:120px;}
-.tituloBach{left:60px; top:160px;}
-.bach2{left:60px; top:210px;}
-.bach1{left:60px; top:260px;}
-
-/* ESO */
-.tituloESO{left:60px; top:310px;}
-.eso4{left:60px; top:360px;}
-.eso3{left:60px; top:410px;}
-.eso2{left:60px; top:460px;}
-.eso1{left:60px; top:510px;}
-
-/* FPB */
-.tituloFPB{left:260px; top:360px;}
-.gbfp2{left:260px; top:410px;}
-.gbfp1{left:260px; top:460px;}
-
-/* GM */
-.tituloGM{left:460px; top:360px;}
-.gm2{left:460px; top:410px;}
-.gm1{left:460px; top:460px;}
-.prova17{left:650px; top:460px;}
-
-/* GS */
-.tituloGS{left:460px; top:160px;}
-.gs2{left:460px; top:210px;}
-.gs1{left:460px; top:260px;}
-.prova19{left:650px; top:240px;}
-
-/* CURSOS */
-.cursGM{left:650px; top:360px;}
-.cursGS{left:650px; top:140px;}
-
-/* LABORAL */
-.labBox{right:40px; top:120px;}
-
 /* SVG */
 
 svg{
-position:absolute;
-top:0;
-left:0;
 width:100%;
-height:100%;
+height:auto;
+margin-top:40px;
+}
+
+/* FOOTER */
+
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -172,81 +88,116 @@ height:100%;
 <p>IES Didín Puig · Orientació</p>
 </header>
 
-<div class="diagram">
+<!-- SVG PERFECTO -->
+<svg viewBox="0 0 1000 650">
 
-<!-- IZQUIERDA -->
-<div class="box master masterBox">MÀSTER</div>
-<div class="box uni uniBox">GRAU UNIVERSITARI</div>
-<div class="box prova provaBatx">PROVA D’ACCÉS</div>
-
-<div class="box tBach tituloBach">TÍTOL BATXILLER</div>
-<div class="box bach bach2">2n BATX</div>
-<div class="box bach bach1">1r BATX</div>
-
-<!-- ESO -->
-<div class="box tESO tituloESO">TÍTOL D’ESO</div>
-<div class="box eso eso4">4t ESO</div>
-<div class="box eso eso3">3r ESO</div>
-<div class="box eso eso2">2n ESO</div>
-<div class="box eso eso1">1r ESO</div>
-
-<!-- FPB -->
-<div class="box tFPB tituloFPB">TÍTOL TÈCNIC BÀSIC</div>
-<div class="box fpb gbfp2">2n GBFP</div>
-<div class="box fpb gbfp1">1r GBFP</div>
-
-<!-- GM -->
-<div class="box tGM tituloGM">TÍTOL TÈCNIC</div>
-<div class="box gm gm2">2º GMFP</div>
-<div class="box gm gm1">1º GMFP</div>
-<div class="box prova prova17">PROVA D’ACCÉS (>17)</div>
-
-<!-- GS -->
-<div class="box tGS tituloGS">TÍTOL TÈCNIC SUPERIOR</div>
-<div class="box gs gs2">2n GSFP</div>
-<div class="box gs gs1">1r GSFP</div>
-<div class="box gray prova19">PROVA D’ACCÉS (>19)</div>
-
-<!-- CURSOS -->
-<div class="box green cursGM">Curs d’Especialització</div>
-<div class="box greenDark cursGS">Curs d’Especialització</div>
-
-<!-- LABORAL -->
-<div class="box lab labBox">MON LABORAL</div>
-
-<!-- FLECHAS PERFECTAMENTE ALINEADAS -->
-<svg>
-
+<!-- FLECHAS -->
 <defs>
 <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
 <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
 </marker>
 </defs>
 
-<!-- ESO -> BATX -->
-<line x1="130" y1="310" x2="130" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- MON LABORAL -->
+<rect x="900" y="100" width="50" height="400" fill="#c0392b"/>
+<text x="925" y="300" fill="white" font-size="14" transform="rotate(-90 925 300)" text-anchor="middle">MON LABORAL</text>
 
-<!-- ESO -> GM -->
-<line x1="130" y1="310" x2="460" y2="310" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- UNIVERSIDAD -->
+<rect x="80" y="60" width="180" height="50" fill="#c03a73"/>
+<text x="170" y="90" fill="white" text-anchor="middle">GRAU UNIVERSITARI</text>
 
-<!-- GM -> GS -->
-<line x1="520" y1="360" x2="520" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="80" y="10" width="180" height="40" fill="#b03060"/>
+<text x="170" y="35" fill="white" text-anchor="middle">MÀSTER</text>
 
-<!-- GS -> UNIVERSIDAD -->
-<line x1="520" y1="200" x2="210" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- BATX -->
+<rect x="80" y="150" width="180" height="40" fill="#7ea9d4"/>
+<text x="170" y="175" fill="white" text-anchor="middle">TÍTOL BATXILLER</text>
 
-<!-- BATX -> UNIVERSIDAD -->
-<line x1="130" y1="160" x2="130" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="80" y="200" width="180" height="40" fill="#3f7fc1"/>
+<text x="170" y="225" fill="white" text-anchor="middle">2n BATX</text>
+
+<rect x="80" y="250" width="180" height="40" fill="#3f7fc1"/>
+<text x="170" y="275" fill="white" text-anchor="middle">1r BATX</text>
+
+<rect x="80" y="110" width="180" height="35" fill="#e0a72f"/>
+<text x="170" y="132" fill="white" text-anchor="middle">PROVA D’ACCÉS</text>
+
+<!-- ESO -->
+<rect x="80" y="300" width="180" height="40" fill="#7fd1c2"/>
+<text x="170" y="325" fill="white" text-anchor="middle">TÍTOL D’ESO</text>
+
+<rect x="80" y="350" width="180" height="40" fill="#5db7a4"/>
+<text x="170" y="375" fill="white" text-anchor="middle">4t ESO</text>
+
+<rect x="80" y="400" width="180" height="40" fill="#5db7a4"/>
+<text x="170" y="425" fill="white" text-anchor="middle">3r ESO</text>
+
+<rect x="80" y="450" width="180" height="40" fill="#5db7a4"/>
+<text x="170" y="475" fill="white" text-anchor="middle">2n ESO</text>
+
+<rect x="80" y="500" width="180" height="40" fill="#5db7a4"/>
+<text x="170" y="525" fill="white" text-anchor="middle">1r ESO</text>
+
+<!-- FPB -->
+<rect x="320" y="350" width="180" height="40" fill="#b79ad6"/>
+<text x="410" y="375" fill="white" text-anchor="middle">TÍTOL TÈCNIC BÀSIC</text>
+
+<rect x="320" y="400" width="180" height="40" fill="#8c1d4f"/>
+<text x="410" y="425" fill="white" text-anchor="middle">2n GBFP</text>
+
+<rect x="320" y="450" width="180" height="40" fill="#8c1d4f"/>
+<text x="410" y="475" fill="white" text-anchor="middle">1r GBFP</text>
+
+<!-- GM -->
+<rect x="540" y="350" width="180" height="40" fill="#5fc15f"/>
+<text x="630" y="375" fill="white" text-anchor="middle">TÍTOL TÈCNIC</text>
+
+<rect x="540" y="400" width="180" height="40" fill="#3aa63a"/>
+<text x="630" y="425" fill="white" text-anchor="middle">2º GMFP</text>
+
+<rect x="540" y="450" width="180" height="40" fill="#3aa63a"/>
+<text x="630" y="475" fill="white" text-anchor="middle">1º GMFP</text>
+
+<rect x="740" y="450" width="200" height="40" fill="#e0a72f"/>
+<text x="840" y="475" fill="white" text-anchor="middle">PROVA D’ACCÉS (>17)</text>
+
+<!-- GS -->
+<rect x="540" y="150" width="180" height="40" fill="#4fa7a7"/>
+<text x="630" y="175" fill="white" text-anchor="middle">TÍTOL TÈCNIC SUPERIOR</text>
+
+<rect x="540" y="200" width="180" height="40" fill="#2f7f7f"/>
+<text x="630" y="225" fill="white" text-anchor="middle">2n GSFP</text>
+
+<rect x="540" y="250" width="180" height="40" fill="#2f7f7f"/>
+<text x="630" y="275" fill="white" text-anchor="middle">1r GSFP</text>
+
+<rect x="740" y="250" width="200" height="40" fill="#6b6b6b"/>
+<text x="840" y="275" fill="white" text-anchor="middle">PROVA D’ACCÉS (>19)</text>
+
+<!-- CURSOS -->
+<rect x="740" y="350" width="200" height="40" fill="#3aa63a"/>
+<text x="840" y="375" fill="white" text-anchor="middle">Curs d’Especialització</text>
+
+<rect x="740" y="100" width="200" height="40" fill="#2f7f7f"/>
+<text x="840" y="125" fill="white" text-anchor="middle">Curs d’Especialització</text>
+
+<!-- FLECHAS -->
+<line x1="170" y1="300" x2="170" y2="250" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="170" y1="300" x2="540" y2="300" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="630" y1="350" x2="630" y2="250" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="630" y1="150" x2="260" y2="85" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="170" y1="150" x2="170" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
 </svg>
-
-</div>
 
 </div>
 
 <footer>
 IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
