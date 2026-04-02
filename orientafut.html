@@ -7,160 +7,302 @@
 <title>Orienta el teu futur | Orientació</title>
 
 <style>
-
+/* ===================== */
+/* BASE */
+/* ===================== */
 body{
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:#ffffff;
-color:#333;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background: #ffffff;
+color: #333;
 }
 
 .wrapper{
-width:75%;
-margin:auto;
+width: 75%;
+margin: auto;
 }
 
+/* ===================== */
+/* BOTÓ TORNAR */
+/* ===================== */
 .back{
-margin-top:20px;
+margin-top: 20px;
 }
 
 .back a{
-background:#6d2548;
-color:white;
-padding:8px 18px;
-border-radius:20px;
-text-decoration:none;
-font-weight:bold;
-font-size:14px;
+background: #6d2548;
+color: white;
+padding: 8px 18px;
+border-radius: 20px;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+transition: .3s;
 }
 
 .back a:hover{
-background:#a65277;
+background: #a65277;
 }
 
+/* ===================== */
+/* HEADER */
+/* ===================== */
 header{
-background:#a65277;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:15px;
-border-radius:10px;
+background: #a65277;
+color: white;
+text-align: center;
+padding: 25px;
+margin-top: 15px;
+border-radius: 10px;
 }
 
 header h1{
-margin:0;
-font-size:30px;
+margin: 0;
+font-size: 30px;
 }
 
+/* ===================== */
+/* SECCIONS */
+/* ===================== */
 .section{
-margin-top:40px;
+margin-top: 50px;
 }
 
 .section h2{
-color:#6d2548;
-border-left:6px solid #a65277;
-padding-left:10px;
-margin-bottom:15px;
+color: #6d2548;
+border-left: 6px solid #a65277;
+padding-left: 10px;
+margin-bottom: 25px;
 }
 
-/* BLOQUES */
-
-.blocks{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:15px;
+.section p{
+line-height: 1.7;
+margin-bottom: 15px;
 }
 
-.block{
-background:#f3f3f3;
-padding:18px;
-border-radius:10px;
-border-left:5px solid #a65277;
-box-shadow:0 6px 14px rgba(0,0,0,0.10);
+/* ===================== */
+/* TARGETES ANIMADES */
+/* ===================== */
+.cards{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 30px;
 }
 
-/* MINI TARGETES */
-
-.block-items{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:10px;
+.card{
+padding: 20px 25px;
+border-radius: 16px;
+border-left: 5px solid #a65277;
+background: #f9f9f9;
+box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+transition: .3s;
+text-align: center;
+cursor: pointer;
 }
 
-.block-item{
-background:#ffffff;
-padding:12px 14px;
-border-radius:10px;
-border-left:4px solid #a65277;
-display:flex;
-align-items:flex-start;
-gap:12px;
-text-decoration:none;
-color:inherit;
-box-shadow:0 6px 14px rgba(0,0,0,0.10);
-transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+.card:hover{
+transform: translateY(-6px);
+box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+background: #fff2f7;
 }
-
-.block-item:hover{
-background:#ececec;
-cursor:pointer;
-transform:translateY(-3px) scale(1.01);
-box-shadow:0 14px 26px rgba(0,0,0,0.18);
-border-left:4px solid #6d2548;
-}
-
-.block-item div{
-line-height:1.5;
-}
-
-/* ICONES */
 
 .icon{
-font-size:22px;
-min-width:28px;
-display:flex;
-justify-content:center;
+font-size: 50px;
+margin-bottom: 15px;
+display: inline-block;
+transition: transform .3s ease;
 }
 
-/* INFO */
+.card:hover .icon{
+transform: translateY(-4px) scale(1.15) rotate(-6deg);
+}
 
+.card-title{
+font-size: 20px;
+font-weight: bold;
+color: #333;
+margin-bottom: 10px;
+transition: color .3s;
+}
+
+.card:hover .card-title{
+color: #6d2548;
+}
+
+.card-info{
+font-size: 14px;
+color: #555;
+line-height: 1.5;
+}
+
+/* Colors especials per targetes */
+.card.fp { border-left-color: #4caf50; }
+.card.fp:hover { background: #e8f5e9; }
+.card.fp:hover .card-title { color: #2e7d32; }
+
+.card.laboral { border-left-color: #1565c0; }
+.card.laboral:hover { background: #e3f2fd; }
+.card.laboral:hover .card-title { color: #0d47a1; }
+
+/* ===================== */
+/* INFO / ALERTES */
+/* ===================== */
 .info{
-background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
-border-left:5px solid #a65277;
+background: #fff2f7;
+padding: 25px;
+border-radius: 12px;
+border-left: 5px solid #a65277;
+line-height: 1.7;
 }
-
-/* WARNING */
 
 .warning{
-background:#fff3cd;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #f2c94c;
-line-height:1.8;
-margin-top:15px;
+background: #fff3cd;
+padding: 25px;
+border-radius: 12px;
+border-left: 5px solid #d4b15a;
+line-height: 1.7;
 }
 
+.warning ul, .info ul{
+padding-left: 20px;
+margin-bottom: 0;
+}
+
+.warning li, .info li{
+margin-bottom: 10px;
+}
+
+/* ===================== */
+/* BOTONS I ENLLAÇOS */
+/* ===================== */
+.link-btn{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 10px 20px;
+background: #1565c0;
+color: white;
+border-radius: 20px;
+font-size: 15px;
+font-weight: bold;
+text-decoration: none;
+transition: all .2s ease;
+margin-top: 15px;
+}
+
+.link-btn:hover{
+background: #0d47a1;
+transform: translateY(-2px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===================== */
+/* MODALS */
+/* ===================== */
+.modal-overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: 0.3s;
+}
+
+.modal-overlay.active{
+opacity: 1;
+visibility: visible;
+}
+
+.modal{
+background: white;
+border-radius: 16px;
+padding: 25px;
+max-width: 650px;
+width: 90%;
+max-height: 85vh;
+overflow-y: auto;
+position: relative;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+transform: translateY(20px);
+transition: 0.3s;
+}
+
+.modal-overlay.active .modal{
+transform: translateY(0);
+}
+
+.modal-close{
+position: absolute;
+top: 15px;
+right: 15px;
+border: none;
+background: #eee;
+border-radius: 50%;
+width: 35px;
+height: 35px;
+font-size: 16px;
+cursor: pointer;
+transition: .2s;
+}
+
+.modal-close:hover{
+background: #ddd;
+color: #d9534f;
+}
+
+.modal-header h3{
+margin-top: 0;
+color: #6d2548;
+border-bottom: 1px solid #eee;
+padding-bottom: 15px;
+margin-bottom: 15px;
+font-size: 22px;
+}
+
+.modal-box{
+background: #f8f9fb;
+border-left: 4px solid #a65277;
+padding: 15px;
+border-radius: 8px;
+margin: 15px 0;
+line-height: 1.6;
+}
+
+.modal-highlight{
+background: #fff3cd;
+border-left: 4px solid #d4b15a;
+padding: 15px;
+border-radius: 8px;
+margin: 15px 0;
+line-height: 1.6;
+}
+
+/* ===================== */
 /* FOOTER */
-
+/* ===================== */
 footer{
-background:#a65277;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-border-radius:10px;
-width:75%;
-margin-left:auto;
-margin-right:auto;
+background: #a65277;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 50px;
+margin-bottom: 20px;
+border-radius: 10px;
 }
 
-@media (max-width:900px){
-.wrapper{width:90%;}
-footer{width:90%;}
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 900px){
+.wrapper{ width: 90%; }
 }
 
 </style>
@@ -181,161 +323,249 @@ footer{width:90%;}
 
 <section class="section">
 <h2>🔎 Eines per orientar el teu futur</h2>
-
 <p>
-Si estàs decidint el teu itinerari acadèmic o professional, aquestes eines poden ajudar-te a conéixer millor els teus interessos i explorar diferents opcions.
+Si estàs en procés de decidir el teu itinerari educatiu o professional, aquests qüestionaris poden ajudar-te a conéixer millor els teus interessos, explorar diferents professions i trobar el camí que millor s'adapte a tu.
 </p>
-
+<p style="font-weight: bold; color: #6d2548;">
+👉 Fes clic en cada eina per veure més informació i accedir als qüestionaris:
+</p>
 </section>
 
 <section class="section">
+<h3>🔍 Qüestionaris d’orientació acadèmica</h3>
+<div class="cards">
 
-<div class="blocks">
-
-<!-- QÜESTIONARIS -->
-
-<div class="block">
-<strong>🔍 Qüestionaris d’orientació</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card" onclick="openModal('modal-orientaline')">
 <span class="icon">🧠</span>
-<div><strong>OrientaLine</strong><br>Per a ESO i Batxillerat</div>
+<div class="card-title">OrientaLine</div>
+<div class="card-info">Plataforma oficial d'orientació de l'institut.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-educaweb')">
 <span class="icon">📘</span>
-<div><strong>Educaweb – El Gran Recorregut</strong><br>Per a ESO i Batxillerat</div>
+<div class="card-title">Educaweb</div>
+<div class="card-info">El Gran Recorregut per explorar la teua vocació.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-mywaypass')">
 <span class="icon">🌐</span>
-<div><strong>MyWayPass</strong><br>Exploració d’interessos professionals</div>
+<div class="card-title">MyWayPass</div>
+<div class="card-info">Test d'interessos a mode de videojoc.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-eligeprof')">
 <span class="icon">📊</span>
-<div><strong>Elige Profesión</strong><br>Test d’interessos</div>
+<div class="card-title">Elige Profesión</div>
+<div class="card-info">Test d'interessos i professions ideals.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-bcnactiva')">
 <span class="icon">🏙️</span>
-<div><strong>Barcelona Activa</strong><br>Especialment per a Batxillerat</div>
+<div class="card-title">Barcelona Activa</div>
+<div class="card-info">Ideal per a Batxillerat i mercat laboral.</div>
 </div>
 
 </div>
+</section>
 
-</div>
+<section class="section">
+<h3>🛠️ Orientació Específica i Laboral</h3>
+<div class="cards">
 
-<!-- FP -->
-
-<div class="block">
-<strong>🛠️ Orientació en Formació Professional</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card fp" onclick="openModal('modal-todofp')">
 <span class="icon">📚</span>
-<div><strong>TodoFP</strong><br>Informació sobre cicles i professions</div>
+<div class="card-title">TodoFP</div>
+<div class="card-info">Informació oficial sobre cicles formatius.</div>
 </div>
 
-<div class="block-item">
+<div class="card fp" onclick="openModal('modal-fpbide')">
 <span class="icon">🧭</span>
-<div><strong>FPBide</strong><br>Qüestionari d’orientació per a FP</div>
+<div class="card-title">FPBide</div>
+<div class="card-info">Dubtes entre FP o Batxillerat? Aquest és el teu test.</div>
 </div>
 
-</div>
-
-</div>
-
-<!-- LABORAL -->
-
-<div class="block">
-<strong>💼 Orientació laboral</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card laboral" onclick="openModal('modal-labora')">
 <span class="icon">🏢</span>
-<div><strong>LABORA</strong><br>Recursos d’ocupació i formació</div>
-</div>
-
-<div class="block-item">
-<span class="icon">📈</span>
-<div>Planificació de carrera i assessorament professional</div>
+<div class="card-title">LABORA</div>
+<div class="card-info">Recursos d'ocupació, formació i orientació laboral.</div>
 </div>
 
 </div>
-
-</div>
-
-<!-- CONSELLS -->
-
-<div class="block">
-<strong>📌 Consells d’orientació</strong>
-
-<div class="block-items">
-
-<div class="block-item">
-<span class="icon">🧩</span>
-<div>No hi ha respostes correctes o incorrectes</div>
-</div>
-
-<div class="block-item">
-<span class="icon">📚</span>
-<div>Complementa els resultats amb informació</div>
-</div>
-
-<div class="block-item">
-<span class="icon">🎯</span>
-<div>Els interessos poden canviar amb el temps</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
-
-<h2>⚠️ Errors habituals en triar estudis</h2>
-
-<div class="warning">
-
-<ul>
-<li>Triar sense informació suficient</li>
-<li>Decidir per pressió externa</li>
-<li>No valorar alternatives</li>
-<li>Triar el més fàcil</li>
-<li>Guiar-se només per eixides laborals</li>
-<li>Decidir amb presses</li>
-</ul>
-
-<p>
-Una bona decisió implica conéixer-te, informar-te i reflexionar.
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
+<h2>📌 Consells per a utilitzar aquests qüestionaris</h2>
 <div class="info">
-Si tens dubtes, consulta amb el teu <strong>tutor o tutora</strong> o amb el <strong>Departament d’Orientació</strong>.
+<ul>
+<li><strong>🧩 No hi ha respostes correctes o incorrectes:</strong> Aquests tests no determinen el teu futur, sinó que et donen pistes sobre quines opcions poden encaixar amb tu.</li>
+<li><strong>📚 Complementa amb informació addicional:</strong> Consulta guies d'orientació, parla amb l'orientadora i participa en fires educatives i Jornades de Portes Obertes.</li>
+<li><strong>🎯 Actualitza les teues respostes:</strong> Els nostres interessos evolucionen amb el temps, repeteix alguns tests en diferents moments de la teua etapa educativa.</li>
+</ul>
 </div>
-
 </section>
 
+<section class="section">
+<h2>⚠️ Els 7 errors més comuns en triar estudis</h2>
+<div class="warning">
+<p>Prendre una decisió adequada requereix evitar aquests errors habituals:</p>
+<ul>
+<li><strong>1. Triar sense suficient informació:</strong> Ocasiona decisions equivocades i frustració.</li>
+<li><strong>2. Estudiar per estudiar:</strong> Fer-ho perquè "alguna cosa cal fer", sense desig real, provoca desmotivació.</li>
+<li><strong>3. No valorar totes les alternatives possibles:</strong> Pots perdre l'oportunitat de descobrir una opció més adequada per a tu.</li>
+<li><strong>4. Decidir pel que diuen o fan els altres:</strong> Les opinions pesen, però la decisió i el futur són teus.</li>
+<li><strong>5. Triar el camí més fàcil:</strong> En rares ocasions la via que requereix menor esforç coincideix amb el que és millor per a nosaltres.</li>
+<li><strong>6. Guiar-se només per les eixides laborals:</strong> Les eixides són canviants i estudiar una cosa que no encaixa amb tu sol eixir malament.</li>
+<li><strong>7. Decidir amb presses:</strong> Prendre una decisió sense dedicar el temps necessari per a informar-se correctament.</li>
+</ul>
+<p style="margin-top: 15px; font-weight: bold; color: #6d2548;">
+💡 Necessites més ajuda? Consulta amb la teua tutora, tutor o amb el Departament d'Orientació de l'Institut.
+</p>
 </div>
+</section>
 
 <footer>
 IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
+
+</div> <div id="modal-orientaline" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🧠 OrientaLine</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat d'ESO i Batxillerat.</p>
+<div class="modal-box">
+<p><strong>💡 Per què fer-lo?</strong> L'institut ha adquirit aquesta eina perquè l'alumnat puga utilitzar-la en el seu procés d'orientació. Ofereix recursos per a conéixer carreres, itineraris formatius i ocupabilitat en diferents àrees.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://elorienta.com/movil//?yafxb=06651" target="_blank" class="link-btn">🔗 Accedir a OrientaLine</a> 
+</div>
+</div>
+</div>
+
+<div id="modal-educaweb" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📘 Educaweb - El Gran Recorregut</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat d'ESO i Batxillerat.</p>
+<div class="modal-box">
+<p><strong>💡 Per què fer-lo?</strong> T'ofereix una visió àmplia de diferents opcions professionals en funció dels teus interessos personals i aptituds.</p>
+</div>
+<div style="text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="https://www.educaweb.cat/orientacio/interessos-professionals/" target="_blank" class="link-btn">🔗 Test en Valencià/Català</a>
+<a href="https://www.educaweb.com/orientacion/intereses-profesionales/" target="_blank" class="link-btn" style="background: #4caf50;">🔗 Test en Castellà</a>
+</div>
+</div>
+</div>
+
+<div id="modal-mywaypass" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🌐 MyWayPass</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat d'ESO i Batxillerat.</p>
+<div class="modal-box">
+<p><strong>💡 Per què fer-lo?</strong> És una plataforma interactiva, a mode de videojoc, que t'ajuda a descobrir les teues fortaleses i explorar diferents àmbits professionals de manera lúdica.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://mywaypass.com/" target="_blank" class="link-btn">🔗 Accedir al test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-eligeprof" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📊 Elige Profesión</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat d'ESO i Batxillerat.</p>
+<div class="modal-box">
+<p><strong>💡 Per què fer-lo?</strong> Permet relacionar els teus interessos amb possibles professions, proporcionant informació detallada sobre cada opció del mercat actual.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://www.eligeprofesion.org/" target="_blank" class="link-btn">🔗 Fes el test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-bcnactiva" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🏙️ Barcelona Activa</h3></div>
+<p><strong>📝 Per a qui:</strong> Especialment per a Batxillerat.</p>
+<div class="modal-box">
+<p><strong>💡 Per què fer-lo?</strong> Relaciona els teus interessos amb sectors i estudis específics en el context del mercat laboral i les professions del futur.</p>
+</div>
+<div style="text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="https://treball.barcelonactiva.cat/porta22/cat/assets/mte/index.html" target="_blank" class="link-btn">🔗 Test en Valencià/Català</a>
+<a href="https://treball.barcelonactiva.cat/porta22/es/assets/mte/index.html" target="_blank" class="link-btn" style="background: #4caf50;">🔗 Test en Castellà</a>
+</div>
+</div>
+</div>
+
+<div id="modal-todofp" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📚 TodoFP</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat que considera la Formació Professional com a opció acadèmica.</p>
+<div class="modal-highlight">
+<p><strong>💡 Per què fer-lo?</strong> Inclou descripcions detallades de tots els cicles formatius, famílies professionals i eixides laborals directes.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://todofp.es/" target="_blank" class="link-btn" style="background: #2e7d32;">🔗 Explora les opcions de FP</a>
+</div>
+</div>
+</div>
+
+<div id="modal-fpbide" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🧭 FPBide</h3></div>
+<p><strong>📝 Per a qui:</strong> Alumnat d'ESO i Batxillerat, especialment per a qui dubta entre FP o Batxillerat.</p>
+<div class="modal-highlight">
+<p><strong>💡 Per què fer-lo?</strong> Ajuda a identificar quin tipus de formació professional o branca encaixa millor amb els teus interessos i habilitats pràctiques.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://fpbide.com/" target="_blank" class="link-btn" style="background: #2e7d32;">🔗 Fes el test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-labora" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🏢 LABORA</h3></div>
+<p><strong>📝 Per a qui:</strong> Estudiants que busquen conéixer opcions d'ocupació, formació i orientació professional a la Comunitat Valenciana.</p>
+<div class="modal-box" style="border-left-color: #1565c0;">
+<p><strong>💡 Per què fer-lo?</strong> Ofereix eines per a la cerca d'ocupació, assessorament en la planificació de carrera i accés a programes de formació per a l'ocupació.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://labora.gva.es/va/ciutadania" target="_blank" class="link-btn" style="background: #0d47a1;">🔗 Accedir a LABORA</a>
+</div>
+</div>
+</div>
+
+<script>
+// Obrir modal
+function openModal(id){
+  document.getElementById(id).classList.add("active");
+  document.body.style.overflow = "hidden"; // Evita fer scroll darrere
+}
+
+// Tancar modal clicant fora
+function closeModal(e){
+  let modal = e.target.closest(".modal-overlay");
+  if(e.target === modal){
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+
+// Tancar modal amb la X
+function forceClose(btn){
+  let modal = btn.closest(".modal-overlay");
+  if(modal){
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+</script>
 
 </body>
 </html>
