@@ -7,161 +7,355 @@
 <title>Orienta tu futuro | Orientación</title>
 
 <style>
-
+/* ===================== */
+/* BASE */
+/* ===================== */
 body{
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:#ffffff;
-color:#333;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background: #ffffff;
+color: #333;
 }
 
 .wrapper{
-width:75%;
-margin:auto;
+width: 75%;
+margin: auto;
 }
 
+/* ===================== */
+/* BOTÓN VOLVER */
+/* ===================== */
 .back{
-margin-top:20px;
+margin-top: 20px;
 }
 
 .back a{
-background:#6d2548;
-color:white;
-padding:8px 18px;
-border-radius:20px;
-text-decoration:none;
-font-weight:bold;
-font-size:14px;
+background: #6d2548;
+color: white;
+padding: 8px 18px;
+border-radius: 20px;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+transition: .3s;
 }
 
 .back a:hover{
-background:#a65277;
+background: #a65277;
 }
 
+/* ===================== */
+/* HEADER */
+/* ===================== */
 header{
-background:#a65277;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:15px;
-border-radius:10px;
+background: #a65277;
+color: white;
+text-align: center;
+padding: 25px;
+margin-top: 15px;
+border-radius: 10px;
 }
 
 header h1{
-margin:0;
-font-size:30px;
+margin: 0;
+font-size: 30px;
 }
 
+/* ===================== */
+/* SECCIONES */
+/* ===================== */
 .section{
-margin-top:40px;
+margin-top: 50px;
 }
 
 .section h2{
-color:#6d2548;
-border-left:6px solid #a65277;
-padding-left:10px;
-margin-bottom:15px;
+color: #6d2548;
+border-left: 6px solid #a65277;
+padding-left: 10px;
+margin-bottom: 25px;
 }
 
-/* BLOQUES */
-
-.blocks{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:15px;
+.section h3{
+color: #333;
+margin-bottom: 20px;
 }
 
-.block{
-background:#f3f3f3;
-padding:18px;
-border-radius:10px;
-border-left:5px solid #a65277;
-box-shadow:0 6px 14px rgba(0,0,0,0.10);
+.section p{
+line-height: 1.7;
+margin-bottom: 15px;
 }
 
-/* MINI TARJETAS */
-
-.block-items{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:10px;
+/* ===================== */
+/* TARJETAS ANIMADAS */
+/* ===================== */
+.cards{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 30px;
 }
 
-.block-item{
-background:#ffffff;
-padding:12px 14px;
-border-radius:10px;
-border-left:4px solid #a65277;
-display:flex;
-align-items:flex-start;
-gap:12px;
-text-decoration:none;
-color:inherit;
-box-shadow:0 6px 14px rgba(0,0,0,0.10);
-transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+.card{
+padding: 20px 25px;
+border-radius: 16px;
+border-left: 5px solid #a65277;
+background: #f9f9f9;
+box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+transition: .3s;
+text-align: center;
+cursor: pointer;
 }
 
-.block-item:hover{
-background:#ececec;
-cursor:pointer;
-transform:translateY(-3px) scale(1.01);
-box-shadow:0 14px 26px rgba(0,0,0,0.18);
-border-left:4px solid #6d2548;
+.card:hover{
+transform: translateY(-6px);
+box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+background: #fff2f7;
 }
-
-.block-item div{
-line-height:1.5;
-}
-
-/* ICONOS */
 
 .icon{
-font-size:22px;
-min-width:28px;
-display:flex;
-justify-content:center;
+font-size: 50px;
+margin-bottom: 15px;
+display: inline-block;
+transition: transform .3s ease;
 }
 
-/* INFO */
+.card:hover .icon{
+transform: translateY(-4px) scale(1.15) rotate(-6deg);
+}
 
+.card-title{
+font-size: 20px;
+font-weight: bold;
+color: #333;
+margin-bottom: 10px;
+transition: color .3s;
+}
+
+.card:hover .card-title{
+color: #6d2548;
+}
+
+.card-info{
+font-size: 14px;
+color: #555;
+line-height: 1.5;
+}
+
+/* Colores especiales para tarjetas */
+.card.fp { border-left-color: #4caf50; }
+.card.fp:hover { background: #e8f5e9; }
+.card.fp:hover .card-title { color: #2e7d32; }
+
+.card.laboral { border-left-color: #1565c0; }
+.card.laboral:hover { background: #e3f2fd; }
+.card.laboral:hover .card-title { color: #0d47a1; }
+
+/* ===================== */
+/* TARJETA PRINCIPAL (RECTANGULAR) */
+/* ===================== */
+.cards-single{
+display: flex;
+justify-content: center; /* Centra la tarjeta horizontalmente */
+}
+
+.card.principal {
+width: 100%;
+max-width: 800px; /* Ocupa más espacio horizontal */
+display: flex;
+align-items: center;
+text-align: left;
+gap: 30px;
+padding: 25px 40px;
+border-left-color: #6d2548;
+background: #fff2f7;
+}
+
+.card.principal:hover {
+background: #ffe4ef;
+}
+
+.card.principal .icon {
+margin-bottom: 0;
+font-size: 70px;
+}
+
+.card.principal .card-title {
+margin-bottom: 8px;
+font-size: 24px;
+}
+
+.card.principal .card-info {
+font-size: 16px;
+}
+
+/* ===================== */
+/* INFO / ALERTAS */
+/* ===================== */
 .info{
-background:#fff2f7;
-padding:20px;
-border-radius:10px;
-line-height:1.6;
-border-left:5px solid #a65277;
+background: #fff2f7;
+padding: 25px;
+border-radius: 12px;
+border-left: 5px solid #a65277;
+line-height: 1.7;
 }
-
-/* WARNING */
 
 .warning{
-background:#fff3cd;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #f2c94c;
-line-height:1.8;
-margin-top:15px;
+background: #fff3cd;
+padding: 25px;
+border-radius: 12px;
+border-left: 5px solid #d4b15a;
+line-height: 1.7;
 }
 
+.warning ul, .info ul{
+padding-left: 20px;
+margin-bottom: 0;
+}
 
+.warning li, .info li{
+margin-bottom: 10px;
+}
+
+/* ===================== */
+/* BOTONES Y ENLACES */
+/* ===================== */
+.link-btn{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 10px 20px;
+background: #1565c0;
+color: white;
+border-radius: 20px;
+font-size: 15px;
+font-weight: bold;
+text-decoration: none;
+transition: all .2s ease;
+margin-top: 15px;
+}
+
+.link-btn:hover{
+background: #0d47a1;
+transform: translateY(-2px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===================== */
+/* MODALES */
+/* ===================== */
+.modal-overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: 0.3s;
+}
+
+.modal-overlay.active{
+opacity: 1;
+visibility: visible;
+}
+
+.modal{
+background: white;
+border-radius: 16px;
+padding: 25px;
+max-width: 650px;
+width: 90%;
+max-height: 85vh;
+overflow-y: auto;
+position: relative;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+transform: translateY(20px);
+transition: 0.3s;
+}
+
+.modal-overlay.active .modal{
+transform: translateY(0);
+}
+
+.modal-close{
+position: absolute;
+top: 15px;
+right: 15px;
+border: none;
+background: #eee;
+border-radius: 50%;
+width: 35px;
+height: 35px;
+font-size: 16px;
+cursor: pointer;
+transition: .2s;
+}
+
+.modal-close:hover{
+background: #ddd;
+color: #d9534f;
+}
+
+.modal-header h3{
+margin-top: 0;
+color: #6d2548;
+border-bottom: 1px solid #eee;
+padding-bottom: 15px;
+margin-bottom: 15px;
+font-size: 22px;
+}
+
+.modal-box{
+background: #f8f9fb;
+border-left: 4px solid #a65277;
+padding: 15px;
+border-radius: 8px;
+margin: 15px 0;
+line-height: 1.6;
+}
+
+.modal-highlight{
+background: #fff3cd;
+border-left: 4px solid #d4b15a;
+padding: 15px;
+border-radius: 8px;
+margin: 15px 0;
+line-height: 1.6;
+}
+
+/* ===================== */
 /* FOOTER */
-
+/* ===================== */
 footer{
-background:#a65277;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-border-radius:10px;
-width:75%;
-margin-left:auto;
-margin-right:auto;
+background: #a65277;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 50px;
+margin-bottom: 20px;
+border-radius: 10px;
 }
 
-@media (max-width:900px){
-.wrapper{width:90%;}
-footer{width:90%;}
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 900px){
+.wrapper{ width: 90%; }
+}
+
+@media (max-width: 600px){
+/* Adapta la tarjeta principal rectangular a móviles */
+.card.principal {
+flex-direction: column;
+text-align: center;
+padding: 25px;
+gap: 15px;
+}
 }
 
 </style>
@@ -182,161 +376,259 @@ footer{width:90%;}
 
 <section class="section">
 <h2>🔎 Herramientas para orientar tu futuro</h2>
-
 <p>
-Si estás decidiendo tu itinerario académico o profesional, estas herramientas pueden ayudarte a conocerte mejor y explorar diferentes opciones.
+Si estás en proceso de decidir tu itinerario educativo o profesional, estos cuestionarios pueden ayudarte a conocer mejor tus intereses, explorar diferentes profesiones y encontrar el camino que mejor se adapte a ti.
 </p>
-
+<p style="font-weight: bold; color: #6d2548;">
+👉 Haz clic en cada herramienta para ver más información y acceder a los cuestionarios:
+</p>
 </section>
 
 <section class="section">
+<h3>🧠 Plataforma OrientaLine del centro</h3>
+<div class="cards-single">
 
-<div class="blocks">
-
-<!-- CUESTIONARIOS -->
-
-<div class="block">
-<strong>🔍 Cuestionarios de orientación</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card principal" onclick="openModal('modal-orientaline')">
 <span class="icon">🧠</span>
-<div><strong>OrientaLine</strong><br>Para ESO y Bachillerato</div>
+<div class="text-content">
+<div class="card-title">OrientaLine</div>
+<div class="card-info">Plataforma oficial de orientación del instituto. Información sobre itinerarios, grados, ciclos formativos y empleabilidad.</div>
+</div>
 </div>
 
-<div class="block-item">
+</div>
+</section>
+
+<section class="section">
+<h3>🔍 Cuestionarios de orientación académica</h3>
+<div class="cards">
+
+<div class="card" onclick="openModal('modal-educaweb')">
 <span class="icon">📘</span>
-<div><strong>Educaweb – El Gran Recorrido</strong><br>Para ESO y Bachillerato</div>
+<div class="card-title">Educaweb</div>
+<div class="card-info">El Gran Recorrido para explorar tu vocación.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-mywaypass')">
 <span class="icon">🌐</span>
-<div><strong>MyWayPass</strong><br>Exploración de intereses profesionales</div>
+<div class="card-title">MyWayPass</div>
+<div class="card-info">Test de intereses a modo de videojuego.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-eligeprof')">
 <span class="icon">📊</span>
-<div><strong>Elige Profesión</strong><br>Test de intereses</div>
+<div class="card-title">Elige Profesión</div>
+<div class="card-info">Test de intereses y profesiones ideales.</div>
 </div>
 
-<div class="block-item">
+<div class="card" onclick="openModal('modal-bcnactiva')">
 <span class="icon">🏙️</span>
-<div><strong>Barcelona Activa</strong><br>Especialmente para Bachillerato</div>
+<div class="card-title">Barcelona Activa</div>
+<div class="card-info">Ideal para Bachillerato y mercado laboral.</div>
 </div>
 
 </div>
+</section>
 
-</div>
+<section class="section">
+<h3>🛠️ Orientación Específica y Laboral</h3>
+<div class="cards">
 
-<!-- FP -->
-
-<div class="block">
-<strong>🛠️ Orientación en Formación Profesional</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card fp" onclick="openModal('modal-todofp')">
 <span class="icon">📚</span>
-<div><strong>TodoFP</strong><br>Información sobre ciclos y profesiones</div>
+<div class="card-title">DecideFP</div>
+<div class="card-info">Información oficial sobre ciclos formativos.</div>
 </div>
 
-<div class="block-item">
+<div class="card fp" onclick="openModal('modal-fpbide')">
 <span class="icon">🧭</span>
-<div><strong>FPBide</strong><br>Cuestionario de orientación para FP</div>
+<div class="card-title">FPBide</div>
+<div class="card-info">¿Dudas entre FP o Bachillerato? Este es tu test.</div>
 </div>
 
-</div>
-
-</div>
-
-<!-- LABORAL -->
-
-<div class="block">
-<strong>💼 Orientación laboral</strong>
-
-<div class="block-items">
-
-<div class="block-item">
+<div class="card laboral" onclick="openModal('modal-labora')">
 <span class="icon">🏢</span>
-<div><strong>LABORA</strong><br>Recursos de empleo y formación</div>
-</div>
-
-<div class="block-item">
-<span class="icon">📈</span>
-<div>Planificación de carrera y asesoramiento profesional</div>
+<div class="card-title">LABORA</div>
+<div class="card-info">Recursos de empleo, formación y orientación laboral.</div>
 </div>
 
 </div>
-
-</div>
-
-<!-- CONSEJOS -->
-
-<div class="block">
-<strong>📌 Consejos de orientación</strong>
-
-<div class="block-items">
-
-<div class="block-item">
-<span class="icon">🧩</span>
-<div>No hay respuestas correctas o incorrectas</div>
-</div>
-
-<div class="block-item">
-<span class="icon">📚</span>
-<div>Complementa los resultados con información</div>
-</div>
-
-<div class="block-item">
-<span class="icon">🎯</span>
-<div>Los intereses pueden cambiar con el tiempo</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
-
-<h2>⚠️ Errores habituales al elegir estudios</h2>
-
-<div class="warning">
-
-<ul>
-<li>Elegir sin suficiente información</li>
-<li>Decidir por presión externa</li>
-<li>No valorar alternativas</li>
-<li>Elegir lo más fácil</li>
-<li>Guiarse solo por salidas laborales</li>
-<li>Decidir con prisas</li>
-</ul>
-
-<p>
-Una buena decisión implica conocerte, informarte y reflexionar.
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
+<h2>📌 Consejos para utilizar estos cuestionarios</h2>
 <div class="info">
-Si tienes dudas, consulta con tu <strong>tutor o tutora</strong> o con el <strong>Departamento de Orientación</strong>.
+<ul>
+<li><strong>🧩 No hay respuestas correctas o incorrectas:</strong> Estos tests no determinan tu futuro, sino que te dan pistas sobre qué opciones pueden encajar contigo.</li>
+<li><strong>📚 Complementa con información adicional:</strong> Consulta guías de orientación, habla con la orientadora y participa en ferias educativas y Jornadas de Puertas Abiertas.</li>
+<li><strong>🎯 Actualiza tus respuestas:</strong> Nuestros intereses evolucionan con el tiempo, repite algunos tests en diferentes momentos de tu etapa educativa.</li>
+</ul>
 </div>
-
 </section>
 
+<section class="section">
+<h2>⚠️ Los 7 errores más comunes al elegir estudios</h2>
+<div class="warning">
+<p>Tomar una decisión adecuada requiere evitar estos errores habituales:</p>
+<ul>
+<li><strong>1. Elegir sin suficiente información:</strong> Ocasiona decisiones equivocadas y frustración.</li>
+<li><strong>2. Estudiar por estudiar:</strong> Hacerlo porque "algo hay que hacer", sin deseo real, provoca desmotivación.</li>
+<li><strong>3. No valorar todas las alternativas posibles:</strong> Puedes perder la oportunidad de descubrir una opción más adecuada para ti.</li>
+<li><strong>4. Decidir por lo que dicen o hacen los demás:</strong> Las opiniones pesan, pero la decisión y el futuro son tuyos.</li>
+<li><strong>5. Elegir el camino más fácil:</strong> En raras ocasiones la vía que requiere menor esfuerzo coincide con lo que es mejor para nosotros.</li>
+<li><strong>6. Guiarse solo por las salidas laborales:</strong> Las salidas son cambiantes y estudiar algo que no encaja contigo suele salir mal.</li>
+<li><strong>7. Decidir con prisas:</strong> Tomar una decisión sin dedicar el tiempo necesario para informarse correctamente.</li>
+</ul>
+<p style="margin-top: 15px; font-weight: bold; color: #6d2548;">
+💡 ¿Necesitas más ayuda? Consulta con tu tutora, tutor o con el Departamento de Orientación.<br><br>
+Y recuerda: Elegir tus estudios es algo que solo puedes hacer tú, pero es necesario apoyarte en el consejo de tu familia y el asesoramiento de tus profesores y profesoras que conocen tus fortalezas y pueden orientarte.
+</p>
 </div>
+</section>
 
 <footer>
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
 </footer>
+
+</div> <div id="modal-orientaline" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🧠 OrientaLine</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado de ESO y Bachillerato.</p>
+<div class="modal-box">
+<p><strong>💡 ¿Por qué hacerlo?</strong> El instituto ha adquirido esta herramienta para que el alumnado pueda utilizarla en su proceso de orientación. Ofrece recursos para conocer carreras, itinerarios formativos y empleabilidad en diferentes áreas.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://elorienta.com/movil//?yafxb=06651" target="_blank" class="link-btn">🔗 Acceder a OrientaLine</a> 
+</div>
+</div>
+</div>
+
+<div id="modal-educaweb" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📘 Educaweb - El Gran Recorrido</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado de ESO y Bachillerato.</p>
+<div class="modal-box">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Te ofrece una visión amplia de diferentes opciones profesionales en función de tus intereses personales y aptitudes.</p>
+</div>
+<div style="text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="https://www.educaweb.cat/orientacio/interessos-professionals/" target="_blank" class="link-btn">🔗 Test en Valenciano/Catalán</a>
+<a href="https://www.educaweb.com/orientacion/intereses-profesionales/" target="_blank" class="link-btn" style="background: #4caf50;">🔗 Test en Castellano</a>
+</div>
+</div>
+</div>
+
+<div id="modal-mywaypass" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🌐 MyWayPass</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado de ESO y Bachillerato.</p>
+<div class="modal-box">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Es una plataforma interactiva, a modo de videojuego, que te ayuda a descubrir tus fortalezas y explorar diferentes ámbitos profesionales de manera lúdica.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://mywaypass.com/" target="_blank" class="link-btn">🔗 Acceder al test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-eligeprof" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📊 Elige Profesión</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado de ESO y Bachillerato.</p>
+<div class="modal-box">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Permite relacionar tus intereses con posibles profesiones, proporcionando información detallada sobre cada opción del mercado actual.</p>
+</div>
+<div style="text-align: center;">
+<a href="http://www.eligeprofesion.org/pro_002.asp?ipag=12" target="_blank" class="link-btn">🔗 Haz el test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-bcnactiva" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🏙️ Barcelona Activa</h3></div>
+<p><strong>📝 Para quién:</strong> Especialmente para Bachillerato.</p>
+<div class="modal-box">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Relaciona tus intereses con sectores y estudios específicos en el contexto del mercado laboral y las profesiones del futuro.</p>
+</div>
+<div style="text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="https://testinteressos.barcelonactiva.cat/anonim.php?gInterfaceLanguage=ca" target="_blank" class="link-btn">🔗 Test en Valenciano/Catalán</a>
+<a href="https://testinteressos.barcelonactiva.cat/anonim.php?gInterfaceLanguage=es" target="_blank" class="link-btn" style="background: #4caf50;">🔗 Test en Castellano</a>
+</div>
+</div>
+</div>
+
+<div id="modal-todofp" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>📚 DecideFP</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado que considera la Formación Profesional como opción académica.</p>
+<div class="modal-highlight">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Incluye descripciones detalladas para diseñar tu itinerario formativo personalizado con todos los ciclos formativos, familias profesionales y salidas laborales directas.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://www.todofp.es/decidefp/datos-iniciales" target="_blank" class="link-btn" style="background: #2e7d32;">🔗 Explora las opciones de FP</a>
+</div>
+</div>
+</div>
+
+<div id="modal-fpbide" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🧭 FPBide</h3></div>
+<p><strong>📝 Para quién:</strong> Alumnado de ESO y Bachillerato, especialmente para quien duda entre FP o Bachillerato.</p>
+<div class="modal-highlight">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Ayuda a identificar qué tipo de formación profesional o rama encaja mejor con tus intereses y habilidades prácticas.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://www.fpbide.com/es/index.html" target="_blank" class="link-btn" style="background: #2e7d32;">🔗 Haz el test</a>
+</div>
+</div>
+</div>
+
+<div id="modal-labora" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<button class="modal-close" onclick="forceClose(this)">✖</button>
+<div class="modal-header"><h3>🏢 LABORA</h3></div>
+<p><strong>📝 Para quién:</strong> Estudiantes que buscan conocer opciones de empleo, formación y orientación profesional en la Comunitat Valenciana.</p>
+<div class="modal-box" style="border-left-color: #1565c0;">
+<p><strong>💡 ¿Por qué hacerlo?</strong> Ofrece herramientas para la búsqueda de empleo, asesoramiento en la planificación de carrera y acceso a programas de formación para el empleo.</p>
+</div>
+<div style="text-align: center;">
+<a href="https://labora.gva.es/va/ciutadania" target="_blank" class="link-btn" style="background: #0d47a1;">🔗 Acceder a LABORA</a>
+</div>
+</div>
+</div>
+
+<script>
+// Abrir modal
+function openModal(id){
+  document.getElementById(id).classList.add("active");
+  document.body.style.overflow = "hidden"; // Evita hacer scroll detrás
+}
+
+// Cerrar modal clicando fuera
+function closeModal(e){
+  let modal = e.target.closest(".modal-overlay");
+  if(e.target === modal){
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+
+// Cerrar modal con la X
+function forceClose(btn){
+  let modal = btn.closest(".modal-overlay");
+  if(modal){
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+</script>
 
 </body>
 </html>
