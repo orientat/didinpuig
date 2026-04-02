@@ -94,13 +94,6 @@ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 gap: 30px;
 }
 
-/* Contenidor específic per a targetes úniques (perquè no s'estiren tota la pantalla) */
-.cards-single{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
-gap: 30px;
-}
-
 .card{
 padding: 20px 25px;
 border-radius: 16px;
@@ -156,8 +149,43 @@ line-height: 1.5;
 .card.laboral:hover { background: #e3f2fd; }
 .card.laboral:hover .card-title { color: #0d47a1; }
 
-.card.principal { border-left-color: #6d2548; background: #fff2f7;}
-.card.principal:hover { background: #ffe4ef; }
+/* ===================== */
+/* TARGETA PRINCIPAL (RECTANGULAR) */
+/* ===================== */
+.cards-single{
+display: flex;
+justify-content: center; /* Centra la tarjeta horizontalmente */
+}
+
+.card.principal {
+width: 100%;
+max-width: 800px; /* Ocupa más espacio horizontal */
+display: flex;
+align-items: center;
+text-align: left;
+gap: 30px;
+padding: 25px 40px;
+border-left-color: #6d2548;
+background: #fff2f7;
+}
+
+.card.principal:hover {
+background: #ffe4ef;
+}
+
+.card.principal .icon {
+margin-bottom: 0;
+font-size: 70px;
+}
+
+.card.principal .card-title {
+margin-bottom: 8px;
+font-size: 24px;
+}
+
+.card.principal .card-info {
+font-size: 16px;
+}
 
 /* ===================== */
 /* INFO / ALERTES */
@@ -318,7 +346,16 @@ border-radius: 10px;
 /* ===================== */
 @media (max-width: 900px){
 .wrapper{ width: 90%; }
-.cards-single{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px){
+/* Adapta la tarjeta principal rectangular a móviles */
+.card.principal {
+flex-direction: column;
+text-align: center;
+padding: 25px;
+gap: 15px;
+}
 }
 
 </style>
@@ -353,8 +390,10 @@ Si estàs en procés de decidir el teu itinerari educatiu o professional, aquest
 
 <div class="card principal" onclick="openModal('modal-orientaline')">
 <span class="icon">🧠</span>
+<div class="text-content">
 <div class="card-title">OrientaLine</div>
-<div class="card-info">Plataforma oficial d'orientació de l'institut. Informació sobre itineraris, graus i cicles.</div>
+<div class="card-info">Plataforma oficial d'orientació de l'institut. Informació sobre itineraris, graus, cicles formatius i ocupabilitat.</div>
+</div>
 </div>
 
 </div>
