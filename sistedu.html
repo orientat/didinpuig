@@ -18,7 +18,7 @@ color:#333;
 /* WRAPPER */
 
 .wrapper{
-width:75%;
+width:1100px;
 margin:auto;
 }
 
@@ -38,10 +38,6 @@ font-weight:bold;
 font-size:14px;
 }
 
-.back a:hover{
-background:#a65277;
-}
-
 /* HEADER */
 
 header{
@@ -53,17 +49,12 @@ margin-top:15px;
 border-radius:10px;
 }
 
-header h1{
-margin:0;
-}
-
 /* DIAGRAMA */
 
 .diagram{
 position:relative;
-margin-top:50px;
-width:100%;
 height:650px;
+margin-top:40px;
 }
 
 /* CAJAS */
@@ -73,36 +64,35 @@ position:absolute;
 padding:10px 16px;
 color:white;
 font-weight:bold;
-text-align:center;
-border-radius:4px;
+border-radius:6px;
 font-size:14px;
+text-align:center;
+white-space:nowrap;
 }
 
-/* COLORES (ajustados a la imagen) */
+/* COLORES EXACTOS */
+
+.master{background:#b03060;}
+.uni{background:#c03a73;}
+.prova{background:#e0a72f;}
+.bach{background:#5f8fc1;}
+.tBach{background:#7ea9d4;}
+
+.gs{background:#2f7f7f;}
+.tGS{background:#4fa7a7;}
+
+.gm{background:#3aa63a;}
+.tGM{background:#5fc15f;}
+
+.fpb{background:#8c1d4f;}
+.tFPB{background:#b79ad6;}
 
 .eso{background:#5db7a4;}
-.tituloESO{background:#78d1c2;}
+.tESO{background:#7fd1c2;}
 
-.fpbasica{background:#8c1d4f;}
-.tituloFPB{background:#c7a6df;}
-
-.gmfp{background:#3aa63a;}
-.tituloGM{background:#58c458;}
-
-.gsfp{background:#2f7f7f;}
-.tituloGS{background:#4ea6a6;}
-
-.bach{background:#3f7fc1;}
-.tituloBach{background:#6fa4db;}
-
-.uni{background:#c03a73;}
-.master{background:#b03060;}
-
-.prova{background:#e0a72f;}
-.prova19{background:#6b6b6b;}
-
-.cursGM{background:#3aa63a;}
-.cursGS{background:#2f7f7f;}
+.gray{background:#6b6b6b;}
+.greenDark{background:#2f7f7f;}
+.green{background:#3aa63a;}
 
 .lab{
 background:#c0392b;
@@ -111,58 +101,52 @@ transform: rotate(180deg);
 display:flex;
 align-items:center;
 justify-content:center;
+height:420px;
+width:60px;
 }
 
 /* POSICIONES */
 
+/* IZQUIERDA */
+.masterBox{left:60px; top:20px;}
+.uniBox{left:60px; top:70px;}
+.provaBatx{left:60px; top:120px;}
+.tituloBach{left:60px; top:160px;}
+.bach2{left:60px; top:210px;}
+.bach1{left:60px; top:260px;}
+
 /* ESO */
-.eso1{left:60px; top:500px;}
-.eso2{left:60px; top:450px;}
-.eso3{left:60px; top:400px;}
-.eso4{left:60px; top:350px;}
-.tESO{left:60px; top:300px;}
+.tituloESO{left:60px; top:310px;}
+.eso4{left:60px; top:360px;}
+.eso3{left:60px; top:410px;}
+.eso2{left:60px; top:460px;}
+.eso1{left:60px; top:510px;}
 
 /* FPB */
-.gbfp1{left:260px; top:450px;}
-.gbfp2{left:260px; top:400px;}
-.tFPB{left:260px; top:350px;}
+.tituloFPB{left:260px; top:360px;}
+.gbfp2{left:260px; top:410px;}
+.gbfp1{left:260px; top:460px;}
 
 /* GM */
-.gm1{left:460px; top:450px;}
-.gm2{left:460px; top:400px;}
-.tGM{left:460px; top:350px;}
+.tituloGM{left:460px; top:360px;}
+.gm2{left:460px; top:410px;}
+.gm1{left:460px; top:460px;}
+.prova17{left:650px; top:460px;}
 
 /* GS */
-.gs1{left:460px; top:250px;}
-.gs2{left:460px; top:200px;}
-.tGS{left:460px; top:150px;}
+.tituloGS{left:460px; top:160px;}
+.gs2{left:460px; top:210px;}
+.gs1{left:460px; top:260px;}
+.prova19{left:650px; top:240px;}
 
-/* Bach */
-.bach1{left:60px; top:250px;}
-.bach2{left:60px; top:200px;}
-.tBach{left:60px; top:150px;}
+/* CURSOS */
+.cursGM{left:650px; top:360px;}
+.cursGS{left:650px; top:140px;}
 
-/* Universidad */
-.uniBox{left:60px; top:80px; width:150px;}
-.masterBox{left:60px; top:40px; width:150px;}
+/* LABORAL */
+.labBox{right:40px; top:120px;}
 
-/* Extras */
-.provaBatx{left:60px; top:120px;}
-.provaGM{left:650px; top:430px;}
-.provaGS{left:650px; top:230px;}
-
-.cursGMBox{left:650px; top:350px;}
-.cursGSBox{left:650px; top:120px;}
-
-/* MON LABORAL */
-.labBox{
-right:40px;
-top:100px;
-height:400px;
-width:50px;
-}
-
-/* FLECHAS (SVG encima) */
+/* SVG */
 
 svg{
 position:absolute;
@@ -170,37 +154,6 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-pointer-events:none;
-}
-
-/* FOOTER */
-
-footer{
-background:#a65277;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-border-radius:10px;
-width:75%;
-margin-left:auto;
-margin-right:auto;
-}
-
-@media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-footer{
-width:90%;
-}
-
-.diagram{
-height:900px;
-}
-
 }
 
 </style>
@@ -221,71 +174,69 @@ height:900px;
 
 <div class="diagram">
 
+<!-- IZQUIERDA -->
+<div class="box master masterBox">MÀSTER</div>
+<div class="box uni uniBox">GRAU UNIVERSITARI</div>
+<div class="box prova provaBatx">PROVA D’ACCÉS</div>
+
+<div class="box tBach tituloBach">TÍTOL BATXILLER</div>
+<div class="box bach bach2">2n BATX</div>
+<div class="box bach bach1">1r BATX</div>
+
 <!-- ESO -->
-<div class="box eso eso1">1r ESO</div>
-<div class="box eso eso2">2n ESO</div>
-<div class="box eso eso3">3r ESO</div>
+<div class="box tESO tituloESO">TÍTOL D’ESO</div>
 <div class="box eso eso4">4t ESO</div>
-<div class="box tituloESO tESO">TÍTOL D’ESO</div>
+<div class="box eso eso3">3r ESO</div>
+<div class="box eso eso2">2n ESO</div>
+<div class="box eso eso1">1r ESO</div>
 
 <!-- FPB -->
-<div class="box fpbasica gbfp1">1r GBFP</div>
-<div class="box fpbasica gbfp2">2n GBFP</div>
-<div class="box tituloFPB tFPB">TÍTOL TÈCNIC BÀSIC</div>
+<div class="box tFPB tituloFPB">TÍTOL TÈCNIC BÀSIC</div>
+<div class="box fpb gbfp2">2n GBFP</div>
+<div class="box fpb gbfp1">1r GBFP</div>
 
 <!-- GM -->
-<div class="box gmfp gm1">1r GMFP</div>
-<div class="box gmfp gm2">2º GMFP</div>
-<div class="box tituloGM tGM">TÍTOL TÈCNIC</div>
+<div class="box tGM tituloGM">TÍTOL TÈCNIC</div>
+<div class="box gm gm2">2º GMFP</div>
+<div class="box gm gm1">1º GMFP</div>
+<div class="box prova prova17">PROVA D’ACCÉS (>17)</div>
 
 <!-- GS -->
-<div class="box gsfp gs1">1r GSFP</div>
-<div class="box gsfp gs2">2n GSFP</div>
-<div class="box tituloGS tGS">TÍTOL TÈCNIC SUPERIOR</div>
+<div class="box tGS tituloGS">TÍTOL TÈCNIC SUPERIOR</div>
+<div class="box gs gs2">2n GSFP</div>
+<div class="box gs gs1">1r GSFP</div>
+<div class="box gray prova19">PROVA D’ACCÉS (>19)</div>
 
-<!-- Bach -->
-<div class="box bach bach1">1r BATX</div>
-<div class="box bach bach2">2n BATX</div>
-<div class="box tituloBach tBach">TÍTOL BATXILLER</div>
+<!-- CURSOS -->
+<div class="box green cursGM">Curs d’Especialització</div>
+<div class="box greenDark cursGS">Curs d’Especialització</div>
 
-<!-- Universidad -->
-<div class="box uni uniBox">GRAU UNIVERSITARI</div>
-<div class="box master masterBox">MÀSTER</div>
-
-<!-- Extras -->
-<div class="box prova provaBatx">PROVA D’ACCÉS</div>
-<div class="box prova provaGM">PROVA D’ACCÉS (>17)</div>
-<div class="box prova19 provaGS">PROVA D’ACCÉS (>19)</div>
-
-<div class="box cursGM cursGMBox">Curs d’Especialització</div>
-<div class="box cursGS cursGSBox">Curs d’Especialització</div>
-
-<!-- MON LABORAL -->
+<!-- LABORAL -->
 <div class="box lab labBox">MON LABORAL</div>
 
-<!-- FLECHAS -->
+<!-- FLECHAS PERFECTAMENTE ALINEADAS -->
 <svg>
 
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
 <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
 </marker>
 </defs>
 
-<!-- ESO a Bach -->
-<line x1="140" y1="340" x2="140" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- ESO -> BATX -->
+<line x1="130" y1="310" x2="130" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-<!-- ESO a GM -->
-<line x1="140" y1="340" x2="500" y2="340" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- ESO -> GM -->
+<line x1="130" y1="310" x2="460" y2="310" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-<!-- GM a GS -->
-<line x1="500" y1="360" x2="500" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- GM -> GS -->
+<line x1="520" y1="360" x2="520" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-<!-- GS a Universidad -->
-<line x1="500" y1="180" x2="210" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- GS -> UNIVERSIDAD -->
+<line x1="520" y1="200" x2="210" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-<!-- Bach a Universidad -->
-<line x1="140" y1="140" x2="140" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+<!-- BATX -> UNIVERSIDAD -->
+<line x1="130" y1="160" x2="130" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
 </svg>
 
