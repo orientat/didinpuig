@@ -60,89 +60,117 @@ margin:0;
 /* DIAGRAMA */
 
 .diagram{
+position:relative;
 margin-top:50px;
-display:grid;
-grid-template-columns: repeat(5, 1fr);
-gap:15px;
-justify-items:center;
-align-items:center;
+width:100%;
+height:650px;
 }
 
 /* CAJAS */
 
 .box{
-padding:10px 14px;
+position:absolute;
+padding:10px 16px;
 color:white;
 font-weight:bold;
 text-align:center;
-border-radius:6px;
+border-radius:4px;
 font-size:14px;
 }
 
-/* COLORES (adaptados a tu estilo) */
+/* COLORES (ajustados a la imagen) */
 
-.eso{background:#5bb3a4;}
-.fpbasica{background:#8b1e4f;}
-.gmfp{background:#3b8f3b;}
-.gsfp{background:#4a9a9a;}
+.eso{background:#5db7a4;}
+.tituloESO{background:#78d1c2;}
+
+.fpbasica{background:#8c1d4f;}
+.tituloFPB{background:#c7a6df;}
+
+.gmfp{background:#3aa63a;}
+.tituloGM{background:#58c458;}
+
+.gsfp{background:#2f7f7f;}
+.tituloGS{background:#4ea6a6;}
+
 .bach{background:#3f7fc1;}
-.uni{background:#c84f84;}
-.master{background:#a63d6a;}
-.lab{background:#c0392b;}
-.gray{background:#666;}
-.yellow{background:#e1ad21;}
-.light{background:#7ccfc1;}
+.tituloBach{background:#6fa4db;}
+
+.uni{background:#c03a73;}
+.master{background:#b03060;}
+
+.prova{background:#e0a72f;}
+.prova19{background:#6b6b6b;}
+
+.cursGM{background:#3aa63a;}
+.cursGS{background:#2f7f7f;}
+
+.lab{
+background:#c0392b;
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
 /* POSICIONES */
 
 /* ESO */
-.eso1{grid-column:1; grid-row:6;}
-.eso2{grid-column:1; grid-row:5;}
-.eso3{grid-column:1; grid-row:4;}
-.eso4{grid-column:1; grid-row:3;}
-.tituloESO{grid-column:1; grid-row:2;}
+.eso1{left:60px; top:500px;}
+.eso2{left:60px; top:450px;}
+.eso3{left:60px; top:400px;}
+.eso4{left:60px; top:350px;}
+.tESO{left:60px; top:300px;}
 
 /* FPB */
-.gbfp1{grid-column:2; grid-row:4;}
-.gbfp2{grid-column:2; grid-row:3;}
-.tituloFPB{grid-column:2; grid-row:2;}
+.gbfp1{left:260px; top:450px;}
+.gbfp2{left:260px; top:400px;}
+.tFPB{left:260px; top:350px;}
 
 /* GM */
-.gm1{grid-column:3; grid-row:4;}
-.gm2{grid-column:3; grid-row:3;}
-.tituloGM{grid-column:3; grid-row:2;}
+.gm1{left:460px; top:450px;}
+.gm2{left:460px; top:400px;}
+.tGM{left:460px; top:350px;}
 
 /* GS */
-.gs1{grid-column:3; grid-row:1;}
-.gs2{grid-column:3; grid-row:0;}
-.tituloGS{grid-column:3; grid-row:-1;}
+.gs1{left:460px; top:250px;}
+.gs2{left:460px; top:200px;}
+.tGS{left:460px; top:150px;}
 
 /* Bach */
-.bach1{grid-column:1; grid-row:1;}
-.bach2{grid-column:1; grid-row:0;}
-.tituloBach{grid-column:1; grid-row:-1;}
+.bach1{left:60px; top:250px;}
+.bach2{left:60px; top:200px;}
+.tBach{left:60px; top:150px;}
 
 /* Universidad */
-.uni{grid-column:1; grid-row:-2;}
-.master{grid-column:1; grid-row:-3;}
+.uniBox{left:60px; top:80px; width:150px;}
+.masterBox{left:60px; top:40px; width:150px;}
 
 /* Extras */
-.prova17{grid-column:4; grid-row:4;}
-.prova19{grid-column:4; grid-row:1;}
-.curso1{grid-column:4; grid-row:2;}
-.curso2{grid-column:4; grid-row:-2;}
+.provaBatx{left:60px; top:120px;}
+.provaGM{left:650px; top:430px;}
+.provaGS{left:650px; top:230px;}
+
+.cursGMBox{left:650px; top:350px;}
+.cursGSBox{left:650px; top:120px;}
 
 /* MON LABORAL */
+.labBox{
+right:40px;
+top:100px;
+height:400px;
+width:50px;
+}
 
-.lab{
-grid-column:5;
-grid-row:1 / span 6;
+/* FLECHAS (SVG encima) */
+
+svg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
 height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-writing-mode: vertical-rl;
-transform: rotate(180deg);
+pointer-events:none;
 }
 
 /* FOOTER */
@@ -159,8 +187,6 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* RESPONSIVE */
-
 @media (max-width:900px){
 
 .wrapper{
@@ -172,13 +198,7 @@ width:90%;
 }
 
 .diagram{
-grid-template-columns: repeat(2, 1fr);
-}
-
-.lab{
-writing-mode:horizontal-tb;
-transform:none;
-grid-column:1 / -1;
+height:900px;
 }
 
 }
@@ -206,40 +226,68 @@ grid-column:1 / -1;
 <div class="box eso eso2">2n ESO</div>
 <div class="box eso eso3">3r ESO</div>
 <div class="box eso eso4">4t ESO</div>
-<div class="box light tituloESO">TÍTOL D’ESO</div>
+<div class="box tituloESO tESO">TÍTOL D’ESO</div>
 
 <!-- FPB -->
 <div class="box fpbasica gbfp1">1r GBFP</div>
 <div class="box fpbasica gbfp2">2n GBFP</div>
-<div class="box light tituloFPB">TÍTOL TÈCNIC BÀSIC</div>
+<div class="box tituloFPB tFPB">TÍTOL TÈCNIC BÀSIC</div>
 
 <!-- GM -->
 <div class="box gmfp gm1">1r GMFP</div>
 <div class="box gmfp gm2">2º GMFP</div>
-<div class="box light tituloGM">TÍTOL TÈCNIC</div>
+<div class="box tituloGM tGM">TÍTOL TÈCNIC</div>
 
 <!-- GS -->
 <div class="box gsfp gs1">1r GSFP</div>
 <div class="box gsfp gs2">2n GSFP</div>
-<div class="box light tituloGS">TÍTOL TÈCNIC SUPERIOR</div>
+<div class="box tituloGS tGS">TÍTOL TÈCNIC SUPERIOR</div>
 
 <!-- Bach -->
 <div class="box bach bach1">1r BATX</div>
 <div class="box bach bach2">2n BATX</div>
-<div class="box light tituloBach">TÍTOL BATXILLER</div>
+<div class="box tituloBach tBach">TÍTOL BATXILLER</div>
 
 <!-- Universidad -->
-<div class="box uni">GRAU UNIVERSITARI</div>
-<div class="box master">MÀSTER</div>
+<div class="box uni uniBox">GRAU UNIVERSITARI</div>
+<div class="box master masterBox">MÀSTER</div>
 
 <!-- Extras -->
-<div class="box yellow prova17">PROVA D’ACCÉS (>17)</div>
-<div class="box gray prova19">PROVA D’ACCÉS (>19)</div>
-<div class="box gmfp curso1">Curs d’Especialització</div>
-<div class="box gsfp curso2">Curs d’Especialització</div>
+<div class="box prova provaBatx">PROVA D’ACCÉS</div>
+<div class="box prova provaGM">PROVA D’ACCÉS (>17)</div>
+<div class="box prova19 provaGS">PROVA D’ACCÉS (>19)</div>
+
+<div class="box cursGM cursGMBox">Curs d’Especialització</div>
+<div class="box cursGS cursGSBox">Curs d’Especialització</div>
 
 <!-- MON LABORAL -->
-<div class="box lab">MON LABORAL</div>
+<div class="box lab labBox">MON LABORAL</div>
+
+<!-- FLECHAS -->
+<svg>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+</marker>
+</defs>
+
+<!-- ESO a Bach -->
+<line x1="140" y1="340" x2="140" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- ESO a GM -->
+<line x1="140" y1="340" x2="500" y2="340" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- GM a GS -->
+<line x1="500" y1="360" x2="500" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- GS a Universidad -->
+<line x1="500" y1="180" x2="210" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Bach a Universidad -->
+<line x1="140" y1="140" x2="140" y2="100" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+</svg>
 
 </div>
 
