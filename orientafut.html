@@ -75,6 +75,11 @@ padding-left: 10px;
 margin-bottom: 25px;
 }
 
+.section h3{
+color: #333;
+margin-bottom: 20px;
+}
+
 .section p{
 line-height: 1.7;
 margin-bottom: 15px;
@@ -86,6 +91,13 @@ margin-bottom: 15px;
 .cards{
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 30px;
+}
+
+/* Contenidor específic per a targetes úniques (perquè no s'estiren tota la pantalla) */
+.cards-single{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
 gap: 30px;
 }
 
@@ -143,6 +155,9 @@ line-height: 1.5;
 .card.laboral { border-left-color: #1565c0; }
 .card.laboral:hover { background: #e3f2fd; }
 .card.laboral:hover .card-title { color: #0d47a1; }
+
+.card.principal { border-left-color: #6d2548; background: #fff2f7;}
+.card.principal:hover { background: #ffe4ef; }
 
 /* ===================== */
 /* INFO / ALERTES */
@@ -303,6 +318,7 @@ border-radius: 10px;
 /* ===================== */
 @media (max-width: 900px){
 .wrapper{ width: 90%; }
+.cards-single{ grid-template-columns: 1fr; }
 }
 
 </style>
@@ -332,14 +348,21 @@ Si estàs en procés de decidir el teu itinerari educatiu o professional, aquest
 </section>
 
 <section class="section">
-<h3>🔍 Qüestionaris d’orientació acadèmica</h3>
-<div class="cards">
+<h3>🧠 Plataforma OrientaLine del centre</h3>
+<div class="cards-single">
 
-<div class="card" onclick="openModal('modal-orientaline')">
+<div class="card principal" onclick="openModal('modal-orientaline')">
 <span class="icon">🧠</span>
 <div class="card-title">OrientaLine</div>
-<div class="card-info">Plataforma oficial d'orientació de l'institut.</div>
+<div class="card-info">Plataforma oficial d'orientació de l'institut. Informació sobre itineraris, graus i cicles.</div>
 </div>
+
+</div>
+</section>
+
+<section class="section">
+<h3>🔍 Qüestionaris d’orientació acadèmica</h3>
+<div class="cards">
 
 <div class="card" onclick="openModal('modal-educaweb')">
 <span class="icon">📘</span>
@@ -374,7 +397,7 @@ Si estàs en procés de decidir el teu itinerari educatiu o professional, aquest
 
 <div class="card fp" onclick="openModal('modal-todofp')">
 <span class="icon">📚</span>
-<div class="card-title">TodoFP</div>
+<div class="card-title">DecideFP</div>
 <div class="card-info">Informació oficial sobre cicles formatius.</div>
 </div>
 
@@ -495,7 +518,7 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 </div>
 <div style="text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
 <a href="https://testinteressos.barcelonactiva.cat/anonim.php?gInterfaceLanguage=ca" target="_blank" class="link-btn">🔗 Test en Valencià/Català</a>
-<a href="https://testinteressos.barcelonactiva.cat/anonim.php?gInterfaceLanguage=es" class="link-btn" style="background: #4caf50;">🔗 Test en Castellà</a>
+<a href="https://testinteressos.barcelonactiva.cat/anonim.php?gInterfaceLanguage=es" target="_blank" class="link-btn" style="background: #4caf50;">🔗 Test en Castellà</a>
 </div>
 </div>
 </div>
@@ -506,7 +529,7 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 <div class="modal-header"><h3>📚 DecideFP</h3></div>
 <p><strong>📝 Per a qui:</strong> Alumnat que considera la Formació Professional com a opció acadèmica.</p>
 <div class="modal-highlight">
-<p><strong>💡 Per què fer-lo?</strong> Inclou descripcions detallades  per dissenyar el teu itinerari formatiu personalitzat amb tots els cicles formatius, famílies professionals i eixides laborals directes.</p>
+<p><strong>💡 Per què fer-lo?</strong> Inclou descripcions detallades per dissenyar el teu itinerari formatiu personalitzat amb tots els cicles formatius, famílies professionals i eixides laborals directes.</p>
 </div>
 <div style="text-align: center;">
 <a href="https://www.todofp.es/decidefp/datos-iniciales" target="_blank" class="link-btn" style="background: #2e7d32;">🔗 Explora les opcions de FP</a>
