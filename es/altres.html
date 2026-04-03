@@ -46,6 +46,14 @@ header h1 { margin: 0; font-size: 30px; }
 .card.regim { border-left-color: #4caf50; }
 .card.regim:hover { background: #e8f5e9; }
 
+/* BLOQUE BECAS DASHBOARD */
+.links-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 15px; }
+.links-card { background: #eef4ff; padding: 20px; border-radius: 14px; border-left: 5px solid #6a8fd8; transition: .3s; }
+.links-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+.links-card-title { font-weight: bold; color: #6d2548; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.links-card a { display: block; text-decoration: none; color: #1565c0; margin-bottom: 8px; font-weight: bold; transition: .2s; }
+.links-card a:hover { text-decoration: underline; transform: translateX(3px); }
+
 /* MODALES */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
 .modal-overlay.active { opacity: 1; visibility: visible; }
@@ -113,6 +121,17 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     </div>
 </section>
 
+<section class="section">
+    <h2>💰 Becas y ayudas</h2>
+    <div class="links-dashboard">
+        <div class="links-card">
+            <div class="links-card-title"><span>🎓</span> Becas principales (MEC)</div>
+            <a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">🔗 Becas MEC (Ministerio de Educación)</a>
+            <p style="font-size: 14px;">Beca general. Información, requisitos y solicitud para el curso 2026-2027.</p>
+        </div>
+    </div>
+</section>
+
 <footer>
     IES Didín Puig · Departamento de Orientación Educativa y Profesional
 </footer>
@@ -132,7 +151,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>🌍 Idiomas (EOI)</h3>
-        <div class="info-box">Certificación oficial A2-C2. Inscripción en junio y septiembre.</div>
+        <div class="info-box">Certificación oficial A2, B1, B2, C1 y C2. Inscripción habitual en junio y septiembre.</div>
         <div style="text-align:center"><a href="https://eoi.gva.es/va/idiomas" target="_blank" class="link-btn">🔗 Web oficial Idiomas GVA</a></div>
     </div>
 </div>
@@ -141,7 +160,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>🖌️ Artes Plásticas y Diseño</h3>
-        <div class="info-box">Ciclos y Grados en Enseñanzas Artísticas Superiores.</div>
+        <div class="info-box">Ciclos de Grado Medio, Superior y Grados en Enseñanzas Artísticas Superiores.</div>
         <div style="text-align:center; display: flex; flex-direction: column; gap: 5px;">
             <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-de-artes-plasticas-y-diseno" target="_blank" class="link-btn">🔗 Oferta Ciclos Artes Plásticas GVA</a>
             <a href="https://iseacv.gva.es/va/informacio-general-graus" target="_blank" class="link-btn btn-green">🔗 Grados Superiores (ISEACV)</a>
@@ -153,7 +172,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>⚽ Enseñanzas Deportivas</h3>
-        <div class="info-box">Técnico deportivo oficial. Es necesario superar una prueba física y técnica.</div>
+        <div class="info-box">Formación oficial para técnicos deportivos. Es necesario superar una prueba física y técnica inicial.</div>
         <div style="text-align:center"><a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-deportivas" target="_blank" class="link-btn">🔗 Oferta Ciclos Deportivos GVA</a></div>
     </div>
 </div>
@@ -171,8 +190,8 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>🏙️ Policía Local</h3>
-        <div class="info-box">Plazas por Ayuntamientos. Requisito: Bachillerato y carnet B.</div>
-        <div style="text-align:center"><a href="https://sede.gva.es/es/cercador-ocupacio-publica?descripcion=POLICIA%20LOCAL" target="_blank" class="link-btn">🔗 Buscador de empleo GVA Policía Local</a></div>
+        <div class="info-box">Las plazas dependen de cada Ayuntamiento. Requisito habitual: Bachillerato y carné B.</div>
+        <div style="text-align:center"><a href="https://sede.gva.es/es/cercador-ocupacio-publica?descripcion=POLICIA%20LOCAL" target="_blank" class="link-btn">🔗 Buscador de empleo Policía Local GVA</a></div>
     </div>
 </div>
 
@@ -180,7 +199,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>👮 Policía Nacional</h3>
-        <div class="info-box">Requisito: Bachillerato y carnet B. Academia de Ávila.</div>
+        <div class="info-box">Requisito: Bachillerato y carné B. Oposición estatal.</div>
         <div style="text-align:center"><a href="https://www.policia.es" target="_blank" class="link-btn">Web oficial Policía</a></div>
     </div>
 </div>
@@ -190,7 +209,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>🛡️ Guardia Civil</h3>
         <div class="info-box">Requisito: ESO o superior. Pruebas físicas y teóricas.</div>
-        <div style="text-align:center"><a href="https://www.guardiacivil.es" target="_blank" class="link-btn">Web G. Civil</a></div>
+        <div style="text-align:center"><a href="https://www.guardiacivil.es" target="_blank" class="link-btn">Web Guardia Civil</a></div>
     </div>
 </div>
 
@@ -198,7 +217,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="forceClose(this)">✖</button>
         <h3>🎖️ Fuerzas Armadas</h3>
-        <div class="info-box">Acceso desde ESO, Bachillerato o Grados según escala.</div>
+        <div class="info-box">Acceso desde ESO (Tropa), Bachillerato (Suboficiales) o Grados (Oficiales).</div>
         <div style="text-align:center"><a href="https://reclutamiento.defensa.gob.es" target="_blank" class="link-btn">Web Reclutamiento</a></div>
     </div>
 </div>
