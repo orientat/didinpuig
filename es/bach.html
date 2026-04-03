@@ -1001,13 +1001,13 @@ Estas son las modalidades que ofrecemos en nuestro centro:
 
 </div>
 
-<div class="batx-card ciencia" onclick="openModal('modal-ciencia')">
+<div class="batx-card ciencia" onclick="openModal('modal-ciencia-img')">
 <span>🔬</span>
 <div class="batx-title">Ciencias y Tecnología</div>
 <span class="hint">Ver materias</span>
 </div>
 
-<div class="batx-card social" onclick="openModal('modal-social')">
+<div class="batx-card social" onclick="openModal('modal-social-img')">
 <span>📊</span>
 <div class="batx-title">Humanidades y Ciencias Sociales</div>
 <span class="hint">Ver materias</span>
@@ -1328,13 +1328,19 @@ behavior:"smooth"
 <div id="modal-ciencia" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🔬 Ciencias y Tecnología</h3>
-
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
+</div>
+</div>
+</div>
 
+<div id="modal-ciencia-img" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<div class="modal-content">
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
+<h3>🔬 Ciencias y Tecnología - IES Didín Puig</h3>
+<img src="../batx_ct.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
 </div>
@@ -1342,13 +1348,19 @@ behavior:"smooth"
 <div id="modal-social" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>📊 Humanidades y Ciencias Sociales</h3>
-
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
+</div>
+</div>
+</div>
 
+<div id="modal-social-img" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<div class="modal-content">
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
+<h3>📊 Humanidades y Ciencias Sociales - IES Didín Puig</h3>
+<img src="../batx_cs.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
 </div>
@@ -1356,13 +1368,9 @@ behavior:"smooth"
 <div id="modal-general" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>📚 Bachillerato General</h3>
-
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
 </div>
 </div>
 </div>
@@ -1370,13 +1378,9 @@ behavior:"smooth"
 <div id="modal-arts1" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🎭 Artes Escénicas</h3>
-
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
 </div>
 </div>
 </div>
@@ -1384,13 +1388,9 @@ behavior:"smooth"
 <div id="modal-arts2" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🎨 Artes Plásticas</h3>
-
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
 </div>
 </div>
 </div>
@@ -1403,7 +1403,7 @@ document.getElementById(id).classList.add("active");
 
 function closeModal(e){
 let modal = e.target.closest(".modal-overlay");
-if(modal){
+if(modal && e.target === modal){
 modal.classList.remove("active");
 }
 }
