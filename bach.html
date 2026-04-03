@@ -345,7 +345,7 @@ justify-content:center;
 }
 
 /* ===================== */
-/* INFO / ALERTAS */
+/* INFO / ALERTES */
 /* ===================== */
 
 .info{
@@ -935,20 +935,12 @@ target="_blank" class="link-inline">
 </p>
 
 <div class="batx-grid">
-<!-- ======================= -->
-<!-- 1r BATXILLERAT -->
-<!-- ======================= -->
-
 <div class="batx-box">
 <h3>1r de Batxillerat</h3>
 <p>📘 És un curs d’introducció on consolides els coneixements generals i comences a orientar-te cap a una modalitat segons els teus interessos.</p>
 <p>🎯 Permet explorar diferents matèries abans de decidir amb més seguretat el teu futur acadèmic.</p>
 </div>
 
-
-<!-- ======================= -->
-<!-- 2n BATXILLERAT -->
-<!-- ======================= -->
 
 <div class="batx-box">
 <h3>2n de Batxillerat</h3>
@@ -1010,13 +1002,13 @@ Aquestes són les modalitats que oferim al nostre centre:
 
 </div>
 
-<div class="batx-card ciencia" onclick="openModal('modal-ciencia')">
+<div class="batx-card ciencia" onclick="openModal('modal-ciencia-img')">
 <span>🔬</span>
 <div class="batx-title">Ciències i Tecnologia</div>
 <span class="hint">Veure matèries</span>
 </div>
 
-<div class="batx-card social" onclick="openModal('modal-social')">
+<div class="batx-card social" onclick="openModal('modal-social-img')">
 <span>📊</span>
 <div class="batx-title">Humanitats i Ciències Socials</div>
 <span class="hint">Veure matèries</span>
@@ -1332,193 +1324,72 @@ behavior:"smooth"
 
 </script>
 
-<!-- MODAL CIÈNCIES -->
 <div id="modal-ciencia" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🔬 Ciències i Tecnologia</h3>
-
 <img src="Bach_ordenacio.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
-<!--
-<div class="blocks">
-
-<div class="block">
-<strong>📘 Matèries comunes</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">📘</span><div>Llengua Castellana i Literatura I</div></div>
-<div class="block-item"><span class="icon">📗</span><div>Valencià: Llengua i Literatura I</div></div>
-<div class="block-item"><span class="icon">🌍</span><div>Llengua Estrangera I</div></div>
-<div class="block-item"><span class="icon">🏃</span><div>Educació Física</div></div>
-<div class="block-item"><span class="icon">🤔</span><div>Filosofia</div></div>
-</div>
-
-</div>
-
-<div class="block">
-<strong>🔬 Modalitat</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">➗</span><div>Matemàtiques I</div></div>
-<div class="block-item"><span class="icon">⚗️</span><div>Física i Química</div></div>
-<div class="block-item"><span class="icon">🧬</span><div>Biologia, Geologia i Ciències Ambientals</div></div>
-<div class="block-item"><span class="icon">💻</span><div>Tecnologia i Enginyeria I</div></div>
-</div>
-
-</div>
-
-<div class="block">
-<strong>⭐ Optatives</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">🧠</span><div>Programació</div></div>
-<div class="block-item"><span class="icon">📊</span><div>Projectes interdisciplinaris</div></div>
-</div>
-
-</div>
-
-</div>
--->
-
 </div>
 </div>
 </div>
 
-<!-- MODAL SOCIAL -->
+<div id="modal-ciencia-img" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<div class="modal-content">
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
+<h3>🔬 Ciències i Tecnologia - IES Didín Puig</h3>
+<img src="batx_ct.png" style="width:100%; border-radius:10px; margin-top:15px;">
+</div>
+</div>
+</div>
+
 <div id="modal-social" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>📊 Humanitats i Ciències Socials</h3>
-
 <img src="Bach_ordenacio.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
-<!--
-<div class="blocks">
-
-<div class="block">
-<strong>📘 Matèries comunes</strong>
-<div class="block-items">
-<div class="block-item"><span class="icon">📘</span><div>Llengua Castellana i Literatura I</div></div>
-<div class="block-item"><span class="icon">📗</span><div>Valencià</div></div>
-<div class="block-item"><span class="icon">🌍</span><div>Llengua Estrangera</div></div>
-</div>
-</div>
-
-<div class="block">
-<strong>📊 Modalitat</strong>
-<div class="block-items">
-<div class="block-item"><span class="icon">➗</span><div>Matemàtiques CCSS I</div></div>
-<div class="block-item"><span class="icon">📈</span><div>Economia</div></div>
-<div class="block-item"><span class="icon">🏛️</span><div>Història del món contemporani</div></div>
-<div class="block-item"><span class="icon">📚</span><div>Llatí</div></div>
-</div>
-</div>
-
-</div>
--->
-
 </div>
 </div>
 </div>
 
-<!-- MODAL GENERAL -->
+<div id="modal-social-img" class="modal-overlay" onclick="closeModal(event)">
+<div class="modal" onclick="event.stopPropagation()">
+<div class="modal-content">
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
+<h3>📊 Humanitats i Ciències Socials - IES Didín Puig</h3>
+<img src="batx_cs.png" style="width:100%; border-radius:10px; margin-top:15px;">
+</div>
+</div>
+</div>
+
 <div id="modal-general" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>📚 Batxillerat General</h3>
-
 <img src="Bach_ordenacio.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
-<!--
-<div class="blocks">
-
-<div class="block">
-<strong>📚 Estructura</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">📊</span><div>Matèria general</div></div>
-<div class="block-item"><span class="icon">🧩</span><div>Treball interdisciplinari</div></div>
-</div>
-
-</div>
-
-</div>
--->
-
 </div>
 </div>
 </div>
 
-<!-- MODAL ARTS ESCÈNIQUES -->
 <div id="modal-arts1" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🎭 Arts Escèniques</h3>
-
 <img src="Bach_ordenacio.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
-<!--
-<div class="blocks">
-
-<div class="block">
-<strong>🎭 Modalitat</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">🎭</span><div>Arts escèniques</div></div>
-<div class="block-item"><span class="icon">🎵</span><div>Anàlisi musical</div></div>
-<div class="block-item"><span class="icon">🎤</span><div>Llenguatge musical</div></div>
-</div>
-
-</div>
-
-</div>
--->
-
 </div>
 </div>
 </div>
 
-<!-- MODAL ARTS PLÀSTIQUES -->
 <div id="modal-arts2" class="modal-overlay" onclick="closeModal(event)">
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
-
-<button class="modal-close" onclick="this.closest('.modal-overlay').style.display='none'">✖</button>
-
+<button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
 <h3>🎨 Arts Plàstiques</h3>
-
 <img src="Bach_ordenacio.png" style="width:100%; border-radius:10px; margin-top:15px;">
-
-<!--
-<div class="blocks">
-
-<div class="block">
-<strong>🎨 Modalitat</strong>
-
-<div class="block-items">
-<div class="block-item"><span class="icon">🎨</span><div>Dibuix artístic</div></div>
-<div class="block-item"><span class="icon">📐</span><div>Dibuix tècnic</div></div>
-<div class="block-item"><span class="icon">🖼️</span><div>Cultura audiovisual</div></div>
-</div>
-
-</div>
-
-</div>
--->
-
 </div>
 </div>
 </div>
@@ -1531,7 +1402,7 @@ document.getElementById(id).classList.add("active");
 
 function closeModal(e){
 let modal = e.target.closest(".modal-overlay");
-if(modal){
+if(modal && e.target === modal){
 modal.classList.remove("active");
 }
 }
