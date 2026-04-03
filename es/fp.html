@@ -1,707 +1,513 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Formación Profesional | Orientación</title>
 
 <style>
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:#ffffff;
-color:#333;
-}
-
-.wrapper{
-width:75%;
-margin:auto;
-}
+/* ===================== */
+/* BASE & WRAPPER */
+/* ===================== */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #ffffff; color: #333; }
+.wrapper { width: 75%; margin: auto; }
 
 /* BOTÓN VOLVER */
-
-.back{
-margin-top:20px;
-}
-
-.back a{
-background:#6d2548;
-color:white;
-padding:8px 18px;
-border-radius:20px;
-text-decoration:none;
-font-weight:bold;
-font-size:14px;
-}
-
-.back a:hover{
-background:#a65277;
-}
+.back { margin-top: 20px; }
+.back a { background: #6d2548; color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; transition: .3s; }
+.back a:hover { background: #a65277; }
 
 /* HEADER */
-
-header{
-background:#a65277;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:15px;
-border-radius:10px;
-}
-
-header h1{
-margin:0;
-font-size:30px;
-}
+header { background: #a65277; color: white; text-align: center; padding: 25px; margin-top: 15px; border-radius: 10px; }
+header h1 { margin: 0; font-size: 30px; }
 
 /* SECCIONES */
+.section { margin-top: 50px; }
+.section h2 { color: #6d2548; border-left: 6px solid #a65277; padding-left: 10px; margin-bottom: 20px; }
+.section p { line-height: 1.8; margin-bottom: 15px; }
 
-.section{
-margin-top:40px;
-padding-top:10px;
-<!--border-top:1px solid #eee;-->
-}
+/* TARJETAS MODALIDADES / ACCESO */
+.modalitats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.modalitat { padding: 25px 15px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 180px; cursor: pointer; transition: .3s; text-decoration: none; color: inherit; }
+.modalitat:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
+.modalitat > span:first-child { font-size: 42px; margin-bottom: 15px; transition: transform .3s ease; }
+.modalitat:hover > span:first-child { transform: translateY(-6px) scale(1.2) rotate(-6deg); }
+.modalitat .title { font-size: 16px; font-weight: bold; margin-bottom: 10px; line-height: 1.3; }
 
-.section h2{
-color:#6d2548;
-border-left:6px solid #a65277;
-padding-left:10px;
-margin-bottom:15px;
-}
+/* HINT ROSADO */
+.hint { display: block; font-size: 13px; color: #6d2548; opacity: 0.7; margin-top: 10px; transition: all .25s ease; }
+.modalitat:hover .hint, .family-card:hover .hint, .card-after:hover .hint { opacity: 1; }
 
-/* TARJETAS TIPOS DE GRADO */
+/* COLORES MODALIDADES */
+.ciencia { background: #eef5ff; }
+.social { background: #edf8f1; }
+.human { background: #fff6e9; }
+.art { background: #fff0f5; }
 
-.modalitats{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px;
-}
+/* BOTONES SOMFP */
+.btn-somfp-container { display: flex; justify-content: center; margin: 30px 0; }
+.btn-somfp { display: inline-flex; align-items: center; gap: 12px; padding: 18px 35px; background: #1565c0; color: white; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: .3s; box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3); }
+.btn-somfp:hover { background: #0d47a1; transform: scale(1.05); }
 
-.modalitat{
-padding:18px;
-border-radius:10px;
-border-left:5px solid #a65277;
-text-align:center;
-font-weight:bold;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
-text-decoration:none;
-color:#333;
-}
-
-/* COLORES */
-
-.ciencia{background:#eef5ff;}
-.social{background:#edf8f1;}
-.human{background:#fff6e9;}
-.art{background:#fff0f5;}
-
-/* TARJETAS */
-
-.card{
-background:#f3f3f3;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #a65277;
-line-height:1.6;
-}
-
-.card ul{
-margin-top:10px;
-padding-left:18px;
-}
+/* QUÉ HACER DESPUÉS */
+.grid-after { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card-after { background: #f9f9f9; padding: 20px; border-radius: 12px; border-left: 5px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.06); transition: .25s; cursor: pointer; text-decoration: none; color: inherit; }
+.card-after:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); background: #fff2f7; }
+.card-after strong { display: block; margin-bottom: 10px; color: #6d2548; font-size: 17px; }
 
 /* FAMILIAS PROFESIONALES */
+.families-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-top: 20px; }
+.family-card { background: #f3f3f3; padding: 20px; border-radius: 12px; border-left: 5px solid #a65277; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+.family-card:hover { background: #fff2f7; transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
+.family-card .f-icon { font-size: 40px; margin-bottom: 10px; display: inline-block; transition: transform .3s ease; }
+.family-card:hover .f-icon { transform: translateY(-6px) scale(1.2) rotate(-6deg); }
+.family-card .f-text { font-weight: bold; font-size: 14px; display: block; }
 
-.families{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px;
-margin-top:20px;
-}
+/* MODALS */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal { background: white; border-radius: 16px; padding: 25px; max-width: 800px; width: 95%; max-height: 90vh; overflow-y: auto; position: relative; }
+.modal-close { position: absolute; top: 15px; right: 15px; border: none; background: #eee; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 18px; }
+.info-box { margin-top: 15px; padding: 18px; background: #f8f9fb; border-radius: 10px; border-left: 5px solid #a65277; line-height: 1.7; text-align: left; }
+.info-box h4 { color: #d81b60; margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid #ddd; }
+.info-box ul { margin-bottom: 10px; padding-left: 20px; }
+.info-box li { margin-bottom: 5px; }
 
-.family{
-background:#f3f3f3;
-border-radius:10px;
-border-left:5px solid #a65277;
-padding:18px;
-text-align:center;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
-transition:all 0.25s ease;
-}
+/* BOTONES AZULES MODAL */
+.modal-links { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; align-items: center; }
+.link-btn-blue { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; background: #1565c0; color: white; border-radius: 25px; font-size: 14px; font-weight: bold; text-decoration: none; transition: .2s; width: 85%; text-align: center; }
+.link-btn-blue:hover { background: #0d47a1; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
-.family a{
-text-decoration:none;
-color:#333;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
+/* BEQUES DASHBOARD */
+.links-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 15px; }
+.links-card { background: #eef4ff; padding: 20px; border-radius: 14px; border-left: 5px solid #6a8fd8; transition: .3s; }
+.links-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+.links-card-title { font-weight: bold; color: #6d2548; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.links-card a { display: block; text-decoration: none; color: #1565c0; margin-bottom: 8px; font-weight: bold; }
+.link-info { font-size: 14px; color: #555; line-height: 1.4; margin-top: 5px; }
 
-.family-icon{
-font-size:40px;
-margin-bottom:8px;
-}
+footer { background: #a65277; color: white; text-align: center; padding: 15px; margin-top: 40px; border-radius: 10px; }
 
-.family-text{
-font-weight:bold;
-font-size:14px;
-}
-
-.family:hover{
-background:#fff7fa;
-transform:translateY(-4px);
-box-shadow:0 6px 16px rgba(0,0,0,0.18);
-border-left:5px solid #6d2548;
-}
-
-/* AVISO */
-
-.warning{
-background:#fff3cd;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #f2c94c;
-line-height:1.8;
-margin-top:15px;
-}
-
-
-/* FOOTER */
-
-footer{
-background:#a65277;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-border-radius:10px;
-width:75%;
-margin-left:auto;
-margin-right:auto;
-}
-
-/* BOTÓN SUBIR */
-
-#topBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#a65277;
-color:white;
-border:none;
-padding:10px 14px;
-border-radius:50%;
-cursor:pointer;
-font-size:18px;
-display:none;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.wrapper{
-width:90%;
-}
-
-.modalitats{
-grid-template-columns:repeat(2,1fr);
-}
-
-.families{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* ===================== */
-/* BLOQUE BECAS */
-/* ===================== */
-
-.links-dashboard{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:15px;
-align-items:start;
-}
-
-.links-card{
-background:#eef4ff;
-padding:12px 20px 10px 20px;
-border-radius:14px;
-border-left:5px solid #6a8fd8;
-transition:.3s;
-
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-gap:6px;
-}
-
-.link-info{
-font-size:14px;
-}
-  
-/* COLOR AZUL */
-.links-card.becas{
-background:#eef4ff;
-border-left:5px solid #6a8fd8;
-}
-
-.links-card:hover{
-transform:translateY(-5px);
-box-shadow:0 12px 25px rgba(0,0,0,0.12);
-}
-
-.links-card-title{
-font-weight:bold;
-color:#6d2548;
-margin-bottom:12px;
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-.links-card a{
-display:block;
-text-decoration:none;
-color:#1565c0;
-margin-bottom:8px;
-transition:.2s;
-}
-
-.links-card a:hover{
-text-decoration:underline;
-color:#0d47a1;
-transform:translateX(3px);
-}
-
-/* ICONOS ANIMADOS EN BECAS */
-
-.links-card-title span{
-font-size:22px;
-transition:transform .3s ease;
-display:inline-block;
-}
-
-.links-card:hover .links-card-title span{
-transform:translateY(-3px) scale(1.2) rotate(-6deg);
-}
-
+@media (max-width: 900px) { .wrapper { width: 90%; } .grid-after { grid-template-columns: 1fr; } .families-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
-
 </head>
 
 <body>
 
 <div class="wrapper">
 
-<div class="back">
-<a href="index.html">← Volver a Orientación</a>
-</div>
+<div class="back"><a href="index.html">← Volver a Orientación</a></div>
 
 <header>
-<h1>🎓 Formación Profesional</h1>
-<p>IES Didín Puig · Departamento de Orientación</p>
+    <h1>🎓 Formación Profesional</h1>
+    <p>IES Didín Puig · Departamento de Orientación</p>
 </header>
 
-
 <section class="section">
-
-<h2>📘 ¿Qué es la Formación Profesional?</h2>
-
-<div class="card">
-
-La Formación Profesional (FP) son estudios profesionales muy cercanos a la realidad del mercado laboral.
-
-Ofrecen una formación especializada que permite adquirir competencias profesionales y facilitar la incorporación al mundo del trabajo.
-
-<br><br>
-
-Estos estudios están orientados al empleo y permiten también continuar la formación académica.
-
-<br><br>
-
-<a href="https://www.todofp.es" target="_blank"><strong>Portal TodoFP</strong></a>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📚 Tipos de grados de Formación Profesional</h2>
-
-<div class="modalitats">
-
-<a class="modalitat ciencia" href="https://www.todofp.es/que-estudiar/grados-d/fp-grado-basico.html" target="_blank">📘 Grado Básico</a>
-
-<a class="modalitat social" href="https://www.todofp.es/que-estudiar/grados-d/grado-medio.html" target="_blank">📗 Grado Medio</a>
-
-<a class="modalitat human" href="https://www.todofp.es/que-estudiar/grados-d/grado-superior.html" target="_blank">🎓 Grado Superior</a>
-
-<a class="modalitat art" href="https://www.todofp.es/que-estudiar/familias-profesionales.html" target="_blank">⭐ Cursos de especialización</a>
-
-<a class="modalitat ciencia" href="https://www.todofp.es/que-estudiar.html" target="_blank">🔎 Buscador de ciclos</a>
-
-</div>
-
-<div class="card">
-
-La Formación Profesional se organiza en <strong>ciclos formativos</strong> agrupados en diferentes <strong>familias profesionales</strong>.
-
-Cada ciclo está formado por <strong>módulos profesionales</strong> que combinan formación teórica y práctica.
-
-Los estudios incluyen también un período de <strong>formación en empresas</strong> que permite aplicar los conocimientos en un entorno real de trabajo.
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🎓 Titulaciones que se obtienen</h2>
-
-<div class="card">
-
-<ul>
-<li>Título de <strong>Técnico</strong> (Grado Medio)</li>
-<li>Título de <strong>Técnico Superior</strong> (Grado Superior)</li>
-</ul>
-
-</div>
-
+    <h2>📚 ¿Qué es la Formación Profesional?</h2>
+    <p>La Formación Profesional (FP) son estudios prácticos y especializados directamente conectados con el mercado laboral. Permiten adquirir las competencias profesionales de cada sector y facilitan tanto la inserción laboral como la continuidad académica hacia ciclos superiores o la Universidad.</p>
 </section>
 
 <section class="section">
-
-<h2>📥 Acceso a la Formación Profesional</h2>
-
-<div class="card">
-
-<h3 style="color:#d81b60;">Acceso a Grado Básico</h3>
-
-<ul>
-<li>Tener cumplidos 15 años, o cumplirlos durante el año natural en curso, y no superar los 17 años.</li>
-<li>Haber cursado 3º de ESO (o excepcionalmente 2º de ESO).</li>
-<li>Haber sido propuesto/a por el equipo docente mediante el Consejo Orientador y con consentimiento familiar.</li>
-</ul>
-
-<p><strong>Estructura del ciclo:</strong></p>
-
-<p>Los ciclos tienen una duración de <strong>2000 horas</strong>, distribuidas en <strong>2 cursos académicos de 30 horas semanales</strong>.</p>
-
-<p><strong>Cada curso incluye:</strong></p>
-
-<ul>
-<li>Módulo de Comunicación y Sociedad I y II</li>
-<li>Módulo de Ciencias Aplicadas I y II</li>
-<li>Módulos asociados a unidades de competencia del CNCP</li>
-<li>Tutoría (1 hora semanal)</li>
-<li>Módulo de Formación y Orientación Laboral (FOL) I y II</li>
-</ul>
-
-<p><strong>Segundo curso:</strong></p>
-
-<ul>
-<li>Formación en Centros de Trabajo (FCT) – 240 horas.</li>
-</ul>
-
-<hr>
-
-<h3 style="color:#d81b60;">Acceso a Grado Medio</h3>
-
-<p>
-Información general sobre el acceso a ciclos formativos:  
-<a href="https://ceice.gva.es/es/web/formacion-profesional/admissio" target="_blank">Pincha aquí</a>
-</p>
-
-<p>
-Consulta las notas de corte para el acceso a Grado Medio:  
-<a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank">Pincha aquí</a>
-</p>
-
-<p><strong>Acceso directo:</strong></p>
-
-<ul>
-<li>Tener el Graduado en Educación Secundaria Obligatoria (ESO).</li>
-<li>Tener un Título de Formación Profesional Básica.</li>
-<li>Tener un Título de Formación Profesional de grado medio (Técnico).</li>
-</ul>
-
-<p><strong>Acceso mediante prueba:</strong></p>
-
-<ul>
-<li>Si no cumples los requisitos de acceso directo puedes acceder mediante una prueba. Debes tener al menos 17 años o cumplirlos durante el año en que quieres iniciar los estudios.</li>
-<li>La prueba acredita que el aspirante tiene los conocimientos necesarios para cursar estas enseñanzas.</li>
-</ul>
-
-<p><strong>Características de la prueba:</strong></p>
-
-<ul>
-<li><strong>Parte A:</strong> Lengua y Literatura + Ciencias Sociales.</li>
-<li><strong>Parte B:</strong> Matemáticas + Tecnología + Ciencias de la Naturaleza.</li>
-</ul>
-
-<p>
-Más información sobre la prueba de acceso:  
-<a href="https://ceice.gva.es/es/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank">Pincha aquí</a>
-</p>
-
-<hr>
-
-<h3 style="color:#d81b60;">Acceso a Grado Superior</h3>
-
-<p>
-Información general sobre el acceso a ciclos formativos:  
-<a href="https://ceice.gva.es/es/web/formacion-profesional/admissio" target="_blank">Pincha aquí</a>
-</p>
-
-<p>
-Consulta las notas de corte para el acceso a Grado Superior:  
-<a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank">Pincha aquí</a>
-</p>
-
-<p><strong>Acceso directo:</strong></p>
-
-<ul>
-<li>Tener el Título de Bachiller.</li>
-<li>Tener un Título de Técnico de grado medio de la misma familia profesional o relacionada.</li>
-<li>Tener un Título de Técnico Superior.</li>
-<li>Tener un Título Universitario.</li>
-<li>Haber superado la prueba de acceso a la universidad para mayores de 25 años.</li>
-</ul>
-
-<p><strong>Acceso mediante prueba:</strong></p>
-
-<ul>
-<li>Tener al menos 19 años o cumplirlos durante el año en que se realiza la prueba.</li>
-<li>También pueden acceder personas con 18 años si tienen un ciclo formativo de grado medio relacionado.</li>
-</ul>
-
-<p><strong>Estructura de la prueba:</strong></p>
-
-<ul>
-<li><strong>Parte común:</strong> Lengua, Inglés, Matemáticas y Competencia digital.</li>
-<li><strong>Parte específica:</strong> elegir una de las tres opciones.</li>
-</ul>
-
-<ul>
-<li><strong>Opción A:</strong> Humanidades y Ciencias Sociales.</li>
-<li><strong>Opción B:</strong> Tecnología.</li>
-<li><strong>Opción C:</strong> Ciencias.</li>
-</ul>
-
-<p>
-Más información sobre la prueba de acceso:  
-<a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank">Pincha aquí</a>
-</p>
-
-<hr>
-
-<h3 style="color:#d81b60;">Acceso a Enseñanzas de FP en Régimen Especial: deportivas, artísticas y musicales</h3>
-
-<ul>
-
-<li>
-Enseñanzas de Artes Plásticas y Diseño – 
-<a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/normativa-artes-plasticas" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-<li>
-Oferta de Ciclos de Artes Plásticas y Diseño CV – 
-<a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/oferta-de-ciclos-formativos" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-<li>
-Instituto Superior de Enseñanzas Artísticas (ISEACV): Grados en Enseñanzas Artísticas Superiores – 
-<a href="https://iseacv.gva.es/va/grados-eeaass" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-<li>
-Enseñanzas Deportivas – 
-<a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-deportivas" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-<li>
-Oferta ciclos Enseñanzas Deportivas – 
-<a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/titulaciones" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-<li>
-Enseñanzas de Música y Danza – 
-<a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-de-musica-y-danza" target="_blank">
-Pincha aquí
-</a>
-</li>
-
-</ul>
-
-</div>
-
- <div style="
-background:#f8f3d6;
-border-left:6px solid #e0b84b;
-padding:18px;
-margin-top:25px;
-border-radius:10px;
-">
-
-<p style="margin:0; font-size:16px;">
-
-<strong>Nota:</strong> En la Secretaría del <strong>IES Didín Puig</strong> puedes consultar la oferta actualizada de ciclos formativos y especialidades de Formación Profesional disponibles. 
-
-Asimismo, el alumnado y las familias pueden acudir al <strong>Departamento de Orientación</strong> para recibir asesoramiento personalizado sobre itinerarios formativos, requisitos de acceso y opciones académicas y profesionales.
-
-</p>
-
-</div>
-
+    <h2>🎓 Modalidades de Grado de Formación Profesional</h2>
+    <div class="modalitats">
+        <div class="modalitat ciencia" onclick="openModal('modal-basic')">
+            <span>📘</span>
+            <div class="title">Grado Básico</div>
+            <span class="hint">Pincha aquí para ver...</span>
+        </div>
+        <div class="modalitat social" onclick="openModal('modal-mitja')">
+            <span>📗</span>
+            <div class="title">Grado Medio</div>
+            <span class="hint">Pincha aquí para ver...</span>
+        </div>
+        <div class="modalitat human" onclick="openModal('modal-superior')">
+            <span>🎓</span>
+            <div class="title">Grado Superior</div>
+            <span class="hint">Pincha aquí para ver...</span>
+        </div>
+        <div class="modalitat art" onclick="openModal('modal-cursos')">
+            <span>⭐</span>
+            <div class="title">Cursos de especialización</div>
+            <span class="hint">Pincha aquí para ver...</span>
+        </div>
+    </div>
+    <div class="btn-somfp-container">
+        <a href="https://somfp.gva.es/fpcv/#/main" target="_blank" class="btn-somfp">
+            <span>🔎</span> BUSCADOR COMPLETO DE CICLOS (SomFP GVA)
+        </a>
+    </div>
 </section>
 
 <section class="section">
-
-<h2>🚀 ¿Qué puedo hacer después de la FP?</h2>
-
-<div class="card">
-
-<ul>
-<li>Incorporarse al mundo laboral</li>
-<li>Continuar estudiando</li>
-<li>Acceder a Grado Superior después de un Grado Medio</li>
-<li>Acceder a la Universidad desde un Grado Superior</li>
-</ul>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🧰 Algunas familias profesionales</h2>
-
-<div class="families">
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank"><div class="family-icon">💻</div><div class="family-text">Informática</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank"><div class="family-icon">⚡</div><div class="family-text">Electricidad y Electrónica</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank"><div class="family-icon">🚗</div><div class="family-text">Automoción</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank"><div class="family-icon">🍳</div><div class="family-text">Hostelería y Turismo</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank"><div class="family-icon">💄</div><div class="family-text">Imagen Personal</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank"><div class="family-icon">👶</div><div class="family-text">Servicios Socioculturales</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank"><div class="family-icon">🏥</div><div class="family-text">Sanidad</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank"><div class="family-icon">📦</div><div class="family-text">Comercio y Marketing</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank"><div class="family-icon">🏗️</div><div class="family-text">Edificación y Obra Civil</div></a></div>
-
-<div class="family"><a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank"><div class="family-icon">🌱</div><div class="family-text">Agraria</div></a></div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>ℹ️ Más información sobre Formación Profesional</h2>
-
-<div class="warning">
-
-<ul>
-<li><a href="https://ceice.gva.es/va/web/formacion-profesional">Formación Profesional Comunidad Valenciana</a></li>
-<li><a href="https://www.todofp.es">Portal TodoFP</a></li>
-</ul>
-
-</div>
-
+    <h2>📥 Acceso a la Formación Profesional</h2>
+    <div class="modalitats">
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-basic-detall')">
+            <span>📝</span>
+            <div class="title">Acceso Grado Básico</div>
+            <span class="hint">Requisitos y Estructura</span>
+        </div>
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-mitja-detall')">
+            <span>📝</span>
+            <div class="title">Acceso Grado Medio</div>
+            <span class="hint">Pruebas y Requisitos</span>
+        </div>
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-superior-detall')">
+            <span>📝</span>
+            <div class="title">Acceso Grado Superior</div>
+            <span class="hint">Pruebas y Requisitos</span>
+        </div>
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-especial-detall')">
+            <span>🎨</span>
+            <div class="title">Régimen Especial</div>
+            <span class="hint">Deporte, Artes y Música</span>
+        </div>
+    </div>
 </section>
 
 <section class="section">
-
-<h2>💰 Becas y ayudas</h2>
-
-<div class="links-dashboard">
-
-<div class="links-card becas">
-<div class="links-card-title"><span>🎓</span> Becas principales (MEC) </div>
-
-<a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">
-🔗 Becas MEC (Ministerio de Educación)
-</a>
-
-<p class="link-info">
-Beca general y ayuda de apoyo educativo. Información, requisitos y solicitud.<br>
-Publicada ya la convocatoria general para el curso 2026-2027.
-</p>
-
-</div>
-
-<div class="links-card becas">
-<div class="links-card-title"><span>🏫</span> Becas Universidades Comunidad Valenciana</div>
-
-<a href="https://universitats.gva.es/es/convocatories" target="_blank">
-🔗 Otras ayudas y becas universitarias
-</a>
-  
-<p class="link-info">
-Información de ayudas y becas universitarias complementarias si en el próximo curso realizas estudios universitarios en la Comunidad Valenciana.
-</p>
-
-</div>
-
+    <h2>🚀 ¿Qué puedo hacer después de la FP?</h2>
+    <div class="grid-after">
+        <div class="card-after" onclick="openModal('modal-superior-detall')">
+            <strong>📈 De Medio a Superior</strong>
+            <p>Acceso directo a los ciclos de Grado Superior para continuar tu especialización técnica.</p>
+            <span class="hint">Ver requisitos...</span>
+        </div>
+        <a href="uni.html" class="card-after">
+            <strong>🏛️ Universidad</strong>
+            <p>Acceso directo desde Grado Superior. Tu nota media del ciclo te sirve para la admisión.</p>
+            <span class="hint">Ir a Universidad...</span>
+        </a>
+        <a href="https://labora.gva.es/va/inici" target="_blank" class="card-after">
+            <strong>💼 Mundo Laboral</strong>
+            <p>Inserción profesional mediante el portal LABORA y los servicios de empleo oficiales de la GVA.</p>
+            <span class="hint">Ir a LABORA...</span>
+        </a>
+    </div>
 </section>
+
+<section class="section">
+    <h2>🧰 Algunas familias Profesionales</h2>
+    <div class="families-grid">
+        <div class="family-card" onclick="openModal('fam-informatica')"><span class="f-icon">💻</span><span class="f-text">Informática</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-electricitat')"><span class="f-icon">⚡</span><span class="f-text">Electricidad</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-automocio')"><span class="f-icon">🚗</span><span class="f-text">Automoción</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-hostaleria')"><span class="f-icon">🍳</span><span class="f-text">Hostelería</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-imatge')"><span class="f-icon">💄</span><span class="f-text">Imagen Personal</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-sociocultural')"><span class="f-icon">👶</span><span class="f-text">Servicios Socioculturales</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-sanitat')"><span class="f-icon">🏥</span><span class="f-text">Sanidad</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-comerc')"><span class="f-icon">📦</span><span class="f-text">Comercio</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-edificacio')"><span class="f-icon">🏗️</span><span class="f-text">Edificación</span><span class="hint">Ver detalles</span></div>
+        <div class="family-card" onclick="openModal('fam-agraria')"><span class="f-icon">🌱</span><span class="f-text">Agraria</span><span class="hint">Ver detalles</span></div>
+    </div>
+    <div class="btn-somfp-container">
+        <a href="https://somfp.gva.es/fpcv/#/main" target="_blank" class="btn-somfp">
+            <span>🔎</span> BUSCADOR COMPLETO DE CICLOS (SomFP GVA)
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>💰 Becas y ayudas</h2>
+    <div class="links-dashboard">
+        <div class="links-card becas">
+            <div class="links-card-title"><span>🎓</span> Becas principales (MEC) </div>
+            <a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">🔗 Becas MEC (Ministerio de Educación)</a>
+            <p class="link-info">Beca general y ayuda de apoyo educativo. Información, requisitos y solicitud.<br>Publicada ya la convocatoria general para el curso 2026-2027.</p>
+        </div>
+        <div class="links-card becas">
+            <div class="links-card-title"><span>🏫</span> Becas Universidades Comunidad Valenciana</div>
+            <a href="https://universitats.gva.es/va/convocatories" target="_blank">🔗 Otras ayudas y becas universitarias</a>
+            <p class="link-info">Información de ayudas y becas universitarias complementarias si el próximo curso realizas estudios universitarios en la Comunidad Valenciana.</p>
+        </div>
+    </div>
+</section>
+
+<footer>IES Didín Puig · Departamento de Orientación</footer>
+
 </div>
-<footer>
-IES Didín Puig · Departamento de Orientación Educativa y Profesional
-</footer>
 
+<div id="modal-basic-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Acceso a Grado Básico</h3>
+        <div class="info-box">
+            <h4>✅ Requisitos de acceso</h4>
+            <ul>
+                <li>Tener cumplidos 15 años, o cumplirlos durante el año natural en curso, y no superar los 17 años.</li>
+                <li>Haber cursado 3º de ESO (o excepcionalmente 2º de ESO).</li>
+                <li>Haber sido propuesto/a por el equipo docente mediante el Consejo Orientador y con consentimiento familiar.</li>
+            </ul>
+            <h4>⏳ Estructura del ciclo</h4>
+            <p>Duración de 2000 horas (2 cursos académicos de 30 horas semanales). Cada curso incluye:</p>
+            <ul>
+                <li>Módulo de Comunicación y Sociedad I y II</li>
+                <li>Módulo de Ciencias Aplicadas I y II</li>
+                <li>Módulos asociados a unidades de competencia del CNCP</li>
+                <li>Tutoría (1 hora semanal)</li>
+                <li>Módulo de Formación y Orientación Laboral (FOL) I y II</li>
+            </ul>
+            <h4>💼 Segundo curso</h4>
+            <p>Formación en Centros de Trabajo (FCT) – 240 horas.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos FP en la CV</a>
+        </div>
+    </div>
+</div>
 
-<button onclick="topFunction()" id="topBtn">↑</button>
+<div id="modal-mitja-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Acceso a Grado Medio</h3>
+        <div class="info-box">
+            <h4>✅ Acceso Directo</h4>
+            <ul>
+                <li>Tener el Graduado en Educación Secundaria Obligatoria (ESO).</li>
+                <li>Tener un Título de Formación Profesional Básica.</li>
+                <li>Tener un Título de Formación Profesional de grado medio (Técnico).</li>
+            </ul>
+            <h4>📝 Acceso mediante Prueba</h4>
+            <p>Debes tener al menos 17 años o cumplirlos durante el año en que quieres iniciar los estudios.</p>
+            <ul>
+                <li><strong>Parte A:</strong> Lengua y Literatura + Ciencias Sociales.</li>
+                <li><strong>Parte B:</strong> Matemáticas + Tecnología + Ciencias de la Naturaleza.</li>
+            </ul>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/admissio" target="_blank" class="link-btn-blue">🔗 Info Admisión GVA</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notas de corte Grado Medio</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">❓ Más info sobre la Prueba</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-superior-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Acceso a Grado Superior</h3>
+        <div class="info-box">
+            <h4>✅ Acceso Directo</h4>
+            <ul>
+                <li>Tener el Título de Bachiller.</li>
+                <li>Tener un Título de Técnico de grado medio de la misma familia profesional o relacionada.</li>
+                <li>Tener un Título de Técnico Superior o Universitario.</li>
+                <li>Haber superado la prueba de acceso a la universidad para mayores de 25 años.</li>
+            </ul>
+            <h4>📝 Acceso mediante Prueba</h4>
+            <p>Tener al menos 19 años o cumplirlos durante el año en que se realiza la prueba (o 18 con título de Técnico relacionado).</p>
+            <ul>
+                <li><strong>Parte común:</strong> Lengua, Inglés, Matemáticas y Competencia digital.</li>
+                <li><strong>Parte específica:</strong> Opción A (Humanidades y CCSS), Opción B (Tecnología) u Opción C (Ciencias).</li>
+            </ul>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/admissio" target="_blank" class="link-btn-blue">🔗 Info Admisión GVA</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notas de corte Grado Superior</a>
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">❓ Más info sobre la Prueba</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-especial-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🎨 Acceso a Enseñanzas de Régimen Especial</h3>
+        <div class="info-box">
+            <h4>Enseñanzas Artísticas y Diseño</h4>
+            <ul>
+                <li>Enseñanzas de Artes Plásticas y Diseño.</li>
+                <li>ISEACV: Grados en Enseñanzas Artísticas Superiores.</li>
+            </ul>
+            <h4>Deportivas, Música y Danza</h4>
+            <ul>
+                <li>Enseñanzas Deportivas (Grado Medio y Superior).</li>
+                <li>Enseñanzas de Música y Danza (Conservatorios).</li>
+            </ul>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/normativa-artes-plasticas" target="_blank" class="link-btn-blue">🔗 Artes Plásticas y Diseño</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/oferta-de-ciclos-formativos" target="_blank" class="link-btn-blue">📂 Oferta Ciclos Artes CV</a>
+            <a href="https://iseacv.gva.es/va/grados-eeaass" target="_blank" class="link-btn-blue">🏛️ Grados Superiores (ISEACV)</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-deportivas" target="_blank" class="link-btn-blue">⚽ Enseñanzas Deportivas</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/titulaciones" target="_blank" class="link-btn-blue">📋 Oferta Ciclos Deportivos</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-de-musica-y-danza" target="_blank" class="link-btn-blue">🎵 Música y Danza</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-basic" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📘 FP Grado Básico</h3>
+        <div class="info-box">Título de Graduado en ESO y Técnico Básico. Formación profesional inicial orientada a la práctica.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos FP en la CV</a>
+            <a href="https://www.todofp.es/que-estudiar/grados-d/fp-grado-basico.html" target="_blank" class="link-btn-blue">🔗 Ciclos formativos en España (TodoFP)</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-mitja" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📗 FP Grado Medio</h3>
+        <div class="info-box">Título de Técnico. Estudios técnicos para la especialización en una profesión y acceso a Grado Superior.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos FP en la CV</a>
+            <a href="https://www.todofp.es/que-estudiar/grados-d/grado-medio.html" target="_blank" class="link-btn-blue">🔗 Ciclos formativos en España (TodoFP)</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-superior" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🎓 FP Grado Superior</h3>
+        <div class="info-box">Título de Técnico Superior. Alta especialización y vía de acceso directo a la Universidad.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos FP en la CV</a>
+            <a href="https://www.todofp.es/que-estudiar/grados-d/grado-superior.html" target="_blank" class="link-btn-blue">🔗 Ciclos formativos en España (TodoFP)</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-cursos" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>⭐ Cursos de especialización</h3>
+        <div class="info-box">Para personas ya tituladas que buscan una alta especialización tecnológica (Master de la FP).</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos FP en la CV</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales.html" target="_blank" class="link-btn-blue">🔗 Ciclos formativos en España (TodoFP)</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-informatica" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>💻 Informática y Comunicaciones</h3>
+        <div class="info-box">Desarrollo de aplicaciones web y multiplataforma, administración de sistemas y ciberseguridad.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-electricitat" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>⚡ Electricidad y Electrónica</h3>
+        <div class="info-box">Mantenimiento eléctrico, domótica, telecomunicaciones y electrónica.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-automocio" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🚗 Automoción</h3>
+        <div class="info-box">Mantenimiento electromecánico de vehículos, carrocería y logística.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-hostaleria" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🍳 Hostelería y Turismo</h3>
+        <div class="info-box">Cocina, restauración, alojamientos turísticos y agencias de viajes.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-imatge" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>💄 Imagen Personal</h3>
+        <div class="info-box">Peluquería, estética, bienestar y asesoría de imagen.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-sociocultural" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>👶 Servicios Socioculturales</h3>
+        <div class="info-box">Educación infantil, integración social y atención a la dependencia.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-sanitat" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🏥 Sanidad</h3>
+        <div class="info-box">Auxiliar de enfermería, farmacia, laboratorio e higiene bucodental.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-comerc" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📦 Comercio</h3>
+        <div class="info-box">Actividades comerciales, marketing, transporte y logística.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-edificacio" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🏗️ Edificación</h3>
+        <div class="info-box">Proyectos de edificación, obra civil y rehabilitación.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-agraria" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🌱 Agraria</h3>
+        <div class="info-box">Agricultura, ganadería, jardinería y gestión forestal.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Ciclos GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
 
 <script>
-
-let btn = document.getElementById("topBtn");
-
-window.onscroll = function(){
-
-if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
-btn.style.display = "block";
-}else{
-btn.style.display = "none";
-}
-
-};
-
-function topFunction(){
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-}
-
+function openModal(id){ document.getElementById(id).classList.add("active"); document.body.style.overflow="hidden"; }
+function closeModal(e){ if(e.target.classList.contains('modal-overlay')){ e.target.classList.remove("active"); document.body.style.overflow="auto"; } }
+function closeAll(){ document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active')); document.body.style.overflow="auto"; }
 </script>
 
 </body>
