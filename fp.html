@@ -26,15 +26,15 @@ header h1 { margin: 0; font-size: 30px; }
 .section h2 { color: #6d2548; border-left: 6px solid #a65277; padding-left: 10px; margin-bottom: 20px; }
 .section p { line-height: 1.8; margin-bottom: 15px; }
 
-/* TARGETES MODALITATS */
+/* TARGETES MODALITATS / ACCÉS */
 .modalitats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.modalitat { padding: 25px 15px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 200px; cursor: pointer; transition: .3s; text-decoration: none; color: inherit; }
+.modalitat { padding: 25px 15px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 180px; cursor: pointer; transition: .3s; text-decoration: none; color: inherit; }
 .modalitat:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
 .modalitat > span:first-child { font-size: 42px; margin-bottom: 15px; transition: transform .3s ease; }
 .modalitat:hover > span:first-child { transform: translateY(-6px) scale(1.2) rotate(-6deg); }
-.modalitat .title { font-size: 16px; font-weight: bold; margin-bottom: 15px; line-height: 1.3; }
+.modalitat .title { font-size: 16px; font-weight: bold; margin-bottom: 10px; line-height: 1.3; }
 
-/* HINT ROSAT */
+/* HINT ROSAT (Estil Batxillerat) */
 .hint { display: block; font-size: 13px; color: #6d2548; opacity: 0.7; margin-top: 10px; transition: all .25s ease; }
 .modalitat:hover .hint, .family-card:hover .hint, .card-after:hover .hint { opacity: 1; }
 
@@ -44,20 +44,19 @@ header h1 { margin: 0; font-size: 30px; }
 .human { background: #fff6e9; }
 .art { background: #fff0f5; }
 
-/* BOTÓ SOMFP DESTACAT */
+/* BOTONS SOMFP DESTACATS */
 .btn-somfp-container { display: flex; justify-content: center; margin: 30px 0; }
 .btn-somfp { display: inline-flex; align-items: center; gap: 12px; padding: 18px 35px; background: #1565c0; color: white; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: .3s; box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3); }
-.btn-somfp:hover { background: #0d47a1; transform: scale(1.05); box-shadow: 0 8px 25px rgba(21, 101, 192, 0.5); }
-.btn-somfp .icon-search { font-size: 24px; }
+.btn-somfp:hover { background: #0d47a1; transform: scale(1.05); }
 
-/* TARGETES QUÈ PUC FER DESPRÉS */
+/* QUÈ PUC FER DESPRÉS */
 .grid-after { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card-after { background: #f9f9f9; padding: 20px; border-radius: 12px; border-left: 5px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.06); transition: .25s; cursor: pointer; text-decoration: none; color: inherit; }
 .card-after:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); background: #fff2f7; }
 .card-after strong { display: block; margin-bottom: 10px; color: #6d2548; font-size: 17px; }
 
 /* FAMÍLIES PROFESSIONALS */
-.families-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+.families-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-top: 20px; }
 .family-card { background: #f3f3f3; padding: 20px; border-radius: 12px; border-left: 5px solid #a65277; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 .family-card:hover { background: #fff2f7; transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
 .family-card .f-icon { font-size: 40px; margin-bottom: 10px; display: inline-block; transition: transform .3s ease; }
@@ -67,9 +66,10 @@ header h1 { margin: 0; font-size: 30px; }
 /* MODALS */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
 .modal-overlay.active { opacity: 1; visibility: visible; }
-.modal { background: white; border-radius: 16px; padding: 25px; max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; }
+.modal { background: white; border-radius: 16px; padding: 25px; max-width: 800px; width: 95%; max-height: 90vh; overflow-y: auto; position: relative; }
 .modal-close { position: absolute; top: 15px; right: 15px; border: none; background: #eee; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 18px; }
-.info-box { margin-top: 15px; padding: 18px; background: #f8f9fb; border-radius: 10px; border-left: 5px solid #a65277; line-height: 1.7; }
+.info-box { margin-top: 15px; padding: 18px; background: #f8f9fb; border-radius: 10px; border-left: 5px solid #a65277; line-height: 1.7; text-align: left; }
+.info-box h4 { color: #d81b60; margin-top: 15px; margin-bottom: 8px; border-bottom: 1px solid #ddd; }
 
 /* BOTONS BLAVS MODAL */
 .modal-links { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; align-items: center; }
@@ -82,10 +82,11 @@ header h1 { margin: 0; font-size: 30px; }
 .links-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
 .links-card-title { font-weight: bold; color: #6d2548; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .links-card a { display: block; text-decoration: none; color: #1565c0; margin-bottom: 8px; font-weight: bold; }
+.link-info { font-size: 14px; color: #555; line-height: 1.4; margin-top: 5px; }
 
 footer { background: #a65277; color: white; text-align: center; padding: 15px; margin-top: 40px; border-radius: 10px; }
 
-@media (max-width: 900px) { .wrapper { width: 90%; } .grid-after { grid-template-columns: 1fr; } .btn-somfp { font-size: 15px; padding: 15px 25px; } }
+@media (max-width: 900px) { .wrapper { width: 90%; } .grid-after { grid-template-columns: 1fr; } .families-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 
@@ -102,11 +103,11 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
 
 <section class="section">
     <h2>📚 Què és la Formació Professional?</h2>
-    <p>La Formació Professional (FP) són estudis pràctics i especialitzats directament connectats amb el mercat laboral. Permeten adquirir les competències professionals de cada sector i faciliten tant la inserció laboral com la continuïtat acadèmica.</p>
+    <p>La Formació Professional (FP) són estudis pràctics i especialitzats directament connectats amb el mercat laboral. Permeten adquirir les competències professionals de cada sector i faciliten tant la inserció laboral com la continuïtat acadèmica cap a cicles superiors o la Universitat.</p>
 </section>
 
 <section class="section">
-    <h2>🎓 Modalitats de Grau</h2>
+    <h2>🎓 Modalitats de Grau de Formació Professional</h2>
     <div class="modalitats">
         <div class="modalitat ciencia" onclick="openModal('modal-basic')">
             <span>📘</span>
@@ -129,18 +130,38 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
             <span class="hint">Punxa ací per veure...</span>
         </div>
     </div>
-
     <div class="btn-somfp-container">
         <a href="https://somfp.gva.es/fpcv/#/main" target="_blank" class="btn-somfp">
-            <span class="icon-search">🔎</span> CERCADOR COMPLET DE CICLES (SomFP GVA)
+            <span>🔎</span> CERCADOR COMPLET DE CICLES (SomFP GVA)
         </a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>📥 Accés a la Formació Professional</h2>
+    <div class="modalitats">
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-basic-detall')">
+            <span>📝</span>
+            <div class="title">Accés Grau Bàsic</div>
+            <span class="hint">Requisits i Estructura</span>
+        </div>
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-mitja-detall')">
+            <span>📝</span>
+            <div class="title">Accés Grau Mitjà</div>
+            <span class="hint">Proves i Requisits</span>
+        </div>
+        <div class="modalitat" style="background:#fff2f7;" onclick="openModal('modal-superior-detall')">
+            <span>📝</span>
+            <div class="title">Accés Grau Superior</div>
+            <span class="hint">Proves i Requisits</span>
+        </div>
     </div>
 </section>
 
 <section class="section">
     <h2>🚀 Què puc fer després de l’FP?</h2>
     <div class="grid-after">
-        <div class="card-after" onclick="openModal('modal-superior')">
+        <div class="card-after" onclick="openModal('modal-superior-detall')">
             <strong>📈 De Mitjà a Superior</strong>
             <p>Accés directe als cicles de Grau Superior per a continuar la teua especialització tècnica.</p>
             <span class="hint">Veure requisits...</span>
@@ -152,79 +173,118 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         </a>
         <a href="https://labora.gva.es/va/inici" target="_blank" class="card-after">
             <strong>💼 Món Laboral</strong>
-            <p>Inserció professional mitjançant el portal LABORA i els serveis d'ocupació oficials.</p>
+            <p>Inserció professional mitjançant el portal LABORA i els serveis d'ocupació oficials de la GVA.</p>
             <span class="hint">Anar a LABORA...</span>
         </a>
     </div>
 </section>
 
 <section class="section">
-    <h2>🧰 Famílies Professionals</h2>
+    <h2>🧰 Algunes famílies Professionals</h2>
     <div class="families-grid">
         <div class="family-card" onclick="openModal('fam-informatica')"><span class="f-icon">💻</span><span class="f-text">Informàtica</span><span class="hint">Veure detalls</span></div>
-        <div class="family-card" onclick="openModal('fam-sanitat')"><span class="f-icon">🏥</span><span class="f-text">Sanitat</span><span class="hint">Veure detalls</span></div>
+        <div class="family-card" onclick="openModal('fam-electricitat')"><span class="f-icon">⚡</span><span class="f-text">Electricitat</span><span class="hint">Veure detalls</span></div>
         <div class="family-card" onclick="openModal('fam-automocio')"><span class="f-icon">🚗</span><span class="f-text">Automoció</span><span class="hint">Veure detalls</span></div>
         <div class="family-card" onclick="openModal('fam-hostaleria')"><span class="f-icon">🍳</span><span class="f-text">Hostaleria i Turisme</span><span class="hint">Veure detalls</span></div>
         <div class="family-card" onclick="openModal('fam-imatge')"><span class="f-icon">💄</span><span class="f-text">Imatge Personal</span><span class="hint">Veure detalls</span></div>
         <div class="family-card" onclick="openModal('fam-sociocultural')"><span class="f-icon">👶</span><span class="f-text">Serveis Socioculturals</span><span class="hint">Veure detalls</span></div>
-        <div class="family-card" onclick="openModal('fam-electricitat')"><span class="f-icon">⚡</span><span class="f-text">Electricitat</span><span class="hint">Veure detalls</span></div>
+        <div class="family-card" onclick="openModal('fam-sanitat')"><span class="f-icon">🏥</span><span class="f-text">Sanitat</span><span class="hint">Veure detalls</span></div>
+        <div class="family-card" onclick="openModal('fam-comerc')"><span class="f-icon">📦</span><span class="f-text">Comerç i Màrqueting</span><span class="hint">Veure detalls</span></div>
+        <div class="family-card" onclick="openModal('fam-edificacio')"><span class="f-icon">🏗️</span><span class="f-text">Edificació</span><span class="hint">Veure detalls</span></div>
         <div class="family-card" onclick="openModal('fam-agraria')"><span class="f-icon">🌱</span><span class="f-text">Agrària</span><span class="hint">Veure detalls</span></div>
     </div>
-
     <div class="btn-somfp-container">
         <a href="https://somfp.gva.es/fpcv/#/main" target="_blank" class="btn-somfp">
-            <span class="icon-search">🔎</span> CERCADOR COMPLET DE CICLES (SomFP GVA)
+            <span>🔎</span> CERCADOR COMPLET DE CICLES (SomFP GVA)
         </a>
     </div>
 </section>
+
 <section class="section">
-
-<h2>💰 Beques i ajudes</h2>
-
-<div class="links-dashboard">
-
-<div class="links-card becas">
-<div class="links-card-title"><span>🎓</span> Beques principals (MEC) </div>
-
-<a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">
-🔗 Beques MEC (Ministeri d’Educació)
-</a>
-
-<p class="link-info">
-Beca general i ajuda de suport educatiu. Informació, requisits i sol·licitud.<br>
-Publicada ja la convocatòria general pel curs 2026-2027.
-</p>
-
-</div>
-
-<div class="links-card becas">
-<div class="links-card-title"><span>🏫</span> Beques Universitats Comunitat Valenciana</div>
-
-<a href="https://universitats.gva.es/va/convocatories" target="_blank">
-🔗 Altres ajudes i beques universitàries
-</a>
-  
-<p class="link-info">
-Informació d'ajudes i beques universitàries complementàries si al proper curs realitzes estudis universitaris a la Comunitat Valenciana.
-</p>
-
-</div>
-
+    <h2>💰 Beques i ajudes</h2>
+    <div class="links-dashboard">
+        <div class="links-card becas">
+            <div class="links-card-title"><span>🎓</span> Beques principals (MEC) </div>
+            <a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">🔗 Beques MEC (Ministeri d’Educació)</a>
+            <p class="link-info">Beca general i ajuda de suport educatiu. Informació, requisits i sol·licitud.<br>Publicada ja la convocatòria general pel curs 2026-2027.</p>
+        </div>
+        <div class="links-card becas">
+            <div class="links-card-title"><span>🏫</span> Beques Universitats Comunitat Valenciana</div>
+            <a href="https://universitats.gva.es/va/convocatories" target="_blank">🔗 Altres ajudes i beques universitàries</a>
+            <p class="link-info">Informació d'ajudes i beques universitàries complementàries si al proper curs realitzes estudis universitaris a la Comunitat Valenciana.</p>
+        </div>
+    </div>
 </section>
 
 <footer>IES Didín Puig · Departament d'Orientació</footer>
 
 </div>
 
+<div id="modal-basic-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Accés a Grau Bàsic</h3>
+        <div class="info-box">
+            <h4>✅ Requisits d'accés</h4>
+            <ul>
+                <li>Tenir complits 15 anys i no superar els 17 l'any natural.</li>
+                <li>Haver cursat 3r d'ESO (o excepcionalment 2n d'ESO).</li>
+                <li>Haver sigut proposat/ada per l'equip docent mitjançant el Consell Orientador.</li>
+            </ul>
+            <h4>⏳ Estructura</h4>
+            <p>2000 hores (2 cursos). Inclou mòduls de Comunicació, Ciències Aplicades, mòduls professionals i FCT (240h al 2n curs).</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de cicles FP en la CV</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-mitja-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Accés a Grau Mitjà</h3>
+        <div class="info-box">
+            <h4>Accés Directe</h4>
+            <p>Títol d'ESO, FP Bàsica o un altre títol de Tècnic.</p>
+            <h4>📝 Prova d'Accés (17 anys)</h4>
+            <ul>
+                <li><strong>Part A:</strong> Llengua i Literatura + Ciències Socials.</li>
+                <li><strong>Part B:</strong> Matemàtiques + Tecnologia + Ciències de la Naturalesa.</li>
+            </ul>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">🔗 Més info Prova d'Accés</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notes de tall Grau Mitjà</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-superior-detall" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📝 Accés a Grau Superior</h3>
+        <div class="info-box">
+            <h4>Accés Directe</h4>
+            <p>Títol de Batxiller o Títol de Tècnic (Grau Mitjà) de la mateixa família o relacionada.</p>
+            <h4>📝 Prova d'Accés (19 anys)</h4>
+            <ul>
+                <li><strong>Part Comuna:</strong> Llengua, Anglés, Matemàtiques i Competència digital.</li>
+                <li><strong>Part Específica:</strong> Opció A (Humanitats i CCSS), Opció B (Tecnologia) o Opció C (Ciències).</li>
+            </ul>
+        </div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">🔗 Més info Prova d'Accés</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notes de tall Grau Superior</a>
+        </div>
+    </div>
+</div>
+
 <div id="modal-basic" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>📘 FP Grau Bàsic</h3>
-        <div class="info-box">
-            <strong>✅ Requisits:</strong> 15-17 anys, 3r ESO cursat i consell orientador de l'equip docent.<br>
-            <strong>📜 Titulació:</strong> Graduat en ESO i Tècnic Bàsic.<br>
-            <strong>⏳ Duració:</strong> 2 cursos (2000h).
-        </div>
+        <div class="info-box">Títol de Graduat en ESO i Tècnic Bàsic. Formació professional inicial.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de cicles formatius de FP en la CV</a>
             <a href="https://www.todofp.es/que-estudiar/grados-d/fp-grado-basico.html" target="_blank" class="link-btn-blue">🔗 Cicles formatius en Espanya (TodoFP)</a>
@@ -236,11 +296,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>📗 FP Grau Mitjà</h3>
-        <div class="info-box">
-            <strong>✅ Accés directe:</strong> ESO o FP Bàsica.<br>
-            <strong>📝 Prova d'accés:</strong> 17 anys complits en l'any de la prova.<br>
-            <strong>📜 Titulació:</strong> Tècnic. Permet l'accés a Grau Superior.
-        </div>
+        <div class="info-box">Títol de Tècnic. Estudis tècnics per a l'especialització en una professió.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de cicles formatius de FP en la CV</a>
             <a href="https://www.todofp.es/que-estudiar/grados-d/grado-medio.html" target="_blank" class="link-btn-blue">🔗 Cicles formatius en Espanya (TodoFP)</a>
@@ -252,11 +308,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>🎓 FP Grau Superior</h3>
-        <div class="info-box">
-            <strong>✅ Accés directe:</strong> Batxillerat o Grau Mitjà.<br>
-            <strong>📝 Prova d'accés:</strong> 19 anys complits en l'any de la prova.<br>
-            <strong>📜 Titulació:</strong> Tècnic Superior. Permet accés a la Universitat.
-        </div>
+        <div class="info-box">Títol de Tècnic Superior. Alta especialització i via d'accés a la Universitat.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de cicles formatius de FP en la CV</a>
             <a href="https://www.todofp.es/que-estudiar/grados-d/grado-superior.html" target="_blank" class="link-btn-blue">🔗 Cicles formatius en Espanya (TodoFP)</a>
@@ -268,9 +320,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>⭐ Cursos d’especialització</h3>
-        <div class="info-box">
-            Postgraus de l'FP per a titulats que busquen alta especialització en sectors tecnològics.
-        </div>
+        <div class="info-box">Per a persones ja titulades que volen una alta especialització tecnològica.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de cicles formatius de FP en la CV</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales.html" target="_blank" class="link-btn-blue">🔗 Cicles formatius en Espanya (TodoFP)</a>
@@ -282,7 +332,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>💻 Informàtica i Comunicacions</h3>
-        <div class="info-box">Desenvolupament d'apps, gestió de sistemes, xarxes i ciberseguretat.</div>
+        <div class="info-box">Programació d'aplicacions, gestió de sistemes, xarxes i ciberseguretat.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
@@ -290,14 +340,14 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     </div>
 </div>
 
-<div id="fam-sanitat" class="modal-overlay" onclick="closeModal(event)">
+<div id="fam-electricitat" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
-        <h3>🏥 Sanitat</h3>
-        <div class="info-box">Infermeria, farmàcia, laboratori clínic, higiene bucodental.</div>
+        <h3>⚡ Electricitat i Electrònica</h3>
+        <div class="info-box">Manteniment elèctric, domòtica i telecomunicacions.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
-            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
         </div>
     </div>
 </div>
@@ -305,8 +355,8 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
 <div id="fam-automocio" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
-        <h3>🚗 Transport i Manteniment de Vehicles</h3>
-        <div class="info-box">Electromecànica, carrosseria i automoció.</div>
+        <h3>🚗 Automoció</h3>
+        <div class="info-box">Manteniment de vehicles, electromecànica i carrosseria.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/transporte-mantenimiento-vehiculos.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
@@ -318,7 +368,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>🍳 Hostaleria i Turisme</h3>
-        <div class="info-box">Cuina, serveis de restauració, gestió d'allotjaments i agències de viatges.</div>
+        <div class="info-box">Cuina, restauració, allotjaments i agències de viatges.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/hosteleria-turismo.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
@@ -330,7 +380,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>💄 Imatge Personal</h3>
-        <div class="info-box">Perruqueria, estètica i benestar.</div>
+        <div class="info-box">Perruqueria, estètica, benestar i assessoria d'imatge.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/imagen-personal.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
@@ -342,7 +392,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>👶 Serveis Socioculturals i a la Comunitat</h3>
-        <div class="info-box">Educació infantil, integració social, mediació comunicativa.</div>
+        <div class="info-box">Educació infantil, integració social i atenció a la dependència.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/servicios-socioculturales-comunidad.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
@@ -350,14 +400,38 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     </div>
 </div>
 
-<div id="fam-electricitat" class="modal-overlay" onclick="closeModal(event)">
+<div id="fam-sanitat" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
-        <h3>⚡ Electricitat i Electrònica</h3>
-        <div class="info-box">Instal·lacions elèctriques, telecomunicacions, manteniment electrònic.</div>
+        <h3>🏥 Sanitat</h3>
+        <div class="info-box">Auxiliar d'infermeria, farmàcia, laboratori i higiene bucodental.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
-            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/electricidad-electronica.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/sanidad.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-comerc" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>📦 Comerç i Màrqueting</h3>
+        <div class="info-box">Màrqueting, publicitat, transport, logística i activitats comercials.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/comercio-marketing.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
+        </div>
+    </div>
+</div>
+
+<div id="fam-edificacio" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeAll()">✖</button>
+        <h3>🏗️ Edificació i Obra Civil</h3>
+        <div class="info-box">Obres d'interior, projectes d'edificació i construcció.</div>
+        <div class="modal-links">
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
+            <a href="https://www.todofp.es/que-estudiar/familias-profesionales/edificacion-obra-civil.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
         </div>
     </div>
 </div>
@@ -366,7 +440,7 @@ Informació d'ajudes i beques universitàries complementàries si al proper curs
     <div class="modal" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeAll()">✖</button>
         <h3>🌱 Agrària</h3>
-        <div class="info-box">Producció agropecuària, jardineria i floristeria, gestió forestal.</div>
+        <div class="info-box">Producció agropecuària, jardineria, floristeria i gestió forestal.</div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">📂 Dossier Cicles GVA</a>
             <a href="https://www.todofp.es/que-estudiar/familias-profesionales/agraria.html" target="_blank" class="link-btn-blue">ℹ️ Info TodoFP</a>
