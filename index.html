@@ -243,7 +243,7 @@ font-size:14px;
 margin-top:auto;
 }
 
-/* 🔥 TARGETA RECTANGULAR (CORREGIDA: BOTÓ CENTRAT A BAIX) */
+/* 🔥 TARGETA RECTANGULAR ESTILITZADA (MÉS FINA) */
 .card-wide-link {
     text-decoration: none;
     display: block;
@@ -254,48 +254,51 @@ margin-top:auto;
     background: linear-gradient(145deg,#b56388,#a65277);
     color: white;
     border-radius: 30px;
-    padding: 35px 40px;
+    padding: 20px 40px; /* Reduït per a ser més fina */
     border: 4px solid #6d2548;
     display: flex;
-    flex-direction: column; /* Alineació vertical per centrar botó */
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
-    min-height: 220px;
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .card-wide:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 16px 30px rgba(0,0,0,0.30);
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.card-wide .header-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
 }
 
 .card-wide .card-icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-    display: inline-block;
+    font-size: 38px; /* Una mica més menuda */
+    margin: 0;
 }
 
 .card-wide:hover .card-icon {
     animation: iconMove .6s ease;
 }
 
-.card-wide .text-box h3 {
+.card-wide h3 {
     margin: 0;
-    font-size: 22px;
-    letter-spacing: 0.5px;
+    font-size: 20px;
 }
 
-.card-wide .text-box p {
-    margin: 10px 0 25px 0;
-    font-size: 16px;
-    opacity: 0.9;
-    max-width: 700px;
-    line-height: 1.5;
+.card-wide p {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    opacity: 0.95;
+    max-width: 800px;
 }
 
 .card-wide .card-button {
-    margin-top: auto; /* Empeny el botó cap a baix */
+    margin-top: 5px;
+    padding: 6px 22px; /* Botó més compacte */
 }
 
 .creditos{
@@ -355,7 +358,8 @@ margin-top:10px;
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
-.card-wide { padding: 30px 20px; }
+.card-wide { padding: 25px 20px; }
+.card-wide .header-card { flex-direction: column; gap: 5px; }
 }
 
 @media (max-width:600px){
@@ -422,11 +426,11 @@ target="_blank" rel="noopener noreferrer">
 
 <a href="tecniques.html" class="card-wide-link">
     <div class="card-wide">
-        <div class="card-icon">📖</div>
-        <div class="text-box">
+        <div class="header-card">
+            <div class="card-icon">📖</div>
             <h3>Tècniques d'Estudi i Foment Lector</h3>
-            <p>Aprèn a organitzar-te, millorar la teua comprensió i traure profit a la lectura.</p>
         </div>
+        <p>Millora la teua comprensió lectora i organitza el teu aprenentatge.</p>
         <div class="card-button">Millora el teu aprenentatge</div>
     </div>
 </a>
