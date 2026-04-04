@@ -177,15 +177,15 @@ margin:10px auto 0;
 border-radius:2px;
 }
 
-/* GRID */
+/* GRID PRINCIPAL */
 .grid{
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:30px;
-margin-bottom:30px; /* Reduït per a la targeta de baix */
+margin-bottom:30px;
 }
 
-/* CARDS */
+/* ESTILO BASE CARDS */
 .card{
 background:linear-gradient(145deg,#b56388,#a65277);
 color:white;
@@ -194,12 +194,10 @@ padding:30px 20px;
 border:4px solid #6d2548;
 text-align:center;
 min-height:170px;
-
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
-
 transition:transform .3s ease, box-shadow .3s ease;
 cursor:pointer;
 text-decoration:none;
@@ -245,7 +243,7 @@ font-size:14px;
 margin-top:auto;
 }
 
-/* 🔥 TARGETA ESPECIAL HORITZONTAL */
+/* 🔥 TARGETA RECTANGULAR (CORREGIDA: BOTÓ CENTRAT A BAIX) */
 .card-wide-link {
     text-decoration: none;
     display: block;
@@ -256,11 +254,14 @@ margin-top:auto;
     background: linear-gradient(145deg,#b56388,#a65277);
     color: white;
     border-radius: 30px;
-    padding: 25px 40px;
+    padding: 35px 40px;
     border: 4px solid #6d2548;
     display: flex;
+    flex-direction: column; /* Alineació vertical per centrar botó */
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+    min-height: 220px;
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
@@ -269,33 +270,32 @@ margin-top:auto;
     box-shadow: 0 16px 30px rgba(0,0,0,0.30);
 }
 
-.card-wide .content {
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
 .card-wide .card-icon {
     font-size: 50px;
-    margin-right: 30px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.card-wide:hover .card-icon {
+    animation: iconMove .6s ease;
 }
 
 .card-wide .text-box h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 0.5px;
 }
 
 .card-wide .text-box p {
-    margin: 5px 0 0 0;
-    font-size: 15px;
+    margin: 10px 0 25px 0;
+    font-size: 16px;
     opacity: 0.9;
+    max-width: 700px;
+    line-height: 1.5;
 }
 
 .card-wide .card-button {
-    margin-top: 0;
-    white-space: nowrap;
+    margin-top: auto; /* Empeny el botó cap a baix */
 }
 
 .creditos{
@@ -304,6 +304,26 @@ font-size:22px;
 color:#6d2548;
 font-weight:700;
 margin-bottom:20px;
+}
+
+.equipo-footer{
+text-align:center;
+font-size:14px;
+color:#555;
+margin-bottom:25px;
+line-height:1.6;
+border-top:1px solid #ddd;
+padding-top:15px;
+}
+
+.aviso-web{
+text-align:center;
+font-size:13px;
+color:#666;
+margin-bottom:30px;
+line-height:1.5;
+border-top:1px solid #ddd;
+padding-top:12px;
 }
 
 .contador-area{
@@ -335,11 +355,7 @@ margin-top:10px;
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
-.card-wide { flex-direction: column; text-align: center; padding: 30px 20px; }
-.card-wide .content { flex-direction: column; }
-.card-wide .card-icon { margin-right: 0; margin-bottom: 15px; }
-.card-wide .card-button { margin-top: 20px; }
-.card-wide .text-box p { margin-bottom: 10px; }
+.card-wide { padding: 30px 20px; }
 }
 
 @media (max-width:600px){
@@ -349,26 +365,6 @@ margin-top:10px;
 
 @media (max-width:900px){
 .orientaline-lateral{display:none;}
-}
-  
-.equipo-footer{
-text-align:center;
-font-size:14px;
-color:#555;
-margin-bottom:25px;
-line-height:1.6;
-border-top:1px solid #ddd;
-padding-top:15px;
-}
-  
-.aviso-web{
-text-align:center;
-font-size:13px;
-color:#666;
-margin-bottom:30px;
-line-height:1.5;
-border-top:1px solid #ddd;
-padding-top:12px;
 }
 </style>
 </head>
@@ -426,12 +422,10 @@ target="_blank" rel="noopener noreferrer">
 
 <a href="tecniques.html" class="card-wide-link">
     <div class="card-wide">
-        <div class="content">
-            <div class="card-icon">📖</div>
-            <div class="text-box">
-                <h3>Tècniques d'Estudi i Foment Lector</h3>
-                <p>Aprèn a organitzar-te, millorar la teua comprensió i traure profit a la lectura.</p>
-            </div>
+        <div class="card-icon">📖</div>
+        <div class="text-box">
+            <h3>Tècniques d'Estudi i Foment Lector</h3>
+            <p>Aprèn a organitzar-te, millorar la teua comprensió i traure profit a la lectura.</p>
         </div>
         <div class="card-button">Millora el teu aprenentatge</div>
     </div>
