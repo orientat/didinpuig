@@ -181,7 +181,7 @@ border-radius:2px;
 display:grid;
 grid-template-columns:repeat(6,1fr);
 gap:30px;
-margin-bottom:80px;
+margin-bottom:30px;
 }
 
 .card{
@@ -192,14 +192,13 @@ padding:30px 20px;
 border:4px solid #6d2548;
 text-align:center;
 min-height:170px;
-
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
-
 transition:transform .3s ease, box-shadow .3s ease;
 cursor:pointer;
+text-decoration:none;
 }
 
 .card:hover{
@@ -214,6 +213,19 @@ transform:scale(0.97);
 .card-icon{
 font-size:36px;
 margin-bottom:12px;
+display:inline-block;
+transition:transform .3s ease;
+}
+
+.card:hover .card-icon, .card-wide:hover .card-icon{
+animation:iconMove .6s ease;
+}
+
+@keyframes iconMove{
+0%{transform:translateY(0) rotate(0deg);}
+30%{transform:translateY(-8px) rotate(-10deg) scale(1.2);}
+60%{transform:translateY(-4px) rotate(8deg) scale(1.1);}
+100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
 .card-title{
@@ -232,12 +244,86 @@ font-size:14px;
 margin-top:auto;
 }
 
+/* 🔥 TARJETA RECTANGULAR ESTILIZADA (CASTELLANO) */
+.card-wide-link {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 80px;
+}
+
+.card-wide {
+    background: linear-gradient(145deg,#b56388,#a65277);
+    color: white;
+    border-radius: 30px;
+    padding: 20px 40px;
+    border: 4px solid #6d2548;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card-wide:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.card-wide .header-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.card-wide .card-icon {
+    font-size: 38px;
+    margin: 0;
+}
+
+.card-wide h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-wide p {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    opacity: 0.95;
+    max-width: 800px;
+}
+
+.card-wide .card-button {
+    margin-top: 5px;
+    padding: 6px 22px;
+}
+
 .creditos{
 text-align:center;
 font-size:22px;
 color:#6d2548;
 font-weight:700;
 margin-bottom:20px;
+}
+
+.equipo-footer{
+text-align:center;
+font-size:14px;
+color:#555;
+margin-bottom:25px;
+line-height:1.6;
+border-top:1px solid #ddd;
+padding-top:15px;
+}
+
+.aviso-web{
+text-align:center;
+font-size:13px;
+color:#666;
+margin-bottom:30px;
+line-height:1.5;
+border-top:1px solid #ddd;
+padding-top:12px;
 }
 
 .contador-area{
@@ -261,26 +347,6 @@ width:100%;
 margin-top:10px;
 }
 
-.equipo-footer{
-text-align:center;
-font-size:14px;
-color:#555;
-margin-bottom:25px;
-line-height:1.6;
-border-top:1px solid #ddd;
-padding-top:15px;
-}
-
-.aviso-web{
-text-align:center;
-font-size:13px;
-color:#666;
-margin-bottom:30px;
-line-height:1.5;
-border-top:1px solid #ddd;
-padding-top:12px;
-}
-
 /* RESPONSIVE */
 @media (max-width:1200px){
 .grid{grid-template-columns:repeat(4,1fr);}
@@ -289,6 +355,8 @@ padding-top:12px;
 
 @media (max-width:800px){
 .grid{grid-template-columns:repeat(3,1fr);}
+.card-wide { padding: 25px 20px; }
+.card-wide .header-card { flex-direction: column; gap: 5px; }
 }
 
 @media (max-width:600px){
@@ -341,31 +409,42 @@ target="_blank" rel="noopener noreferrer">
 
 <div class="grid">
 
-<a href="transicio.html"><div class="card"><div class="card-icon">🏫</div><div class="card-title">Transición de Primaria</div><div class="card-button">Consultar información</div></div></a>
+<a href="transicio.html" class="card"><div class="card-icon">🏫</div><div class="card-title">Transición de Primaria</div><div class="card-button">Consultar información</div></a>
 
-<a href="1eso.html"><div class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º de ESO</div><div class="card-button">Guía del alumnado</div></div></a>
+<a href="1eso.html" class="card"><div class="card-icon">📘</div><div class="card-title">Estás en 1º de ESO</div><div class="card-button">Guía del alumnado</div></a>
 
-<a href="2eso.html"><div class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º de ESO</div><div class="card-button">Consultar opciones</div></div></a>
+<a href="2eso.html" class="card"><div class="card-icon">📗</div><div class="card-title">Estás en 2º de ESO</div><div class="card-button">Consultar opciones</div></a>
 
-<a href="3eso.html"><div class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º de ESO</div><div class="card-button">Recibir orientación</div></div></a>
+<a href="3eso.html" class="card"><div class="card-icon">📙</div><div class="card-title">Estás en 3º de ESO</div><div class="card-button">Recibir orientación</div></a>
 
-<a href="4eso.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º de ESO</div><div class="card-button">Explorar el futuro</div></div></a>
+<a href="4eso.html" class="card"><div class="card-icon">🎓</div><div class="card-title">Estás en 4º de ESO</div><div class="card-button">Explorar el futuro</div></a>
 
-<a href="pdc.html"><div class="card"><div class="card-icon">🗺️</div><div class="card-title">Estás en PDC</div><div class="card-button">Consultar el programa</div></div></a>
+<a href="pdc.html" class="card"><div class="card-icon">🗺️</div><div class="card-title">Estás en PDC</div><div class="card-button">Consultar el programa</div></a>
 
-<a href="fp.html"><div class="card"><div class="card-icon">🛠️</div><div class="card-title">Conoce la FP</div><div class="card-button">Descubrir opciones</div></div></a>
+<a href="fp.html" class="card"><div class="card-icon">🛠️</div><div class="card-title">Conoce la FP</div><div class="card-button">Descubrir opciones</div></a>
 
-<a href="bach.html"><div class="card"><div class="card-icon">🎓</div><div class="card-title">Conoce el Bachillerato</div><div class="card-button">Consultar itinerarios</div></div></a>
+<a href="bach.html" class="card"><div class="card-icon">🎓</div><div class="card-title">Conoce el Bachillerato</div><div class="card-button">Consultar itinerarios</div></a>
 
-<a href="uni.html"><div class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceder a información</div></div></a>
+<a href="uni.html" class="card"><div class="card-icon">🏛️</div><div class="card-title">Conoce la Universidad</div><div class="card-button">Acceder a información</div></a>
 
-<a href="altres.html"><div class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Explorar opciones</div></div></a>
+<a href="altres.html" class="card"><div class="card-icon">📚</div><div class="card-title">Otros estudios</div><div class="card-button">Explorar opciones</div></a>
 
-<a href="orientafut.html"><div class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta tu futuro</div><div class="card-button">Realizar tests</div></div></a>
+<a href="orientafut.html" class="card"><div class="card-icon">🧭</div><div class="card-title">Orienta tu futuro</div><div class="card-button">Realizar tests</div></a>
 
-<a href="sistedu.html"><div class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educativo</div><div class="card-button">Consultar esquema</div></div></a>
+<a href="sistedu.html" class="card"><div class="card-icon">🗂️</div><div class="card-title">Sistema educativo</div><div class="card-button">Consultar esquema</div></a>
 
 </div>
+
+<a href="tecniques.html" class="card-wide-link">
+    <div class="card-wide">
+        <div class="header-card">
+            <div class="card-icon">📖</div>
+            <h3>Técnicas de Estudio y Fomento Lector</h3>
+        </div>
+        <p>Mejora tu comprensión lectora y organiza tu aprendizaje.</p>
+        <div class="card-button">Mejora tu aprendizaje</div>
+    </div>
+</a>
 
 <div class="creditos">
 IES Didín Puig · Departamento de Orientación Educativa y Profesional
@@ -385,7 +464,7 @@ Esta página se encuentra en proceso de elaboración. Ante cualquier duda, se re
 
 <div class="contador-area">
 <div class="contador-box">
-VISITAS: <span id="busuanzi_value_page_pv">000000</span>
+VISITES: <span id="busuanzi_value_page_pv">000000</span>
 </div>
 </div>
 
@@ -396,19 +475,14 @@ VISITAS: <span id="busuanzi_value_page_pv">000000</span>
 </div>
 
 <script>
-
 window.addEventListener("scroll", function(){
-
 let botones = document.querySelectorAll(".orientaline-lateral");
-
 if(window.scrollY > 200){
 botones.forEach(b => b.classList.add("orientaline-visible"));
 }else{
 botones.forEach(b => b.classList.remove("orientaline-visible"));
 }
-
 });
-
 </script>
 
 </body>
