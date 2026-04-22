@@ -26,45 +26,7 @@ header h1 { margin: 0; font-size: 30px; }
 .section h2 { color: #6d2548; border-left: 6px solid #a65277; padding-left: 10px; margin-bottom: 20px; }
 .section p { line-height: 1.8; margin-bottom: 15px; }
 
-/* ESTILS DELS NOUS TEXTOS I BOTONS GRANS */
-.intro-busqueda {
-    text-align: center;
-    max-width: 85%;
-    margin: 40px auto 15px auto;
-    line-height: 1.7;
-    color: #444;
-    font-size: 16px;
-}
-
-.nota-oficial {
-    text-align: center;
-    font-size: 13px;
-    color: #777;
-    margin-top: -30px; 
-    margin-bottom: 40px;
-    font-style: italic;
-}
-
-.btn-container-double { display: flex; justify-content: center; gap: 25px; margin: 25px 0 50px 0; flex-wrap: wrap; }
-.btn-blue-action { 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 14px; 
-    padding: 20px 40px; 
-    background: #1565c0; 
-    color: white !important; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 18px; 
-    transition: .3s; 
-    box-shadow: 0 6px 18px rgba(21, 101, 192, 0.35); 
-    min-width: 320px; 
-}
-.btn-blue-action:hover { background: #0d47a1; transform: scale(1.04) translateY(-3px); box-shadow: 0 10px 25px rgba(21, 101, 192, 0.45); }
-
-/* TARGETES MODALITATS / ACCÉS */
+/* TARJETAS MODALIDADES / ACCESO */
 .modalitats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
 .modalitat { padding: 25px 15px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 180px; cursor: pointer; transition: .3s; text-decoration: none; color: inherit; }
 .modalitat:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
@@ -81,6 +43,13 @@ header h1 { margin: 0; font-size: 30px; }
 .social { background: #edf8f1; }
 .human { background: #fff6e9; }
 .art { background: #fff0f5; }
+
+/* 🔥 NUEVOS ESTILOS BOTONES AZULES OPTIMIZADOS */
+.intro-busqueda { text-align: center; max-width: 85%; margin: 40px auto 15px auto; line-height: 1.7; color: #444; font-size: 16px; }
+.nota-oficial { text-align: center; font-size: 13px; color: #777; margin-top: -30px; margin-bottom: 40px; font-style: italic; }
+.btn-container-double { display: flex; justify-content: center; gap: 25px; margin: 25px 0 50px 0; flex-wrap: wrap; }
+.btn-blue-action { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 20px 40px; background: #1565c0; color: white !important; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: .3s; box-shadow: 0 6px 18px rgba(21, 101, 192, 0.35); min-width: 320px; }
+.btn-blue-action:hover { background: #0d47a1; transform: scale(1.04) translateY(-3px); box-shadow: 0 10px 25px rgba(21, 101, 192, 0.45); }
 
 /* QUÉ HACER DESPUÉS */
 .grid-after { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -223,7 +192,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
             <p>Acceso directo desde Grado Superior. Tu nota media del ciclo te sirve para la admisión.</p>
             <span class="hint">Ir a Universidad...</span>
         </a>
-        <a href="https://labora.gva.es/es/inici" target="_blank" class="card-after">
+        <a href="https://labora.gva.es/va/inici" target="_blank" class="card-after">
             <strong>💼 Mundo Laboral</strong>
             <p>Inserción profesional mediante el portal LABORA y los servicios de empleo oficiales de la GVA.</p>
             <span class="hint">Ir a LABORA...</span>
@@ -317,6 +286,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         <div class="modal-links">
             <a href="https://ceice.gva.es/es/web/formacion-profesional/admissio" target="_blank" class="link-btn-blue">🔗 Info Admisión GVA</a>
             <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notas de corte Grado Medio</a>
+            <a href="https://ceice.gva.es/es/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">❓ Más info sobre la Prueba</a>
         </div>
     </div>
 </div>
@@ -343,6 +313,7 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         <div class="modal-links">
             <a href="https://ceice.gva.es/va/web/formacion-profesional/admissio" target="_blank" class="link-btn-blue">🔗 Info Admisión GVA</a>
             <a href="https://ceice.gva.es/es/web/formacion-profesional/notes-de-tall" target="_blank" class="link-btn-blue">📊 Notas de corte Grado Superior</a>
+            <a href="https://ceice.gva.es/va/web/formacion-profesional/pruebas-de-acceso-a-ciclos-formativos" target="_blank" class="link-btn-blue">❓ Más info sobre la Prueba</a>
         </div>
     </div>
 </div>
@@ -360,28 +331,32 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
             <h4>Deportivas, Música y Danza</h4>
             <ul>
                 <li>Enseñanzas Deportivas (Grado Medio y Superior).</li>
-                <li>Enseñanzas de Música y Danza (Conservatoris).</li>
+                <li>Enseñanzas de Música y Danza (Conservatorios).</li>
             </ul>
         </div>
         <div class="modal-links">
             <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/normativa-artes-plasticas" target="_blank" class="link-btn-blue">🔗 Artes Plásticas y Diseño</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/oferta-de-ciclos-formativos" target="_blank" class="link-btn-blue">📂 Oferta Ciclos Artes CV</a>
+            <a href="https://iseacv.gva.es/va/grados-eeaass" target="_blank" class="link-btn-blue">🏛️ Grados Superiores (ISEACV)</a>
             <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-deportivas" target="_blank" class="link-btn-blue">⚽ Enseñanzas Deportivas</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/titulaciones" target="_blank" class="link-btn-blue">📋 Oferta Ciclos Deportivos</a>
+            <a href="https://ceice.gva.es/es/web/ensenanzas-regimen-especial/ensenanzas-de-musica-y-danza" target="_blank" class="link-btn-blue">🎵 Música y Danza</a>
         </div>
     </div>
 </div>
 
-<div id="modal-basic" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>📘 FP Grado Básico</h3><div class="info-box">Título de Graduado en ESO y Técnico Básico. Formación práctica para la inserción laboral.</div></div></div>
-<div id="modal-mitja" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>📗 FP Grado Medio</h3><div class="info-box">Titulación de Técnico. Estudios técnicos para la especialización profesional. Permite el acceso al Grado Superior.</div></div></div>
-<div id="modal-superior" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🎓 FP Grado Superior</h3><div class="info-box">Obtención del título de Técnico Superior. Permite la inserción laboral cualificada y el acceso directo a la Universidad.</div></div></div>
+<div id="modal-basic" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>📘 FP Grado Básico</h3><div class="info-box">Título de Graduado en ESO y Técnico Básico. Formación profesional inicial orientada a la práctica.</div><div class="modal-links"><a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos en la CV</a></div></div></div>
+<div id="modal-mitja" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>📗 FP Grado Medio</h3><div class="info-box">Titulación de Técnico. Estudios técnicos para la especialización profesional. Permite el acceso al Grado Superior.</div><div class="modal-links"><a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos en la CV</a></div></div></div>
+<div id="modal-superior" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🎓 FP Grado Superior</h3><div class="info-box">Obtención del título de Técnico Superior. Permite la inserción laboral cualificada y el acceso directo a la Universidad.</div><div class="modal-links"><a href="https://ceice.gva.es/va/web/formacion-profesional/dossier-cicles" target="_blank" class="link-btn-blue">🔗 Oferta de ciclos en la CV</a></div></div></div>
 <div id="modal-cursos" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>⭐ Cursos de especialización</h3><div class="info-box">Los llamados "másteres de la FP". Alta especialización para titulados en Grado Medio o Superior.</div></div></div>
 
 <div id="fam-informatica" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>💻 Informática</h3><div class="info-box">Desarrollo de aplicaciones web, multiplataforma y ciberseguridad.</div></div></div>
 <div id="fam-electricitat" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>⚡ Electricidad</h3><div class="info-box">Instalaciones eléctricas, automáticas y telecomunicaciones.</div></div></div>
 <div id="fam-automocio" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🚗 Automoción</h3><div class="info-box">Mantenimiento de vehículos, carrocería y electromecánica.</div></div></div>
-<div id="fam-hostaleria" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🍳 Hostelería</h3><div class="info-box">Cocina, restauración y gestión turística.</div></div></div>
+<div id="fam-hostaleria" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🍳 Hostelería</h3><div class="info-box">Cocina, restauración y gestión de alojamientos turísticos.</div></div></div>
 <div id="fam-imatge" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>💄 Imagen Personal</h3><div class="info-box">Peluquería, estética y asesoría de imagen personal.</div></div></div>
 <div id="fam-sociocultural" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>👶 Servicios Socioculturales</h3><div class="info-box">Educación infantil, integración social y atención a la dependencia.</div></div></div>
-<div id="fam-sanitat" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🏥 Sanidad</h3><div class="info-box">Enfermería, farmacia, laboratorio e higiene bucodental.</div></div></div>
+<div id="fam-sanitat" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🏥 Sanidad</h3><div class="info-box">Enfermería, farmacia, laboratorio clínico e higiene bucodental.</div></div></div>
 <div id="fam-comerc" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>📦 Comercio</h3><div class="info-box">Actividades comerciales, marketing, publicidad y logística.</div></div></div>
 <div id="fam-edificacio" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🏗️ Edificación</h3><div class="info-box">Proyectos de edificación, obra civil y construcción.</div></div></div>
 <div id="fam-agraria" class="modal-overlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeAll()">✖</button><h3>🌱 Agraria</h3><div class="info-box">Agricultura, ganadería, jardinería y gestión forestal.</div></div></div>
