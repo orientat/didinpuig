@@ -70,7 +70,7 @@ font-size:60px;
 transition:transform .2s ease;
 }
 
-.option:hover .icon{
+.option:hover .icon, .option-next:hover .icon{
 animation:iconMove .6s ease;
 }
 
@@ -81,7 +81,7 @@ animation:iconMove .6s ease;
 100%{transform:translateY(0) rotate(0deg) scale(1.15);}
 }
 
-/* TARJETAS */
+/* TARJETAS PDC (CURSOS) */
 
 .options{
 display:grid;
@@ -153,7 +153,6 @@ transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-
 /* EFECTO */
 
 .option-extra{
@@ -171,6 +170,59 @@ transform:translateY(0);
 }
 
 .option:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 14px 26px rgba(0,0,0,0.18);
+border-left:5px solid #6d2548;
+}
+
+/* NUEVAS TARJETAS "QUÉ HACER DESPUÉS" (ESTILO 4º ESO REORDENADO) */
+.options-next{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:15px;
+}
+
+.option-next{
+background:#f3f3f3;
+padding:25px 20px;
+border-radius:14px;
+text-align:center;
+font-weight:bold;
+border-left:5px solid #a65277;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:160px;
+cursor:pointer;
+}
+
+/* Colores de las nuevas tarjetas por orden */
+.option-next:nth-child(1){background:#e7f0ec;} /* FP - Verde */
+.option-next:nth-child(2){background:#f2e9df;} /* Otros - Marrón */
+.option-next:nth-child(3){background:#e8edf3;} /* Bach - Azul */
+.option-next:nth-child(4){background:#efe3ea;} /* Asistente - Rosa */
+
+.option-next a{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:100%;
+height:100%;
+text-decoration:none;
+color:inherit;
+}
+
+.option-next .icon{
+font-size:42px;
+}
+
+.option-next:hover{
 transform:translateY(-5px) scale(1.02);
 box-shadow:0 14px 26px rgba(0,0,0,0.18);
 border-left:5px solid #6d2548;
@@ -220,10 +272,6 @@ margin-top:15px;
 line-height:1.6;
 }
 
-.link-grande{
-font-size:18px;
-}
-
 /* CAJAS */
 
 .info{
@@ -243,10 +291,6 @@ line-height:1.8;
 margin-top:15px;
 }
 
-.section .warning{
-margin-bottom:20px;
-}  
-
 .info ul,
 .warning ul{
 list-style:none;
@@ -260,46 +304,76 @@ margin:0 0 10px 0;
 line-height:1.6;
 }
 
-/* IMÁGENES */
+/* ASISTENTE (MODAL) */
 
-.pdc-img{
-text-align:center;
-margin-top:30px;
+.assistant{
+opacity:0;
+pointer-events:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+cursor:pointer;
+transition:opacity .3s ease;
 }
 
-.pdc-img img{
-max-width:100%;
-height:auto;
-border-radius:10px;
-margin-bottom:25px;
+.assistant.active{
+opacity:1;
+pointer-events:auto;
 }
 
-/* FOOTER */
-
-footer{
-background:#a65277;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-border-radius:10px;
-width:75%;
-margin-left:auto;
-margin-right:auto;
+.assistant-box{
+background:#eef5ff;
+padding:25px;
+border-radius:12px;
+width:90%;
+max-width:500px;
+border-left:5px solid #1565c0;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+position:relative;
+transform:scale(0.9);
+transition:transform .3s ease;
+cursor: default;
 }
 
-.section-final{
+.assistant.active .assistant-box{
+transform:scale(1);
+}
+
+.question{
+margin-bottom:15px;
+}
+
+button{
 margin-top:10px;
-}
-  
-@media (max-width:900px){
-.wrapper{width:90%;}
-footer{width:90%;}
+padding:10px 15px;
+border:none;
+background:#1565c0;
+color:white;   
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
 }
 
-/* ===================== */
+.result{
+margin-top:15px;
+padding:15px;
+background:#fff;
+border-radius:10px;
+border-left:5px solid #6d2548;
+display:none;
+opacity:0;
+transform:translateY(10px);
+transition:all .3s ease;
+}
+
 /* BLOQUE BECAS */
-/* ===================== */
 
 .links-dashboard{
 display:grid;
@@ -315,21 +389,10 @@ padding:12px 20px 10px 20px;
 border-radius:14px;
 border-left:5px solid #6a8fd8;
 transition:.3s;
-
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
 gap:6px;
-}
-
-.link-info{
-font-size:14px;
-}
-  
-/* COLOR AZUL */
-.links-card.becas{
-background:#eef4ff;
-border-left:5px solid #6a8fd8;
 }
 
 .links-card:hover{
@@ -342,8 +405,7 @@ font-weight:bold;
 color:#6d2548;
 margin-bottom:12px;
 display:flex;
-align-items:center;
-gap:8px;
+align-items:center; gap:8px;
 }
 
 .links-card a{
@@ -354,22 +416,21 @@ margin-bottom:8px;
 transition:.2s;
 }
 
-.links-card a:hover{
-text-decoration:underline;
-color:#0d47a1;
-transform:translateX(3px);
+footer{
+background:#a65277;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+border-radius:10px;
+width:75%;
+margin-left:auto;
+margin-right:auto;
 }
 
-/* ICONOS ANIMADOS EN BECAS */
-
-.links-card-title span{
-font-size:22px;
-transition:transform .3s ease;
-display:inline-block;
-}
-
-.links-card:hover .links-card-title span{
-transform:translateY(-3px) scale(1.2) rotate(-6deg);
+@media (max-width:900px){
+.wrapper{width:90%;}
+footer{width:90%;}
 }
 
 </style>
@@ -389,53 +450,28 @@ transform:translateY(-3px) scale(1.2) rotate(-6deg);
 </header>
 
 <section class="section">
-
 <h2>📚 ¿Qué es el PDC?</h2>
-
-<p>
-A continuación encontrarás las condiciones para acceder a los dos cursos del 
-<strong>Programa de Diversificación Curricular (PDC)</strong>.
-</p>
-
-<p>
-Una vez acabado el PDC, el alumnado obtiene el 
-<strong>título de Graduado en Educación Secundaria Obligatoria (ESO)</strong>.
-</p>
-
-<p>
-Para incorporarse al programa es necesario que el alumnado 
-<strong>sea propuesto por el equipo docente</strong>.
-</p>
-
+<p>A continuación encontrarás las condiciones para acceder a los dos cursos del <strong>Programa de Diversificación Curricular (PDC)</strong>.</p>
+<p>Una vez acabado el PDC, el alumnado obtiene el <strong>título de Graduado en Educación Secundaria Obligatoria (ESO)</strong>.</p>
+<p>Para incorporarse al programa es necesario que el alumnado <strong>sea propuesto por el equipo docente</strong>.</p>
 </section>
 
 <section class="section">
-
 <h2>🎯 ¿A quién está dirigido?</h2>
-
 <div class="warning">
-
-Los programas de diversificación curricular están orientados a la 
-<strong>consecución del título de la ESO</strong> por parte del alumnado que:
-
+Los programas de diversificación curricular están orientados a la <strong>consecución del título de la ESO</strong> por parte del alumnado que:
 <ul>
 <li>📘 Presenta <strong>dificultades relevantes de aprendizaje</strong>.</li>
 <li>📚 Ha recibido medidas de apoyo en <strong>1º o 2º de ESO</strong>.</li>
 <li>🧭 Puede beneficiarse de esta <strong>medida de atención a la diversidad</strong> para obtener el título.</li>
 </ul>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <h2>📅 Cursos del programa</h2>
-
 <div class="options">
-
 <div>
-
 <div class="option">
 <a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+3r+ESO+PDC_val.pdf" target="_blank">
 <span class="icon">📘</span>
@@ -444,57 +480,21 @@ Los programas de diversificación curricular están orientados a la
 <div class="option-extra">Pincha para ver la distribución de las horas lectivas semanales</div>
 </a>
 </div>
-
 <div class="materies-title">⏰ Materias en 3º de PDC (32 horas semanales)</div>
-
 <div class="subjects">
-
-<div class="subject">
-<strong>Ámbito Lingüístico y Social — 9 h</strong>
-<small>
-- Valenciano: Lengua y Literatura<br>
-- Lengua Castellana y Literatura<br>
-- Geografía e Historia
-</small>
-</div>
-
-<div class="subject">
-<strong>Ámbito Científico — 8 h</strong>
-<small>
-- Matemáticas<br>
-- Biología y Geología<br>
-- Física y Química
-</small>
-</div>
-
-<div class="subject">
-<strong>Ámbito Práctico — 4 h</strong>
-<small>
-- Tecnología y Digitalización<br>
-- Educación Plástica, Visual y Audiovisual
-</small>
-</div>
-
+<div class="subject"><strong>Ámbito Lingüístico y Social — 9 h</strong><small>- Valenciano: Lengua y Literatura<br>- Lengua Castellana y Literatura<br>- Geografía e Historia</small></div>
+<div class="subject"><strong>Ámbito Científico — 8 h</strong><small>- Matemáticas<br>- Biología y Geología<br>- Física y Química</small></div>
+<div class="subject"><strong>Ámbito Práctico — 4 h</strong><small>- Tecnología y Digitalización<br>- Educación Plástica, Visual y Audiovisual</small></div>
 <div class="subject">Lengua Extranjera — 3 h</div>
 <div class="subject">Educación Física — 2 h</div>
 <div class="subject">Música — 2 h</div>
 <div class="subject">Optativa — 2 h</div>
 <div class="subject">Religión / Atención educativa — 1 h</div>
 <div class="subject">Tutoría — 1 h</div>
-
 </div>
-
-<div class="optatives-text">
-Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>
-En este curso se puede elegir una de entre estas materias:<br>
-- Segunda Lengua Extranjera: Alemán<br> 
-- Talleres de Profundización
+<div class="optatives-text">Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>En este curso se puede elegir una de entre estas materias:<br>- Segunda Lengua Extranjera: Alemán<br>- Talleres de Profundización</div>
 </div>
-
-</div>
-
 <div>
-
 <div class="option">
 <a href="https://ceice.gva.es/documents/162640733/166701284/250407_Distribuci%C3%B3+d%27hores+lectives+de+4t+ESO+PDC_val.pdf" target="_blank">
 <span class="icon">📗</span>
@@ -503,117 +503,129 @@ En este curso se puede elegir una de entre estas materias:<br>
 <div class="option-extra">Pincha para ver la distribución de las horas lectivas semanales</div>
 </a>
 </div>
-
 <div class="materies-title">⏰ Materias en 4º de PDC (32 horas semanales)</div>
-
 <div class="subjects">
-
-<div class="subject">
-<strong>Ámbito Lingüístico y Social — 9 h</strong>
-<small>
-- Valenciano: Lengua y Literatura<br>
-- Lengua Castellana y Literatura<br>
-- Geografía e Historia
-</small>
-</div>
-
-<div class="subject">
-<strong>Ámbito Científico — 9 h</strong>
-<small>
-- Matemáticas<br>
-- Biología y Geología<br>
-- Física y Química
-</small>
-</div>
-
-<div class="subject">
-<strong>Ámbito Práctico — 4 h</strong>
-<small>
-- Tecnología y Digitalización<br>
-- Expresión Artística
-</small>
-</div>
-
+<div class="subject"><strong>Ámbito Lingüístico y Social — 9 h</strong><small>- Valenciano: Lengua y Literatura<br>- Lengua Castellana y Literatura<br>- Geografía e Historia</small></div>
+<div class="subject"><strong>Ámbito Científico — 9 h</strong><small>- Matemáticas<br>- Biología y Geología<br>- Física y Química</small></div>
+<div class="subject"><strong>Ámbito Práctico — 4 h</strong><small>- Tecnología y Digitalización<br>- Expresión Artística</small></div>
 <div class="subject">Lengua Extranjera — 3 h</div>
 <div class="subject">Educación Física — 2 h</div>
 <div class="subject">Educación en Valores Cívicos y Éticos — 1 h</div>
 <div class="subject">Optativa — 2 h</div>
 <div class="subject">Religión o Atención educativa — 1 h</div>
 <div class="subject">Tutoría — 1 h</div>
-
 </div>
-
-<div class="optatives-text">
-Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>
-En este curso se puede elegir una de entre estas materias:<br>
-- Filosofía <br> 
-- Segunda Lengua Extranjera: Alemán<br> 
-- Competencia Comunicativa Oral en Inglés
+<div class="optatives-text">Cada curso se informará de <strong>la oferta de optativas del centro</strong>.<br><br>En este curso se puede elegir una de entre estas materias:<br>- Filosofía <br>- Segunda Lengua Extranjera: Alemán<br>- Competencia Comunicativa Oral en Inglés</div>
 </div>
-
 </div>
-
-</div>
-
 </section>
 
 <section class="section">
+<h2>🧭 ¿Qué quieres hacer después de 4º de PDC?</h2>
+<p>¿Sabes qué quieres hacer cuando acabes la ESO en el programa PDC?</p>
+<div class="options-next">
+    <div class="option-next"><a href="fp.html"><span class="icon">🛠️</span> FP (CICLOS FORMATIVOS)</a></div>
+    <div class="option-next"><a href="altres.html"><span class="icon">📚</span> OTROS ESTUDIOS</a></div>
+    <div class="option-next"><a href="bach.html"><span class="icon">🎓</span> BACHILLERATO</a></div>
+    <div class="option-next" onclick="toggleAssistant()"><span class="icon">🤔</span> AÚN NO SÉ QUÉ HACER</div>
+</div>
+</section>
 
+<section class="section">
 <h2>ℹ️ Más información</h2>
-
 <div class="warning">
-
 Puedes consultar la información oficial del <strong>Programa de Diversificación Curricular</strong> en este enlace → → →
-<a href="https://ceice.gva.es/es/web/ordenacion-academica/programa-de-diversificacion-curricular" 
-target="_blank" class="link-btn"> 🔗 PÁGINA OFICIAL GVA
-</a>
-
+<a href="https://ceice.gva.es/es/web/ordenacion-academica/programa-de-diversificacion-curricular" target="_blank" class="link-btn"> 🔗 PÁGINA OFICIAL GVA</a>
 </div>
-
-<!--
-<div class="pdc_img">
-<img src="../pdc_cast1.png" alt="Organización PDC 3º ESO">
-<img src="../pdc_cast2.png" alt="Organización PDC 4º ESO">
-</div>
--->
-
 </section>
 
 <section class="section section-final">
-<div class="info">
-
-Si tienes dudas, consulta con tu 
-<strong>tutor o tutora</strong> o con el 
-<strong>Departamento de Orientación</strong>.
-
-</div>
-
+<div class="info">Si tienes dudas, consulta con tu <strong>tutor o tutora</strong> o con el <strong>Departamento de Orientación</strong>.</div>
 </section>
 
 <section class="section">
-
 <h2>💰 Becas y ayudas</h2>
-
 <div class="links-dashboard">
-
 <div class="links-card becas">
 <div class="links-card-title"><span>🎓</span> Becas principales (MEC) </div>
-
-<a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">
-🔗 Becas MEC (Ministerio de Educación)
-</a>
-
-<p class="link-info">
-Beca general y ayuda de apoyo educativo. Información, requisitos y solicitud. Publicada ya la convocatoria general para el curso 2026-2027.
-</p>
-
+<a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">🔗 Becas MEC (Ministerio de Educación)</a>
+<p class="link-info">Beca general y ayuda de apoyo educativo. Información, requisitos y solicitud. Publicada ya la convocatoria general para el curso 2026-2027.</p>
 </div>
-
+</div>
 </section>
+
 </div>
-<footer>
-IES Didín Puig · Departamento de Orientación Educativa y Profesional
-</footer>
+
+<div id="assistant" class="assistant" onclick="toggleAssistant()">
+<div class="assistant-box" onclick="event.stopPropagation()">
+<button onclick="toggleAssistant()" style="position:absolute; top:10px; right:10px; background:#ffffff; color:#d32f2f; border:none; font-size:16px; cursor:pointer; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center;">✖</button>
+<h3>🧭 Te ayudamos a decidir</h3>
+<div class="question"><strong>1. ¿Te gusta estudiar teoría?</strong><br><select id="q1"><option value="">Selecciona</option><option value="si">Sí</option><option value="no">No</option></select></div>
+<div class="question"><strong>2. ¿Prefieres cosas prácticas?</strong><br><select id="q2"><option value="">Selecciona</option><option value="si">Sí</option><option value="no">No</option></select></div>
+<div class="question"><strong>3. ¿Tienes claro qué quieres estudiar?</strong><br><select id="q3"><option value="">Selecciona</option><option value="si">Sí</option><option value="no">No</option></select></div>
+<div class="question"><strong>4. ¿Cómo son tus notas habitualmente?</strong><br><select id="q4"><option value="">Selecciona</option><option value="altas">Buenas o muy buenas</option><option value="medias">Normales</option><option value="bajas">Bajas</option></select></div>
+<div class="question"><strong>5. ¿Qué te gusta más?</strong><br><select id="q5"><option value="">Selecciona</option><option value="estudiar">Estudiar y continuar formándome</option><option value="trabajar">Aprender una profesión práctica</option><option value="duda">No lo tengo claro</option></select></div>
+<div class="question"><strong>6. ¿Tienes pensado ir a la universidad?</strong><br><select id="q6"><option value="">Selecciona</option><option value="si">Sí</option><option value="no">No</option><option value="no_se">No lo sé</option></select></div>
+<button onclick="calcular()">Ver recomendación</button>
+<div id="result" class="result"></div>
+</div>
+</div>
+
+<footer>IES Didín Puig · Departamento de Orientación Educativa y Profesional</footer>
+
+<script>
+function toggleAssistant(){
+    let a = document.getElementById("assistant");
+    if(a.classList.contains("active")){
+        a.classList.remove("active");
+        document.body.style.overflow = "auto";
+    } else {
+        a.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function calcular(){
+    let q1 = document.getElementById("q1").value;
+    let q2 = document.getElementById("q2").value;
+    let q3 = document.getElementById("q3").value;
+    let q4 = document.getElementById("q4").value;
+    let q5 = document.getElementById("q5").value;
+    let q6 = document.getElementById("q6").value;
+    let result = document.getElementById("result");
+
+    if(!q1 || !q2 || !q3 || !q4 || !q5 || !q6){
+        result.innerHTML = "⚠️ Por favor, responde todas las preguntas.";
+        result.style.display = "block";
+        result.style.opacity = "1";
+        return;
+    }
+
+    let batx = 0; let fp = 0;
+    if(q1==="si") batx++; if(q2==="si") fp++;
+    if(q4==="altas") batx+=2; if(q4==="bajas") fp+=2;
+    if(q5==="estudiar") batx+=2; if(q5==="trabajar") fp+=2;
+    if(q6==="si") batx+=2; if(q6==="no") fp+=2;
+
+    let missatge = ""; let color = "";
+    if(batx > fp){
+        missatge = "🎓 Recomendamos BACHILLERATO.<br><br><a href='bach.html'>👉 Ver opciones</a>";
+        color = "#e3f2fd";
+    } else if(fp > batx){
+        missatge = "🛠️ Recomendamos FORMACIÓN PROFESIONAL.<br><br><a href='fp.html'>👉 Ver ciclos</a>";
+        color = "#e8f5e9";
+    } else {
+        missatge = "🤔 Consulta con Orientación para decidir mejor.";
+        color = "#fff3e0";
+    }
+
+    result.innerHTML = missatge;
+    result.style.display = "block";
+    result.style.opacity = "1";
+    result.style.background = color;
+    result.style.transform = "translateY(0)";
+}
+</script>
 
 </body>
 </html>
