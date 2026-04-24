@@ -6,195 +6,149 @@
 <title>Tècniques d'Estudi | Orientació</title>
 
 <style>
-/* ===================== */
-/* BASE & WRAPPER */
-/* ===================== */
 body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #ffffff; color: #333; }
 .wrapper { width: 75%; margin: auto; padding-bottom: 50px; }
-
-/* BOTÓ TORNAR */
 .back { margin-top: 20px; }
 .back a { background: #6d2548; color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; transition: .3s; }
 .back a:hover { background: #a65277; }
-
-/* HEADER OFICIAL */
 header { background: #a65277; color: white; text-align: center; padding: 25px; margin-top: 15px; border-radius: 10px; }
 header h1 { margin: 0; font-size: 30px; }
-
-/* SECCIONS */
 .section { margin-top: 50px; }
 .section h2 { color: #6d2548; border-left: 6px solid #a65277; padding-left: 10px; margin-bottom: 20px; }
 .section p { line-height: 1.8; margin-bottom: 15px; }
-
-/* TARGETES MÈTODE (3 FASES) */
 .grid-fases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
 .card-fase { padding: 30px 20px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); cursor: pointer; transition: .3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 200px; }
 .card-fase:hover { transform: translateY(-8px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
 .card-fase .f-icon { font-size: 50px; margin-bottom: 15px; transition: transform .3s ease; }
-.card-fase:hover .f-icon { transform: scale(1.2) rotate(-6deg); }
 .card-fase .f-title { font-weight: bold; font-size: 18px; color: #6d2548; }
-
 .hint { display: block; font-size: 13px; color: #a65277; opacity: 0.7; margin-top: 10px; font-weight: bold; }
-
-/* COLORS FASES */
 .fase1 { background: #e0f2f1; border-left-color: #009688; }
 .fase2 { background: #e3f2fd; border-left-color: #2196f3; }
 .fase3 { background: #f3e5f5; border-left-color: #9c27b0; }
-
-/* BLOC DIAGNÒSTIC */
-.diagnosis { background: #fff8d6; padding: 25px; border-radius: 12px; border-left: 6px solid #f2c94c; margin-top: 30px; }
-.diagnosis strong { color: #6d2548; display: block; margin-bottom: 10px; font-size: 18px; }
-
-/* BLOCS QUADRICULATS (6 TARGETES) */
 .grid-cuadre { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
 .card-cuadre { background: #f9f9f9; padding: 25px; border-radius: 12px; border-top: 4px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: .3s; }
 .card-cuadre:hover { background: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 .card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; }
-
-/* REFLEXIÓ FINAL */
+.diagnosis { background: #fff8d6; padding: 25px; border-radius: 12px; border-left: 6px solid #f2c94c; margin-top: 30px; }
+.diagnosis strong { color: #6d2548; display: block; margin-bottom: 10px; font-size: 18px; }
 .valor-lectura { background: #fce4ec; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; border: 2px dashed #a65277; }
 .valor-lectura blockquote { font-style: italic; font-size: 1.2em; color: #6d2548; margin-bottom: 15px; border:none; padding:0; line-height: 1.6;}
-
-/* FOOTER */
 footer { background: #a65277; color: white; text-align: center; padding: 15px; margin-top: 50px; border-radius: 10px; }
-
-/* MODALS */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
 .modal-overlay.active { opacity: 1; visibility: visible; }
 .modal { background: white; border-radius: 16px; padding: 30px; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; }
 .modal-close { position: absolute; top: 15px; right: 15px; border: none; background: #eee; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 18px; }
 .info-box { margin-top: 15px; padding: 20px; background: #f4f7f6; border-radius: 12px; border-left: 5px solid #a65277; line-height: 1.8; }
-
-@media (max-width: 900px) { 
-    .wrapper { width: 90%; } 
-    .grid-fases, .grid-cuadre { grid-template-columns: 1fr; } 
-}
+@media (max-width: 900px) { .wrapper { width: 90%; } .grid-fases, .grid-cuadre { grid-template-columns: 1fr; } }
 </style>
 </head>
-
 <body>
 
 <div class="wrapper">
+    <div class="back"><a href="index.html">← Tornar a Orientació</a></div>
+    <header>
+        <h1>📖 Tècniques d'Estudi i Lectura</h1>
+        <p>IES Didín Puig · Departament d’Orientació</p>
+    </header>
 
-<div class="back"><a href="index.html">← Tornar a Orientació</a></div>
+    <section class="section">
+        <h2>🎯 El camí cap a l'èxit acadèmic</h2>
+        <p>L'estudi eficaç no és només memoritzar de forma passiva; és un procés actiu que requereix <strong>comprensió, síntesi i capacitat d'expressió</strong>.</p>
+    </section>
 
-<header>
-    <h1>📖 Tècniques d'Estudi i Lectura</h1>
-    <p>IES Didín Puig · Departament d’Orientació</p>
-</header>
-
-<section class="section">
-    <h2>🎯 El camí cap a l'èxit acadèmic</h2>
-    <p>L'estudi eficaç no és només memoritzar de forma passiva; és un procés actiu que requereix <strong>comprensió, síntesi i capacitat d'expressió</strong>. Saber llegir és saber entendre, i saber entendre és la base per a superar qualsevol repte acadèmic i professional.</p>
-</section>
-
-<section class="section">
-    <h2>🪗 El Mètode de l'Acordió</h2>
-    <p>Aquest itinerari t'ajudarà a transformar la lectura en coneixement real i significatiu:</p>
-    
-    <div class="grid-fases">
-        <div class="card-fase fase1" onclick="openModal('modal-fase1')">
-            <span class="f-icon">🔍</span>
-            <div class="f-title">Fase 1: Comprensió</div>
-            <span class="hint">Llegir i entendre...</span>
+    <section class="section">
+        <h2>🪗 El Mètode de l'Acordió</h2>
+        <div class="grid-fases">
+            <div class="card-fase fase1" onclick="openModal('modal-fase1')">
+                <span class="f-icon">🔍</span>
+                <div class="f-title">Fase 1: Comprensió</div>
+                <span class="hint">Llegir i entendre...</span>
+            </div>
+            <div class="card-fase fase2" onclick="openModal('modal-fase2')">
+                <span class="f-icon">📝</span>
+                <div class="f-title">Fase 2: Síntesi</div>
+                <span class="hint">Esquemes i resums...</span>
+            </div>
+            <div class="card-fase fase3" onclick="openModal('modal-fase3')">
+                <span class="f-icon">🗣️</span>
+                <div class="f-title">Fase 3: Expressió</div>
+                <span class="hint">Explicar i recordar...</span>
+            </div>
         </div>
-        <div class="card-fase fase2" onclick="openModal('modal-fase2')">
-            <span class="f-icon">📝</span>
-            <div class="f-title">Fase 2: Síntesi</div>
-            <span class="hint">Esquemes i resums...</span>
+    </section>
+
+    <section class="section">
+        <h2>📚 Consells per a una bona lectura</h2>
+        <div class="grid-cuadre">
+            <div class="card-cuadre">
+                <strong>1. Diari Personal</strong>
+                <p>Es recomana una llibreteta menuda i personalitzada que pugues dur a qualsevol lloc, amb una llapissera o boli a mà.</p>
+            </div>
+            <div class="card-cuadre">
+                <strong>2. Fitxa del Llibre</strong>
+                <p>Convé anotar la referència bibliogràfica del llibre que vas a llegir: autor, títol, editorial, lloc i any d'edició.</p>
+            </div>
+            <div class="card-cuadre">
+                <strong>3. Coneixements Previs</strong>
+                <p>Abans de començar, pregunta't: Com he arribat a este llibre? Qui me l'ha recomanat? Per què m'ha cridat l'atenció?</p>
+            </div>
+            <div class="card-cuadre">
+                <strong>4. Lectura Fragmentada</strong>
+                <p>És millor no llegir-lo tot d'una. Fes-ho a capítols o a ratets per a poder digerir el contingut i dialogar amb el text.</p>
+            </div>
+            <div class="card-cuadre">
+                <strong>5. Tipus d'Anotacions i Creativitat</strong>
+                <p>Anota vocabulari, idees clau i la teua connexió personal per a interioritzar el text; pots afegir fotos o dibuixos que aporten un enriquiment personal i creatiu a la teua experiència de lectura.</p>
+            </div>
+            <div class="card-cuadre">
+                <strong>6. Automatització</strong>
+                <p>L'objectiu final és que aquest procés de reflexió es torne automàtic i ja no et calga el suport físic del diari en el futur.</p>
+            </div>
         </div>
-        <div class="card-fase fase3" onclick="openModal('modal-fase3')">
-            <span class="f-icon">🗣️</span>
-            <div class="f-title">Fase 3: Expressió</div>
-            <span class="hint">Explicar i recordar...</span>
+    </section>
+
+    <section class="section">
+        <div class="diagnosis">
+            <strong>✨ L'Atmosfera de Lectura</strong>
+            <p>Busca sempre un racó especial, llocs agradables i en silenci que et conviden a endinsar-se en el llibre amb tots els sentits. Fes de la lectura un moment de plaer i desconnexió.</p>
         </div>
+    </section>
+
+    <div class="valor-lectura">
+        <blockquote>"Recorda que llegir és un acte màgic que ens permet escoltar íntimament persones que ens parlen des d'altres espais i altres temps."</blockquote>
+        <p><strong>IES Didín Puig · Departament d’Orientació</strong></p>
     </div>
-</section>
 
-<section class="section">
-    <h2>📚 Consells per a una bona lectura</h2>
-    <p>Segueix aquests 6 punts clau per a convertir la lectura en un diàleg enriquidor:</p>
-    
-    <div class="grid-cuadre">
-        <div class="card-cuadre">
-            <strong>1. Diari Personal de Seguiment</strong>
-            <p>Es recomana una llibreteta menuda i personalitzada que pugues dur a qualsevol lloc, amb una llapissera o boli a mà.</p>
-        </div>
-        <div class="card-cuadre">
-            <strong>2. Fitxa del Llibre</strong>
-            <p>Convé anotar la referència bibliogràfica: autor, títol, editorial, lloc i any d'edició del llibre que vas a llegir.</p>
-        </div>
-        <div class="card-cuadre">
-            <strong>3. Coneixements Previs</strong>
-            <p>Reflexiona: Com he arribat a este llibre? Qui me l'ha recomanat? Per què m'ha cridat l'atenció inicialment?</p>
-        </div>
-        <div class="card-cuadre">
-            <strong>4. Lectura Fragmentada</strong>
-            <p>És convenient no llegir-se tot el llibre d'una. Llegeix a capítols o a ratets per a poder digerir el contingut.</p>
-        </div>
-        <div class="card-cuadre">
-            <strong>5. Tipus d'Anotacions</strong>
-            <p>Anota paraules noves, idees clau i, sobretot, la teua connexió personal: sentiments o records que et suscita el text.</p>
-        </div>
-        <div class="card-cuadre">
-            <strong>6. Creativitat i Enriquiment</strong>
-            <p>Pots afegir fotos, dibuixos o poemes al teu diari que aporten un enriquiment personal a la teua experiència de lectura.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="diagnosis">
-        <strong>💡 L'Espai de Lectura</strong>
-        <p>Busca espais agradables i en silenci que conviden a endinsar-se en el llibre amb tots els sentits. Recorda que l'objectiu és que aquest procés acabe sent automàtic.</p>
-    </div>
-</section>
-
-<div class="valor-lectura">
-    <blockquote>"Recorda que llegir és un acte màgic que ens permet escoltar íntimament persones que ens parlen des d'altres espais i altres temps."</blockquote>
-    <p><strong>IES Didín Puig · Departament d'Orientació</strong></p>
-</div>
-
-<footer>
-    <p>&copy; 2024 Departament d'Orientació - IES Didín Puig</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Departament d'Orientació - IES Didín Puig</p>
+    </footer>
 </div>
 
 <div id="modal-fase1" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 1: Comprensió i Anàlisi</h2>
-        <div class="info-box">Llegir atentament, identificar paraules desconegudes i anotar el nou vocabulari al diari.</div>
+        <div class="info-box">Llegir atentament, identificar paraules desconegudes i buscar-les al diccionari.</div>
     </div>
 </div>
 <div id="modal-fase2" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 2: Síntesi i Reflexió</h2>
-        <div class="info-box">Anotar les idees principals, fer esquemes i connectar el text amb experiències personals.</div>
+        <div class="info-box">Anotar idees clau, fer esquemes i connectar el que has llegit amb les teues pròpies experiències vitals.</div>
     </div>
 </div>
 <div id="modal-fase3" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 3: Expressió i Record</h2>
-        <div class="info-box">Explicar el que s'ha après amb paraules pròpies i reflexionar sobre els sentiments que ha despertat la lectura.</div>
+        <div class="info-box">Ser capaç d'explicar el que has après amb paraules pròpies i dialogar internament sobre el contingut.</div>
     </div>
 </div>
 
 <script>
-function openModal(id) {
-    document.getElementById(id).classList.add('active');
-    document.body.style.overflow = 'hidden'; 
-}
-function closeModal(e) {
-    if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) {
-        const modals = document.querySelectorAll('.modal-overlay');
-        modals.forEach(m => m.classList.remove('active'));
-        document.body.style.overflow = 'auto';
-    }
-}
+function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
+function closeModal(e) { if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) { const modals = document.querySelectorAll('.modal-overlay'); modals.forEach(m => m.classList.remove('active')); document.body.style.overflow = 'auto'; } }
 </script>
 
 </body>
