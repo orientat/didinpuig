@@ -602,6 +602,37 @@ color:#0d47a1;
 transform:translateX(3px);
 }
 
+/* ESTILS BOTÓ EXCEL */
+.link-excel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.link-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s ease;
+    width: fit-content;
+    border: 2px solid #1D6F42;
+}
+
+.link-excel:hover {
+    background: #248a52 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
 </style>
 </head>
 
@@ -704,6 +735,13 @@ Notes de tall Orientaline
 
 </div>
 </section>
+
+<div class="link-excel-container">
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+       target="_blank" class="link-excel">
+        📊 TAULA EXCEL INTERACTIVA PONDERACIONS I NOTES DE TALL 2026
+    </a>
+</div>
 
 <section class="section">
 <h2>🤔 Com triar grau?</h2>
@@ -817,7 +855,6 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 
   
 </div>
-<!-- MODAL BATXILLERAT -->
 <div class="modal-overlay" id="modalBatx">
  <div class="modal">
   
@@ -944,7 +981,6 @@ IES Didín Puig · Departament d'Orientació Educativa i Professional
 </div>
 
 
-<!-- MODAL FP -->
 <div class="modal-overlay" id="modalFP">
   <div class="modal">
   
