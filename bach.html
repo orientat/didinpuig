@@ -73,6 +73,31 @@ transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* ÚNICA DEFINICIÓ CORRECTA DEL BOTÓ EXCEL */
+.link-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s ease;
+    margin: 30px auto;
+    width: fit-content;
+    border: 2px solid #1D6F42;
+}
+
+.link-excel:hover {
+    background: #248a52 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
 .link-inline{
 display:inline-flex;
 align-items:center;
@@ -665,11 +690,11 @@ margin-bottom:10px;
 .batx-layout > div:first-child{
 max-width:600px;
 }
-  
+  
 .batx-side{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:25px; /* ESPACIADO LATERAL CORRECTO */
 margin-top:10px;
 margin-right:10px;
 }
@@ -786,7 +811,7 @@ flex-direction:column;
 justify-content:flex-start;
 gap:6px;
 }
-  
+  
 /* COLOR AZUL */
 .links-card.becas{
 background:#eef4ff;
@@ -832,33 +857,7 @@ display:inline-block;
 .links-card:hover .links-card-title span{
 transform:translateY(-3px) scale(1.2) rotate(-6deg);
 }
-
-/* ESTILS BOTÓ EXCEL */
-.link-excel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 16px 28px;
-    background: #1D6F42 !important;
-    color: white !important;
-    border-radius: 35px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all .2s ease;
-    margin: 30px auto;
-    width: fit-content;
-    border: 2px solid #1D6F42;
-}
-
-.link-excel:hover {
-    background: #248a52 !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-  
+  
 </style>
 
 </head>
@@ -948,7 +947,7 @@ El Batxillerat és una etapa <strong>no obligatòria</strong> que se cursa despr
 <p>
 📄 En aquest enllaç pots veure la <strong>DISTRIBUCIÓ DE LES HORES LECTIVAS</strong>
 
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
 target="_blank" class="link-inline">
 🔗 PÀGINA OFICIAL GVA
 </a>
@@ -991,7 +990,7 @@ class="link-btn">
 🔗 PÀGINA OFICIAL GVA
 </a>
 </div>
-  
+  
 </section>
 
 <section class="section">
@@ -1038,11 +1037,11 @@ Aquestes són les modalitats que oferim al nostre centre:
 <span class="hint">Veure matèries</span>
 </div>
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
 </section>
 <section class="section">
@@ -1064,18 +1063,15 @@ Després es poden sumar dues assignatures multiplicades per 0, 0,1 o 0,2.
 </div>
 
 <div class="example">
-Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  
-Biologia 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
+Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  Biologia 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  
-Matemàtiques 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
+Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  Matemàtiques 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  
-Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
+Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
 </div>
 
 <a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
@@ -1118,7 +1114,7 @@ Utilitza aquest <strong>simulador</strong> per estimar la teua nota d'accés i d
 
 <div class="result">
 
-Nota d'accés: <span id="acces">-</span> /10  
+Nota d'accés: <span id="acces">-</span> /10  
 <br>
 Nota d'admissió: <span id="final">-</span> /14
 
@@ -1137,7 +1133,7 @@ Nota d'admissió: <span id="final">-</span> /14
 <strong>⚠️ Recorda:</strong>
 
 <p>
-Les ponderacions de les diferents matèries poden variar segons el grau que vulgues estudiar. 
+Les ponderacions de les diferents matèries poden variar segons el grau que vulgues estudiar. 
 Consulta sempre les taules oficials de ponderació.
 </p>
 
@@ -1193,7 +1189,7 @@ class="link-btn">
 <ul>
 <li>Vies d'accés: mitjançant PAU - mitjançant CFGS</li>
 <li>Guia Pau, calendari, notes de tall i taula ponderacions</li>
-<li>Mapa interactivo Graus universitaris i ensenyaments artístiques superiors</li>
+<li>Mapa interactiu Graus universitaris i ensenyaments artístiques superiors</li>
 <li>Eines i recursos útils</li>
 </ul>
 </a>
@@ -1211,7 +1207,7 @@ class="link-btn">
 <a href="altres.html" class="card link-card">
 <strong><span class="icon">📚</span> Altres estudis</strong>
 <ul>
-<li>Ensenyances de règim especial: Idiomes - Arts plàstiques i disseny - Esportives - Música i dansa - Música i arts escèniques  </li>
+<li>Ensenyances de règim especial: Idiomes - Arts plàstiques i disseny - Esportives - Música i dansa - Música i arts escèniques </li>
 <li>Ensenyances per a Forces i Cossos de Seguretat: Policia Nacional - Policia Local - Guàrdia Civil - Bombers - Forces armades</li>
 </ul>
 </a>
@@ -1280,7 +1276,7 @@ Publicada ja la convocatòria general pel curs 2026-2027.
 <a href="https://universitats.gva.es/va/convocatories" target="_blank">
 🔗 Altres ajudes i beques universitàries
 </a>
-  
+  
 <p class="link-info">
 Informació d'ajudes i beques universitàries complementàries si al proper curs realitzes estudis universitaris a la Comunitat Valenciana.
 </p>
@@ -1429,7 +1425,7 @@ behavior:"smooth"
 </div>
 </div>
 </div>
-  
+  
 <script>
 
 function openModal(id){
@@ -1444,6 +1440,6 @@ modal.classList.remove("active");
 }
 
 </script>
- 
+ 
 </body>
 </html>
