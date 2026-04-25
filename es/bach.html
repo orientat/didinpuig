@@ -73,6 +73,31 @@ transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* NUEVO BOTÓN EXCEL */
+.link-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s ease;
+    margin: 30px auto;
+    width: fit-content;
+    border: 2px solid #1D6F42;
+}
+
+.link-excel:hover {
+    background: #248a52 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
 .link-inline{
 display:inline-flex;
 align-items:center;
@@ -666,11 +691,11 @@ margin-bottom:10px;
 .batx-layout > div:first-child{
 max-width:600px;
 }
-  
+  
 .batx-side{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:25px; /* ESPACIADO LATERAL MEJORADO */
 margin-top:10px;
 margin-right:10px;
 }
@@ -787,7 +812,7 @@ flex-direction:column;
 justify-content:flex-start;
 gap:6px;
 }
-  
+  
 /* COLOR AZUL */
 .links-card.becas{
 background:#eef4ff;
@@ -833,7 +858,7 @@ display:inline-block;
 .links-card:hover .links-card-title span{
 transform:translateY(-3px) scale(1.2) rotate(-6deg);
 }
-  
+  
 </style>
 
 </head>
@@ -923,7 +948,7 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 <p>
 📄 En este enlace puedes ver la <strong>DISTRIBUCIÓN DE LAS HORAS LECTIVAS</strong>
 
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
 target="_blank" class="link-inline">
 🔗 PÁGINA OFICIAL GVA
 </a>
@@ -1013,11 +1038,11 @@ Estas son las modalidades que ofrecemos en nuestro centro:
 <span class="hint">Ver materias</span>
 </div>
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
 </section>
 <section class="section">
@@ -1039,19 +1064,25 @@ Después se pueden sumar dos asignaturas multiplicadas por 0, 0,1 o 0,2.
 </div>
 
 <div class="example">
-Ejemplo 1: Bach 7.5 · PAU 7 → acceso 7.3  
+Ejemplo 1: Bach 7.5 · PAU 7 → acceso 7.3  
 Biología 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Ejemplo 2: Bach 8.2 · PAU 6.5 → acceso 7.5  
+Ejemplo 2: Bach 8.2 · PAU 6.5 → acceso 7.5  
 Matemáticas 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Ejemplo 3: Bach 6.8 · PAU 7.5 → acceso 7.1  
+Ejemplo 3: Bach 6.8 · PAU 7.5 → acceso 7.1  
 Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
 </div>
+
+<a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+   target="_blank" 
+   class="link-excel">
+    📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
+</a>
 
 </section>
 
@@ -1088,7 +1119,7 @@ Utiliza este <strong>simulador</strong> para estimar tu nota de acceso y de admi
 
 <div class="result">
 
-Nota de acceso: <span id="acces">-</span> /10  
+Nota de acceso: <span id="acces">-</span> /10  
 <br>
 Nota de admisión: <span id="final">-</span> /14
 
@@ -1107,7 +1138,7 @@ Nota de admisión: <span id="final">-</span> /14
 <strong>⚠️ Recuerda:</strong>
 
 <p>
-Las ponderaciones de las diferentes materias pueden variar según el grado que quieras estudiar. 
+Las ponderaciones de las diferentes materias pueden variar según el grado que quieras estudiar. 
 Consulta siempre las tablas oficiales de ponderación.
 </p>
 
@@ -1143,6 +1174,12 @@ class="link-btn">
 
 </div>
 
+<a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+   target="_blank" 
+   class="link-excel">
+    📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
+</a>
+
 </div>
 
 </section>
@@ -1176,7 +1213,7 @@ class="link-btn">
 <a href="altres.html" class="card link-card">
 <strong><span class="icon">📚</span> Otros estudios</strong>
 <ul>
-<li>Enseñanzas de régimen especial: Idiomas - Artes plásticas y diseño - Esportivas - Música y danza - Música y artes escénicas  </li>
+<li>Enseñanzas de régimen especial: Idiomas - Artes plásticas y diseño - Esportivas - Música y danza - Música y arts escénicas  </li>
 <li>Enseñanzas para a Fuerzas y Cuerpos de Seguridad: Policía Nacional - Policía Local - Guardia Civil - Bomberos - Fuerzas armadas</li>
 </ul>
 </a>
@@ -1245,7 +1282,7 @@ Publicada ya la convocatoria general para el curso 2026-2027.
 <a href="https://universitats.gva.es/es/convocatories" target="_blank">
 🔗 Otras ayudas y becas universitarias
 </a>
-  
+  
 <p class="link-info">
 Información de ayudas y becas universitarias complementarias si en el próximo curso realizas estudios universitarios en la Comunidad Valenciana.
 </p>
@@ -1394,7 +1431,7 @@ behavior:"smooth"
 </div>
 </div>
 </div>
-  
+  
 <script>
 
 function openModal(id){
@@ -1409,6 +1446,6 @@ modal.classList.remove("active");
 }
 
 </script>
- 
+ 
 </body>
 </html>
