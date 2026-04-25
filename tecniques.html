@@ -55,9 +55,9 @@ header h1 { margin: 0; font-size: 30px; }
     box-shadow: 0 8px 25px rgba(64, 224, 208, 0.5);
 }
 
-/* BOTÓ QÜESTIONARI PDF (Blau Oceà - Combinat amb Genially) */
+/* BOTÓ QÜESTIONARI PDF (Blau Harmonitzat) */
 .btn-pdf {
-    background: #1565c0 !important; /* Blau professional */
+    background: #1565c0 !important;
     color: white !important;
     border: 2px solid #1565c0;
     box-shadow: 0 4px 15px rgba(21, 101, 192, 0.2);
@@ -78,20 +78,36 @@ header h1 { margin: 0; font-size: 30px; }
 .fase1 { background: #e0f2f1; border-left-color: #009688; }
 .fase2 { background: #e3f2fd; border-left-color: #2196f3; }
 .fase3 { background: #f3e5f5; border-left-color: #9c27b0; }
+
+/* TARGETES DE CONSELLS DE LECTURA (Amb efecte hover rosa) */
 .grid-cuadre { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
-.card-cuadre { background: #f9f9f9; padding: 25px; border-radius: 12px; border-top: 4px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: .3s; }
-.card-cuadre:hover { background: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-.card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; }
+.card-cuadre { background: #f9f9f9; padding: 25px; border-radius: 12px; border-top: 4px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+
+.card-cuadre:hover { 
+    background: #fff2f7 !important; /* Rosa claret com a Batxillerat */
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 24px rgba(109, 37, 72, 0.15); 
+}
+
+.card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; transition: color 0.3s ease; }
+
+.card-cuadre:hover strong {
+    color: #a65277; /* Canvi suau de color al títol */
+}
+
 .diagnosis { background: #fff8d6; padding: 25px; border-radius: 12px; border-left: 6px solid #f2c94c; margin-top: 30px; }
 .diagnosis strong { color: #6d2548; display: block; margin-bottom: 10px; font-size: 18px; }
 .valor-lectura { background: #fce4ec; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; border: 2px dashed #a65277; }
 .valor-lectura blockquote { font-style: italic; font-size: 1.2em; color: #6d2548; margin-bottom: 15px; border:none; padding:0; line-height: 1.6;}
 footer { background: #a65277; color: white; text-align: center; padding: 15px; margin-top: 50px; border-radius: 10px; }
+
+/* MODALS */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
 .modal-overlay.active { opacity: 1; visibility: visible; }
 .modal { background: white; border-radius: 16px; padding: 30px; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; }
 .modal-close { position: absolute; top: 15px; right: 15px; border: none; background: #eee; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 18px; }
 .info-box { margin-top: 15px; padding: 20px; background: #f4f7f6; border-radius: 12px; border-left: 5px solid #a65277; line-height: 1.8; }
+
 @media (max-width: 900px) { .wrapper { width: 90%; } .grid-fases, .grid-cuadre { grid-template-columns: 1fr; } .resources-container { flex-direction: column; align-items: center; } }
 </style>
 </head>
