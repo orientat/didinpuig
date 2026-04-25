@@ -73,29 +73,38 @@ transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN EXCEL ESPECIAL (NUEVO) */
+/* CONTENIDOR PER A CENTRAR EL BOTÓ EXCEL */
+.link-excel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* BOTÓN EXCEL ESPECIAL (ÚNICA DEFINICIÓ) */
 .link-excel {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px 24px;
-    background: #1D6F42; /* Verde Excel */
-    color: white;
-    border-radius: 30px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     transition: all .2s ease;
-    margin: 20px auto;
+    margin: 30px auto;
     width: fit-content;
     border: 2px solid #1D6F42;
 }
 
 .link-excel:hover {
-    background: #248a52;
+    background: #248a52 !important;
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .link-inline{
@@ -573,11 +582,6 @@ padding:5px 0;
 content:"";
 }
 
-/* AJUSTE DE ESPACIO ENTRE TARJETAS (ARREGLO) */
-.modalitat, .batx-card {
-    margin-bottom: 15px;
-}
-
 }
 
 /* ===================== */
@@ -696,11 +700,11 @@ margin-bottom:10px;
 .batx-layout > div:first-child{
 max-width:600px;
 }
-  
+  
 .batx-side{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:25px; /* ESPACIADO LATERAL CORRECTE */
 margin-top:10px;
 margin-right:10px;
 }
@@ -741,7 +745,7 @@ margin-bottom:8px;
 
 /* COLORES TARJETAS */
 .batx-card.ciencia{background:#eef5ff;}
-.batx-social{background:#edf8f1;}
+.batx-card.social{background:#edf8f1;}
 
 
 /* ICONO */
@@ -817,7 +821,7 @@ flex-direction:column;
 justify-content:flex-start;
 gap:6px;
 }
-  
+  
 /* COLOR AZUL */
 .links-card.becas{
 background:#eef4ff;
@@ -863,7 +867,7 @@ display:inline-block;
 .links-card:hover .links-card-title span{
 transform:translateY(-3px) scale(1.2) rotate(-6deg);
 }
-  
+  
 </style>
 
 </head>
@@ -900,7 +904,7 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 </p>
 
 <p>
-📌 <strong>Clave:</strong> tendrás que elegir una modalid y unas materias que influirán en tu futuro académico.
+📌 <strong>Clave:</strong> tendrás que elegir una modalid i unes matèries que influiran en el teu futur acadèmic.
 </p>
 
 </div>
@@ -909,38 +913,38 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 
 <section class="section">
 
-<h2>🎓 Modalidades de Bachillerato</h2>
+<h2>🎓 Modalitats de Batxillerat</h2>
 
 <div class="modalitats">
 
 <div class="modalitat ciencia" onclick="openModal('modal-ciencia')">
 <span>🔬</span>
-<div class="title">Ciencias y Tecnología</div>
-<span class="hint">Pincha para ver las materias</span>
+<div class="title">Ciències i Tecnologia</div>
+<span class="hint">Prem per a veure les matèries</span>
 </div>
 
 <div class="modalitat social" onclick="openModal('modal-social')">
 <span>📊</span>
-<div class="title">Humanidades y Ciencias Sociales</div>
-<span class="hint">Pincha para ver las materias</span>
+<div class="title">Humanitats i Ciències Socials</div>
+<span class="hint">Prem per a veure les matèries</span>
 </div>
 
 <div class="modalitat art" onclick="openModal('modal-general')">
 <span>📚</span>
 <div class="title">General</div>
-<span class="hint">Pincha para ver las materias</span>
+<span class="hint">Prem per a veure les matèries</span>
 </div>
 
 <div class="modalitat human" onclick="openModal('modal-arts1')">
 <span>🎭</span>
-<div class="title">Artes. Vía Música y Artes Escèniques</div>
-<span class="hint">Pincha para ver las materias</span>
+<div class="title">Arts. Via Música i Arts Escèniques</div>
+<span class="hint">Prem per a veure les matèries</span>
 </div>
 
 <div class="modalitat human" onclick="openModal('modal-arts2')">
 <span>🎨</span>
-<div class="title">Artes. Vía Artes Plásticas, Imagen y Diseño</div>
-<span class="hint">Pincha para ver las materias</span>
+<div class="title">Arts. Via Arts Plàstiques, Imatge i Disseny</div>
+<span class="hint">Prem per a veure les matèries</span>
 </div>
 
 </div>
@@ -948,33 +952,33 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 
 <section class="section">
 
-<h2>⏰ Materias en Bachillerato</h2>
+<h2>⏰ Matèries en Batxillerat</h2>
 
 <p>
-📄 En este enlace puedes ver la <strong>DISTRIBUCIÓN DE LAS HORAS LECTIVAS</strong>
+📄 En aquest enllaç pots veure la <strong>DISTRIBUCIÓ DE LES HORES LECTIVES</strong>
 
-<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
+<a href="https://portal.edu.gva.es/noucurriculum/wp-content/uploads/sites/1918/2023/03/4_Annexos-del-projecte-Decret-de-Batxillerat.-ANNEX-IV-Distribucio-de-les-hores-lectives-batxillerat-en-regim-diurn.pdf" 
 target="_blank" class="link-inline">
-🔗 PÁGINA OFICIAL GVA
+🔗 PÀGINA OFICIAL GVA
 </a>
 </p>
 
 <p style="margin-top:15px;">
-👉 El Bachillerato se organiza en <strong>dos cursos</strong> con características diferentes:
+👉 El Batxillerat s'organitza en <strong>dos cursos</strong> amb característiques diferents:
 </p>
 
 <div class="batx-grid">
 <div class="batx-box">
-<h3>1º de Bachillerato</h3>
-<p>📘 Es un curso de introducción donde consolidas los conocimientos generales y empiezas a orientarte hacia una modalidad según tus intereses.</p>
-<p>🎯 Permite explorar diferentes materias antes de decidir con más seguridad tu futuro académico.</p>
+<h3>1r de Batxillerat</h3>
+<p>📘 És un curs d'introducció on consolides els coneixements generals i comences a orientar-te cap a una modalitat segons els teus interessos.</p>
+<p>🎯 Permet explorar diferents matèries abans de decidir amb més seguretat el teu futur acadèmic.</p>
 </div>
 
 
 <div class="batx-box">
-<h3>2º de Bachillerato</h3>
-<p>📈 Es un curso más exigente y especializado, orientado a preparar las pruebas de acceso a la universidad.</p>
-<p>🎓 Las materias elegidas pueden influir directamente en la nota de admisión y en las opciones de futuro.</p>
+<h3>2n de Batxillerat</h3>
+<p>📈 És un curs més exigent i especialitzat, orientat a preparar les proves d'accés a la universitat.</p>
+<p>🎓 Les matèries elegides poden influir directament en la nota d'admissió i en les opcions de futur.</p>
 </div>
 
 </div>
@@ -982,18 +986,18 @@ target="_blank" class="link-inline">
 </section>
 <section class="section">
 
-<h2>ℹ️ Más información</h2>
+<h2>ℹ️ Més informació</h2>
 
 <div class="warning" style="display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; gap:20px; padding:20px 25px;">
 
 <div>
-Puedes consultar la información oficial sobre <strong>la organización del Bachillerato</strong> en este enlace → → →
+Pots consultar la informació oficial sobre <strong>l'organització del Batxillerat</strong> en aquest enllaç → → →
 </div>
 
 <a href="https://ceice.gva.es/es/web/ordenacion-academica/bachillerato/organizacion-y-funcionamiento"
 target="_blank"
 class="link-btn">
-🔗 PÁGINA OFICIAL GVA
+🔗 PÀGINA OFICIAL GVA
 </a>
 </div>
 
@@ -1001,7 +1005,7 @@ class="link-btn">
 
 <section class="section">
 
-<h2>📘 Cómo es el Bachillerato en el IES Didín Puig</h2>
+<h2>📘 Com és el Batxillerat en l'IES Didín Puig</h2>
 
 <div class="info">
 
@@ -1009,102 +1013,103 @@ class="link-btn">
 
 <div class="batx-text">
 <p>
-En nuestro centro ofrecemos un Bachillerato orientado a ayudarte a tomar decisiones sobre tu futuro académico y profesional.
+En el nostre centre oferim un Batxillerat orientat a ajudar-te a prendre decisions sobre el teu futur acadèmic i professional.
 </p>
-<p><strong>Podrás:</strong></p>
+<p><strong>Podràs:</strong></p>
 <ul>
-<li>🎯 Escoger una modalidad según tus intereses</li>
-<li>📈 Prepararte para la universidad o FP superior</li>
-<li>🧭 Recibir orientación para planificar tu itinerario</li>
+<li>🎯 Escollir una modalitat segons els teus interessos</li>
+<li>📈 Preparar-te per a la universitat o FP superior</li>
+<li>🧭 Rebre orientació per a planificar el teu itinerari</li>
 </ul>
 
 <br>
 
-👉 Es importante elegir bien las materias, ya que pueden influir en las opciones de acceso a estudios posteriores.
+👉 És important triar bé les matèries, ja que poden influir en les opcions d'accés a estudis posteriors.
 
 </div>
 
 <div class="batx-side">
 
 <div class="batx-subtitle">
-Estas son las modalidades que ofrecemos en nuestro centro:
+Aquestes són les modalitats que oferim al nostre centre:
 
 </div>
 
 <div class="batx-card ciencia" onclick="openModal('modal-ciencia-img')">
 <span>🔬</span>
-<div class="batx-title">Ciencias y Tecnología</div>
-<span class="hint">Ver materias</span>
+<div class="batx-title">Ciències i Tecnologia</div>
+<span class="hint">Veure matèries</span>
 </div>
 
 <div class="batx-card social" onclick="openModal('modal-social-img')">
 <span>📊</span>
-<div class="batx-title">Humanidades y Ciencias Sociales</div>
-<span class="hint">Ver materias</span>
+<div class="batx-title">Humanitats i Ciències Socials</div>
+<span class="hint">Veure matèries</span>
 </div>
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
-</div> 
+</div> 
 
 </section>
 <section class="section">
 
-<h2>📊 Cómo funcionan las ponderaciones de la PAU</h2>
+<h2>📊 Com funcionen les ponderacions de la PAU</h2>
 
 <div class="warning">
 
-Las ponderaciones permiten aumentar la nota de admisión a la universidad.
+Les ponderacions permeten augmentar la nota d'admissió a la universitat.
 
 <ul>
-<li><strong>Nota de acceso:</strong> 60% de Bachillerato + 40% de la fase obligatoria de la PAU (hasta 10 puntos)</li>
-<li><strong>Nota de admisión:</strong> Nota de acceso + Ponderaciones de materias de la fase voluntaria (hasta 4 puntos más)</li>
+<li><strong>Nota d'accés:</strong> 60% de Batxillerat + 40% de la fase obligatòria de la PAU (fins a 10 punts)</li>
+<li><strong>Nota d'admissió:</strong> Nota d'accés + Ponderacions de matèries de la fase voluntària (fins a 4 punts més)</li>
 </ul>
 
 
-Después se pueden sumar dos asignaturas multiplicadas por 0, 0,1 o 0,2.
+Després es poden sumar dues assignatures multiplicades per 0, 0,1 o 0,2.
 
 </div>
 
 <div class="example">
-Ejemplo 1: Bach 7.5 · PAU 7 → acceso 7.3  
-Biología 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
+Exemple 1: Batx 7.5 · PAU 7 → accés 7.3  
+Biologia 9×0.2 + Química 8×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Ejemplo 2: Bach 8.2 · PAU 6.5 → acceso 7.5  
-Matemáticas 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
+Exemple 2: Batx 8.2 · PAU 6.5 → accés 7.5  
+Matemàtiques 9×0.2 + Física 7×0.2 → <strong>10.7</strong>
 </div>
 
 <div class="example">
-Ejemplo 3: Bach 6.8 · PAU 7.5 → acceso 7.1  
-Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
+Exemple 3: Batx 6.8 · PAU 7.5 → accés 7.1  
+Economia 8×0.1 + Matemàtiques CCSS 9×0.2 → <strong>9.7</strong>
 </div>
 
-<a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
-   target="_blank" 
-   class="link-excel">
-    📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
-</a>
+<div class="link-excel-container">
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+       target="_blank" class="link-excel">
+        📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
+    </a>
+</div>
 
 </section>
 <section class="section">
 
-<h2>🧮 Simulador de nota de admisión</h2>
+<h2>🧮 Simulador de nota d'admissió</h2>
 
 <div class="sim">
 <p>
-Utiliza este <strong>simulador</strong> para estimar tu nota de acceso y de admisión a la universidad y entender cómo influyen las ponderaciones en el resultado final.
+Utilitza aquest <strong>simulador</strong> per a estimar la teua nota d'accés i d'admissió a la universitat i entendre com influeixen les ponderacions en el resultat final.
 </p>
 <div class="sim-grid">
 
-<input id="bat" type="number" placeholder="Nota Media Bachillerato">
-<input id="pau" type="number" placeholder="Nota PAU obligatoria">
+<input id="bat" type="number" placeholder="Nota Mitjana Batxillerat">
+<input id="pau" type="number" placeholder="Nota PAU obligatòria">
 
 <div>
-<input id="m1" type="number" placeholder="Nota Asignatura 1">
+<input id="m1" type="number" placeholder="Nota Assignatura 1">
 <select id="p1">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
@@ -1112,7 +1117,7 @@ Utiliza este <strong>simulador</strong> para estimar tu nota de acceso y de admi
 </div>
 
 <div>
-<input id="m2" type="number" placeholder="Nota Asignatura 2">
+<input id="m2" type="number" placeholder="Nota Assignatura 2">
 <select id="p2">
 <option value="0.1">pondera 0,1</option>
 <option value="0.2">pondera 0,2</option>
@@ -1123,9 +1128,9 @@ Utiliza este <strong>simulador</strong> para estimar tu nota de acceso y de admi
 
 <div class="result">
 
-Nota de acceso: <span id="acces">-</span> /10  
+Nota d'accés: <span id="acces">-</span> /10  
 <br>
-Nota de admisión: <span id="final">-</span> /14
+Nota d'admissió: <span id="final">-</span> /14
 
 <div class="progress-bar">
 <div id="progress"></div>
@@ -1139,27 +1144,27 @@ Nota de admisión: <span id="final">-</span> /14
 
 <div class="warning">
 
-<strong>⚠️ Recuerda:</strong>
+<strong>⚠️ Recorda:</strong>
 
 <p>
-Las ponderaciones de las diferentes materias pueden variar según el grado que quieras estudiar. 
-Consulta siempre las tablas oficiales de ponderación.
+Les ponderacions de les diferents matèries poden variar segons el grau que vulgues estudiar. 
+Consulta sempre les taules oficials de ponderació.
 </p>
 
 </div>
 
 <section class="section">
 
-<h2>🌐 Cálculo oficial notas y tabla de ponderaciones (Generalitat Valenciana)</h2>
+<h2>🌐 Càlcul oficial notes i taula de ponderacions (Generalitat Valenciana)</h2>
 
 <div class="info info-center">
 <p>
-En estos enlaces encontrarás información oficial y actualizada sobre:
+En aquests enllaços trobaràs informació oficial i actualitzada sobre:
 </p>
 <div class="inline-list">
-<span>📄 Tablas de ponderaciones actualizadas</span>
-<span>📊 Criterios para el cálculo de la nota de acceso</span>
-<span>🎓 Información, consultas e incidencias</span>
+<span>📄 Taules de ponderacions actualitzades</span>
+<span>📊 Criteris per al càlcul de la nota d'accés</span>
+<span>🎓 Informació, consultes i incidències</span>
 </div>
 
 <div class="info-links-center">
@@ -1167,22 +1172,23 @@ En estos enlaces encontrarás información oficial y actualizada sobre:
 <a href="https://universitats.gva.es/es/-/c%C3%A0lcul-qualificacions"
 target="_blank"
 class="link-btn">
-🔗 PÁGINA OFICIAL GVA
+🔗 PÀGINA OFICIAL GVA
 </a>
 
 <a href="https://paunicomvalenciana.es/"
 target="_blank"
 class="link-btn">
-🔎 EXPLORADOR NOTAS DE CORTE
+🔎 EXPLORADOR NOTES DE TALL
 </a>
 
 </div>
 
-<a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
-   target="_blank" 
-   class="link-excel">
-    📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
-</a>
+<div class="link-excel-container">
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+       target="_blank" class="link-excel">
+        📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
+    </a>
+</div>
 
 </div>
 
@@ -1190,45 +1196,45 @@ class="link-btn">
 
 <section class="section">
 
-<h2>🧭 Y después de Bachillerato, ¿qué?</h2>
+<h2>🧭 I després de Batxillerat, què?</h2>
 
 <div class="grid">
 
 <a href="uni.html" class="card link-card">
-<strong><span class="icon">🎓</span> Universidad</strong>
+<strong><span class="icon">🎓</span> Universitat</strong>
 <ul>
-<li>Vias de acceso: mediante PAU - mediante CFGS</li>
-<li>Guía Pau, calendario, notas de corte y tabla ponderaciones</li>
-<li>Mapa interactivo Grados universitarios y enseñanzas artísticas superiores</li>
-<li>Herramientas y recursos útiles</li>
+<li>Vies d'accés: mitjançant PAU - mitjançant CFGS</li>
+<li>Guia Pau, calendari, notes de tall i taula ponderacions</li>
+<li>Mapa interactiu Graus universitaris i ensenyaments artístics superiors</li>
+<li>Eines i recursos útils</li>
 </ul>
 </a>
 
 <a href="fp.html" class="card link-card">
-<strong><span class="icon">🛠️</span> FP Grado Superior</strong>
+<strong><span class="icon">🛠️</span> FP Grau Superior</strong>
 <ul>
-<li>Vias de acceso: directas - mediante pruebas de acceso</li>
-<li>Tipos de Ciclos formativos</li>
-<li>Mapa interactivo de centros de la Comunidad Valenciana</li>
-<li>Áreas i familias profesionales</li>
+<li>Vies d'accés: directes - mitjançant proves d'accés</li>
+<li>Tipus de Cicles formatius</li>
+<li>Mapa interactiu de centres de la Comunitat Valenciana</li>
+<li>Àrees i famílies professionals</li>
 </ul>
 </a>
 
 <a href="altres.html" class="card link-card">
-<strong><span class="icon">📚</span> Otros estudios</strong>
+<strong><span class="icon">📚</span> Altres estudis</strong>
 <ul>
-<li>Enseñanzas de régimen especial: Idiomes - Artes plásticas y diseño - Esportivas - Música y danza - Música y artes escénicas  </li>
-<li>Enseñanzas para a Fuerzas y Cuerpos de Seguridad: Policía Nacional - Policía Local - Guardia Civil - Bomberos - Fuerzas armadas</li>
+<li>Ensenyaments de règim especial: Idiomes - Arts plàstiques i disseny - Esportives - Música i dansa - Música i arts escèniques  </li>
+<li>Ensenyaments per a Forces i Cossos de Seguretat: Policia Nacional - Policia Local - Guàrdia Civil - Bombers - Forces armades</li>
 </ul>
 </a>
 
 <a href="orientafut.html" class="card link-card">
-<strong><span class="icon">🧭</span> Orienta tu futuro</strong>
+<strong><span class="icon">🧭</span> Orienta el teu futur</strong>
 <ul>
-<li>Herramientas para orientar tu futuro</li>
-<li>Cuestionarios de orientación académica y profesional</li>
-<li>Orientación laboral y recursos de empleo y planificación profesional</li>
-<li>Consejos orientadores y reflexiones para valorar buenas deciciones</li>
+<li>Eines per a orientar el teu futur</li>
+<li>Qüestionaris d'orientació acadèmica i professional</li>
+<li>Orientació laboral i recursos d'ocupació i planificació professional</li>
+<li>Consells orientadors i reflexions per a valorar bones decisions</li>
 </ul>
 </a>
 
@@ -1238,22 +1244,22 @@ class="link-btn">
 
 <section class="section">
 
-<h2>📝 Planifica tu itinerario</h2>
+<h2>📝 Planifica el teu itinerari</h2>
 
 <div class="plan">
 
 <div class="plan-box">
-<strong>1º de Bachillerato</strong>
+<strong>1r de Batxillerat</strong>
 <textarea></textarea>
 </div>
 
 <div class="plan-box">
-<strong>2º de Bachillerato</strong>
+<strong>2n de Batxillerat</strong>
 <textarea></textarea>
 </div>
 
 <div class="plan-box">
-<strong>Después del Bachillerato</strong>
+<strong>Després del Batxillerat</strong>
 <textarea></textarea>
 </div>
 
@@ -1262,33 +1268,33 @@ class="link-btn">
 </section>
 <section class="section">
 
-<h2>💰 Becas y ayudas</h2>
+<h2>💰 Beques i ajudes</h2>
 
 <div class="links-dashboard">
 
 <div class="links-card becas">
-<div class="links-card-title"><span>🎓</span> Becas principales (MEC) </div>
+<div class="links-card-title"><span>🎓</span> Beques principals (MEC) </div>
 
 <a href="https://www.becaseducacion.gob.es/becas-y-ayudas.html" target="_blank">
-🔗 Becas MEC (Ministerio de Educación)
+🔗 Beques MEC (Ministeri d'Educació)
 </a>
 
 <p class="link-info">
-Beca general y ayuda de apoyo educativo. Información, requisitos y solicitud.<br>
-Publicada ya la convocatoria general para el curso 2026-2027.
+Beca general i ajuda de suport educatiu. Informació, requisits i sol·licitud.<br>
+Publicada ja la convocatòria general per al curs 2026-2027.
 </p>
 
 </div>
 
 <div class="links-card becas">
-<div class="links-card-title"><span>🏫</span> Becas Universidades Comunidad Valenciana</div>
+<div class="links-card-title"><span>🏫</span> Beques Universitats Comunitat Valenciana</div>
 
 <a href="https://universitats.gva.es/es/convocatories" target="_blank">
-🔗 Otras ayudas y becas universitarias
+🔗 Altres ajudes i beques universitàries
 </a>
-  
+  
 <p class="link-info">
-Información de ayudas y becas universitarias complementarias si en el próximo curso realizas estudios universitarios en la Comunidad Valenciana.
+Informació d'ajudes i beques universitàries complementàries si en el pròxim curs realitzes estudis universitaris a la Comunitat Valenciana.
 </p>
 
 </div>
@@ -1298,7 +1304,7 @@ Información de ayudas y becas universitarias complementarias si en el próximo 
 </section>
 
 <footer>
-IES Didín Puig · Departamento de Orientación Educativa y Profesional
+IES Didín Puig · Departament d'Orientació Educativa i Professional
 </footer>
 
 
@@ -1370,7 +1376,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>🔬 Ciencias y Tecnología</h3>
+<h3>🔬 Ciències i Tecnologia</h3>
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1380,7 +1386,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>🔬 Ciencias y Tecnología - IES Didín Puig</h3>
+<h3>🔬 Ciències i Tecnologia - IES Didín Puig</h3>
 <img src="../batx_ct.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1390,7 +1396,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>📊 Humanidades y Ciencias Sociales</h3>
+<h3>📊 Humanitats i Ciències Socials</h3>
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1400,7 +1406,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>📊 Humanidades y Ciencias Sociales - IES Didín Puig</h3>
+<h3>📊 Humanitats i Ciències Socials - IES Didín Puig</h3>
 <img src="../batx_cs.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1410,7 +1416,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>📚 Bachillerato General</h3>
+<h3>📚 Batxillerat General</h3>
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1420,7 +1426,7 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>🎭 Artes Escénicas</h3>
+<h3>🎭 Arts Escèniques</h3>
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
@@ -1430,12 +1436,12 @@ behavior:"smooth"
 <div class="modal" onclick="event.stopPropagation()">
 <div class="modal-content">
 <button class="modal-close" onclick="this.closest('.modal-overlay').classList.remove('active')">✖</button>
-<h3>🎨 Artes Plásticas</h3>
+<h3>🎨 Arts Plàstiques</h3>
 <img src="../Bach_ordenacion.png" style="width:100%; border-radius:10px; margin-top:15px;">
 </div>
 </div>
 </div>
-  
+  
 <script>
 
 function openModal(id){
@@ -1450,6 +1456,6 @@ modal.classList.remove("active");
 }
 
 </script>
- 
+ 
 </body>
 </html>
