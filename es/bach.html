@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
 
 <meta charset="UTF-8">
@@ -73,29 +73,29 @@ transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* BOTÓN EXCEL ESPECIAL (NUEVO) */
+/* BOTÓN EXCEL ESPECIAL - VERDE Y CENTRADO */
 .link-excel {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px 24px;
-    background: #1D6F42; /* Verde Excel */
-    color: white;
-    border-radius: 30px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     transition: all .2s ease;
-    margin: 20px auto;
+    margin: 30px auto;
     width: fit-content;
     border: 2px solid #1D6F42;
 }
 
 .link-excel:hover {
-    background: #248a52;
+    background: #248a52 !important;
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .link-inline{
@@ -573,11 +573,6 @@ padding:5px 0;
 content:"";
 }
 
-/* AJUSTE DE ESPACIO ENTRE TARJETAS (ARREGLO) */
-.modalitat, .batx-card {
-    margin-bottom: 15px;
-}
-
 }
 
 /* ===================== */
@@ -700,7 +695,7 @@ max-width:600px;
 .batx-side{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:25px; /* ESPACIO AUMENTADO PARA QUE NO SE PEGUEN */
 margin-top:10px;
 margin-right:10px;
 }
@@ -741,7 +736,7 @@ margin-bottom:8px;
 
 /* COLORES TARJETAS */
 .batx-card.ciencia{background:#eef5ff;}
-.batx-social{background:#edf8f1;}
+.batx-card.social{background:#edf8f1;}
 
 
 /* ICONO */
@@ -900,7 +895,7 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 </p>
 
 <p>
-📌 <strong>Clave:</strong> tendrás que elegir una modalid y unas materias que influirán en tu futuro académico.
+📌 <strong>Clave:</strong> tendrás que elegir una modalidad y unas materias que influirán en tu futuro académico.
 </p>
 
 </div>
@@ -933,7 +928,7 @@ El Bachillerato es una etapa <strong>no obligatoria</strong> que se cursa despu�
 
 <div class="modalitat human" onclick="openModal('modal-arts1')">
 <span>🎭</span>
-<div class="title">Artes. Vía Música y Artes Escèniques</div>
+<div class="title">Artes. Vía Música y Artes Escénicas</div>
 <span class="hint">Pincha para ver las materias</span>
 </div>
 
@@ -1090,6 +1085,7 @@ Economía 8×0.1 + Matemáticas CCSS 9×0.2 → <strong>9.7</strong>
 </a>
 
 </section>
+
 <section class="section">
 
 <h2>🧮 Simulador de nota de admisión</h2>
@@ -1217,7 +1213,7 @@ class="link-btn">
 <a href="altres.html" class="card link-card">
 <strong><span class="icon">📚</span> Otros estudios</strong>
 <ul>
-<li>Enseñanzas de régimen especial: Idiomes - Artes plásticas y diseño - Esportivas - Música y danza - Música y artes escénicas  </li>
+<li>Enseñanzas de régimen especial: Idiomas - Artes plásticas y diseño - Esportivas - Música y danza - Música y arts escénicas  </li>
 <li>Enseñanzas para a Fuerzas y Cuerpos de Seguridad: Policía Nacional - Policía Local - Guardia Civil - Bomberos - Fuerzas armadas</li>
 </ul>
 </a>
