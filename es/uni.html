@@ -615,6 +615,37 @@ display:inline-block;
 transform:translateY(-3px) scale(1.2) rotate(-6deg);
 }
 
+/* ESTILOS BOTÓN EXCEL */
+.link-excel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.link-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #1D6F42 !important;
+    color: white !important;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .2s ease;
+    width: fit-content;
+    border: 2px solid #1D6F42;
+}
+
+.link-excel:hover {
+    background: #248a52 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
 </style>
 </head>
 
@@ -717,6 +748,13 @@ Notas de corte Orientaline
 
 </div>
 </section>
+
+<div class="link-excel-container">
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/orientat/didinpuig/main/Ponderacions_notes_tall_2026.xlsx" 
+       target="_blank" class="link-excel">
+        📊 TABLA EXCEL INTERACTIVA PONDERACIONES Y NOTAS DE CORTE 2026
+    </a>
+</div>
 
 <section class="section">
 <h2>🤔 ¿Cómo elegir grado?</h2>
@@ -844,9 +882,9 @@ IES Didín Puig · Departamento de Orientación Educativa y Profesional
 <p><strong>La nota de admisión se calcula combinando:</strong></p>
 
 <ul>
-  <li>📊 Media de Bachillerato (60%)</li>
-  <li>📝 Fase obligatoria de la PAU (40%)</li>
-  <li>➕ Fase voluntaria (para subir nota)</li>
+  <li> media de Bachillerato (60%)</li>
+  <li> fase obligatoria de la PAU (40%)</li>
+  <li> fase voluntaria (para subir nota)</li>
 </ul>
 </div>
 
@@ -970,8 +1008,8 @@ IES Didín Puig · Departamento de Orientación Educativa y Profesional
     <div class="modal-box">
       <p><strong>La nota de admisión se calcula combinando:</strong></p>
       <ul>
-        <li>📊 Nota media del ciclo formativo (100%)</li>
-        <li>➕ Fase voluntaria de la PAU (para subir nota)</li>
+        <li> nota media del ciclo formativo (100%)</li>
+        <li> fase voluntaria de la PAU (para subir nota)</li>
       </ul>
     </div>
 
@@ -986,8 +1024,8 @@ IES Didín Puig · Departamento de Orientación Educativa y Profesional
 
       <ul>
         <li><strong>NMC:</strong> Nota media del ciclo</li>
-        <li><strong>M1 y M2:</strong> Dos mejores notas de la fase voluntaria</li>
-        <li><strong>A y B:</strong> Ponderaciones (0,1 o 0,2)</li>
+        <li><strong>M1 i M2:</strong> Dos mejores notas de la fase voluntaria</li>
+        <li><strong>A i B:</strong> Ponderaciones (0,1 o 0,2)</li>
       </ul>
 
       <p>👉 Nota máxima: <strong>14</strong></p>
