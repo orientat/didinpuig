@@ -39,6 +39,8 @@ header h1 { margin: 0; font-size: 30px; }
     text-decoration: none;
     transition: all .3s ease;
     min-width: 280px;
+    cursor: pointer; /* Afegit per als botons de password */
+    border: none;
 }
 
 /* BOTÓ GENIALLY (Cian) */
@@ -83,7 +85,7 @@ header h1 { margin: 0; font-size: 30px; }
     box-shadow: 0 8px 25px rgba(166, 82, 119, 0.4);
 }
 
-/* GRID PER ALS NOUS BOTONS DE FORMULARIS */
+/* GRID PER ALS BOTONS DE FORMULARIS */
 .grid-forms {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -101,21 +103,17 @@ header h1 { margin: 0; font-size: 30px; }
 .fase2 { background: #e3f2fd; border-left-color: #2196f3; }
 .fase3 { background: #f3e5f5; border-left-color: #9c27b0; }
 
-/* TARGETES DE CONSELLS DE LECTURA (Amb efecte hover rosa) */
+/* TARGETES DE CONSELLS DE LECTURA */
 .grid-cuadre { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
 .card-cuadre { background: #f9f9f9; padding: 25px; border-radius: 12px; border-top: 4px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; }
 
 .card-cuadre:hover { 
-    background: #fff2f7 !important; /* Rosa claret com a Batxillerat */
+    background: #fff2f7 !important; 
     transform: translateY(-5px); 
     box-shadow: 0 12px 24px rgba(109, 37, 72, 0.15); 
 }
 
 .card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; transition: color 0.3s ease; }
-
-.card-cuadre:hover strong {
-    color: #a65277; /* Canvi suau de color al títol */
-}
 
 .diagnosis { background: #fff8d6; padding: 25px; border-radius: 12px; border-left: 6px solid #f2c94c; margin-top: 30px; }
 .diagnosis strong { color: #6d2548; display: block; margin-bottom: 10px; font-size: 18px; }
@@ -158,20 +156,19 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         </div>
     </section>
 
-    <!-- NOU BLOC DE FORMULARIS -->
     <section class="section">
         <h2>📝 Formularis de Seguiment</h2>
-        <p>Per favor, selecciona el formulari corresponent per a completar el seguiment del programa:</p>
+        <p>Aquests formularis requereixen una contrasenya per accedir-hi:</p>
         <div class="grid-forms">
-            <a href="https://forms.gle/jJfwci3nNoayb3YW6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 QÜESTIONARI FAMÍLIES
-            </a>
-            <a href="https://forms.gle/V4TUkxU5UYDir59b6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 QÜESTIONARI ALUMNAT
-            </a>
-            <a href="https://forms.gle/MVoAeNwZHc7gEv9x6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 QÜESTIONARI PROFESSORAT
-            </a>
+            <button onclick="checkPassword('families')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 QÜESTIONARI FAMÍLIES
+            </button>
+            <button onclick="checkPassword('alumnat')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 QÜESTIONARI ALUMNAT
+            </button>
+            <button onclick="checkPassword('professorat')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 QÜESTIONARI PROFESSORAT
+            </button>
         </div>
     </section>
 
@@ -201,27 +198,27 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         <div class="grid-cuadre">
             <div class="card-cuadre">
                 <strong>1. Diari Personal</strong>
-                <p>Es recomana una llibreteta menuda i personalitzada que pugues dur a qualsevol lloc, amb una llapissera o boli a mà.</p>
+                <p>Es recomana una llibreteta menuda i personalitzada que pugues dur a qualsevol lloc.</p>
             </div>
             <div class="card-cuadre">
                 <strong>2. Fitxa del Llibre</strong>
-                <p>Convé anotar la referència bibliogràfica del llibre que vas a llegir: autor, títol, editorial, lloc i any d'edició.</p>
+                <p>Convé anotar la referència bibliogràfica del llibre: autor, títol, editorial...</p>
             </div>
             <div class="card-cuadre">
                 <strong>3. Coneixements Previs</strong>
-                <p>Abans de començar, pregunta't: Com he arribat a este llibre? Qui me l'ha recomanat? Per què m'ha cridat l'atenció?</p>
+                <p>Abans de començar, pregunta't: Com he arribat a este llibre? Qui me l'ha recomanat?</p>
             </div>
             <div class="card-cuadre">
                 <strong>4. Lectura Fragmentada</strong>
-                <p>És millor no llegir-lo tot d'una. Fes-ho a capítols o a ratets per a poder digerir el contingut i dialogar amb el text.</p>
+                <p>És millor no llegir-lo tot d'una. Fes-ho a capítols o a ratets.</p>
             </div>
             <div class="card-cuadre">
                 <strong>5. Tipus d'Anotacions i Creativitat</strong>
-                <p>Anota vocabulari, idees clau i la teua connexió personal per a interioritzar el text; pots afegir fotos o dibuixos que aporten un enriquiment personal i creatiu a la teua experiència de lectura.</p>
+                <p>Anota vocabulari, idees clau i la teua connexió personal.</p>
             </div>
             <div class="card-cuadre">
-                <strong>6. Automatizatció</strong>
-                <p>L'objectiu final és que aquest procés de reflexió es torne automàtic i ja no et calga el suport físic del diari en el futur.</p>
+                <strong>6. Automatització</strong>
+                <p>L'objectiu final és que aquest procés de reflexió es torne automàtic.</p>
             </div>
         </div>
     </section>
@@ -229,19 +226,16 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <section class="section">
         <div class="diagnosis">
             <strong>✨ L'Atmosfera de Lectura</strong>
-            <p>Busca sempre un racó especial, llocs agradables i en silenci que et conviden a endinsar-se en el llibre amb tots els sentits. Fes de la lectura un moment de plaer i desconnexió.</p>
+            <p>Busca sempre un racó especial que et conviden a endinsar-se en el llibre amb tots els sentits.</p>
         </div>
     </section>
 
     <section class="section">
         <h2>💡 Recursos per a l'Èxit Acadèmic</h2>
-        <p>Aprofita les nostres eines interactives i materials de diagnòstic per a optimitzar el teu temps d'estudi:</p>
-        
         <div class="resources-container">
-            <a href="https://view.genially.com/5fa3162989da530d018ca547?fbclid=IwAR3HSeMzb4Mm_2UIjfrEb_gi0plYpTJoCLV5xr7ju5-RO6tvsRN6KAq212Q" target="_blank" class="btn-resource btn-genially">
+            <a href="https://view.genially.com/5fa3162989da530d018ca547" target="_blank" class="btn-resource btn-genially">
                 🚀 GUIA INTERACTIVA (Genially)
             </a>
-
             <a href="Cuestionario_habitos_estudio.pdf" target="_blank" class="btn-resource btn-pdf">
                 📋 QÜESTIONARI D'HÀBITS D'ESTUDI
             </a>
@@ -269,18 +263,43 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 2: Síntesi i Reflexió</h2>
-        <div class="info-box">Anotar idees clau, fer esquemes i connectar el que has llegit amb les teues pròpies experiències vitals.</div>
+        <div class="info-box">Anotar idees clau, fer esquemes i connectar el que has llegit.</div>
     </div>
 </div>
 <div id="modal-fase3" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 3: Expressió i Record</h2>
-        <div class="info-box">Ser capaç d'explicar el que has après amb paraules pròpies i dialogar internament sobre el contingut.</div>
+        <div class="info-box">Ser capaç d'explicar el que has après amb paraules pròpies.</div>
     </div>
 </div>
 
 <script>
+// FUNCIÓ PER CONTROLAR LES CONTRASENYES
+function checkPassword(type) {
+    const passwords = {
+        'families': 'fam2026',    // Canvia 'fam2026' per la clau que vulguis
+        'alumnat': 'alu2026',     // Canvia 'alu2026' per la clau que vulguis
+        'professorat': 'pro2026'  // Canvia 'pro2026' per la clau que vulguis
+    };
+
+    const links = {
+        'families': 'https://forms.gle/jJfwci3nNoayb3YW6',
+        'alumnat': 'https://forms.gle/V4TUkxU5UYDir59b6',
+        'professorat': 'https://forms.gle/MVoAeNwZHc7gEv9x6'
+    };
+
+    let userPass = prompt("Per favor, introdueix la contrasenya d'accés:");
+
+    if (userPass === null) return; // Si cancel·la, no fem res
+
+    if (userPass === passwords[type]) {
+        window.open(links[type], '_blank');
+    } else {
+        alert("Contrasenya incorrecta. Torna-ho a intentar o consulta amb el Departament d'Orientació.");
+    }
+}
+
 function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeModal(e) { if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) { const modals = document.querySelectorAll('.modal-overlay'); modals.forEach(m => m.classList.remove('active')); document.body.style.overflow = 'auto'; } }
 </script>
