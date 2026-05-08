@@ -39,83 +39,37 @@ header h1 { margin: 0; font-size: 30px; }
     text-decoration: none;
     transition: all .3s ease;
     min-width: 280px;
+    cursor: pointer;
+    border: none;
 }
 
-/* BOTÓN GENIALLY (Cian) */
-.btn-genially {
-    background: #40E0D0 !important;
-    color: #1f3a5f !important;
-    border: 2px solid #40E0D0;
-    box-shadow: 0 4px 15px rgba(64, 224, 208, 0.3);
-}
+/* COLORES BOTONES */
+.btn-genially { background: #40E0D0 !important; color: #1f3a5f !important; border: 2px solid #40E0D0; box-shadow: 0 4px 15px rgba(64, 224, 208, 0.3); }
+.btn-genially:hover { background: #33c7b8 !important; transform: translateY(-4px); box-shadow: 0 8px 25px rgba(64, 224, 208, 0.5); }
+.btn-pdf { background: #1565c0 !important; color: white !important; border: 2px solid #1565c0; box-shadow: 0 4px 15px rgba(21, 101, 192, 0.2); }
+.btn-pdf:hover { background: #1976d2 !important; transform: translateY(-4px); box-shadow: 0 8px 25px rgba(21, 101, 192, 0.4); }
+.btn-llegim { background: #6d2548 !important; color: white !important; border: 2px solid #6d2548; box-shadow: 0 4px 15px rgba(109, 37, 72, 0.2); }
+.btn-llegim:hover { background: #a65277 !important; transform: translateY(-4px); box-shadow: 0 8px 25px rgba(166, 82, 119, 0.4); }
 
-.btn-genially:hover {
-    background: #33c7b8 !important;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(64, 224, 208, 0.5);
-}
+/* GRID FORMULARIOS */
+.grid-forms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
 
-/* BOTÓN CUESTIONARIO PDF I FORMS (Azul Armonizado) */
-.btn-pdf {
-    background: #1565c0 !important;
-    color: white !important;
-    border: 2px solid #1565c0;
-    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.2);
-}
-
-.btn-pdf:hover {
-    background: #1976d2 !important;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(21, 101, 192, 0.4);
-}
-
-/* BOTÓN LLEGIM A L'AULA (Púrpura) */
-.btn-llegim {
-    background: #6d2548 !important;
-    color: white !important;
-    border: 2px solid #6d2548;
-    box-shadow: 0 4px 15px rgba(109, 37, 72, 0.2);
-}
-
-.btn-llegim:hover {
-    background: #a65277 !important;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(166, 82, 119, 0.4);
-}
-
-/* GRID PARA LOS NUEVOS BOTONES DE FORMULARIOS */
-.grid-forms {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
+/* FASES MÉTODO ACORDEÓN */
 .grid-fases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
 .card-fase { padding: 30px 20px; border-radius: 14px; border-left: 6px solid #a65277; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); cursor: pointer; transition: .3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-height: 200px; }
 .card-fase:hover { transform: translateY(-8px); box-shadow: 0 16px 30px rgba(0,0,0,0.18); }
-.card-fase .f-icon { font-size: 50px; margin-bottom: 15px; transition: transform .3s ease; }
+.card-fase .f-icon { font-size: 50px; margin-bottom: 15px; }
 .card-fase .f-title { font-weight: bold; font-size: 18px; color: #6d2548; }
 .hint { display: block; font-size: 13px; color: #a65277; opacity: 0.7; margin-top: 10px; font-weight: bold; }
 .fase1 { background: #e0f2f1; border-left-color: #009688; }
 .fase2 { background: #e3f2fd; border-left-color: #2196f3; }
 .fase3 { background: #f3e5f5; border-left-color: #9c27b0; }
 
-/* TARJETAS DE CONSEJOS DE LECTURA (Con efecto hover rosa) */
+/* TARJETAS CONSEJOS */
 .grid-cuadre { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
 .card-cuadre { background: #f9f9f9; padding: 25px; border-radius: 12px; border-top: 4px solid #a65277; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; }
-
-.card-cuadre:hover { 
-    background: #fff2f7 !important; /* Rosa claro corporativo */
-    transform: translateY(-5px); 
-    box-shadow: 0 12px 24px rgba(109, 37, 72, 0.15); 
-}
-
-.card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; transition: color 0.3s ease; }
-
-.card-cuadre:hover strong {
-    color: #a65277;
-}
+.card-cuadre:hover { background: #fff2f7 !important; transform: translateY(-5px); box-shadow: 0 12px 24px rgba(109, 37, 72, 0.15); }
+.card-cuadre strong { color: #6d2548; font-size: 18px; display: block; margin-bottom: 10px; }
 
 .diagnosis { background: #fff8d6; padding: 25px; border-radius: 12px; border-left: 6px solid #f2c94c; margin-top: 30px; }
 .diagnosis strong { color: #6d2548; display: block; margin-bottom: 10px; font-size: 18px; }
@@ -158,20 +112,19 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
         </div>
     </section>
 
-    <!-- NUEVO BLOQUE DE FORMULARIOS -->
     <section class="section">
         <h2>📝 Formularios de Seguimiento</h2>
-        <p>Por favor, selecciona el formulario correspondiente para completar el seguimiento del programa:</p>
+        <p>Estos formularios requieren una contraseña para acceder:</p>
         <div class="grid-forms">
-            <a href="https://forms.gle/jJfwci3nNoayb3YW6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 CUESTIONARIO FAMILIAS
-            </a>
-            <a href="https://forms.gle/V4TUkxU5UYDir59b6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 CUESTIONARIO ALUMNADO
-            </a>
-            <a href="https://forms.gle/MVoAeNwZHc7gEv9x6" target="_blank" class="btn-resource btn-pdf" style="min-width: auto;">
-                📩 CUESTIONARIO PROFESORADO
-            </a>
+            <button onclick="checkPassword('families')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 CUESTIONARIO FAMILIAS
+            </button>
+            <button onclick="checkPassword('alumnat')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 CUESTIONARIO ALUMNADO
+            </button>
+            <button onclick="checkPassword('professorat')" class="btn-resource btn-pdf" style="min-width: auto;">
+                🔒 CUESTIONARIO PROFESORADO
+            </button>
         </div>
     </section>
 
@@ -199,49 +152,28 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
     <section class="section">
         <h2>📚 Consejos para una buena lectura</h2>
         <div class="grid-cuadre">
-            <div class="card-cuadre">
-                <strong>1. Diario Personal</strong>
-                <p>Se recomienda una libretita pequeña y personalizada que puedas llevar a cualquier parte, con un lápiz o bolígrafo a mano.</p>
-            </div>
-            <div class="card-cuadre">
-                <strong>2. Ficha del Libro</strong>
-                <p>Conviene anotar la referencia bibliográfica del libro que vas a leer: autor, título, editorial, lugar y año de edición.</p>
-            </div>
-            <div class="card-cuadre">
-                <strong>3. Conocimientos Previos</strong>
-                <p>Antes de empezar, pregúntate: ¿Cómo he llegado a este libro? ¿Quién me lo ha recomendado? ¿Por qué me ha llamado la atención?</p>
-            </div>
-            <div class="card-cuadre">
-                <strong>4. Lectura Fragmentada</strong>
-                <p>Es mejor no leerlo todo de una vez. Hazlo por capítulos o "a ratitos" para poder digerir el contenido y dialogar con el texto.</p>
-            </div>
-            <div class="card-cuadre">
-                <strong>5. Tipos de Anotaciones y Creatividad</strong>
-                <p>Anota vocabulario, ideas clave y tu conexión personal para interiorizar el texto; puedes añadir fotos o dibujos que aporten un enriquecimiento personal y creativo a tu experiencia de lectura.</p>
-            </div>
-            <div class="card-cuadre">
-                <strong>6. Automatización</strong>
-                <p>El objetivo final es que este proceso de reflexión se vuelva automático y ya no necesites el soporte físico del diario en el futuro.</p>
-            </div>
+            <div class="card-cuadre"><strong>1. Diario Personal</strong><p>Se recomienda una libretita pequeña y personalizada que puedas llevar a cualquier parte.</p></div>
+            <div class="card-cuadre"><strong>2. Ficha del Libro</strong><p>Conviene anotar la referencia bibliográfica: autor, título, editorial, lugar y año.</p></div>
+            <div class="card-cuadre"><strong>3. Conocimientos Previos</strong><p>Antes de empezar, pregúntate: ¿Cómo he llegado a este libro? ¿Quién me lo ha recomendado?</p></div>
+            <div class="card-cuadre"><strong>4. Lectura Fragmentada</strong><p>Es mejor no leerlo todo de una vez. Hazlo por capítulos para digerir el contenido.</p></div>
+            <div class="card-cuadre"><strong>5. Tipos de Anotaciones y Creatividad</strong><p>Anota vocabulario, ideas clave y tu conexión personal para interiorizar el texto.</p></div>
+            <div class="card-cuadre"><strong>6. Automatización</strong><p>El objetivo final es que este proceso de reflexión se vuelva automático en el futuro.</p></div>
         </div>
     </section>
 
     <section class="section">
         <div class="diagnosis">
             <strong>✨ La Atmósfera de Lectura</strong>
-            <p>Busca siempre un rincón especial, lugares agradables y en silencio que te inviten a adentrarte en el libro con todos los sentidos. Haz de la lectura un momento de placer y desconexión.</p>
+            <p>Busca siempre un rincón especial, lugares agradables y en silencio que te inviten a adentrarte en el libro con todos los sentidos.</p>
         </div>
     </section>
 
     <section class="section">
         <h2>💡 Recursos para el Éxito Académico</h2>
-        <p>Aprovecha nuestras herramientas interactivas y materiales de diagnóstico para optimizar tu tiempo de estudio:</p>
-        
         <div class="resources-container">
-            <a href="https://view.genially.com/5fa3162989da530d018ca547?fbclid=IwAR3HSeMzb4Mm_2UIjfrEb_gi0plYpTJoCLV5xr7ju5-RO6tvsRN6KAq212Q" target="_blank" class="btn-resource btn-genially">
-                🚀 GUIA INTERACTIVA (Genially)
+            <a href="https://view.genially.com/5fa3162989da530d018ca547" target="_blank" class="btn-resource btn-genially">
+                🚀 GUÍA INTERACTIVA (Genially)
             </a>
-
             <a href="../Cuestionario_habitos_estudio.pdf" target="_blank" class="btn-resource btn-pdf">
                 📋 CUESTIONARIO DE HÁBITOS DE ESTUDIO
             </a>
@@ -268,19 +200,31 @@ footer { background: #a65277; color: white; text-align: center; padding: 15px; m
 <div id="modal-fase2" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
-        <h2>Fase 2: Síntesi y Reflexión</h2>
-        <div class="info-box">Anotar ideas clave, realizar esquemas y conectar lo que has leído con tus propias experiencias vitales.</div>
+        <h2>Fase 2: Síntesis y Reflexión</h2>
+        <div class="info-box">Anotar ideas clave, realizar esquemas y conectar lo leído con tus experiencias.</div>
     </div>
 </div>
 <div id="modal-fase3" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal">
         <button class="modal-close" onclick="closeModal(event)">&times;</button>
         <h2>Fase 3: Expresión y Recuerdo</h2>
-        <div class="info-box">Ser capaz de explicar lo aprendido con tus propias palabras y dialogar internamente sobre el contenido.</div>
+        <div class="info-box">Ser capaz de explicar lo aprendido con tus propias palabras y dialogar sobre el contenido.</div>
     </div>
 </div>
 
 <script>
+function checkPassword(type) {
+    const passwords = { 'families': 'fam2026', 'alumnat': 'alu2026', 'professorat': 'pro2026' };
+    const links = {
+        'families': 'https://forms.gle/jJfwci3nNoayb3YW6',
+        'alumnat': 'https://forms.gle/V4TUkxU5UYDir59b6',
+        'professorat': 'https://forms.gle/MVoAeNwZHc7gEv9x6'
+    };
+    let userPass = prompt("Por favor, introduce la contraseña de acceso:");
+    if (userPass === null) return;
+    if (userPass === passwords[type]) { window.open(links[type], '_blank'); }
+    else { alert("Contraseña incorrecta. Inténtalo de nuevo o consulta con Orientación."); }
+}
 function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeModal(e) { if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) { const modals = document.querySelectorAll('.modal-overlay'); modals.forEach(m => m.classList.remove('active')); document.body.style.overflow = 'auto'; } }
 </script>
